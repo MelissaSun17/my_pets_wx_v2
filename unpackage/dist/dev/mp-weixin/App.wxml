@@ -1,0 +1,1 @@
+<view class="_div"><router-view vue-id="c31923fa-1" bind:__l="__l"></router-view><tab-bar data-custom-hidden="{{!(showCustomTabBar)}}" vue-id="c31923fa-2" bind:__l="__l"></tab-bar></view>

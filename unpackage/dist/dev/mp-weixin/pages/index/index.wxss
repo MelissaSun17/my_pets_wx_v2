@@ -1,0 +1,446 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.wrap {
+  padding: 12px;
+}
+.u-demo-block__content {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFD1DB;
+  position: relative;
+}
+.content_ {
+  z-index: 2;
+  display: flex;
+  width: 750rpx;
+  position: absolute;
+  background-color: #FFD1DB;
+  top: 0;
+}
+.content_1 {
+  flex: 1;
+}
+.content_2 {
+  flex: 1;
+}
+.content_left {
+  margin-top: 16rpx;
+  height: 360rpx;
+  text-align: right;
+  z-index: 2;
+}
+.content_left image {
+  width: 340rpx;
+  height: 360rpx;
+}
+.content_right {
+  margin-top: 16rpx;
+  height: 360rpx;
+  z-index: 2;
+}
+.content_right image {
+  width: 340rpx;
+  height: 360rpx;
+}
+.scroll-view {
+  background-color: #FFD1DB;
+  margin-bottom: 30rpx;
+}
+.demo-box1 {
+  display: flex;
+  width: 750rpx;
+  height: 328rpx;
+  border-radius: 8rpx;
+  background-color: #FFD1DB;
+}
+.demo-box1 .box-one {
+  width: 258rpx;
+  height: 328rpx;
+  position: relative;
+  margin-left: 24rpx;
+}
+.demo-box1 .box-one .box-one-img {
+  width: 230rpx;
+  height: 230rpx;
+  background: #FFD1DB;
+  border-radius: 120rpx 120rpx 60rpx 60rpx;
+  margin: 54rpx 16rpx 44rpx 12rpx;
+}
+.demo-box1 .box-one .box-one-img image {
+  width: 230rpx;
+  height: 230rpx;
+  border-radius: 120rpx 120rpx 60rpx 60rpx;
+  border: 4rpx solid black;
+}
+.demo-box1 .box-one .box-one-img .box-one-info {
+  display: flex;
+  flex-direction: column;
+  width: 196rpx;
+  height: 88rpx;
+  border: 6rpx solid black;
+  border-radius: 20rpx;
+  position: absolute;
+  left: 24rpx;
+  bottom: 6rpx;
+  background-color: #ffffff;
+  box-shadow: 3rpx 3rpx 13rpx black;
+}
+.demo-box1 .box-one .box-one-img .box-one-info .text1 {
+  font-size: 32rpx;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 10rpx;
+}
+.demo-box1 .box-one .box-one-img .box-one-info .text2 {
+  font-size: 20rpx;
+  margin-top: 4rpx;
+  text-align: center;
+}
+.demo-box2 {
+  background-color: #FFD1DB;
+}
+.demo-box2 .demo-box2_img {
+  width: 750rpx;
+  background-color: #FFD1DB;
+  z-index: 1;
+  position: relative;
+  height: 160rpx;
+  border-radius: 6rpx;
+  display: flex;
+}
+.demo-box2 .demo-box2_img .demo-box2-left {
+  width: 344rpx;
+  height: 152rpx;
+  margin-left: 40rpx;
+  flex: 1;
+}
+.demo-box2 .demo-box2_img .demo-box2-left image {
+  width: 344rpx;
+  height: 152rpx;
+  border-radius: 0 100rpx 0 0;
+}
+.demo-box2 .demo-box2_img .demo-box2-right {
+  position: absolute;
+  right: 40rpx;
+  width: 344rpx;
+  height: 160rpx;
+  flex: 1;
+}
+.demo-box2 .demo-box2_img .demo-box2-right image {
+  width: 344rpx;
+  height: 160rpx;
+  border-radius: 0 0 0 100rpx;
+}
+.demo-box3 {
+  z-index: 2;
+  top: 375rpx;
+  background-color: #FFFFFF;
+  width: 750rpx;
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 60rpx;
+  /* 左上角 */
+  border-top-right-radius: 60rpx;
+  /* 右上角 */
+}
+.demo-box3 .feimi-serve {
+  width: 638rpx;
+  height: 220rpx;
+  margin-top: 80rpx;
+  margin-left: 40rpx;
+}
+.demo-box3 .feimi-serve .feimi-serve-text {
+  display: flex;
+  position: relative;
+  background-color: #FFFFFF;
+}
+.demo-box3 .feimi-serve .feimi-serve-text .feimi-serve-text-title {
+  width: 176rpx;
+  height: 64rpx;
+  font-family: HanYiYaKuHei-75W;
+  font-weight: normal;
+  font-size: 44rpx;
+  color: #000000;
+  line-height: 64rpx;
+  text-align: left;
+  font-style: normal;
+  font-weight: 800;
+}
+.demo-box3 .feimi-serve .feimi-serve-text .feimi-serve-text-img {
+  position: absolute;
+  bottom: 4rpx;
+  left: 144rpx;
+  width: 44rpx;
+  height: 30rpx;
+}
+.demo-box3 .feimi-serve .feimi-serve-text .feimi-serve-text-img image {
+  width: 45rpx;
+  height: 30rpx;
+}
+.demo-box3 .feimi-serve .feimi-serve-icon {
+  width: 606rpx;
+  height: 140rpx;
+  background-color: #ffffff;
+  margin-left: 32rpx;
+  display: flex;
+  margin-top: 16rpx;
+}
+.demo-box3 .feimi-serve .feimi-serve-icon .icon-view {
+  width: 112rpx;
+  height: 140rpx;
+}
+.demo-box3 .feimi-serve .feimi-serve-icon .icon-view .icon-view-img {
+  width: 112rpx;
+  height: 112rpx;
+}
+.demo-box3 .feimi-serve .feimi-serve-icon .icon-view .icon-view-img image {
+  width: 112rpx;
+  height: 112rpx;
+}
+.demo-box3 .feimi-serve .feimi-serve-icon .icon-view .icon-text {
+  width: 112rpx;
+  text-align: center;
+  font-family: PingFangSC, PingFang SC;
+  font-weight: 400;
+  font-size: 20rpx;
+  color: #4D5154;
+  line-height: 24rpx;
+  font-style: normal;
+}
+.demo-box3 .feimi-serve .feimi-serve-icon .icon-view:nth-child(2) {
+  margin-left: 52rpx;
+  margin-right: 54rpx;
+}
+.demo-box3 .feimi-serve .feimi-serve-icon .icon-view:nth-child(3) {
+  margin-right: 52rpx;
+}
+.demo-box3 .pet-trainer {
+  margin-top: 40rpx;
+  background-color: #ffffff;
+}
+.demo-box3 .pet-trainer .pet-trainer-top {
+  width: 660rpx;
+  height: 64rpx;
+  margin-left: 40rpx;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30rpx;
+}
+.demo-box3 .pet-trainer .pet-trainer-top .pet-trainer-top-text {
+  width: 154rpx;
+  height: 64rpx;
+  display: flex;
+  position: relative;
+}
+.demo-box3 .pet-trainer .pet-trainer-top .pet-trainer-top-text .pet-trainer-text-left {
+  width: 132rpx;
+  height: 64rpx;
+  font-family: HYYakuHei, HYYakuHei;
+  font-weight: 700;
+  font-size: 44rpx;
+  color: #000000;
+  line-height: 64rpx;
+  text-align: left;
+  font-style: normal;
+}
+.demo-box3 .pet-trainer .pet-trainer-top .pet-trainer-top-text .pet-trainer-text-left-img {
+  position: absolute;
+  width: 44rpx;
+  height: 30rpx;
+  bottom: 10rpx;
+  left: 114rpx;
+}
+.demo-box3 .pet-trainer .pet-trainer-top .pet-trainer-top-text .pet-trainer-text-left-img image {
+  width: 44rpx;
+  height: 30rpx;
+}
+.demo-box3 .pet-trainer .pet-trainer-top .pet-trainer-text-right {
+  margin-top: 20rpx;
+  height: 24rpx;
+  width: 96rpx;
+  font-family: PingFangSC, PingFang SC;
+  font-weight: 400;
+  font-size: 24rpx;
+  color: #FF5C7F;
+  line-height: 24rpx;
+  font-style: normal;
+}
+.demo-box3 .pet-trainer .pet-trainer-intro {
+  flex: 1;
+  background-color: #FFFFFF;
+  position: relative;
+  margin-left: 40rpx;
+}
+.demo-box3 .pet-trainer .pet-trainer-intro .pet-trainer-intro-bag {
+  width: 660rpx;
+  height: 172rpx;
+  background: #000000;
+  border-radius: 32rpx;
+  border: 2rpx solid #000000;
+  position: absolute;
+  left: 10rpx;
+  top: 22rpx;
+  z-index: 1;
+}
+.demo-box3 .pet-trainer .pet-trainer-intro .pet-trainer-intro-list {
+  width: 660rpx;
+  height: 184rpx;
+  border: 1px solid black;
+  border-radius: 32rpx;
+  display: flex;
+  background-color: #FFFFFF;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 34rpx;
+}
+.demo-box3 .pet-trainer .pet-trainer-intro .pet-trainer-intro-list .pet-trainer-intro-list-img {
+  width: 132rpx;
+  height: 132rpx;
+  border: 1px solid red;
+  margin-top: 26rpx;
+  margin-left: 24rpx;
+}
+.demo-box3 .pet-trainer .pet-trainer-intro .pet-trainer-intro-list .pet-trainer-intro-list-img image {
+  width: 132rpx;
+  height: 132rpx;
+  border-radius: 50%;
+}
+.demo-box3 .pet-trainer .pet-trainer-intro .pet-trainer-intro-list .pet-trainer-intro-list-img-info {
+  margin-left: 24rpx;
+  margin-top: 26rpx;
+  width: 448rpx;
+  height: 140rpx;
+}
+.demo-box3 .pet-trainer .pet-trainer-intro .pet-trainer-intro-list .pet-trainer-intro-list-img-info .list-img-info-top {
+  display: flex;
+  justify-content: space-between;
+  height: 36rpx;
+}
+.demo-box3 .pet-trainer .pet-trainer-intro .pet-trainer-intro-list .pet-trainer-intro-list-img-info .list-img-info-top .list-img-info-top-left {
+  width: 52rpx;
+  height: 36rpx;
+  font-family: PingFangSC, PingFang SC;
+  font-weight: 500;
+  font-size: 26rpx;
+  color: #000000;
+  line-height: 36rpx;
+  text-align: left;
+  font-style: normal;
+}
+.demo-box3 .pet-trainer .pet-trainer-intro .pet-trainer-intro-list .pet-trainer-intro-list-img-info .list-img-info-top .list-img-info-top-right {
+  color: #999999;
+  font-size: 22rpx;
+  margin-top: 2rpx;
+}
+.demo-box3 .pet-trainer .pet-trainer-intro .pet-trainer-intro-list .pet-trainer-intro-list-img-info .list-img-info-top .list-img-info-top-right .text_2 {
+  margin-left: 5rpx;
+  margin-right: 5rpx;
+}
+.demo-box3 .pet-trainer .pet-trainer-intro .pet-trainer-intro-list .pet-trainer-intro-list-img-info .list-img-info-center .text_1 {
+  width: 90rpx;
+  height: 32rpx;
+  font-family: PingFangSC, PingFang SC;
+  font-weight: 400;
+  font-size: 22rpx;
+  color: #999999;
+  line-height: 32rpx;
+  text-align: left;
+  font-style: normal;
+  margin-right: 10rpx;
+}
+.demo-box3 .pet-trainer .pet-trainer-intro .pet-trainer-intro-list .pet-trainer-intro-list-img-info .list-img-info-center .text_2 {
+  height: 10rpx;
+  font-family: PingFangSC, PingFang SC;
+  font-weight: 400;
+  font-size: 20rpx;
+  color: #999999;
+  font-style: normal;
+}
+.demo-box3 .pet-trainer .pet-trainer-intro .pet-trainer-intro-list .pet-trainer-intro-list-img-info .list-img-info-center .text_3 {
+  width: 128rpx;
+  height: 32rpx;
+  font-family: PingFangSC, PingFang SC;
+  font-weight: 400;
+  font-size: 22rpx;
+  color: #999999;
+  line-height: 32rpx;
+  text-align: left;
+  font-style: normal;
+  margin-left: 10rpx;
+}
+.demo-box3 .pet-trainer .pet-trainer-intro .pet-trainer-intro-list .pet-trainer-intro-list-img-info .list-img-info-bottom {
+  margin-top: 18rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.demo-box3 .pet-trainer .pet-trainer-intro .pet-trainer-intro-list .pet-trainer-intro-list-img-info .list-img-info-bottom .text_1 {
+  width: 280rpx;
+  height: 40rpx;
+  font-family: PingFangSC, PingFang SC;
+  font-weight: 600;
+  font-size: 28rpx;
+  color: #111111;
+  line-height: 40rpx;
+  text-align: left;
+  font-style: normal;
+}
+.demo-box3 .pet-trainer .pet-trainer-intro .pet-trainer-intro-list .pet-trainer-intro-list-img-info .list-img-info-bottom .money .money_text1 {
+  width: 16rpx;
+  height: 34rpx;
+  font-family: PingFangSC, PingFang SC;
+  font-weight: 600;
+  font-size: 24rpx;
+  color: #FF5C7F;
+  line-height: 34rpx;
+  text-align: left;
+  font-style: normal;
+  margin-right: 4rpx;
+}
+.demo-box3 .pet-trainer .pet-trainer-intro .pet-trainer-intro-list .pet-trainer-intro-list-img-info .list-img-info-bottom .money .money_text2 {
+  width: 48rpx;
+  height: 34rpx;
+  font-family: PingFangSC, PingFang SC;
+  font-weight: 600;
+  font-size: 40rpx;
+  color: #FF5C7F;
+  line-height: 40rpx;
+  text-align: left;
+  font-style: normal;
+  margin-right: 8rpx;
+}
+.demo-box3 .pet-trainer .pet-trainer-intro .pet-trainer-intro-list .pet-trainer-intro-list-img-info .list-img-info-bottom .money .money_text3 {
+  width: 50rpx;
+  height: 34rpx;
+  font-family: PingFangSC, PingFang SC;
+  font-weight: 500;
+  font-size: 20rpx;
+  color: #333333;
+  line-height: 34rpx;
+  text-align: left;
+  font-style: normal;
+}
+

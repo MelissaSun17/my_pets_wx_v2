@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/serve/index",
+    "pages/news/index",
+    "pages/main/index"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8",
+    "rpxCalcMaxDeviceWidth": 960,
+    "rpxCalcBaseDeviceWidth": 375,
+    "rpxCalcIncludeWidth": 750
+  },
+  "tabBar": {
+    "backgroundColor": "#FFFFFF ",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/serve/index",
+        "text": "服务"
+      },
+      {
+        "pagePath": "pages/news/index",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/main/index",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

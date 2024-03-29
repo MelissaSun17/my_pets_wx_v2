@@ -1,0 +1,64 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "菲咪Furmie",
+				"navigationBarBackgroundColor": "#FFD1DB"
+			},
+			"usingComponents": {
+			        "uni-icons": "@/uview-ui/components/u-icons/u-icons" // 导入 uView 图标组件，具体路径根据您的项目结构而定
+			    }
+		},
+		{
+			"path": "pages/serve/index",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		},
+		{
+			"path": "pages/news/index",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		},
+		{
+			"path": "pages/main/index",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		}
+	],
+	"tabBar": {
+		"backgroundColor": "#FFFFFF ",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"text": "首页"
+				// "selectedIconPath": "/static/编组.png"
+			},
+			{
+				"pagePath": "pages/serve/index",
+				"text": "服务"
+			},
+			{
+				"pagePath": "pages/news/index",
+				"text": "消息"
+			},
+			{
+				"pagePath": "pages/main/index",
+				"text": "我的"
+			}
+
+		]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"rpxCalcMaxDeviceWidth": 960,
+		"rpxCalcBaseDeviceWidth": 375,
+		"rpxCalcIncludeWidth": 750
+	},
+	"uniIdRouter": {}
+}
