@@ -74,6 +74,65 @@
   margin-top: 26rpx;
   margin-left: 8rpx;
 }
+.trusteeship .trusteeship-list .list-radio.data-v-18f91b7a {
+  margin-top: 16rpx;
+  margin-bottom: 16rpx;
+}
+.trusteeship .trusteeship-list .list-radio .radio-text.data-v-18f91b7a {
+  display: flex;
+}
+.trusteeship .trusteeship-list .list-radio .radio-text .radio-text-left.data-v-18f91b7a {
+  margin-right: 16rpx;
+  width: 128rpx;
+  height: 64rpx;
+  margin-left: 32rpx;
+  background: #F2F2F2;
+  border-radius: 32rpx 32rpx 32rpx 32rpx;
+}
+.trusteeship .trusteeship-list .list-radio .radio-text .radio-text-left .text.data-v-18f91b7a {
+  width: 128rpx;
+  height: 64rpx;
+  border-radius: 32rpx 32rpx 32rpx 32rpx;
+}
+.trusteeship .trusteeship-list .list-radio .radio-text .radio-text-left .text text.data-v-18f91b7a {
+  width: 128rpx;
+  height: 64rpx;
+  font-family: PingFang SC, PingFang SC;
+  font-weight: 600;
+  font-size: 24rpx;
+  color: #666666;
+  line-height: 64rpx;
+  font-style: normal;
+  text-transform: none;
+  margin-left: 40rpx;
+}
+.trusteeship .trusteeship-list .list-radio .radio-text .radio-text-right.data-v-18f91b7a {
+  margin-right: 16rpx;
+  width: 128rpx;
+  height: 64rpx;
+  margin-left: 32rpx;
+  background: #F2F2F2;
+  border-radius: 32rpx 32rpx 32rpx 32rpx;
+}
+.trusteeship .trusteeship-list .list-radio .radio-text .radio-text-right .text.data-v-18f91b7a {
+  width: 128rpx;
+  height: 64rpx;
+  border-radius: 32rpx 32rpx 32rpx 32rpx;
+}
+.trusteeship .trusteeship-list .list-radio .radio-text .radio-text-right .text text.data-v-18f91b7a {
+  width: 48rpx;
+  height: 36rpx;
+  font-family: PingFang SC, PingFang SC;
+  font-weight: 600;
+  font-size: 24rpx;
+  color: #666666;
+  line-height: 64rpx;
+  text-align: center;
+  font-style: normal;
+  text-transform: none;
+  margin-left: 40rpx;
+  padding-top: 8rpx;
+}
 .trusteeship .trusteeship-list .container.data-v-18f91b7a {
   display: flex;
   margin-top: 16rpx;
@@ -138,16 +197,17 @@
   margin-top: 16rpx;
 }
 .trusteeship .trusteeship-list .dingwei .dingwei-icon.data-v-18f91b7a {
-  width: 60rpx;
-  height: 60rpx;
-  margin-left: 20rpx;
-  margin-top: 10rpx;
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 24rpx;
+  margin-top: 24rpx;
   background: rgba(255, 255, 255, 0);
   border-radius: 0rpx 0rpx 0rpx 0rpx;
+  margin-right: 16rpx;
 }
 .trusteeship .trusteeship-list .dingwei .dingwei-icon image.data-v-18f91b7a {
-  width: 60rpx;
-  height: 60rpx;
+  width: 32rpx;
+  height: 32rpx;
 }
 .trusteeship .trusteeship-list .dingwei .dingwei-text.data-v-18f91b7a {
   width: 294rpx;
@@ -160,7 +220,7 @@
   text-align: left;
   font-style: normal;
   text-transform: none;
-  margin-top: 24rpx;
+  margin-top: 26rpx;
 }
 .trusteeship .trusteeship-list .dingwei .dingwei-icon-right.data-v-18f91b7a {
   width: 24rpx;
@@ -298,7 +358,7 @@
   font-family: PingFang SC, PingFang SC;
   font-weight: 600;
   font-size: 24rpx;
-  color: #000000;
+  color: #666666;
   line-height: 32rpx;
   text-align: left;
   font-style: normal;
@@ -311,7 +371,12 @@
   height: 24rpx;
   border-radius: 0rpx 0rpx 0rpx 0rpx;
   margin-left: 182rpx;
-  margin-top: 16rpx;
+  margin-top: 20rpx;
+}
+.fuwu-baby .fuwu-baby-list .fuwu-time .time-right image.data-v-18f91b7a {
+  width: 24rpx;
+  height: 24rpx;
+  border-radius: 0rpx 0rpx 0rpx 0rpx;
 }
 ._img_.data-v-18f91b7a {
   width: 144rpx;

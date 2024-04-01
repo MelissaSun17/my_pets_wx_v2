@@ -11,11 +11,34 @@
 							服务项目
 						</view>
 					</view>
-					<own-check class="container" :list="list" color="#666666  " bgColor="#F2F2F2 "
+					<!-- <own-check class="container" :list="list" color="#666666  " bgColor="#F2F2F2 "
 						activeTextColor="#000000" activeBgColor="#FFD1DB" type="1" :btnStyle="btnStyle" fontSize="22rpx"
 						@chooseItem="chooseItems">
-
-					</own-check>
+					</own-check> -->
+					<view class="list-radio">
+						<view class="radio-text">
+							<view class="radio-text-left">
+								<view class="text" :class="{ active: currentTab === 'xuanzhe1' }"
+									@click="changeTab('xuanzhe1')">
+									<text v-if="currentTabText === 'xuanzhe1'">
+										喂食
+									</text>
+									<text v-else>喂食</text>
+								</view>
+							</view>
+							<view class="radio-text-right">
+								<view class="text" :class="{ active: currentTab === 'xuanzhe2' }"
+									@click="changeTab('xuanzhe2')">
+									<text v-if="currentTabText === 'xuanzhe2'">
+										遛狗
+									</text>
+									<text v-else>
+										遛狗
+									</text>
+								</view>
+							</view>
+						</view>
+					</view>
 					<view class="trusteeship-list-dizhi">
 						<view class="list-dizhi">
 							＊
@@ -26,13 +49,13 @@
 					</view>
 					<view class="dingwei" @click="godingwei">
 						<view class="dingwei-icon">
-							<image src="../../static/QQ截图20240330171750.png" mode=""></image>
+							<image src="../../static/icon_location@3x.png" mode=""></image>
 						</view>
 						<view class="dingwei-text">
 							请选择服务地址
 						</view>
 						<view class="dingwei-icon-right">
-							<text>></text>
+							<image src="../../static/icon_arrow@3x.png" mode=""></image>
 						</view>
 					</view>
 				</view>
@@ -44,6 +67,7 @@
 					</view>
 					<view class="fuwu-baby-img">
 						<view class="container">
+							<!-- 选项卡 -->
 							<view class="fuwu-baby-img">
 								<view class="fuwu-baby-img-left">
 									<view class="_img" :class="{ active: currentTab === 'tab1' }"
@@ -62,6 +86,7 @@
 									</view>
 								</view>
 							</view>
+
 							<!-- 对应选项卡的内容 -->
 							<view class="tab-content">
 								<view v-if="currentTab === 'tab1'">
@@ -105,13 +130,13 @@
 						<uni-datetime-picker v-model="datetimerange" type="datetimerange" rangeSeparator="至">
 							<view class="fuwu-time">
 								<view class="time-icon">
-									<image src="../../static/QQ截图20240330181623.png" mode=""></image>
+									<image src="../../static/icon_time@3x.png" mode=""></image>
 								</view>
 								<view class="time-text">
 									请选择服务时间
 								</view>
 								<view class="time-right">
-									<text>></text>
+									<image src="../../static/icon_arrow@3x.png" mode=""></image>
 								</view>
 							</view>
 						</uni-datetime-picker>
@@ -120,10 +145,9 @@
 			</view>
 			<view class="chazhao">
 				<view class="chazhao-img">
-					<image src="../../static/btn_nor@3x.png" mode=""></image>
+					<image src="../../static/btn_dis@3x.png" mode=""></image>
 				</view>
 			</view>
-
 		</view>
 	</view>
 </template>
@@ -136,7 +160,7 @@
 		},
 		data() {
 			return {
-				currentTab: 'tab1', // 默认显示第一个选项卡
+				currentTab: '', // 默认显示第一个选项卡
 				currentImg: '',
 				single: '',
 				datetimesingle: '',
@@ -195,9 +219,9 @@
 			maskClick(e) {
 				console.log('maskClick事件:', e);
 			},
-			chooseItems(e) {
-				console.log(e)
-			},
+			// chooseItems(e) {
+			// 	console.log(e)
+			// },
 			// 切换选项卡
 			changeTab(tab) {
 				this.currentTab = tab;
@@ -216,7 +240,7 @@
 
 <style lang="scss" scoped>
 	.box {
-		background-color: #FFFFFFF;
+		background-color: #FFFFFF;
 	}
 
 	.content {
@@ -226,6 +250,7 @@
 	}
 
 	.trusteeship {
+
 		padding-left: 40rpx;
 
 		.trusteeship-list {
@@ -270,6 +295,67 @@
 				}
 			}
 
+			.list-radio {
+				margin-top: 16rpx;
+				margin-bottom: 16rpx;
+				.radio-text {
+					display: flex;
+
+					.radio-text-left {
+						margin-right: 16rpx;
+						width: 128rpx;
+						height: 64rpx;
+						margin-left: 32rpx;
+						background: #F2F2F2;
+						border-radius: 32rpx 32rpx 32rpx 32rpx;
+						.text{
+							width: 128rpx;
+							height: 64rpx;
+							border-radius: 32rpx 32rpx 32rpx 32rpx;
+							text{
+								width: 128rpx;
+								height: 64rpx;
+								font-family: PingFang SC, PingFang SC;
+								font-weight: 600;
+								font-size: 24rpx;
+								color: #666666;
+								line-height: 64rpx;
+								font-style: normal;
+								text-transform: none;
+								margin-left: 40rpx;
+							}
+						}
+					}
+					.radio-text-right {
+						margin-right: 16rpx;
+						width: 128rpx;
+						height: 64rpx;
+						margin-left: 32rpx;
+						background: #F2F2F2;
+						border-radius: 32rpx 32rpx 32rpx 32rpx;
+						.text{
+							width: 128rpx;
+							height: 64rpx;
+							border-radius: 32rpx 32rpx 32rpx 32rpx;
+							text{
+								width: 48rpx;
+								height: 36rpx;
+								font-family: PingFang SC, PingFang SC;
+								font-weight: 600;
+								font-size: 24rpx;
+								color: #666666;
+								line-height: 64rpx;
+								text-align: center;
+								font-style: normal;
+								text-transform: none;
+								margin-left: 40rpx;
+								padding-top: 8rpx;
+							}
+						}
+					}
+				}
+			}
+
 			.container {
 				display: flex;
 				margin-top: 16rpx;
@@ -298,6 +384,7 @@
 			}
 
 			.trusteeship-list-dizhi {
+				// margin-top: 20rpx;
 				display: flex;
 
 				.list-dizhi {
@@ -343,16 +430,17 @@
 				.dingwei-icon {
 					// width: 32rpx;
 					// height: 32rpx;
-					width: 60rpx;
-					height: 60rpx;
-					margin-left: 20rpx;
-					margin-top: 10rpx;
+					width: 32rpx;
+					height: 32rpx;
+					margin-left: 24rpx;
+					margin-top: 24rpx;
 					background: rgba(255, 255, 255, 0);
 					border-radius: 0rpx 0rpx 0rpx 0rpx;
+					margin-right: 16rpx;
 
 					image {
-						width: 60rpx;
-						height: 60rpx;
+						width: 32rpx;
+						height: 32rpx;
 					}
 				}
 
@@ -367,7 +455,7 @@
 					text-align: left;
 					font-style: normal;
 					text-transform: none;
-					margin-top: 24rpx;
+					margin-top: 26rpx;
 				}
 
 				.dingwei-icon-right {
@@ -375,7 +463,12 @@
 					height: 24rpx;
 					border-radius: 0rpx 0rpx 0rpx 0rpx;
 					margin-left: 182rpx;
-					margin-top: 16rpx;
+					margin-top: 20rpx;
+					image{
+						width: 24rpx;
+						height: 24rpx;
+						border-radius: 0rpx 0rpx 0rpx 0rpx;
+					}
 				}
 			}
 		}
@@ -384,8 +477,6 @@
 	.fuwu-baby {
 		padding-left: 40rpx;
 		margin-top: 34rpx;
-
-
 
 		.fuwu-baby-list {
 			width: 660rpx;
@@ -525,7 +616,7 @@
 					font-family: PingFang SC, PingFang SC;
 					font-weight: 600;
 					font-size: 24rpx;
-					color: #000000;
+					color: #666666 ;
 					line-height: 32rpx;
 					text-align: left;
 					font-style: normal;
@@ -539,7 +630,12 @@
 					height: 24rpx;
 					border-radius: 0rpx 0rpx 0rpx 0rpx;
 					margin-left: 182rpx;
-					margin-top: 16rpx;
+					margin-top: 20rpx;
+					image{
+						width: 24rpx;
+						height: 24rpx;
+						border-radius: 0rpx 0rpx 0rpx 0rpx;
+					}
 				}
 			}
 		}
@@ -570,10 +666,12 @@
 			text-align: center;
 		}
 	}
+
 	.active {
-	    background-color: #FFD1DB;
+		background-color: #FFD1DB;
 	}
-	.tixing{
+
+	.tixing {
 		width: 112rpx;
 		height: 40rpx;
 		font-family: PingFang SC, PingFang SC;

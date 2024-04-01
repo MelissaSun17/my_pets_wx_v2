@@ -42,7 +42,7 @@
 											mode=""></image>
 										<view class="box-one-info">
 											<text class="text1">哆啦</text>
-											<text class="text2">6岁&nbsp;布偶猫&nbsp;已绝育</text>
+											<text class="text2">6岁&nbsp;你好啊布偶猫&nbsp;已绝育</text>
 										</view>
 									</view>
 								</view>
@@ -53,7 +53,7 @@
 											mode=""></image>
 										<view class="box-one-info">
 											<text class="text1">哆啦</text>
-											<text class="text2">6岁&nbsp;布偶猫&nbsp;已绝育</text>
+											<text class="text2">6岁&nbsp;你好啊布偶猫&nbsp;已绝育</text>
 										</view>
 									</view>
 								</view>
@@ -64,7 +64,7 @@
 											mode=""></image>
 										<view class="box-one-info">
 											<text class="text1">哆啦</text>
-											<text class="text2">6岁&nbsp;布偶猫&nbsp;已绝育</text>
+											<text class="text2">6岁&nbsp;你好啊布偶猫&nbsp;已绝育</text>
 										</view>
 									</view>
 								</view>
@@ -77,10 +77,10 @@
 				<u-col span="12">
 					<view class="demo-box2">
 						<view class="demo-box2_img">
-							<view class="demo-box2-left">
+							<view class="demo-box2-left" @click="gotuoguan">
 								<image src="../../static/微信截图_20240329143245.png" mode=""></image>
 							</view>
-							<view class="demo-box2-right">
+							<view class="demo-box2-right" @click="goshangmen">
 								<image src="../../static/微信截图_20240329143411.png" mode=""></image>
 							</view>
 						</view>
@@ -467,6 +467,7 @@
 					bottom: 6rpx;
 					background-color: #ffffff;
 					box-shadow: 3rpx 3rpx 13rpx rgba(0, 0, 0, 2);
+					overflow: hidden; /* 隐藏溢出部分 */
 
 					.text1 {
 						font-size: 32rpx;
@@ -476,9 +477,20 @@
 					}
 
 					.text2 {
+						width: 190rpx;
 						font-size: 20rpx;
 						margin-top: 4rpx;
 						text-align: center;
+						white-space: nowrap; /* 不换行 */
+						animation: scroll-left 10s linear infinite; /* 调用动画 */
+					}
+					@keyframes scroll-left {
+					  0% {
+					    transform: translateX(100%);
+					  }
+					  100% {
+					    transform: translateX(-100%);
+					  }
 					}
 				}
 			}

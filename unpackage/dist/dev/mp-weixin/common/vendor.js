@@ -15245,8 +15245,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-// 此版本发布于2023-03-27
-var version = '2.0.36';
+// 此版本发布于2024-03-17
+var version = '2.0.37';
 
 // 开发环境才提示，生产环境不会提示
 if (true) {
@@ -17347,7 +17347,8 @@ var _default = {
     closeOnClickOverlay: false,
     negativeTop: 0,
     width: '650rpx',
-    confirmButtonShape: ''
+    confirmButtonShape: '',
+    duration: 400
   }
 };
 exports.default = _default;

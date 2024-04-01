@@ -110,6 +110,8 @@
   bottom: 6rpx;
   background-color: #ffffff;
   box-shadow: 3rpx 3rpx 13rpx black;
+  overflow: hidden;
+  /* 隐藏溢出部分 */
 }
 .demo-box1 .box-one .box-one-img .box-one-info .text1.data-v-57280228 {
   font-size: 32rpx;
@@ -118,9 +120,35 @@
   margin-top: 10rpx;
 }
 .demo-box1 .box-one .box-one-img .box-one-info .text2.data-v-57280228 {
+  width: 190rpx;
   font-size: 20rpx;
   margin-top: 4rpx;
   text-align: center;
+  white-space: nowrap;
+  /* 不换行 */
+  -webkit-animation: scroll-left-data-v-57280228 10s linear infinite;
+          animation: scroll-left-data-v-57280228 10s linear infinite;
+  /* 调用动画 */
+}
+@-webkit-keyframes scroll-left-data-v-57280228 {
+0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+}
+100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+}
+}
+@keyframes scroll-left-data-v-57280228 {
+0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+}
+100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+}
 }
 .demo-box2.data-v-57280228 {
   background-color: #FFD1DB;

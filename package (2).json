@@ -1,0 +1,19 @@
+{
+    "id": "fui-bottom-popup",
+    "name": "BottomPopup 底部弹出层",
+    "version": "v1.0.0",
+    "description": "BottomPopup 底部弹出层，从底部弹出的浮层，引导用户进行相关操作。",
+    "keywords": [
+        "BottomPopup",
+        "底部弹出层",
+        "FirstUI",
+        "Nvue",
+        "组件"
+    ],
+    "dcloudext": {
+        "category": [
+            "前端组件",
+            "通用组件"
+        ]
+    }
+}

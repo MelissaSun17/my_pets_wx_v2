@@ -175,9 +175,9 @@ var _default = {
   },
   data: function data() {
     return {
-      currentTab: 'tab1',
+      currentTab: '',
       // 默认显示第一个选项卡
-      currentImg: 'img1',
+      currentImg: '',
       single: '',
       datetimesingle: '',
       range: ['2021-02-1', '2021-3-28'],
@@ -232,9 +232,9 @@ var _default = {
     maskClick: function maskClick(e) {
       console.log('maskClick事件:', e);
     },
-    chooseItems: function chooseItems(e) {
-      console.log(e);
-    },
+    // chooseItems(e) {
+    // 	console.log(e)
+    // },
     // 切换选项卡
     changeTab: function changeTab(tab) {
       this.currentTab = tab;
