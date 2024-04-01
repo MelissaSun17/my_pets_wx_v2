@@ -1,5 +1,20 @@
 {
-  "dependencies": {
-    "uview-ui": "^2.0.36"
-  }
+    "id": "own-checkBtn",
+    "name": "单选复选自定义选择按钮 tabs",
+    "displayName": "单选复选自定义选择按钮 tabs",
+    "version": "2.1",
+    "description": "tabs单选复选自定义选择按钮",
+    "keywords": [
+        "单选",
+        "多选",
+        "radio",
+        "checkbox",
+        "tabs"
+    ],
+    "dcloudext": {
+        "category": [
+            "前端组件",
+            "通用组件"
+        ]
+    }
 }

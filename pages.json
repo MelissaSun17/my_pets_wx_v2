@@ -1,14 +1,18 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		// {
+		// 	"path": "pages/tabnav/index",
+		// 	"style": {
+		// 		"navigationBarTitleText": "菲咪Furmie",
+		// 		"navigationBarBackgroundColor": "#FFD1DB"
+		// 	}
+		// },
 		{
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "菲咪Furmie",
 				"navigationBarBackgroundColor": "#FFD1DB"
-			},
-			"usingComponents": {
-			        "uni-icons": "@/uview-ui/components/u-icons/u-icons" // 导入 uView 图标组件，具体路径根据您的项目结构而定
-			    }
+			}
 		},
 		{
 			"path": "pages/serve/index",
@@ -27,26 +31,52 @@
 			"style": {
 				"navigationBarTitleText": "uni-app"
 			}
+		},
+		{
+			"path": "pages/tuoguan/index",
+			"style": {
+				"navigationBarTitleText": "托管服务",
+				"navigationBarBackgroundColor": "#FFD1DB"
+			}
+		},
+		{
+			"path": "pages/shangmen/index",
+			"style": {
+				"navigationBarTitleText": "上门服务",
+				"navigationBarBackgroundColor": "#FFD1DB"
+			}
+		},
+		{
+			"path" : "pages/dizhi/index",
+			"style" : 
+			{
+				"navigationBarTitleText" : "地址簿",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
 		}
 	],
 	"tabBar": {
-		"backgroundColor": "#FFFFFF ",
+		// "backgroundColor": "#FFFFFF ",
 		"list": [{
 				"pagePath": "pages/index/index",
-				"text": "首页"
-				// "selectedIconPath": "/static/编组.png"
+				// "text": "首页",
+				"iconPath": "static/首页未选中@3x.png",
+				"selectedIconPath": "static/首页已选中@2x.png" 
 			},
 			{
 				"pagePath": "pages/serve/index",
-				"text": "服务"
+				"iconPath": "static/服务未选中@2x.png",
+				"selectedIconPath": "static/服务已选中.png" 
 			},
 			{
 				"pagePath": "pages/news/index",
-				"text": "消息"
+				"iconPath": "static/消息未选中@2x.png",
+				"selectedIconPath": "static/消息已选中@2x.png" 
 			},
 			{
 				"pagePath": "pages/main/index",
-				"text": "我的"
+				"iconPath": "static/我的未选中@2x.png",
+				"selectedIconPath": "static/我的已选中@2x.png" 
 			}
 
 		]

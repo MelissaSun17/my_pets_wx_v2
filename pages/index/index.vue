@@ -2,33 +2,28 @@
 	<view class="content">
 		<view class="u-page">
 			<view class="u-demo-block__content">
-				<!-- <u-row>
+				<u-row>
 					<view class="content_">
 						<view class="content_1">
 							<u-col span="12">
-								<view class="content_left">
+								<view class="content_left" @click="gotuoguan">
 									<image src="../../static/托管服务-入口@2x.png" mode=""></image>
 								</view>
 							</u-col>
 						</view>
 						<view class="content_2">
 							<u-col span="12">
-								<view class="content_right">
+								<view class="content_right" @click="goshangmen">
 									<image src="../../static/上门服务-入口@2x.png" mode=""></image>
 								</view>
 							</u-col>
 						</view>
 					</view>
-					<u-col span="6">
-						<view class="content_right">
-							<image src="../../static/上门服务-入口@2x.png" mode=""></image>
-						</view>
-					</u-col>
-				</u-row> -->
-				<u-row>
+				</u-row>
+				<!-- <u-row>
 					<u-col span="12">
 						<scroll-view class="scroll-view" scroll-x="true" scroll-y="false">
-						<view class="demo-box1">
+							<view class="demo-box1">
 								<view class="box-one">
 									<view class="box-one-img">
 										<image
@@ -73,313 +68,274 @@
 										</view>
 									</view>
 								</view>
-							</scroll-view>
-							<!-- <view class="box-one">
-								<view class="box-one-img">
-									<image
-										src="https://s2.best-wallpaper.net/wallpaper/iphone/1710/Two-furry-kittens-look_iphone_750x1334.jpg"
-										mode=""></image>
-									<view class="box-one-info">
-										<text class="text1">哆啦</text>
-										<text class="text2">6岁&nbsp;布偶猫&nbsp;已绝育</text>
-									</view>
 								</view>
-							</view>
-							<view class="box-one">
-								<view class="box-one-img">
-									<image
-										src="https://s2.best-wallpaper.net/wallpaper/iphone/1710/Two-furry-kittens-look_iphone_750x1334.jpg"
-										mode=""></image>
-									<view class="box-one-info">
-										<text class="text1">哆啦</text>
-										<text class="text2">6岁&nbsp;布偶猫&nbsp;已绝育</text>
-									</view>
-								</view>
-							</view>
-							<view class="box-one">
-								<view class="box-one-img">
-									<image
-										src="https://s2.best-wallpaper.net/wallpaper/iphone/1710/Two-furry-kittens-look_iphone_750x1334.jpg"
-										mode=""></image>
-									<view class="box-one-info">
-										<text class="text1">哆啦</text>
-										<text class="text2">6岁&nbsp;布偶猫&nbsp;已绝育</text>
-									</view>
-								</view>
-							</view>
-							<view class="box-one">
-								<view class="box-one-img">
-									<image
-										src="https://s2.best-wallpaper.net/wallpaper/iphone/1710/Two-furry-kittens-look_iphone_750x1334.jpg"
-										mode=""></image>
-									<view class="box-one-info">
-										<text class="text1">哆啦</text>
-										<text class="text2">6岁&nbsp;布偶猫&nbsp;已绝育</text>
-									</view>
-								</view>
-							</view> -->
-						</view>
+						</scroll-view>
 					</u-col>
-				</u-row>
-				<u-row>
-					<u-col span="12">
-						<view class="demo-box2">
-							<view class="demo-box2_img">
-								<view class="demo-box2-left">
-									<image src="../../static/微信截图_20240329143245.png" mode=""></image>
+				</u-row> -->
+			</view>
+			<!-- <u-row>
+				<u-col span="12">
+					<view class="demo-box2">
+						<view class="demo-box2_img">
+							<view class="demo-box2-left">
+								<image src="../../static/微信截图_20240329143245.png" mode=""></image>
+							</view>
+							<view class="demo-box2-right">
+								<image src="../../static/微信截图_20240329143411.png" mode=""></image>
+							</view>
+						</view>
+					</view>
+				</u-col>
+			</u-row> -->
+			<u-row>
+				<u-col span="12">
+					<view class="demo-box3">
+						<view class="feimi-serve">
+							<view class="feimi-serve-text">
+								<view class="feimi-serve-text-title">
+									菲咪服务
 								</view>
-								<view class="demo-box2-right">
-									<image src="../../static/微信截图_20240329143411.png" mode=""></image>
+								<view class="feimi-serve-text-img">
+									<image src="../../static/标题尾巴@2x.png" mode=""></image>
+								</view>
+							</view>
+							<view class="feimi-serve-icon">
+								<view class="icon-view">
+									<view class="icon-view-img">
+										<image src="../../static/矩形@2x.png" mode=""></image>
+									</view>
+									<view class="icon-text">服务介绍</view>
+								</view>
+								<view class="icon-view">
+									<view class="icon-view-img">
+										<image src="../../static/编组 31@2x.png" mode=""></image>
+									</view>
+									<view class="icon-text">基金保障</view>
+								</view>
+								<view class="icon-view">
+									<view class="icon-view-img">
+										<image src="../../static/矩形备份@2x.png" mode=""></image>
+									</view>
+									<view class="icon-text">成为宠托师</view>
+								</view>
+								<view class="icon-view">
+									<view class="icon-view-img">
+										<image src="../../static/矩形备份 2@2x.png" mode=""></image>
+									</view>
+									<view class="icon-text">常见问题</view>
 								</view>
 							</view>
 						</view>
-					</u-col>
-				</u-row>
-				<u-row>
-					<u-col span="12">
-						<view class="demo-box3">
-							<view class="feimi-serve">
-								<view class="feimi-serve-text">
-									<view class="feimi-serve-text-title">
-										菲咪服务
+						<view class="pet-trainer">
+							<view class="pet-trainer-top">
+								<view class="pet-trainer-top-text">
+									<view class="pet-trainer-text-left">
+										宠托师
 									</view>
-									<view class="feimi-serve-text-img">
+									<view class="pet-trainer-text-left-img">
 										<image src="../../static/标题尾巴@2x.png" mode=""></image>
 									</view>
 								</view>
-								<view class="feimi-serve-icon">
-									<view class="icon-view">
-										<view class="icon-view-img">
-											<image src="../../static/矩形@2x.png" mode=""></image>
-										</view>
-										<view class="icon-text">服务介绍</view>
+								<text class="pet-trainer-text-right">查看更多</text>
+							</view>
+							<view class="pet-trainer-intro">
+								<view class="pet-trainer-intro-bag">
+
+								</view>
+								<view class="pet-trainer-intro-list">
+									<view class="pet-trainer-intro-list-img">
+										<image src="https://pic4.zhimg.com/v2-efd4f4517d5bdb43858a04f7e4ff5f7f_r.jpg"
+											mode=""></image>
 									</view>
-									<view class="icon-view">
-										<view class="icon-view-img">
-											<image src="../../static/编组 31@2x.png" mode=""></image>
+									<view class="pet-trainer-intro-list-img-info">
+										<view class="list-img-info-top">
+											<view class="list-img-info-top-left">泡泡</view>
+											<view class="list-img-info-top-right">
+												<text class="text_1">
+													距您
+												</text>
+												<text class="text_2">
+													0.8
+												</text>
+												<text class="text_3">
+													km
+												</text>
+											</view>
 										</view>
-										<view class="icon-text">基金保障</view>
-									</view>
-									<view class="icon-view">
-										<view class="icon-view-img">
-											<image src="../../static/矩形备份@2x.png" mode=""></image>
+										<view class="list-img-info-center">
+											<text class="text_1">
+												养猫10年
+											</text>
+											<text class="text_2">
+												|
+											</text>
+											<text class="text_3">
+												服务过200次
+											</text>
 										</view>
-										<view class="icon-text">成为宠托师</view>
-									</view>
-									<view class="icon-view">
-										<view class="icon-view-img">
-											<image src="../../static/矩形备份 2@2x.png" mode=""></image>
+										<view class="list-img-info-bottom">
+											<text class="text_1">
+												寄养可接&nbsp;|&nbsp;上门可接
+											</text>
+											<view class="money">
+												<text class="money_text1">￥</text>
+												<text class="money_text2">40</text>
+												<text class="money_text3">/次起</text>
+											</view>
 										</view>
-										<view class="icon-text">常见问题</view>
 									</view>
 								</view>
 							</view>
-							<view class="pet-trainer">
-								<view class="pet-trainer-top">
-									<view class="pet-trainer-top-text">
-										<view class="pet-trainer-text-left">
-											宠托师
-										</view>
-										<view class="pet-trainer-text-left-img">
-											<image src="../../static/标题尾巴@2x.png" mode=""></image>
-										</view>
-									</view>
-									<text class="pet-trainer-text-right">查看更多</text>
-								</view>
-								<view class="pet-trainer-intro">
-									<view class="pet-trainer-intro-bag">
+							<view class="pet-trainer-intro">
+								<view class="pet-trainer-intro-bag">
 
+								</view>
+								<view class="pet-trainer-intro-list">
+									<view class="pet-trainer-intro-list-img">
+										<image src="https://pic4.zhimg.com/v2-efd4f4517d5bdb43858a04f7e4ff5f7f_r.jpg"
+											mode=""></image>
 									</view>
-									<view class="pet-trainer-intro-list">
-										<view class="pet-trainer-intro-list-img">
-											<image src="https://pic4.zhimg.com/v2-efd4f4517d5bdb43858a04f7e4ff5f7f_r.jpg" mode=""></image>
-										</view>
-										<view class="pet-trainer-intro-list-img-info">
-											<view class="list-img-info-top">
-												<view class="list-img-info-top-left">泡泡</view>
-												<view class="list-img-info-top-right">
-													<text class="text_1">
-														距您
-													</text>
-													<text class="text_2">
-														0.8
-													</text>
-													<text class="text_3">
-														km
-													</text>
-												</view>
-											</view>
-											<view class="list-img-info-center">
+									<view class="pet-trainer-intro-list-img-info">
+										<view class="list-img-info-top">
+											<view class="list-img-info-top-left">泡泡</view>
+											<view class="list-img-info-top-right">
 												<text class="text_1">
-													养猫10年
+													距您
 												</text>
 												<text class="text_2">
-													|
+													0.8
 												</text>
 												<text class="text_3">
-													服务过200次
+													km
 												</text>
 											</view>
-											<view class="list-img-info-bottom">
-												<text class="text_1">
-													寄养可接&nbsp;|&nbsp;上门可接
-												</text>
-												<view class="money">
-													<text class="money_text1">￥</text>
-													<text class="money_text2">40</text>
-													<text class="money_text3">/次起</text>
-												</view>
+										</view>
+										<view class="list-img-info-center">
+											<text class="text_1">
+												养猫10年
+											</text>
+											<text class="text_2">
+												|
+											</text>
+											<text class="text_3">
+												服务过200次
+											</text>
+										</view>
+										<view class="list-img-info-bottom">
+											<text class="text_1">
+												寄养可接&nbsp;|&nbsp;上门可接
+											</text>
+											<view class="money">
+												<text class="money_text1">￥</text>
+												<text class="money_text2">40</text>
+												<text class="money_text3">/次起</text>
 											</view>
 										</view>
 									</view>
 								</view>
-								<view class="pet-trainer-intro">
-									<view class="pet-trainer-intro-bag">
+							</view>
+							<view class="pet-trainer-intro">
+								<view class="pet-trainer-intro-bag">
 
+								</view>
+								<view class="pet-trainer-intro-list">
+									<view class="pet-trainer-intro-list-img">
+										<image src="https://pic4.zhimg.com/v2-efd4f4517d5bdb43858a04f7e4ff5f7f_r.jpg"
+											mode=""></image>
 									</view>
-									<view class="pet-trainer-intro-list">
-										<view class="pet-trainer-intro-list-img">
-											<image src="https://pic4.zhimg.com/v2-efd4f4517d5bdb43858a04f7e4ff5f7f_r.jpg" mode=""></image>
-										</view>
-										<view class="pet-trainer-intro-list-img-info">
-											<view class="list-img-info-top">
-												<view class="list-img-info-top-left">泡泡</view>
-												<view class="list-img-info-top-right">
-													<text class="text_1">
-														距您
-													</text>
-													<text class="text_2">
-														0.8
-													</text>
-													<text class="text_3">
-														km
-													</text>
-												</view>
-											</view>
-											<view class="list-img-info-center">
+									<view class="pet-trainer-intro-list-img-info">
+										<view class="list-img-info-top">
+											<view class="list-img-info-top-left">泡泡</view>
+											<view class="list-img-info-top-right">
 												<text class="text_1">
-													养猫10年
+													距您
 												</text>
 												<text class="text_2">
-													|
+													0.8
 												</text>
 												<text class="text_3">
-													服务过200次
+													km
 												</text>
 											</view>
-											<view class="list-img-info-bottom">
-												<text class="text_1">
-													寄养可接&nbsp;|&nbsp;上门可接
-												</text>
-												<view class="money">
-													<text class="money_text1">￥</text>
-													<text class="money_text2">40</text>
-													<text class="money_text3">/次起</text>
-												</view>
+										</view>
+										<view class="list-img-info-center">
+											<text class="text_1">
+												养猫10年
+											</text>
+											<text class="text_2">
+												|
+											</text>
+											<text class="text_3">
+												服务过200次
+											</text>
+										</view>
+										<view class="list-img-info-bottom">
+											<text class="text_1">
+												寄养可接&nbsp;|&nbsp;上门可接
+											</text>
+											<view class="money">
+												<text class="money_text1">￥</text>
+												<text class="money_text2">40</text>
+												<text class="money_text3">/次起</text>
 											</view>
 										</view>
 									</view>
 								</view>
-								<view class="pet-trainer-intro">
-									<view class="pet-trainer-intro-bag">
+							</view>
+							<view class="pet-trainer-intro">
+								<view class="pet-trainer-intro-bag">
 
-									</view>
-									<view class="pet-trainer-intro-list">
-										<view class="pet-trainer-intro-list-img">
-											<image src="https://pic4.zhimg.com/v2-efd4f4517d5bdb43858a04f7e4ff5f7f_r.jpg" mode=""></image>
-										</view>
-										<view class="pet-trainer-intro-list-img-info">
-											<view class="list-img-info-top">
-												<view class="list-img-info-top-left">泡泡</view>
-												<view class="list-img-info-top-right">
-													<text class="text_1">
-														距您
-													</text>
-													<text class="text_2">
-														0.8
-													</text>
-													<text class="text_3">
-														km
-													</text>
-												</view>
-											</view>
-											<view class="list-img-info-center">
-												<text class="text_1">
-													养猫10年
-												</text>
-												<text class="text_2">
-													|
-												</text>
-												<text class="text_3">
-													服务过200次
-												</text>
-											</view>
-											<view class="list-img-info-bottom">
-												<text class="text_1">
-													寄养可接&nbsp;|&nbsp;上门可接
-												</text>
-												<view class="money">
-													<text class="money_text1">￥</text>
-													<text class="money_text2">40</text>
-													<text class="money_text3">/次起</text>
-												</view>
-											</view>
-										</view>
-									</view>
 								</view>
-								<view class="pet-trainer-intro">
-									<view class="pet-trainer-intro-bag">
-
+								<view class="pet-trainer-intro-list">
+									<view class="pet-trainer-intro-list-img">
+										<image src="https://pic4.zhimg.com/v2-efd4f4517d5bdb43858a04f7e4ff5f7f_r.jpg"
+											mode=""></image>
 									</view>
-									<view class="pet-trainer-intro-list">
-										<view class="pet-trainer-intro-list-img">
-											<image src="https://pic4.zhimg.com/v2-efd4f4517d5bdb43858a04f7e4ff5f7f_r.jpg" mode=""></image>
-										</view>
-										<view class="pet-trainer-intro-list-img-info">
-											<view class="list-img-info-top">
-												<view class="list-img-info-top-left">泡泡</view>
-												<view class="list-img-info-top-right">
-													<text class="text_1">
-														距您
-													</text>
-													<text class="text_2">
-														0.8
-													</text>
-													<text class="text_3">
-														km
-													</text>
-												</view>
-											</view>
-											<view class="list-img-info-center">
+									<view class="pet-trainer-intro-list-img-info">
+										<view class="list-img-info-top">
+											<view class="list-img-info-top-left">泡泡</view>
+											<view class="list-img-info-top-right">
 												<text class="text_1">
-													养猫10年
+													距您
 												</text>
 												<text class="text_2">
-													|
+													0.8
 												</text>
 												<text class="text_3">
-													服务过200次
+													km
 												</text>
 											</view>
-											<view class="list-img-info-bottom">
-												<text class="text_1">
-													寄养可接&nbsp;|&nbsp;上门可接
-												</text>
-												<view class="money">
-													<text class="money_text1">￥</text>
-													<text class="money_text2">40</text>
-													<text class="money_text3">/次起</text>
-												</view>
+										</view>
+										<view class="list-img-info-center">
+											<text class="text_1">
+												养猫10年
+											</text>
+											<text class="text_2">
+												|
+											</text>
+											<text class="text_3">
+												服务过200次
+											</text>
+										</view>
+										<view class="list-img-info-bottom">
+											<text class="text_1">
+												寄养可接&nbsp;|&nbsp;上门可接
+											</text>
+											<view class="money">
+												<text class="money_text1">￥</text>
+												<text class="money_text2">40</text>
+												<text class="money_text3">/次起</text>
 											</view>
 										</view>
 									</view>
 								</view>
 							</view>
 						</view>
-					</u-col>
-				</u-row>
-			</view>
+					</view>
+				</u-col>
+			</u-row>
 		</view>
+	</view>
 	</view>
 </template>
 
@@ -394,14 +350,26 @@
 
 		},
 		methods: {
-
+			gotuoguan(){
+				uni.navigateTo({
+					url:'/pages/tuoguan/index'
+				})
+			},
+			goshangmen(){
+				uni.navigateTo({
+					url:'/pages/shangmen/index'
+				})
+			}
 		}
 	}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 	.wrap {
 		padding: 12px;
+	}
+	.content{
+		background-color: #FFD1DB;
 	}
 
 	.u-demo-block__content {
@@ -415,8 +383,6 @@
 		z-index: 2;
 		display: flex;
 		width: 750rpx;
-		// height: 500rpx;
-		position: absolute;
 		background-color: #FFD1DB;
 		top: 0;
 
@@ -438,7 +404,6 @@
 		// background-color: #FFD1DB;
 		text-align: right;
 		z-index: 2;
-
 		image {
 			width: 340rpx;
 			height: 360rpx;
@@ -456,10 +421,12 @@
 			height: 360rpx;
 		}
 	}
-	.scroll-view{
+
+	.scroll-view {
 		background-color: #FFD1DB;
 		margin-bottom: 30rpx;
 	}
+
 	.demo-box1 {
 		display: flex;
 		width: 750rpx;
@@ -566,7 +533,9 @@
 	.demo-box3 {
 		z-index: 2;
 		top: 375rpx;
-		background-color: #FFFFFF;
+		background-image: url('../../static/背景造型@2x.png');
+		background-size: 100%;
+		 background-repeat: no-repeat; 
 		width: 750rpx;
 		display: flex;
 		flex-direction: column;
@@ -581,7 +550,9 @@
 			width: 638rpx;
 			height: 220rpx;
 			margin-top: 80rpx;
-			margin-left: 40rpx;
+			padding-left: 40rpx;
+			padding-right:72rpx ;
+			background-color: #FFFFFF;
 
 			.feimi-serve-text {
 				display: flex;
@@ -661,7 +632,7 @@
 		}
 
 		.pet-trainer {
-			margin-top: 40rpx;
+			padding-top: 40rpx;
 			background-color: #ffffff;
 
 			.pet-trainer-top {
@@ -749,10 +720,10 @@
 					.pet-trainer-intro-list-img {
 						width: 132rpx;
 						height: 132rpx;
-						border: 1px solid red;
 						margin-top: 26rpx;
 						margin-left: 24rpx;
-						image{
+
+						image {
 							width: 132rpx;
 							height: 132rpx;
 							border-radius: 50%;
@@ -771,7 +742,7 @@
 							height: 36rpx;
 
 							.list-img-info-top-left {
-								width: 52rpx;
+								width: 130rpx;
 								height: 36rpx;
 								font-family: PingFangSC, PingFang SC;
 								font-weight: 500;

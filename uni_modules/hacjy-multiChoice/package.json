@@ -1,0 +1,32 @@
+{
+    "id": "hacjy-multiChoice",
+    "name": "单选多选框（hacjy-multiChoice）",
+    "displayName": "单选多选框",
+    "version": "1.0.0",
+    "description": "hacjy-multiChoice -- 单选/多选框 1. 支持单选/多选模式 2. 支持取消单选项 3. 支持网格布局（Grid）和流式布局（Wrap） 4. 支持设置字体颜色，边框颜色，背景色等",
+    "keywords": [
+        "单选",
+        "多选",
+        "单选框",
+        "多选框"
+    ],
+    "dcloudext": {
+        "category": [
+            "前端组件",
+            "通用组件"
+        ],
+        "contact": {
+            "qq": ""
+        },
+        "declaration": {
+            "ads": "无",
+            "data": "无",
+            "permissions": "无"
+        },
+        "npmurl": ""
+    },
+    "repository": "",
+    "engines": {
+        "HBuilderX": "^3.8.12"
+    }
+}

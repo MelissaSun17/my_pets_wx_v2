@@ -3,7 +3,10 @@
     "pages/index/index",
     "pages/serve/index",
     "pages/news/index",
-    "pages/main/index"
+    "pages/main/index",
+    "pages/tuoguan/index",
+    "pages/shangmen/index",
+    "pages/dizhi/index"
   ],
   "subPackages": [],
   "window": {
@@ -16,23 +19,26 @@
     "rpxCalcIncludeWidth": 750
   },
   "tabBar": {
-    "backgroundColor": "#FFFFFF ",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "iconPath": "static/首页未选中@3x.png",
+        "selectedIconPath": "static/首页已选中@2x.png"
       },
       {
         "pagePath": "pages/serve/index",
-        "text": "服务"
+        "iconPath": "static/服务未选中@2x.png",
+        "selectedIconPath": "static/服务已选中.png"
       },
       {
         "pagePath": "pages/news/index",
-        "text": "消息"
+        "iconPath": "static/消息未选中@2x.png",
+        "selectedIconPath": "static/消息已选中@2x.png"
       },
       {
         "pagePath": "pages/main/index",
-        "text": "我的"
+        "iconPath": "static/我的未选中@2x.png",
+        "selectedIconPath": "static/我的已选中@2x.png"
       }
     ]
   },
