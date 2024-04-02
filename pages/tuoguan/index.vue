@@ -123,12 +123,46 @@
 							</view>
 						</view>
 					</view>
+					<!-- <view class="xinzeng">
+						<view class="xinzeng-img">
+							<view class="img_">
+								<image src="../../static/logo.png" mode=""></image>
+							</view>
+							<view class="text">
+								妮妮
+							</view>
+						</view>
+						<view class="xinzeng-img">
+							<view class="img_">
+								<image src="../../static/logo.png" mode=""></image>
+							</view>
+							<view class="text">
+								妮妮
+							</view>
+						</view><view class="xinzeng-img">
+							<view class="img_">
+								<image src="../../static/logo.png" mode=""></image>
+							</view>
+							<view class="text">
+								妮妮
+							</view>
+						</view><view class="xinzeng-img">
+							<view class="img_">
+								<image src="../../static/btn_add@3x.png" mode=""></image>
+							</view>
+							<view class="text">
+								新增宝贝
+							</view>
+						</view>
+					</view> -->
 					<view class="time">
 						服务时间
 					</view>
 					<view class="">
-						<uni-datetime-picker v-model="datetimerange" type="datetimerange" rangeSeparator="至">
-							<view class="fuwu-time">
+						<view class="index">
+							<wu-calendar mode="multiple" color="#FF5C7F" slideSwitchMode="vertical" :selected="selected"
+								ref="calendar" @confirm="calendarConfirm" :insert="false" startWeek="mon"></wu-calendar>
+							<view class="fuwu-time" @click="open">
 								<view class="time-icon">
 									<image src="../../static/icon_time@3x.png" mode=""></image>
 								</view>
@@ -139,7 +173,7 @@
 									<image src="../../static/icon_arrow@3x.png" mode=""></image>
 								</view>
 							</view>
-						</uni-datetime-picker>
+						</view>
 					</view>
 				</view>
 			</view>
@@ -160,12 +194,11 @@
 		},
 		data() {
 			return {
+				type: 'center',
 				currentTab: '', // 默认显示第一个选项卡
 				currentImg: '',
 				single: '',
-				datetimesingle: '',
 				range: ['2021-02-1', '2021-3-28'],
-				datetimerange: [],
 				start: Date.now() - 1000000000,
 				end: Date.now() + 1000000000,
 				title: 'Hello',
@@ -190,34 +223,32 @@
 		},
 
 		watch: {
-			datetimesingle(newval) {
-				console.log('单选:', this.datetimesingle);
-			},
 			range(newval) {
 				console.log('范围选:', this.range);
+				this.toggle('bottom');
 			},
-			datetimerange(newval) {
-				console.log('范围选:', this.datetimerange);
-			}
 		},
 		mounted() {
-			setTimeout(() => {
-				this.datetimesingle = Date.now() - 2 * 24 * 3600 * 1000
-				this.single = '2021-2-12'
-				this.datetimerange = ["2021-07-08 0:01:10", "2021-08-08 23:59:59"]
-			}, 3000)
 		},
 
 		methods: {
+			calendarConfirm(e) {
+				console.log(e);
+			},
+			// 打开日历
+			open() {
+				this.$refs.calendar.open();
+			},
+			// handleConfirm() {
+			// 	this.toggle('bottom');
+			// },
 			change(e) {
-				this.single = e
-				console.log('change事件:', this.single = e);
+				console.log('当前模式：' + e.type + ',状态：' + e.show);
 			},
-			changeLog(e) {
-				console.log('change事件:', e);
-			},
-			maskClick(e) {
-				console.log('maskClick事件:', e);
+			toggle(type) {
+				this.type = type
+				// open 方法传入参数 等同在 uni-popup 组件上绑定 type属性
+				this.$refs.popup.open(type)
 			},
 			// chooseItems(e) {
 			// 	console.log(e)
@@ -242,7 +273,111 @@
 	.box {
 		background-color: #FFFFFF;
 	}
-
+	.xinzeng{
+		display: flex;
+		.xinzeng-img{
+			margin-top: 16rpx;
+			margin-left: 44rpx;
+			width: 104rpx;
+			height: 104rpx;
+			border-radius: 0rpx 0rpx 0rpx 0rpx;
+			margin-bottom: 40rpx;
+			.text{
+				margin-top: 8rpx;
+				width: 104rpx;
+				height: 34rpx;
+				font-family: PingFang SC, PingFang SC;
+				font-weight: 500;
+				font-size: 24rpx;
+				color: #333333;
+				line-height: 28rpx;
+				text-align: center;
+				font-style: normal;
+				text-transform: none;
+			}
+			image{
+				width: 104rpx;
+				height: 104rpx;
+				border-radius: 100rpx;
+			}
+		}
+	}
+	.fuwushiduan-top{
+		display: flex;
+		justify-content: space-between;
+		.fuwushiduan-top-text{
+			width: 128rpx;
+			height: 44rpx;
+			font-family: PingFang SC, PingFang SC;
+			font-weight: 600;
+			font-size: 32rpx;
+			color: #332828;
+			line-height: 38rpx;
+			text-align: center;
+			font-style: normal;
+			text-transform: none;
+			margin-left: 312rpx;
+			margin-top: 48rpx;
+		}
+		.fuwushiduan-top-img{
+			width: 25rpx;
+			height: 25rpx;
+			border-radius: 0rpx 0rpx 0rpx 0rpx;
+			margin-right: 48rpx;
+			margin-top: 40rpx;
+			image{
+				width: 25rpx;
+				height: 25rpx;
+				border-radius: 0rpx 0rpx 0rpx 0rpx;
+			}
+		}
+	}
+	.shiduan_1{
+		display: flex;
+		.shiduan_1-left{
+			width: 312rpx;
+			height: 96rpx;
+			background: #F2F2F2;
+			border-radius: 16rpx 16rpx 16rpx 16rpx;
+			margin-left: 48rpx;
+			margin-right: 30rpx;
+			text{
+				width: 154rpx;
+				height: 32rpx;
+				font-family: PingFang SC, PingFang SC;
+				font-weight: 400;
+				font-size: 28rpx;
+				color: #666666;
+				line-height: 32rpx;
+				text-align: center;
+				font-style: normal;
+				text-transform: none;
+				margin-left: 80rpx;
+				margin-top: 32rpx;
+				
+			}
+		}
+		.shiduan_1-right{
+			width: 312rpx;
+			height: 96rpx;
+			background: #F2F2F2;
+			border-radius: 16rpx 16rpx 16rpx 16rpx;
+			text{
+				width: 154rpx;
+				height: 32rpx;
+				font-family: PingFang SC, PingFang SC;
+				font-weight: 400;
+				font-size: 28rpx;
+				color: #666666;
+				line-height: 32rpx;
+				text-align: center;
+				font-style: normal;
+				text-transform: none;
+				margin-left: 80rpx;
+				margin-top: 32rpx;
+			}
+		}
+	}
 	.content {
 		background-image: url('../../static/bg@3x.png');
 		background-size: 100%;
@@ -298,6 +433,7 @@
 			.list-radio {
 				margin-top: 16rpx;
 				margin-bottom: 16rpx;
+
 				.radio-text {
 					display: flex;
 
@@ -308,11 +444,13 @@
 						margin-left: 32rpx;
 						background: #F2F2F2;
 						border-radius: 32rpx 32rpx 32rpx 32rpx;
-						.text{
+
+						.text {
 							width: 128rpx;
 							height: 64rpx;
 							border-radius: 32rpx 32rpx 32rpx 32rpx;
-							text{
+
+							text {
 								width: 128rpx;
 								height: 64rpx;
 								font-family: PingFang SC, PingFang SC;
@@ -326,6 +464,7 @@
 							}
 						}
 					}
+
 					.radio-text-right {
 						margin-right: 16rpx;
 						width: 128rpx;
@@ -333,11 +472,13 @@
 						margin-left: 32rpx;
 						background: #F2F2F2;
 						border-radius: 32rpx 32rpx 32rpx 32rpx;
-						.text{
+
+						.text {
 							width: 128rpx;
 							height: 64rpx;
 							border-radius: 32rpx 32rpx 32rpx 32rpx;
-							text{
+
+							text {
 								width: 48rpx;
 								height: 36rpx;
 								font-family: PingFang SC, PingFang SC;
@@ -611,7 +752,7 @@
 					font-family: PingFang SC, PingFang SC;
 					font-weight: 600;
 					font-size: 24rpx;
-					color: #666666 ;
+					color: #666666;
 					line-height: 32rpx;
 					text-align: left;
 					font-style: normal;
@@ -626,7 +767,8 @@
 					border-radius: 0rpx 0rpx 0rpx 0rpx;
 					margin-left: 182rpx;
 					margin-top: 20rpx;
-					image{
+
+					image {
 						width: 24rpx;
 						height: 24rpx;
 						border-radius: 0rpx 0rpx 0rpx 0rpx;

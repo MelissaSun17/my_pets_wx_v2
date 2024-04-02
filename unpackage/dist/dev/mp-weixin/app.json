@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/chongtuoshi/index",
     "pages/serve/index",
     "pages/news/index",
     "pages/main/index",
@@ -19,6 +20,7 @@
     "rpxCalcIncludeWidth": 750
   },
   "tabBar": {
+    "backgroundColor": "#FFFFFF ",
     "list": [
       {
         "pagePath": "pages/index/index",

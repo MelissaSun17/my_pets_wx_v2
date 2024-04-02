@@ -102,10 +102,20 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 //
+//
+//
+//
+//
+// import customTabBar from 'pages/tabnav/index.vue'
 var _default = {
+  // components: {
+  // 	customTabBar,
+  // },
   onLaunch: function onLaunch() {
     console.log('App Launch');
+    // uni.hideTabBar()
   },
+
   onShow: function onShow() {
     console.log('App Show');
   },

@@ -2,7 +2,7 @@
   "navigationBarTitleText": "托管服务",
   "navigationBarBackgroundColor": "#FFD1DB",
   "usingComponents": {
-    "uni-datetime-picker": "/uni_modules/uni-datetime-picker/components/uni-datetime-picker/uni-datetime-picker",
+    "wu-calendar": "/uni_modules/wu-calendar/components/wu-calendar/wu-calendar",
     "own-check": "/components/own-checkBtn/own-check"
   }
 }

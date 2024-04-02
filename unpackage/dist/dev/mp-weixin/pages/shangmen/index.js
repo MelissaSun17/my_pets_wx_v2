@@ -100,8 +100,11 @@ __webpack_require__.r(__webpack_exports__);
 var components
 try {
   components = {
-    uniDatetimePicker: function () {
-      return Promise.all(/*! import() | uni_modules/uni-datetime-picker/components/uni-datetime-picker/uni-datetime-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-datetime-picker/components/uni-datetime-picker/uni-datetime-picker")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-datetime-picker/components/uni-datetime-picker/uni-datetime-picker.vue */ 225))
+    wuCalendar: function () {
+      return Promise.all(/*! import() | uni_modules/wu-calendar/components/wu-calendar/wu-calendar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/wu-calendar/components/wu-calendar/wu-calendar")]).then(__webpack_require__.bind(null, /*! @/uni_modules/wu-calendar/components/wu-calendar/wu-calendar.vue */ 225))
+    },
+    uniPopup: function () {
+      return __webpack_require__.e(/*! import() | uni_modules/uni-popup/components/uni-popup/uni-popup */ "uni_modules/uni-popup/components/uni-popup/uni-popup").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-popup/components/uni-popup/uni-popup.vue */ 260))
     },
   }
 } catch (e) {
@@ -166,7 +169,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var ownCheck = function ownCheck() {
   __webpack_require__.e(/*! require.ensure | components/own-checkBtn/own-check */ "components/own-checkBtn/own-check").then((function () {
-    return resolve(__webpack_require__(/*! @/components/own-checkBtn/own-check.vue */ 237));
+    return resolve(__webpack_require__(/*! @/components/own-checkBtn/own-check.vue */ 253));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var _default = {
@@ -192,14 +195,7 @@ var _default = {
         "border-radius": "32rpx",
         "font-size": '24rpx',
         "font-weight": "600"
-      },
-      list: [{
-        name: "喂食",
-        type: 1
-      }, {
-        name: "遛狗",
-        type: 2
-      }]
+      }
     };
   },
   watch: {
@@ -222,16 +218,35 @@ var _default = {
     }, 3000);
   },
   methods: {
+    calendarConfirm: function calendarConfirm(e) {
+      console.log(e);
+      this.toggle('bottom');
+    },
+    // 打开日历
+    open: function open() {
+      this.$refs.calendar.open();
+    },
+    handleConfirm: function handleConfirm() {
+      this.toggle('bottom');
+    },
     change: function change(e) {
-      this.single = e;
-      console.log('change事件:', this.single = e);
+      console.log('当前模式：' + e.type + ',状态：' + e.show);
     },
-    changeLog: function changeLog(e) {
-      console.log('change事件:', e);
+    toggle: function toggle(type) {
+      this.type = type;
+      // open 方法传入参数 等同在 uni-popup 组件上绑定 type属性
+      this.$refs.popup.open(type);
     },
-    maskClick: function maskClick(e) {
-      console.log('maskClick事件:', e);
-    },
+    // change(e) {
+    // 	this.single = e
+    // 	console.log('change事件:', this.single = e);
+    // },
+    // changeLog(e) {
+    // 	console.log('change事件:', e);
+    // },
+    // maskClick(e) {
+    // 	console.log('maskClick事件:', e);
+    // },
     // chooseItems(e) {
     // 	console.log(e)
     // },

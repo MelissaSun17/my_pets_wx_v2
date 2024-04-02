@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "菲咪Furmie",
+  "navigationBarBackgroundColor": "#FFD1DB",
+  "usingComponents": {
+    "my-tabbar": "/components/my-tabbar/my-tabbar"
+  }
+}

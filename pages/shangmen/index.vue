@@ -127,8 +127,10 @@
 						服务时间
 					</view>
 					<view class="">
-						<uni-datetime-picker v-model="datetimerange" type="datetimerange" rangeSeparator="至">
-							<view class="fuwu-time">
+						<view class="index">
+							<wu-calendar mode="multiple" color="#FF5C7F" slideSwitchMode="vertical" :selected="selected"
+								ref="calendar" @confirm="calendarConfirm" :insert="false" startWeek="mon"></wu-calendar>
+							<view class="fuwu-time" @click="open">
 								<view class="time-icon">
 									<image src="../../static/icon_time@3x.png" mode=""></image>
 								</view>
@@ -139,7 +141,49 @@
 									<image src="../../static/icon_arrow@3x.png" mode=""></image>
 								</view>
 							</view>
-						</uni-datetime-picker>
+						</view>
+					</view>
+					<view class="example-body box">
+						<button class="button" type="primary" @click="toggle('bottom')"><text
+								class="button-text"></text></button>
+					</view>
+					<view>
+						<!-- 普通弹窗 -->
+						<uni-popup ref="popup" background-color="#fff" @change="change">
+							<view class="popup-content"
+								:class="{ 'popup-height': type === 'left' || type === 'right' }">
+								<view class="fuwushiduan-top">
+									<view class="fuwushiduan-top-text">
+										服务时段
+									</view>
+									<view class="fuwushiduan-top-img">
+										<image src="../../static/QQ截图20240401171515.png" mode=""></image>
+									</view>
+								</view>
+								<view class="shiduan_1">
+									<view class="shiduan_1-left">
+										<text>6:00 ~ 11:00</text>
+									</view>
+									<view class="shiduan_1-right">
+										<text>11:00 ~ 14:00</text>
+									</view>
+								</view>
+								<view class="shiduan_2">
+									<view class="shiduan_2-left">
+										<text>14:00 ~ 18:00</text>
+									</view>
+									<view class="shiduan_2-right">
+										<text>18:00 ~ 20:00</text>
+									</view>
+								</view>
+								<view class="quantian">
+									<text>全天</text>
+								</view>
+								<view class="open">
+									<text>确认</text>
+								</view>
+							</view>
+						</uni-popup>
 					</view>
 				</view>
 			</view>
@@ -177,15 +221,6 @@
 					"font-size": '24rpx',
 					"font-weight": "600",
 				},
-				list: [{
-						name: "喂食",
-						type: 1,
-					},
-					{
-						name: "遛狗",
-						type: 2,
-					}
-				],
 			}
 		},
 
@@ -209,16 +244,35 @@
 		},
 
 		methods: {
+			calendarConfirm(e) {
+				console.log(e);
+				this.toggle('bottom');
+			},
+			// 打开日历
+			open() {
+				this.$refs.calendar.open();
+			},
+			handleConfirm() {
+				this.toggle('bottom');
+			},
 			change(e) {
-				this.single = e
-				console.log('change事件:', this.single = e);
+				console.log('当前模式：' + e.type + ',状态：' + e.show);
 			},
-			changeLog(e) {
-				console.log('change事件:', e);
+			toggle(type) {
+				this.type = type
+				// open 方法传入参数 等同在 uni-popup 组件上绑定 type属性
+				this.$refs.popup.open(type)
 			},
-			maskClick(e) {
-				console.log('maskClick事件:', e);
-			},
+			// change(e) {
+			// 	this.single = e
+			// 	console.log('change事件:', this.single = e);
+			// },
+			// changeLog(e) {
+			// 	console.log('change事件:', e);
+			// },
+			// maskClick(e) {
+			// 	console.log('maskClick事件:', e);
+			// },
 			// chooseItems(e) {
 			// 	console.log(e)
 			// },
@@ -241,6 +295,187 @@
 <style lang="scss" scoped>
 	.box {
 		background-color: #FFFFFF;
+	}
+
+	.fuwushiduan-top {
+		display: flex;
+		justify-content: space-between;
+
+		.fuwushiduan-top-text {
+			width: 128rpx;
+			height: 44rpx;
+			font-family: PingFang SC, PingFang SC;
+			font-weight: 600;
+			font-size: 32rpx;
+			color: #332828;
+			line-height: 38rpx;
+			text-align: center;
+			font-style: normal;
+			text-transform: none;
+			margin-left: 312rpx;
+			margin-top: 48rpx;
+		}
+
+		.fuwushiduan-top-img {
+			width: 25rpx;
+			height: 25rpx;
+			border-radius: 0rpx 0rpx 0rpx 0rpx;
+			margin-right: 48rpx;
+			margin-top: 40rpx;
+
+			image {
+				width: 25rpx;
+				height: 25rpx;
+				border-radius: 0rpx 0rpx 0rpx 0rpx;
+			}
+		}
+	}
+
+	.shiduan_1 {
+		display: flex;
+		margin-top: 64rpx;
+
+		.shiduan_1-left {
+			width: 312rpx;
+			height: 96rpx;
+			background: #F2F2F2;
+			border-radius: 16rpx 16rpx 16rpx 16rpx;
+			margin-left: 48rpx;
+			margin-right: 30rpx;
+			line-height: 96rpx;
+
+			text {
+				width: 154rpx;
+				height: 32rpx;
+				font-family: PingFang SC, PingFang SC;
+				font-weight: 400;
+				font-size: 28rpx;
+				color: #666666;
+				line-height: 32rpx;
+				text-align: center;
+				font-style: normal;
+				text-transform: none;
+				margin-left: 80rpx;
+				margin-top: 32rpx !important;
+
+			}
+		}
+
+		.shiduan_1-right {
+			width: 312rpx;
+			height: 96rpx;
+			background: #F2F2F2;
+			border-radius: 16rpx 16rpx 16rpx 16rpx;
+			line-height: 96rpx;
+
+			text {
+				width: 154rpx;
+				height: 32rpx;
+				font-family: PingFang SC, PingFang SC;
+				font-weight: 400;
+				font-size: 28rpx;
+				color: #666666;
+				line-height: 32rpx;
+				text-align: center;
+				font-style: normal;
+				text-transform: none;
+				margin-left: 80rpx;
+				margin-top: 32rpx;
+			}
+		}
+	}
+	.shiduan_2 {
+		display: flex;
+		margin-top: 32rpx;
+	
+		.shiduan_2-left {
+			width: 312rpx;
+			height: 96rpx;
+			background: #F2F2F2;
+			border-radius: 16rpx 16rpx 16rpx 16rpx;
+			margin-left: 48rpx;
+			margin-right: 30rpx;
+			line-height: 96rpx;
+	
+			text {
+				width: 154rpx;
+				height: 32rpx;
+				font-family: PingFang SC, PingFang SC;
+				font-weight: 400;
+				font-size: 28rpx;
+				color: #666666;
+				line-height: 32rpx;
+				text-align: center;
+				font-style: normal;
+				text-transform: none;
+				margin-left: 80rpx;
+				margin-top: 32rpx !important;
+	
+			}
+		}
+	
+		.shiduan_2-right {
+			width: 312rpx;
+			height: 96rpx;
+			background: #F2F2F2;
+			border-radius: 16rpx 16rpx 16rpx 16rpx;
+			line-height: 96rpx;
+	
+			text {
+				width: 154rpx;
+				height: 32rpx;
+				font-family: PingFang SC, PingFang SC;
+				font-weight: 400;
+				font-size: 28rpx;
+				color: #666666;
+				line-height: 32rpx;
+				text-align: center;
+				font-style: normal;
+				text-transform: none;
+				margin-left: 80rpx;
+				margin-top: 32rpx;
+			}
+		}
+	}
+	.quantian{
+		width: 654rpx;
+		height: 96rpx;
+		background: #F2F2F2;
+		border-radius: 16rpx 16rpx 16rpx 16rpx;
+		text-align: center;
+		line-height: 96rpx;
+		margin-left: 48rpx;
+		margin-top: 32rpx;
+		margin-bottom: 74rpx;
+		text{
+			width: 56rpx;
+			height: 32rpx;
+			font-family: PingFang SC, PingFang SC;
+			font-weight: 400;
+			font-size: 28rpx;
+			color: #666666;
+			line-height: 32rpx;
+			font-style: normal;
+			text-transform: none;
+		}
+	}
+	.open{
+		width: 750rpx;
+		height: 120rpx;
+		line-height: 120rpx;
+		text-align: center;
+		border-top: 2rpx solid #EBE9E9 ;
+		text{
+			width: 750rpx;
+			height: 120rpx;
+			font-family: PingFang SC, PingFang SC;
+			font-weight: 500;
+			font-size: 32rpx;
+			color: #D8D8D8;
+			line-height: 38rpx;
+			font-style: normal;
+			text-transform: none;
+		}
 	}
 
 	.content {
@@ -298,6 +533,7 @@
 			.list-radio {
 				margin-top: 16rpx;
 				margin-bottom: 16rpx;
+
 				.radio-text {
 					display: flex;
 
@@ -308,11 +544,13 @@
 						margin-left: 32rpx;
 						background: #F2F2F2;
 						border-radius: 32rpx 32rpx 32rpx 32rpx;
-						.text{
+
+						.text {
 							width: 128rpx;
 							height: 64rpx;
 							border-radius: 32rpx 32rpx 32rpx 32rpx;
-							text{
+
+							text {
 								width: 128rpx;
 								height: 64rpx;
 								font-family: PingFang SC, PingFang SC;
@@ -326,6 +564,7 @@
 							}
 						}
 					}
+
 					.radio-text-right {
 						margin-right: 16rpx;
 						width: 128rpx;
@@ -333,11 +572,13 @@
 						margin-left: 32rpx;
 						background: #F2F2F2;
 						border-radius: 32rpx 32rpx 32rpx 32rpx;
-						.text{
+
+						.text {
 							width: 128rpx;
 							height: 64rpx;
 							border-radius: 32rpx 32rpx 32rpx 32rpx;
-							text{
+
+							text {
 								width: 48rpx;
 								height: 36rpx;
 								font-family: PingFang SC, PingFang SC;
@@ -464,7 +705,8 @@
 					border-radius: 0rpx 0rpx 0rpx 0rpx;
 					margin-left: 182rpx;
 					margin-top: 20rpx;
-					image{
+
+					image {
 						width: 24rpx;
 						height: 24rpx;
 						border-radius: 0rpx 0rpx 0rpx 0rpx;
@@ -616,7 +858,7 @@
 					font-family: PingFang SC, PingFang SC;
 					font-weight: 600;
 					font-size: 24rpx;
-					color: #666666 ;
+					color: #666666;
 					line-height: 32rpx;
 					text-align: left;
 					font-style: normal;
@@ -631,7 +873,8 @@
 					border-radius: 0rpx 0rpx 0rpx 0rpx;
 					margin-left: 182rpx;
 					margin-top: 20rpx;
-					image{
+
+					image {
 						width: 24rpx;
 						height: 24rpx;
 						border-radius: 0rpx 0rpx 0rpx 0rpx;

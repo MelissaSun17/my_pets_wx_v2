@@ -508,10 +508,15 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
 var _default = {
   data: function data() {
     return {
-      title: 'Hello'
+
+      // currentPage: 'tabBar1',
+      // title: 'Hello'
     };
   },
   onLoad: function onLoad() {},
@@ -524,6 +529,11 @@ var _default = {
     goshangmen: function goshangmen() {
       uni.navigateTo({
         url: '/pages/shangmen/index'
+      });
+    },
+    gochongtuoshi: function gochongtuoshi() {
+      uni.navigateTo({
+        url: '/pages/chongtuoshi/index'
       });
     }
   }

@@ -136,7 +136,7 @@
 										<image src="../../static/标题尾巴@2x.png" mode=""></image>
 									</view>
 								</view>
-								<text class="pet-trainer-text-right">查看更多</text>
+								<text class="pet-trainer-text-right" @click="gochongtuoshi">查看更多</text>
 							</view>
 							<view class="pet-trainer-intro">
 								<view class="pet-trainer-intro-bag">
@@ -335,6 +335,9 @@
 				</u-col>
 			</u-row>
 		</view>
+		<!-- <view class="">
+		<my-tabbar :currentPage="currentPage"></my-tabbar>
+		</view> -->
 	</view>
 	</view>
 </template>
@@ -343,7 +346,9 @@
 	export default {
 		data() {
 			return {
-				title: 'Hello'
+				
+				// currentPage: 'tabBar1',
+				// title: 'Hello'
 			}
 		},
 		onLoad() {
@@ -358,6 +363,11 @@
 			goshangmen(){
 				uni.navigateTo({
 					url:'/pages/shangmen/index'
+				})
+			},
+			gochongtuoshi(){
+				uni.navigateTo({
+					url:'/pages/chongtuoshi/index'
 				})
 			}
 		}

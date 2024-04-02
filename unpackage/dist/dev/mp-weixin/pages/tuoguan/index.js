@@ -100,8 +100,8 @@ __webpack_require__.r(__webpack_exports__);
 var components
 try {
   components = {
-    uniDatetimePicker: function () {
-      return Promise.all(/*! import() | uni_modules/uni-datetime-picker/components/uni-datetime-picker/uni-datetime-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-datetime-picker/components/uni-datetime-picker/uni-datetime-picker")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-datetime-picker/components/uni-datetime-picker/uni-datetime-picker.vue */ 225))
+    wuCalendar: function () {
+      return Promise.all(/*! import() | uni_modules/wu-calendar/components/wu-calendar/wu-calendar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/wu-calendar/components/wu-calendar/wu-calendar")]).then(__webpack_require__.bind(null, /*! @/uni_modules/wu-calendar/components/wu-calendar/wu-calendar.vue */ 225))
     },
   }
 } catch (e) {
@@ -166,7 +166,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var ownCheck = function ownCheck() {
   __webpack_require__.e(/*! require.ensure | components/own-checkBtn/own-check */ "components/own-checkBtn/own-check").then((function () {
-    return resolve(__webpack_require__(/*! @/components/own-checkBtn/own-check.vue */ 237));
+    return resolve(__webpack_require__(/*! @/components/own-checkBtn/own-check.vue */ 253));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var _default = {
@@ -175,13 +175,12 @@ var _default = {
   },
   data: function data() {
     return {
+      type: 'center',
       currentTab: '',
       // 默认显示第一个选项卡
       currentImg: '',
       single: '',
-      datetimesingle: '',
       range: ['2021-02-1', '2021-3-28'],
-      datetimerange: [],
       start: Date.now() - 1000000000,
       end: Date.now() + 1000000000,
       title: 'Hello',
@@ -203,34 +202,30 @@ var _default = {
     };
   },
   watch: {
-    datetimesingle: function datetimesingle(newval) {
-      console.log('单选:', this.datetimesingle);
-    },
     range: function range(newval) {
       console.log('范围选:', this.range);
-    },
-    datetimerange: function datetimerange(newval) {
-      console.log('范围选:', this.datetimerange);
+      this.toggle('bottom');
     }
   },
-  mounted: function mounted() {
-    var _this = this;
-    setTimeout(function () {
-      _this.datetimesingle = Date.now() - 2 * 24 * 3600 * 1000;
-      _this.single = '2021-2-12';
-      _this.datetimerange = ["2021-07-08 0:01:10", "2021-08-08 23:59:59"];
-    }, 3000);
-  },
+  mounted: function mounted() {},
   methods: {
+    calendarConfirm: function calendarConfirm(e) {
+      console.log(e);
+    },
+    // 打开日历
+    open: function open() {
+      this.$refs.calendar.open();
+    },
+    // handleConfirm() {
+    // 	this.toggle('bottom');
+    // },
     change: function change(e) {
-      this.single = e;
-      console.log('change事件:', this.single = e);
+      console.log('当前模式：' + e.type + ',状态：' + e.show);
     },
-    changeLog: function changeLog(e) {
-      console.log('change事件:', e);
-    },
-    maskClick: function maskClick(e) {
-      console.log('maskClick事件:', e);
+    toggle: function toggle(type) {
+      this.type = type;
+      // open 方法传入参数 等同在 uni-popup 组件上绑定 type属性
+      this.$refs.popup.open(type);
     },
     // chooseItems(e) {
     // 	console.log(e)
