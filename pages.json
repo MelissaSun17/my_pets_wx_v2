@@ -102,6 +102,7 @@
 	// 	]
 	// },
 	"tabBar": {
+		// "custom": true,
 		"backgroundColor": "#FFFFFF ",
 		"list": [{
 				"pagePath": "pages/index/index",

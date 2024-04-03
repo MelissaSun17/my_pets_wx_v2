@@ -338,6 +338,7 @@
 		<!-- <view class="">
 		<my-tabbar :currentPage="currentPage"></my-tabbar>
 		</view> -->
+		
 	</view>
 	</view>
 </template>

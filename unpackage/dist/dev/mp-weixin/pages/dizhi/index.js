@@ -158,7 +158,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function(uni) {
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -244,8 +244,81 @@ exports.default = void 0;
 //
 //
 //
-var _default = {};
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      isComponent1Visible: true,
+      isComponent2Visible: false // 控制第二个组件的显示状态
+    };
+  },
+
+  methods: {
+    selectAddress: function selectAddress() {
+      uni.navigateBack({
+        delta: 1,
+        success: function success() {
+          var pages = getCurrentPages();
+          var prevPage = pages[pages.length - 1]; // 上一个页面
+          prevPage.changeColor(); // 触发修改颜色的操作
+        }
+      });
+    },
+    search: function search() {
+      console.log(111);
+    },
+    aa: function aa() {
+      this.isComponent1Visible = !this.isComponent1Visible;
+      this.isComponent2Visible = !this.isComponent2Visible;
+      console.log(111);
+    }
+  }
+};
 exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 

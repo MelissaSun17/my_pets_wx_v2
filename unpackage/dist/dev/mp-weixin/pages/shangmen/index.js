@@ -383,6 +383,7 @@ var _default = {
   },
   data: function data() {
     return {
+      isColor: false,
       isDisabled: true,
       show: false,
       mode: 'multiple',
@@ -468,6 +469,7 @@ var _default = {
       console.log('日历选择：', e);
       this.show = false;
       this.toggle('bottom');
+      this.isColor = true;
     },
     close: function close() {
       this.show = false;

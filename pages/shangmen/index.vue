@@ -134,7 +134,7 @@
 								<view class="time-icon">
 									<image src="../../static/icon_time@3x.png" mode=""></image>
 								</view>
-								<view class="time-text">
+								<view class="time-text" :class="{ 'selecteds': isColor }">
 									请选择服务时间
 								</view>
 								<view class="time-right">
@@ -205,6 +205,7 @@
 		},
 		data() {
 			return {
+				isColor: false,
 				isDisabled:true,
 				show: false,
 				mode: 'multiple',
@@ -302,6 +303,7 @@
 				console.log('日历选择：', e)
 				this.show = false
 				this.toggle('bottom');
+					this.isColor = true
 			},
 			close(){
 				this.show = false
@@ -330,6 +332,10 @@
 <style lang="scss" scoped>
 	.box {
 		background-color: #FFFFFF;
+	}
+	.selecteds {
+		color: black !important;
+		/* 改变你想要的颜色 */
 	}
 	.shiduan{
 		display: flex;
@@ -730,7 +736,7 @@
 				}
 
 				.dingwei-text {
-					width: 294rpx;
+					width: 476rpx;
 					height: 32rpx;
 					font-family: PingFang SC, PingFang SC;
 					font-weight: 600;
@@ -897,7 +903,7 @@
 				}
 
 				.time-text {
-					width: 294rpx;
+					width: 476rpx;
 					height: 32rpx;
 					font-family: PingFang SC, PingFang SC;
 					font-weight: 600;

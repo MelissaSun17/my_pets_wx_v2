@@ -51,11 +51,11 @@
 						<view class="dingwei-icon">
 							<image src="../../static/icon_location@3x.png" mode=""></image>
 						</view>
-						<view class="dingwei-text">
+						<view class="dingwei-text" :class="{ 'selecteddizhi': dizhiColor }">
 							请选择服务地址
 						</view>
 						<view class="dingwei-icon-right">
-							<text>></text>
+							<image src="../../static/icon_arrow@3x.png" mode=""></image>
 						</view>
 					</view>
 				</view>
@@ -166,7 +166,7 @@
 								<view class="time-icon">
 									<image src="../../static/icon_time@3x.png" mode=""></image>
 								</view>
-								<view class="time-text">
+								<view class="time-text" :class="{ 'selected': isColor }">
 									请选择服务时间
 								</view>
 								<view class="time-right">
@@ -202,6 +202,8 @@
 		},
 		data() {
 			return {
+				dizhiColor: false,
+				isColor: false,
 				isDisabled: true,
 				show: false,
 				mode: 'multiple',
@@ -245,7 +247,8 @@
 			},
 			confirm(e) {
 				console.log('日历选择：', e)
-				this.show = false
+				this.show = false,
+					this.isColor = true;
 			},
 			close() {
 				this.show = false
@@ -266,7 +269,7 @@
 				console.log(this.currentTabText);
 				if (this.currentTabText === "xuanzhe2") {
 					this.mode = 'range'
-				}else{
+				} else {
 					this.mode = 'multiple'
 				}
 			},
@@ -278,6 +281,9 @@
 					url: '/pages/dizhi/index'
 				})
 			},
+			changeColor() {
+				this.dizhiColor = true; // 修改字体颜色
+			}
 		}
 	}
 </script>
@@ -285,6 +291,14 @@
 <style lang="scss" scoped>
 	.box {
 		background-color: #FFFFFF;
+	}
+
+	.selected {
+		color: black !important;
+		/* 改变你想要的颜色 */
+	}
+	.selecteddizhi{
+		color: black !important;
 	}
 
 	.xinzeng {
@@ -613,7 +627,7 @@
 				}
 
 				.dingwei-text {
-					width: 294rpx;
+					width: 476rpx;
 					height: 32rpx;
 					font-family: PingFang SC, PingFang SC;
 					font-weight: 600;
@@ -630,8 +644,14 @@
 					width: 24rpx;
 					height: 24rpx;
 					border-radius: 0rpx 0rpx 0rpx 0rpx;
-					margin-left: 182rpx;
+					// margin-left: 182rpx;
 					margin-top: 16rpx;
+
+					image {
+						width: 24rpx;
+						height: 24rpx;
+						border-radius: 0rpx 0rpx 0rpx 0rpx;
+					}
 				}
 			}
 		}
@@ -774,7 +794,7 @@
 				}
 
 				.time-text {
-					width: 294rpx;
+					width: 476rpx;
 					height: 32rpx;
 					font-family: PingFang SC, PingFang SC;
 					font-weight: 600;
@@ -792,7 +812,7 @@
 					width: 24rpx;
 					height: 24rpx;
 					border-radius: 0rpx 0rpx 0rpx 0rpx;
-					margin-left: 182rpx;
+					// margin-left: 182rpx;
 					margin-top: 20rpx;
 
 					image {

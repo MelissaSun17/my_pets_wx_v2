@@ -27,6 +27,10 @@
 .box.data-v-713ca44d {
   background-color: #FFFFFF;
 }
+.selecteds.data-v-713ca44d {
+  color: black !important;
+  /* 改变你想要的颜色 */
+}
 .shiduan.data-v-713ca44d {
   display: flex;
   padding: 0 33rpx;
@@ -386,7 +390,7 @@
   height: 32rpx;
 }
 .trusteeship .trusteeship-list .dingwei .dingwei-text.data-v-713ca44d {
-  width: 294rpx;
+  width: 476rpx;
   height: 32rpx;
   font-family: PingFang SC, PingFang SC;
   font-weight: 600;
@@ -534,7 +538,7 @@
   height: 32rpx;
 }
 .fuwu-baby .fuwu-baby-list .fuwu-time .time-text.data-v-713ca44d {
-  width: 294rpx;
+  width: 476rpx;
   height: 32rpx;
   font-family: PingFang SC, PingFang SC;
   font-weight: 600;

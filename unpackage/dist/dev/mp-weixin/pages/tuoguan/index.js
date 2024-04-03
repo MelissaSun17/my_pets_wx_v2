@@ -373,6 +373,8 @@ var _default = {
   },
   data: function data() {
     return {
+      dizhiColor: false,
+      isColor: false,
       isDisabled: true,
       show: false,
       mode: 'multiple',
@@ -410,7 +412,7 @@ var _default = {
     },
     confirm: function confirm(e) {
       console.log('日历选择：', e);
-      this.show = false;
+      this.show = false, this.isColor = true;
     },
     close: function close() {
       this.show = false;
@@ -440,6 +442,9 @@ var _default = {
       uni.navigateTo({
         url: '/pages/dizhi/index'
       });
+    },
+    changeColor: function changeColor() {
+      this.dizhiColor = true; // 修改字体颜色
     }
   }
 };
