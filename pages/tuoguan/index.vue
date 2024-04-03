@@ -160,8 +160,8 @@
 					</view>
 					<view class="">
 						<view class="index">
-							<u-calendar  title="服务日期" rowHeight="80" :maxDate="maxDate" color="#FFD1DB" round="30rpx" :show="show"
-								:mode="mode" @confirm="confirm" @close="close" ></u-calendar>
+							<u-calendar title="服务日期" rowHeight="100" :maxDate="maxDate" color="#FFD1DB" round="30rpx"
+								:show="show" :mode="mode" @confirm="confirm" @close="close"></u-calendar>
 							<view class="fuwu-time" @click="show = true">
 								<view class="time-icon">
 									<image src="../../static/icon_time@3x.png" mode=""></image>
@@ -179,7 +179,8 @@
 			</view>
 			<view class="chazhao">
 				<view class="chazhao-img">
-					<image :src="isDisabled ? '../../static/btn_dis@3x.png' : '../../static/btn_nor@3x.png'" mode=""></image>
+					<image :src="isDisabled ? '../../static/btn_dis@3x.png' : '../../static/btn_nor@3x.png'" mode="">
+					</image>
 				</view>
 			</view>
 		</view>
@@ -201,7 +202,7 @@
 		},
 		data() {
 			return {
-				isDisabled:true,
+				isDisabled: true,
 				show: false,
 				mode: 'multiple',
 				maxDate: `${year}-${month}-${date + 90}`,
@@ -209,7 +210,7 @@
 				position: 'bottom',
 				type: 'center',
 				currentTab: '', // 默认显示第一个选项卡
-				currentTabText:'',
+				currentTabText: '',
 				currentImg: '',
 				single: '',
 				btnStyle: {
@@ -233,7 +234,7 @@
 		},
 
 		watch: {
-			
+
 		},
 		mounted() {},
 
@@ -246,22 +247,28 @@
 				console.log('日历选择：', e)
 				this.show = false
 			},
-			close(){
+			close() {
 				this.show = false
 			},
 
 			// change(e) {
 			// 	console.log('当前模式：' + e.type + ',状态：' + e.show);
 			// },
-			
+
 			// 切换选项卡
 			changeTab(tab) {
 				this.currentTab = tab;
 				this.isDisabled = false
 			},
-			changeTabText(tab){
+			changeTabText(tab) {
 				this.currentTabText = tab;
 				this.isDisabled = false
+				console.log(this.currentTabText);
+				if (this.currentTabText === "xuanzhe2") {
+					this.mode = 'range'
+				}else{
+					this.mode = 'multiple'
+				}
 			},
 			changeImg(img) {
 				this.currentImg = img
