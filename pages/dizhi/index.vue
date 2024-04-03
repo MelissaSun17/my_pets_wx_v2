@@ -164,6 +164,8 @@
 			text-transform: none;
 			margin-left: 8rpx;
 			margin-top: 4rpx;
+			white-space: nowrap; /* 不换行 */
+			animation: scroll-left 10s linear infinite; /* 调用动画 */
 		}
 		.dizhi-right{
 			width: 112rpx;
@@ -215,6 +217,8 @@
 				text-transform: none;
 				margin-top: 48rpx;
 				margin-left: 40rpx;
+				white-space: nowrap; /* 不换行 */
+				animation: scroll-left 10s linear infinite; /* 调用动画 */
 			}
 			.main-dizhi-list-img{
 				width: 28rpx;
@@ -265,6 +269,8 @@
 				text-transform: none;
 				margin-top: 48rpx;
 				margin-left: 40rpx;
+				white-space: nowrap; /* 不换行 */
+				animation: scroll-left 10s linear infinite; /* 调用动画 */
 			}
 		}
 	}

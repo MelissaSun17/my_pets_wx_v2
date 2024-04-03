@@ -2,7 +2,7 @@
   "navigationBarTitleText": "菲咪Furmie",
   "navigationBarBackgroundColor": "#FFD1DB",
   "usingComponents": {
-    "u-row": "/uni_modules/uview-ui/components/u-row/u-row",
-    "u-col": "/uni_modules/uview-ui/components/u-col/u-col"
+    "u-row": "/node-modules/uview-ui/components/u-row/u-row",
+    "u-col": "/node-modules/uview-ui/components/u-col/u-col"
   }
 }

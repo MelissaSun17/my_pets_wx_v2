@@ -1557,7 +1557,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"feimi","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"feimi","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -8934,7 +8934,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"feimi","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"feimi","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -8955,14 +8955,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"feimi","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"feimi","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"feimi","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"feimi","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -9058,7 +9058,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"feimi","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"feimi","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -15245,8 +15245,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-// 此版本发布于2024-03-17
-var version = '2.0.37';
+// 此版本发布于2023-03-27
+var version = '2.0.36';
 
 // 开发环境才提示，生产环境不会提示
 if (true) {
@@ -17347,8 +17347,7 @@ var _default = {
     closeOnClickOverlay: false,
     negativeTop: 0,
     width: '650rpx',
-    confirmButtonShape: '',
-    duration: 400
+    confirmButtonShape: ''
   }
 };
 exports.default = _default;
@@ -19292,43 +19291,7 @@ exports.default = _default;
 /* 211 */,
 /* 212 */,
 /* 213 */,
-/* 214 */
-/*!***********************************************************************!*\
-  !*** D:/1/feimi/feimi/uni_modules/uview-ui/components/u-row/props.js ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  props: {
-    // 给col添加间距，左右边距各占一半
-    gutter: {
-      type: [String, Number],
-      default: uni.$u.props.row.gutter
-    },
-    // 水平排列方式，可选值为`start`(或`flex-start`)、`end`(或`flex-end`)、`center`、`around`(或`space-around`)、`between`(或`space-between`)
-    justify: {
-      type: String,
-      default: uni.$u.props.row.justify
-    },
-    // 垂直对齐方式，可选值为top、center、bottom
-    align: {
-      type: String,
-      default: uni.$u.props.row.align
-    }
-  }
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
+/* 214 */,
 /* 215 */,
 /* 216 */,
 /* 217 */,
@@ -19337,9 +19300,9 @@ exports.default = _default;
 /* 220 */,
 /* 221 */,
 /* 222 */
-/*!***********************************************************************!*\
-  !*** D:/1/feimi/feimi/uni_modules/uview-ui/components/u-col/props.js ***!
-  \***********************************************************************/
+/*!*****************************************************************************!*\
+  !*** D:/1/feimi/feimi/node_modules/uview-ui/components/u-calendar/props.js ***!
+  \*****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19352,30 +19315,145 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _default = {
   props: {
-    // 占父容器宽度的多少等分，总分为12份
-    span: {
+    // 日历顶部标题
+    title: {
+      type: String,
+      default: uni.$u.props.calendar.title
+    },
+    // 是否显示标题
+    showTitle: {
+      type: Boolean,
+      default: uni.$u.props.calendar.showTitle
+    },
+    // 是否显示副标题
+    showSubtitle: {
+      type: Boolean,
+      default: uni.$u.props.calendar.showSubtitle
+    },
+    // 日期类型选择，single-选择单个日期，multiple-可以选择多个日期，range-选择日期范围
+    mode: {
+      type: String,
+      default: uni.$u.props.calendar.mode
+    },
+    // mode=range时，第一个日期底部的提示文字
+    startText: {
+      type: String,
+      default: uni.$u.props.calendar.startText
+    },
+    // mode=range时，最后一个日期底部的提示文字
+    endText: {
+      type: String,
+      default: uni.$u.props.calendar.endText
+    },
+    // 自定义列表
+    customList: {
+      type: Array,
+      default: uni.$u.props.calendar.customList
+    },
+    // 主题色，对底部按钮和选中日期有效
+    color: {
+      type: String,
+      default: uni.$u.props.calendar.color
+    },
+    // 最小的可选日期
+    minDate: {
       type: [String, Number],
-      default: uni.$u.props.col.span
+      default: uni.$u.props.calendar.minDate
     },
-    // 指定栅格左侧的间隔数(总12栏)
-    offset: {
+    // 最大可选日期
+    maxDate: {
       type: [String, Number],
-      default: uni.$u.props.col.offset
+      default: uni.$u.props.calendar.maxDate
     },
-    // 水平排列方式，可选值为`start`(或`flex-start`)、`end`(或`flex-end`)、`center`、`around`(或`space-around`)、`between`(或`space-between`)
-    justify: {
-      type: String,
-      default: uni.$u.props.col.justify
+    // 默认选中的日期，mode为multiple或range是必须为数组格式
+    defaultDate: {
+      type: [Array, String, Date, null],
+      default: uni.$u.props.calendar.defaultDate
     },
-    // 垂直对齐方式，可选值为top、center、bottom、stretch
-    align: {
-      type: String,
-      default: uni.$u.props.col.align
+    // mode=multiple时，最多可选多少个日期
+    maxCount: {
+      type: [String, Number],
+      default: uni.$u.props.calendar.maxCount
     },
-    // 文字对齐方式
-    textAlign: {
+    // 日期行高
+    rowHeight: {
+      type: [String, Number],
+      default: uni.$u.props.calendar.rowHeight
+    },
+    // 日期格式化函数
+    formatter: {
+      type: [Function, null],
+      default: uni.$u.props.calendar.formatter
+    },
+    // 是否显示农历
+    showLunar: {
+      type: Boolean,
+      default: uni.$u.props.calendar.showLunar
+    },
+    // 是否显示月份背景色
+    showMark: {
+      type: Boolean,
+      default: uni.$u.props.calendar.showMark
+    },
+    // 确定按钮的文字
+    confirmText: {
       type: String,
-      default: uni.$u.props.col.textAlign
+      default: uni.$u.props.calendar.confirmText
+    },
+    // 确认按钮处于禁用状态时的文字
+    confirmDisabledText: {
+      type: String,
+      default: uni.$u.props.calendar.confirmDisabledText
+    },
+    // 是否显示日历弹窗
+    show: {
+      type: Boolean,
+      default: uni.$u.props.calendar.show
+    },
+    // 是否允许点击遮罩关闭日历
+    closeOnClickOverlay: {
+      type: Boolean,
+      default: uni.$u.props.calendar.closeOnClickOverlay
+    },
+    // 是否为只读状态，只读状态下禁止选择日期
+    readonly: {
+      type: Boolean,
+      default: uni.$u.props.calendar.readonly
+    },
+    // 	是否展示确认按钮
+    showConfirm: {
+      type: Boolean,
+      default: uni.$u.props.calendar.showConfirm
+    },
+    // 日期区间最多可选天数，默认无限制，mode = range时有效
+    maxRange: {
+      type: [Number, String],
+      default: uni.$u.props.calendar.maxRange
+    },
+    // 范围选择超过最多可选天数时的提示文案，mode = range时有效
+    rangePrompt: {
+      type: String,
+      default: uni.$u.props.calendar.rangePrompt
+    },
+    // 范围选择超过最多可选天数时，是否展示提示文案，mode = range时有效
+    showRangePrompt: {
+      type: Boolean,
+      default: uni.$u.props.calendar.showRangePrompt
+    },
+    // 是否允许日期范围的起止时间为同一天，mode = range时有效
+    allowSameDay: {
+      type: Boolean,
+      default: uni.$u.props.calendar.allowSameDay
+    },
+    // 圆角值
+    round: {
+      type: [Boolean, String, Number],
+      default: uni.$u.props.calendar.round
+    },
+    // 最多展示月份数量
+    monthNum: {
+      type: [Number, String],
+      default: 12
     }
   }
 };
@@ -19383,17 +19461,10 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 223 */,
-/* 224 */,
-/* 225 */,
-/* 226 */,
-/* 227 */,
-/* 228 */,
-/* 229 */,
-/* 230 */
-/*!*******************************************************************************!*\
-  !*** D:/1/feimi/feimi/uni_modules/wu-calendar/components/wu-calendar/util.js ***!
-  \*******************************************************************************/
+/* 223 */
+/*!****************************************************************************!*\
+  !*** D:/1/feimi/feimi/node_modules/uview-ui/components/u-calendar/util.js ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19405,617 +19476,404 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ 13));
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ 23));
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ 24));
-var _calendar = _interopRequireDefault(__webpack_require__(/*! ./calendar.js */ 231));
-var Calendar = /*#__PURE__*/function () {
-  function Calendar() {
-    var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
-      date = _ref.date,
-      selected = _ref.selected,
-      startDate = _ref.startDate,
-      endDate = _ref.endDate,
-      mode = _ref.mode,
-      monthShowCurrentMonth = _ref.monthShowCurrentMonth,
-      rangeEndRepick = _ref.rangeEndRepick,
-      rangeSameDay = _ref.rangeSameDay,
-      rangeHaveDisableTruncation = _ref.rangeHaveDisableTruncation,
-      type = _ref.type,
-      foldStatus = _ref.foldStatus,
-      startWeek = _ref.startWeek;
-    (0, _classCallCheck2.default)(this, Calendar);
-    // 当前日期
-    this.date = this.getDate(new Date()); // 当前初入日期
-    // 打点信息
-    this.selected = selected || [];
-    // 范围开始
-    this.startDate = startDate;
-    // 范围结束
-    this.endDate = endDate;
-    // 日历以周几开始
-    this.startWeek = startWeek;
-    // 日期选择类型
-    this.mode = mode;
-    // 日历类型
-    this.type = type;
-    // 折叠状态
-    this.foldStatus = foldStatus;
-    // 允许范围内重选结束日期
-    this.rangeEndRepick = rangeEndRepick;
-    // 允许日期选择范围起始日期为同一天
-    this.rangeSameDay = rangeSameDay;
-    // 日期选择范围内遇到打点禁用日期是否截断
-    this.rangeHaveDisableTruncation = rangeHaveDisableTruncation;
-    // 每月是否仅显示当月的数据
-    this.monthShowCurrentMonth = monthShowCurrentMonth;
-    // 清理多选状态
-    this.cleanRange();
-    // 每周日期
-    this.weeks = {};
-    // 多个日期
-    this.multiple = [];
-  }
-  /**
-   * 设置日期
-   * @param {Object} date
-   */
-  (0, _createClass2.default)(Calendar, [{
-    key: "setDate",
-    value: function setDate(date) {
-      this.selectDate = this.getDate(date);
-      this._getWeek(this.selectDate.fullDate);
-    }
-
-    /**
-     * 清除范围
-     */
-  }, {
-    key: "cleanRange",
-    value: function cleanRange() {
-      this.rangeStatus = {
-        before: '',
-        after: '',
-        data: []
-      };
-    }
-
-    /**
-     * 清除多选
-     */
-  }, {
-    key: "cleanMultiple",
-    value: function cleanMultiple() {
-      this.multiple = [];
-    }
-
-    /**
-     * 重置开始日期
-     */
-  }, {
-    key: "resetSatrtDate",
-    value: function resetSatrtDate(startDate) {
-      // 范围开始
-      this.startDate = startDate;
-    }
-
-    /**
-     * 重置结束日期
-     */
-  }, {
-    key: "resetEndDate",
-    value: function resetEndDate(endDate) {
-      // 范围结束
-      this.endDate = endDate;
-    }
-
-    /**
-     * 重置是否每月仅显示当月数据
-     * @param {Boolean} show 是否仅显示当月数据 
-     */
-  }, {
-    key: "resetMonthShowCurrentMonth",
-    value: function resetMonthShowCurrentMonth(show) {
-      this.monthShowCurrentMonth = show;
-    }
-
-    // 重置允许范围内重选结束日期
-  }, {
-    key: "resetRangeEndRepick",
-    value: function resetRangeEndRepick(val) {
-      this.rangeEndRepick = val;
-    }
-
-    // 重置允许日期范围选择起始日期为同一天
-  }, {
-    key: "resetRangeSameDay",
-    value: function resetRangeSameDay(val) {
-      this.rangeSameDay = val;
-    }
-
-    // 重置范围内遇到打点禁用日期是否截断
-  }, {
-    key: "resetRangeHaveDisableTruncation",
-    value: function resetRangeHaveDisableTruncation(val) {
-      this.rangeHaveDisableTruncation = val;
-    }
-
-    // 重置日期选择模式
-  }, {
-    key: "resetMode",
-    value: function resetMode(val) {
-      this.mode = val;
-    }
-
-    // 重置折叠状态
-  }, {
-    key: "resetFoldStatus",
-    value: function resetFoldStatus(val) {
-      this.foldStatus = val;
-    }
-
-    // 重置日历以周几开始
-  }, {
-    key: "resetStartWeek",
-    value: function resetStartWeek(val) {
-      this.startWeek = val;
-    }
-
-    /**
-     * 创建本月某一天的信息
-     */
-  }, {
-    key: "_createCurrentDay",
-    value: function _createCurrentDay(nowDate, full, date) {
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var _toConsumableArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ 18));
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+var _default = {
+  methods: {
+    // 设置月份数据
+    setMonth: function setMonth() {
       var _this = this;
-      // 是否今天
-      var isDay = this.date.fullDate === nowDate;
-      // 获取打点信息
-      var info = this.selected && this.selected.find(function (item) {
-        if (_this.dateEqual(nowDate, item.date)) {
-          return item;
-        }
-      });
+      // 月初是周几
+      var day = dayjs(this.date).date(1).day();
+      var start = day == 0 ? 6 : day - 1;
 
-      // 日期禁用
-      var disableBefore = true;
-      var disableAfter = true;
-      if (this.startDate) {
-        disableBefore = this.dateCompare(this.startDate, nowDate);
-      }
-      if (this.endDate) {
-        disableAfter = this.dateCompare(nowDate, this.endDate);
-      }
+      // 本月天数
+      var days = dayjs(this.date).endOf('month').format('D');
 
-      // 范围选择模式
-      var ranges = this.rangeStatus.data;
-      var checked = false;
-      if (this.mode == 'range') {
-        checked = ranges.findIndex(function (item) {
-          return _this.dateEqual(item, nowDate);
-        }) !== -1 ? true : false;
-      }
+      // 上个月天数
+      var prevDays = dayjs(this.date).endOf('month').subtract(1, 'month').format('D');
 
-      // 多日期选择模式
-      var multiples = this.multiple;
-      var multiplesChecked = false;
-      if (this.mode == 'multiple') {
-        multiplesChecked = multiples.findIndex(function (item) {
-          return _this.dateEqual(item, nowDate);
-        }) !== -1;
-      }
-      var data = {
-        fullDate: nowDate,
-        year: full.year,
-        date: date,
-        type: this.type,
-        mode: this.mode,
-        multiples: this.mode == 'multiple' ? multiplesChecked : false,
-        rangeMultiple: this.mode == 'range' ? checked : false,
-        beforeRange: this.dateEqual(this.rangeStatus.before, nowDate),
-        afterRange: this.dateEqual(this.rangeStatus.after, nowDate),
-        month: full.month,
-        lunar: this.getlunar(full.year, full.month, date),
-        disable: !(disableBefore && disableAfter),
-        isDay: isDay
-      };
-      if (info) {
-        data.extraInfo = info;
-        data.disable = info.disable || false;
-      }
-      return data;
-    }
-
-    /**
-     * 获取任意时间
-     */
-  }, {
-    key: "getDate",
-    value: function getDate(date) {
-      var AddDayCount = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-      var str = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'day';
-      if (!date) {
-        date = new Date();
-      }
-      if ((0, _typeof2.default)(date) !== 'object') {
-        date = date.replace(/-/g, '/');
-      }
-      var dd = new Date(date);
-      switch (str) {
-        case 'day':
-          dd.setDate(dd.getDate() + AddDayCount); // 获取AddDayCount天后的日期
-          break;
-        case 'month':
-          if (dd.getDate() === 31 && AddDayCount > 0) {
-            dd.setDate(dd.getDate() + AddDayCount);
-          } else {
-            var preMonth = dd.getMonth();
-            dd.setMonth(preMonth + AddDayCount); // 获取AddDayCount天后的日期
-            var nextMonth = dd.getMonth();
-            // 处理 pre 切换月份目标月份为2月没有当前日(30 31) 切换错误问题
-            if (AddDayCount < 0 && preMonth !== 0 && nextMonth - preMonth > AddDayCount) {
-              dd.setMonth(nextMonth + (nextMonth - preMonth + AddDayCount));
-            }
-            // 处理 next 切换月份目标月份为2月没有当前日(30 31) 切换错误问题
-            if (AddDayCount > 0 && nextMonth - preMonth > AddDayCount) {
-              dd.setMonth(nextMonth - (nextMonth - preMonth - AddDayCount));
-            }
-          }
-          break;
-        case 'week':
-          dd.setDate(dd.getDate() + AddDayCount * 7);
-          break;
-        case 'year':
-          dd.setFullYear(dd.getFullYear() + AddDayCount); // 获取AddDayCount天后的日期
-          break;
-      }
-      var y = dd.getFullYear();
-      var m = dd.getMonth() + 1 < 10 ? '0' + (dd.getMonth() + 1) : dd.getMonth() + 1; // 获取当前月份的日期，不足10补0
-      var d = dd.getDate() < 10 ? '0' + dd.getDate() : dd.getDate(); // 获取当前几号，不足10补0
-      return {
-        fullDate: y + '-' + m + '-' + d,
-        year: y,
-        month: m,
-        date: d,
-        day: dd.getDay()
-      };
-    }
-
-    /**
-     * 获取上月剩余天数
-     */
-  }, {
-    key: "_getLastMonthDays",
-    value: function _getLastMonthDays(firstDay, full) {
-      var dateArr = [];
-      for (var i = firstDay; i > 0; i--) {
-        var beforeDate = new Date(full.year, full.month - 1, -i + 1).getDate();
-        dateArr.push({
-          date: beforeDate,
-          month: full.month - 1,
-          year: full.year,
-          lunar: this.getlunar(full.year, full.month - 1, beforeDate),
-          disable: true
-        });
-      }
-      return dateArr;
-    }
-    /**
-     * 获取本月天数
-     */
-  }, {
-    key: "_currentMonthDays",
-    value: function _currentMonthDays(dateData, full) {
-      var dateArr = [];
-      var fullDate = this.date.fullDate;
-      for (var i = 1; i <= dateData; i++) {
-        var nowDate = full.year + '-' + (full.month < 10 ? full.month : full.month) + '-' + (i < 10 ? '0' + i : i);
-        dateArr.push(this._createCurrentDay(nowDate, full, i));
-      }
-      return dateArr;
-    }
-    /**
-     * 获取下月天数
-     */
-  }, {
-    key: "_getNextMonthDays",
-    value: function _getNextMonthDays(surplus, full) {
-      var dateArr = [];
-      for (var i = 1; i < surplus + 1; i++) {
-        dateArr.push({
-          date: i,
-          month: Number(full.month) + 1,
-          lunar: this.getlunar(full.year, Number(full.month) + 1, i),
-          disable: true
-        });
-      }
-      return dateArr;
-    }
-    /**
-     * 获取任意日期的一周
-     */
-  }, {
-    key: "_getWeekDays",
-    value: function _getWeekDays(dateData) {
-      var dateArr = [];
-      var oneDayTime = 1000 * 60 * 60 * 24;
-      var today = new Date(dateData);
-      // 获取这个日期是星期几
-      var todayDay;
-      var startDate;
-      // 如果日历以周一开始
-      if (this.startWeek == 'mon') {
-        todayDay = today.getDay() || 7;
-        startDate = new Date(today.getTime() - oneDayTime * (todayDay - 1));
-      } else {
-        todayDay = today.getDay();
-        startDate = new Date(today.getTime() - oneDayTime * todayDay);
-      }
-      for (var i = 0; i < 7; i++) {
-        var temp = new Date(startDate.getTime() + i * oneDayTime);
-        var newDate = this.getDate("".concat(temp.getFullYear(), "-").concat(temp.getMonth() + 1, "-").concat(temp.getDate()));
-        dateArr.push(this._createCurrentDay(newDate.fullDate, newDate, Number(newDate.date)));
-      }
-      return dateArr;
-    }
-
-    /**
-     * 获取当前日期详情
-     * @param {Object} date
-     */
-  }, {
-    key: "getInfo",
-    value: function getInfo(date) {
-      var _this2 = this;
-      if (!date) {
-        date = new Date();
-      }
-      var dateInfo = this.canlender.find(function (item) {
-        return item.fullDate === _this2.getDate(date).fullDate;
-      });
-      return dateInfo;
-    }
-
-    /**
-     * 比较时间大小
-     */
-  }, {
-    key: "dateCompare",
-    value: function dateCompare(startDate, endDate) {
-      // 计算截止时间
-      startDate = new Date(startDate.replace('-', '/').replace('-', '/'));
-      // 计算详细项的截止时间
-      endDate = new Date(endDate.replace('-', '/').replace('-', '/'));
-      if (startDate <= endDate) {
-        return true;
-      } else {
-        return false;
-      }
-    }
-
-    /**
-     * 比较时间是否相等
-     */
-  }, {
-    key: "dateEqual",
-    value: function dateEqual(before, after) {
-      // 计算截止时间
-      before = new Date(before.replace('-', '/').replace('-', '/'));
-      // 计算详细项的截止时间
-      after = new Date(after.replace('-', '/').replace('-', '/'));
-      if (before.getTime() - after.getTime() === 0) {
-        return true;
-      } else {
-        return false;
-      }
-    }
-
-    /**
-     * 获取日期范围内所有日期
-     * @param {Object} begin
-     * @param {Object} end
-     */
-  }, {
-    key: "getDateAll",
-    value: function getDateAll(begin, end) {
-      // 找出所有打点中已禁用的部分 不让其被添加在日期选择范围内
-      var disableList = this.selected.filter(function (item) {
-        return item.date && item.disable;
-      }).map(function (item) {
-        return item.date;
-      });
+      // 日期数据
       var arr = [];
-      var ab = begin.split('-');
-      var ae = end.split('-');
-      var db = new Date();
-      db.setFullYear(ab[0], ab[1] - 1, ab[2]);
-      var de = new Date();
-      de.setFullYear(ae[0], ae[1] - 1, ae[2]);
-      var wuxDb = db.getTime() - 24 * 60 * 60 * 1000;
-      var wuxDe = de.getTime() - 24 * 60 * 60 * 1000;
-      for (var k = wuxDb; k <= wuxDe;) {
-        k = k + 24 * 60 * 60 * 1000;
-        var fullDate = this.getDate(new Date(parseInt(k))).fullDate;
-        // 如果要在选择范围内截断日期
-        if (this.rangeHaveDisableTruncation) {
-          // 如果不在打点禁止列表中
-          if (disableList.includes(fullDate)) return arr;
-          arr.push(fullDate);
-        } else {
-          if (!disableList.includes(fullDate)) arr.push(fullDate);
-        }
-      }
-      return arr;
-    }
-    /**
-     * 计算阴历日期显示
-     */
-  }, {
-    key: "getlunar",
-    value: function getlunar(year, month, date) {
-      return _calendar.default.solar2lunar(year, month, date);
-    }
-    /**
-     * 设置打点
-     */
-  }, {
-    key: "setSelectInfo",
-    value: function setSelectInfo(data, value) {
-      this.selected = value;
-      this._getWeek(data);
-    }
+      // 清空表格
+      this.month = [];
 
-    /**
-     *  设置范围
-     */
-  }, {
-    key: "setRange",
-    value: function setRange(fullDate) {
-      var _this$rangeStatus = this.rangeStatus,
-        before = _this$rangeStatus.before,
-        after = _this$rangeStatus.after;
-
-      // 非范围选择不再执行
-      if (this.mode != 'range') return;
-
-      // 判断目前的日期 是否 比before日期小或者等于before日期 如果为true就要重置
-      var reset = this.dateCompare(fullDate, before);
-      // 如果日期选择范围允许为同一天 且 目前是需要重置的
-      if (this.rangeSameDay && before && reset) {
-        // 判断是否需要相等 如果 不相等 则 重置 如果相等 则不重置
-        reset = !this.dateEqual(fullDate, before);
-      }
-      if ((before && after || reset) && (!this.rangeEndRepick || this.rangeEndRepick && this.rangeStatus.data.indexOf(fullDate) == -1)) {
-        this.rangeStatus.before = fullDate;
-        this.rangeStatus.after = '';
-        this.rangeStatus.data = [];
-      } else {
-        if (!before) {
-          this.rangeStatus.before = fullDate;
-        } else {
-          if (this.dateCompare(this.rangeStatus.before, fullDate)) {
-            this.rangeStatus.data = this.getDateAll(this.rangeStatus.before, fullDate);
-          } else {
-            this.rangeStatus.data = this.getDateAll(fullDate, this.rangeStatus.before);
-          }
-          this.rangeStatus.after = this.rangeStatus.data[this.rangeStatus.data.length - 1];
-        }
-      }
-      this._getWeek(fullDate);
-    }
-
-    /**
-     *  设置多选
-     */
-  }, {
-    key: "setMultiple",
-    value: function setMultiple(fullDate) {
-      var _this3 = this;
-      // 非多选不再执行
-      if (this.mode != 'multiple') return;
-      // 检查是否已经多选
-      var index = this.multiple.findIndex(function (item) {
-        if (_this3.dateEqual(fullDate, item)) {
-          return item;
-        }
-      });
-      if (index === -1) {
-        this.multiple.push(fullDate);
-        this.setDate(fullDate);
-      } else {
-        this.multiple = this.multiple.filter(function (item, i) {
-          return i != index;
-        });
-      }
-      this._getWeek(fullDate);
-    }
-
-    /**
-     * 获取每周数据
-     * @param {Object} dateData
-     */
-  }, {
-    key: "_getWeek",
-    value: function _getWeek(dateData) {
-      var useWeeks = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-      var _this$getDate = this.getDate(dateData),
-        year = _this$getDate.year,
-        month = _this$getDate.month;
-      var weeks = {};
-      // 日历数据
-      var canlender = [];
-      if (this.foldStatus === 'open') {
-        // 默认以周末开始
-        var firstDay = new Date(year, month - 1, 1).getDay();
-        // 如果以周一开始
-        if (this.startWeek === 'mon') {
-          firstDay = firstDay === 0 ? 6 : firstDay - 1;
-        }
-        var currentDay = new Date(year, month, 0).getDate();
-        // 日期数据
-        var dates = {
-          lastMonthDays: this._getLastMonthDays(firstDay, this.getDate(dateData)),
-          // 上个月末尾几天
-          currentMonthDys: this._currentMonthDays(currentDay, this.getDate(dateData)),
-          // 本月天数
-          weeks: []
+      // 添加上月数据
+      arr.push.apply(arr, (0, _toConsumableArray2.default)(new Array(start).fill(1).map(function (e, i) {
+        var day = prevDays - start + i + 1;
+        return {
+          value: day,
+          disabled: true,
+          date: dayjs(_this.date).subtract(1, 'month').date(day).format('YYYY-MM-DD')
         };
-        // 下月开始几天
-        var surplus = 42 - (dates.lastMonthDays.length + dates.currentMonthDys.length);
-        dates.nextMonthDays = this._getNextMonthDays(surplus, this.getDate(dateData));
+      })));
 
-        // 如果仅显示当月
-        if (this.monthShowCurrentMonth) {
-          // 日历数据
-          canlender = canlender.concat(dates.lastMonthDays.map(function (item) {
-            return item = {
-              empty: true,
-              lunar: {}
-            };
-          }), dates.currentMonthDys, dates.nextMonthDays.map(function (item) {
-            return item = {
-              empty: true,
-              lunar: {}
-            };
-          }));
-        } else {
-          // 拼接数组  上个月开始几天 + 本月天数+ 下个月开始几天
-          canlender = canlender.concat(dates.lastMonthDays, dates.currentMonthDys, dates.nextMonthDays);
-        }
-      } else {
-        canlender = this._getWeekDays(dateData);
+      // 添加本月数据
+      arr.push.apply(arr, (0, _toConsumableArray2.default)(new Array(days - 0).fill(1).map(function (e, i) {
+        var day = i + 1;
+        return {
+          value: day,
+          date: dayjs(_this.date).date(day).format('YYYY-MM-DD')
+        };
+      })));
+
+      // 添加下个月
+      arr.push.apply(arr, (0, _toConsumableArray2.default)(new Array(42 - days - start).fill(1).map(function (e, i) {
+        var day = i + 1;
+        return {
+          value: day,
+          disabled: true,
+          date: dayjs(_this.date).add(1, 'month').date(day).format('YYYY-MM-DD')
+        };
+      })));
+
+      // 分割数组
+      var _loop = function _loop(n) {
+        _this.month.push(arr.slice(n, n + 7).map(function (e, i) {
+          e.index = i + n;
+
+          // 自定义信息
+          var custom = _this.customList.find(function (c) {
+            return c.date == e.date;
+          });
+
+          // 农历
+          if (_this.lunar) {
+            var _this$getLunar = _this.getLunar(e.date),
+              IDayCn = _this$getLunar.IDayCn,
+              IMonthCn = _this$getLunar.IMonthCn;
+            e.lunar = IDayCn == '初一' ? IMonthCn : IDayCn;
+          }
+          return _objectSpread(_objectSpread({}, e), custom);
+        }));
+      };
+      for (var n = 0; n < arr.length; n += 7) {
+        _loop(n);
       }
-      for (var i = 0; i < canlender.length; i++) {
-        if (i % 7 === 0) {
-          weeks[parseInt(i / 7)] = new Array(7);
-        }
-        weeks[parseInt(i / 7)][i % 7] = canlender[i] || {};
-      }
-      if (useWeeks) {
-        this.canlender = canlender;
-        this.weeks = weeks;
-      }
-      return weeks;
     }
-
-    //静态方法
-    // static init(date) {
-    // 	if (!this.instance) {
-    // 		this.instance = new Calendar(date);
-    // 	}
-    // 	return this.instance;
-    // }
-  }]);
-  return Calendar;
-}();
-var _default = Calendar;
+  }
+};
 exports.default = _default;
 
 /***/ }),
-/* 231 */
-/*!***********************************************************************************!*\
-  !*** D:/1/feimi/feimi/uni_modules/wu-calendar/components/wu-calendar/calendar.js ***!
-  \***********************************************************************************/
+/* 224 */
+/*!*****************************************************************!*\
+  !*** D:/1/feimi/feimi/node_modules/uview-ui/libs/util/dayjs.js ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ 13);
+!function (t, e) {
+  ( false ? undefined : _typeof(exports)) === 'object' && typeof module !== 'undefined' ? module.exports = e() :  true ? !(__WEBPACK_AMD_DEFINE_FACTORY__ = (e),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) :
+				__WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : undefined;
+}(this, function () {
+  'use strict';
+
+  var t = 'millisecond';
+  var e = 'second';
+  var n = 'minute';
+  var r = 'hour';
+  var i = 'day';
+  var s = 'week';
+  var u = 'month';
+  var a = 'quarter';
+  var o = 'year';
+  var f = 'date';
+  var h = /^(\d{4})[-/]?(\d{1,2})?[-/]?(\d{0,2})[^0-9]*(\d{1,2})?:?(\d{1,2})?:?(\d{1,2})?.?(\d+)?$/;
+  var c = /\[([^\]]+)]|Y{1,4}|M{1,4}|D{1,2}|d{1,4}|H{1,2}|h{1,2}|a|A|m{1,2}|s{1,2}|Z{1,2}|SSS/g;
+  var d = {
+    name: 'en',
+    weekdays: 'Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday'.split('_'),
+    months: 'January_February_March_April_May_June_July_August_September_October_November_December'.split('_')
+  };
+  var $ = function $(t, e, n) {
+    var r = String(t);
+    return !r || r.length >= e ? t : "".concat(Array(e + 1 - r.length).join(n)).concat(t);
+  };
+  var l = {
+    s: $,
+    z: function z(t) {
+      var e = -t.utcOffset();
+      var n = Math.abs(e);
+      var r = Math.floor(n / 60);
+      var i = n % 60;
+      return "".concat((e <= 0 ? '+' : '-') + $(r, 2, '0'), ":").concat($(i, 2, '0'));
+    },
+    m: function t(e, n) {
+      if (e.date() < n.date()) return -t(n, e);
+      var r = 12 * (n.year() - e.year()) + (n.month() - e.month());
+      var i = e.clone().add(r, u);
+      var s = n - i < 0;
+      var a = e.clone().add(r + (s ? -1 : 1), u);
+      return +(-(r + (n - i) / (s ? i - a : a - i)) || 0);
+    },
+    a: function a(t) {
+      return t < 0 ? Math.ceil(t) || 0 : Math.floor(t);
+    },
+    p: function p(h) {
+      return {
+        M: u,
+        y: o,
+        w: s,
+        d: i,
+        D: f,
+        h: r,
+        m: n,
+        s: e,
+        ms: t,
+        Q: a
+      }[h] || String(h || '').toLowerCase().replace(/s$/, '');
+    },
+    u: function u(t) {
+      return void 0 === t;
+    }
+  };
+  var y = 'en';
+  var M = {};
+  M[y] = d;
+  var m = function m(t) {
+    return t instanceof S;
+  };
+  var D = function D(t, e, n) {
+    var r;
+    if (!t) return y;
+    if (typeof t === 'string') M[t] && (r = t), e && (M[t] = e, r = t);else {
+      var _i = t.name;
+      M[_i] = t, r = _i;
+    }
+    return !n && r && (y = r), r || !n && y;
+  };
+  var v = function v(t, e) {
+    if (m(t)) return t.clone();
+    var n = _typeof(e) === 'object' ? e : {};
+    return n.date = t, n.args = arguments, new S(n);
+  };
+  var g = l;
+  g.l = D, g.i = m, g.w = function (t, e) {
+    return v(t, {
+      locale: e.$L,
+      utc: e.$u,
+      x: e.$x,
+      $offset: e.$offset
+    });
+  };
+  var S = function () {
+    function d(t) {
+      this.$L = D(t.locale, null, !0), this.parse(t);
+    }
+    var $ = d.prototype;
+    return $.parse = function (t) {
+      this.$d = function (t) {
+        var e = t.date;
+        var n = t.utc;
+        if (e === null) return new Date(NaN);
+        if (g.u(e)) return new Date();
+        if (e instanceof Date) return new Date(e);
+        if (typeof e === 'string' && !/Z$/i.test(e)) {
+          var _r = e.match(h);
+          if (_r) {
+            var _i2 = _r[2] - 1 || 0;
+            var _s = (_r[7] || '0').substring(0, 3);
+            return n ? new Date(Date.UTC(_r[1], _i2, _r[3] || 1, _r[4] || 0, _r[5] || 0, _r[6] || 0, _s)) : new Date(_r[1], _i2, _r[3] || 1, _r[4] || 0, _r[5] || 0, _r[6] || 0, _s);
+          }
+        }
+        return new Date(e);
+      }(t), this.$x = t.x || {}, this.init();
+    }, $.init = function () {
+      var t = this.$d;
+      this.$y = t.getFullYear(), this.$M = t.getMonth(), this.$D = t.getDate(), this.$W = t.getDay(), this.$H = t.getHours(), this.$m = t.getMinutes(), this.$s = t.getSeconds(), this.$ms = t.getMilliseconds();
+    }, $.$utils = function () {
+      return g;
+    }, $.isValid = function () {
+      return !(this.$d.toString() === 'Invalid Date');
+    }, $.isSame = function (t, e) {
+      var n = v(t);
+      return this.startOf(e) <= n && n <= this.endOf(e);
+    }, $.isAfter = function (t, e) {
+      return v(t) < this.startOf(e);
+    }, $.isBefore = function (t, e) {
+      return this.endOf(e) < v(t);
+    }, $.$g = function (t, e, n) {
+      return g.u(t) ? this[e] : this.set(n, t);
+    }, $.unix = function () {
+      return Math.floor(this.valueOf() / 1e3);
+    }, $.valueOf = function () {
+      return this.$d.getTime();
+    }, $.startOf = function (t, a) {
+      var h = this;
+      var c = !!g.u(a) || a;
+      var d = g.p(t);
+      var $ = function $(t, e) {
+        var n = g.w(h.$u ? Date.UTC(h.$y, e, t) : new Date(h.$y, e, t), h);
+        return c ? n : n.endOf(i);
+      };
+      var l = function l(t, e) {
+        return g.w(h.toDate()[t].apply(h.toDate('s'), (c ? [0, 0, 0, 0] : [23, 59, 59, 999]).slice(e)), h);
+      };
+      var y = this.$W;
+      var M = this.$M;
+      var m = this.$D;
+      var D = "set".concat(this.$u ? 'UTC' : '');
+      switch (d) {
+        case o:
+          return c ? $(1, 0) : $(31, 11);
+        case u:
+          return c ? $(1, M) : $(0, M + 1);
+        case s:
+          var v = this.$locale().weekStart || 0;
+          var S = (y < v ? y + 7 : y) - v;
+          return $(c ? m - S : m + (6 - S), M);
+        case i:
+        case f:
+          return l("".concat(D, "Hours"), 0);
+        case r:
+          return l("".concat(D, "Minutes"), 1);
+        case n:
+          return l("".concat(D, "Seconds"), 2);
+        case e:
+          return l("".concat(D, "Milliseconds"), 3);
+        default:
+          return this.clone();
+      }
+    }, $.endOf = function (t) {
+      return this.startOf(t, !1);
+    }, $.$set = function (s, a) {
+      var h;
+      var c = g.p(s);
+      var d = "set".concat(this.$u ? 'UTC' : '');
+      var $ = (h = {}, h[i] = "".concat(d, "Date"), h[f] = "".concat(d, "Date"), h[u] = "".concat(d, "Month"), h[o] = "".concat(d, "FullYear"), h[r] = "".concat(d, "Hours"), h[n] = "".concat(d, "Minutes"), h[e] = "".concat(d, "Seconds"), h[t] = "".concat(d, "Milliseconds"), h)[c];
+      var l = c === i ? this.$D + (a - this.$W) : a;
+      if (c === u || c === o) {
+        var _y = this.clone().set(f, 1);
+        _y.$d[$](l), _y.init(), this.$d = _y.set(f, Math.min(this.$D, _y.daysInMonth())).$d;
+      } else $ && this.$d[$](l);
+      return this.init(), this;
+    }, $.set = function (t, e) {
+      return this.clone().$set(t, e);
+    }, $.get = function (t) {
+      return this[g.p(t)]();
+    }, $.add = function (t, a) {
+      var f;
+      var h = this;
+      t = Number(t);
+      var c = g.p(a);
+      var d = function d(e) {
+        var n = v(h);
+        return g.w(n.date(n.date() + Math.round(e * t)), h);
+      };
+      if (c === u) return this.set(u, this.$M + t);
+      if (c === o) return this.set(o, this.$y + t);
+      if (c === i) return d(1);
+      if (c === s) return d(7);
+      var $ = (f = {}, f[n] = 6e4, f[r] = 36e5, f[e] = 1e3, f)[c] || 1;
+      var l = this.$d.getTime() + t * $;
+      return g.w(l, this);
+    }, $.subtract = function (t, e) {
+      return this.add(-1 * t, e);
+    }, $.format = function (t) {
+      var e = this;
+      if (!this.isValid()) return 'Invalid Date';
+      var n = t || 'YYYY-MM-DDTHH:mm:ssZ';
+      var r = g.z(this);
+      var i = this.$locale();
+      var s = this.$H;
+      var u = this.$m;
+      var a = this.$M;
+      var o = i.weekdays;
+      var f = i.months;
+      var h = function h(t, r, i, s) {
+        return t && (t[r] || t(e, n)) || i[r].substr(0, s);
+      };
+      var d = function d(t) {
+        return g.s(s % 12 || 12, t, '0');
+      };
+      var $ = i.meridiem || function (t, e, n) {
+        var r = t < 12 ? 'AM' : 'PM';
+        return n ? r.toLowerCase() : r;
+      };
+      var l = {
+        YY: String(this.$y).slice(-2),
+        YYYY: this.$y,
+        M: a + 1,
+        MM: g.s(a + 1, 2, '0'),
+        MMM: h(i.monthsShort, a, f, 3),
+        MMMM: h(f, a),
+        D: this.$D,
+        DD: g.s(this.$D, 2, '0'),
+        d: String(this.$W),
+        dd: h(i.weekdaysMin, this.$W, o, 2),
+        ddd: h(i.weekdaysShort, this.$W, o, 3),
+        dddd: o[this.$W],
+        H: String(s),
+        HH: g.s(s, 2, '0'),
+        h: d(1),
+        hh: d(2),
+        a: $(s, u, !0),
+        A: $(s, u, !1),
+        m: String(u),
+        mm: g.s(u, 2, '0'),
+        s: String(this.$s),
+        ss: g.s(this.$s, 2, '0'),
+        SSS: g.s(this.$ms, 3, '0'),
+        Z: r
+      };
+      return n.replace(c, function (t, e) {
+        return e || l[t] || r.replace(':', '');
+      });
+    }, $.utcOffset = function () {
+      return 15 * -Math.round(this.$d.getTimezoneOffset() / 15);
+    }, $.diff = function (t, f, h) {
+      var c;
+      var d = g.p(f);
+      var $ = v(t);
+      var l = 6e4 * ($.utcOffset() - this.utcOffset());
+      var y = this - $;
+      var M = g.m(this, $);
+      return M = (c = {}, c[o] = M / 12, c[u] = M, c[a] = M / 3, c[s] = (y - l) / 6048e5, c[i] = (y - l) / 864e5, c[r] = y / 36e5, c[n] = y / 6e4, c[e] = y / 1e3, c)[d] || y, h ? M : g.a(M);
+    }, $.daysInMonth = function () {
+      return this.endOf(u).$D;
+    }, $.$locale = function () {
+      return M[this.$L];
+    }, $.locale = function (t, e) {
+      if (!t) return this.$L;
+      var n = this.clone();
+      var r = D(t, e, !0);
+      return r && (n.$L = r), n;
+    }, $.clone = function () {
+      return g.w(this.$d, this);
+    }, $.toDate = function () {
+      return new Date(this.valueOf());
+    }, $.toJSON = function () {
+      return this.isValid() ? this.toISOString() : null;
+    }, $.toISOString = function () {
+      return this.$d.toISOString();
+    }, $.toString = function () {
+      return this.$d.toUTCString();
+    }, d;
+  }();
+  var p = S.prototype;
+  return v.prototype = p, [['$ms', t], ['$s', e], ['$m', n], ['$H', r], ['$W', i], ['$M', u], ['$y', o], ['$D', f]].forEach(function (t) {
+    p[t[1]] = function (e) {
+      return this.$g(e, t[0], t[1]);
+    };
+  }), v.extend = function (t, e) {
+    return t.$i || (t(e, S, v), t.$i = !0), v;
+  }, v.locale = D, v.isDayjs = m, v.unix = function (t) {
+    return v(1e3 * t);
+  }, v.en = M[y], v.Ls = M, v.p = {}, v;
+});
+
+/***/ }),
+/* 225 */
+/*!********************************************************************!*\
+  !*** D:/1/feimi/feimi/node_modules/uview-ui/libs/util/calendar.js ***!
+  \********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20027,25 +19885,25 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 /**
- * @1900-2100区间内的公历、农历互转
- * @charset UTF-8
- * @github  https://github.com/jjonline/calendar.js
- * @Author  Jea杨(JJonline@JJonline.Cn)
- * @Time    2014-7-21
- * @Time    2016-8-13 Fixed 2033hex、Attribution Annals
- * @Time    2016-9-25 Fixed lunar LeapMonth Param Bug
- * @Time    2017-7-24 Fixed use getTerm Func Param Error.use solar year,NOT lunar year
- * @Version 1.0.3
- * @公历转农历：calendar.solar2lunar(1987,11,01); //[you can ignore params of prefix 0]
- * @农历转公历：calendar.lunar2solar(1987,09,10); //[you can ignore params of prefix 0]
- */
+* @1900-2100区间内的公历、农历互转
+* @charset UTF-8
+* @github  https://github.com/jjonline/calendar.js
+* @Author  Jea杨(JJonline@JJonline.Cn)
+* @Time    2014-7-21
+* @Time    2016-8-13 Fixed 2033hex、Attribution Annals
+* @Time    2016-9-25 Fixed lunar LeapMonth Param Bug
+* @Time    2017-7-24 Fixed use getTerm Func Param Error.use solar year,NOT lunar year
+* @Version 1.0.3
+* @公历转农历：calendar.solar2lunar(1987,11,01); //[you can ignore params of prefix 0]
+* @农历转公历：calendar.lunar2solar(1987,09,10); //[you can ignore params of prefix 0]
+*/
 /* eslint-disable */
 var calendar = {
   /**
-   * 农历1900-2100的润大小信息表
-   * @Array Of Property
-   * @return Hex
-   */
+      * 农历1900-2100的润大小信息表
+      * @Array Of Property
+      * @return Hex
+      */
   lunarInfo: [0x04bd8, 0x04ae0, 0x0a570, 0x054d5, 0x0d260, 0x0d950, 0x16554, 0x056a0, 0x09ad0, 0x055d2,
   // 1900-1909
   0x04ae0, 0x0a5b6, 0x0a4d0, 0x0d250, 0x1d255, 0x0b540, 0x0d6a0, 0x0ada2, 0x095b0, 0x14977,
@@ -20091,97 +19949,71 @@ var calendar = {
   // 2100
 
   /**
-   * 公历每个月份的天数普通表
-   * @Array Of Property
-   * @return Number
-   */
+      * 公历每个月份的天数普通表
+      * @Array Of Property
+      * @return Number
+      */
   solarMonth: [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
   /**
-   * 天干地支之天干速查表
-   * @Array Of Property trans["甲","乙","丙","丁","戊","己","庚","辛","壬","癸"]
-   * @return Cn string
-   */
+      * 天干地支之天干速查表
+      * @Array Of Property trans["甲","乙","丙","丁","戊","己","庚","辛","壬","癸"]
+      * @return Cn string
+      */
   Gan: ["\u7532", "\u4E59", "\u4E19", "\u4E01", "\u620A", "\u5DF1", "\u5E9A", "\u8F9B", "\u58EC", "\u7678"],
   /**
-   * 天干地支之地支速查表
-   * @Array Of Property
-   * @trans["子","丑","寅","卯","辰","巳","午","未","申","酉","戌","亥"]
-   * @return Cn string
-   */
+      * 天干地支之地支速查表
+      * @Array Of Property
+      * @trans["子","丑","寅","卯","辰","巳","午","未","申","酉","戌","亥"]
+      * @return Cn string
+      */
   Zhi: ["\u5B50", "\u4E11", "\u5BC5", "\u536F", "\u8FB0", "\u5DF3", "\u5348", "\u672A", "\u7533", "\u9149", "\u620C", "\u4EA5"],
   /**
-   * 天干地支之地支速查表<=>生肖
-   * @Array Of Property
-   * @trans["鼠","牛","虎","兔","龙","蛇","马","羊","猴","鸡","狗","猪"]
-   * @return Cn string
-   */
+      * 天干地支之地支速查表<=>生肖
+      * @Array Of Property
+      * @trans["鼠","牛","虎","兔","龙","蛇","马","羊","猴","鸡","狗","猪"]
+      * @return Cn string
+      */
   Animals: ["\u9F20", "\u725B", "\u864E", "\u5154", "\u9F99", "\u86C7", "\u9A6C", "\u7F8A", "\u7334", "\u9E21", "\u72D7", "\u732A"],
   /**
-   * 24节气速查表
-   * @Array Of Property
-   * @trans["小寒","大寒","立春","雨水","惊蛰","春分","清明","谷雨","立夏","小满","芒种","夏至","小暑","大暑","立秋","处暑","白露","秋分","寒露","霜降","立冬","小雪","大雪","冬至"]
-   * @return Cn string
-   */
+      * 24节气速查表
+      * @Array Of Property
+      * @trans["小寒","大寒","立春","雨水","惊蛰","春分","清明","谷雨","立夏","小满","芒种","夏至","小暑","大暑","立秋","处暑","白露","秋分","寒露","霜降","立冬","小雪","大雪","冬至"]
+      * @return Cn string
+      */
   solarTerm: ["\u5C0F\u5BD2", "\u5927\u5BD2", "\u7ACB\u6625", "\u96E8\u6C34", "\u60CA\u86F0", "\u6625\u5206", "\u6E05\u660E", "\u8C37\u96E8", "\u7ACB\u590F", "\u5C0F\u6EE1", "\u8292\u79CD", "\u590F\u81F3", "\u5C0F\u6691", "\u5927\u6691", "\u7ACB\u79CB", "\u5904\u6691", "\u767D\u9732", "\u79CB\u5206", "\u5BD2\u9732", "\u971C\u964D", "\u7ACB\u51AC", "\u5C0F\u96EA", "\u5927\u96EA", "\u51AC\u81F3"],
   /**
-   * 1900-2100各年的24节气日期速查表
-   * @Array Of Property
-   * @return 0x string For splice
-   */
+      * 1900-2100各年的24节气日期速查表
+      * @Array Of Property
+      * @return 0x string For splice
+      */
   sTermInfo: ['9778397bd097c36b0b6fc9274c91aa', '97b6b97bd19801ec9210c965cc920e', '97bcf97c3598082c95f8c965cc920f', '97bd0b06bdb0722c965ce1cfcc920f', 'b027097bd097c36b0b6fc9274c91aa', '97b6b97bd19801ec9210c965cc920e', '97bcf97c359801ec95f8c965cc920f', '97bd0b06bdb0722c965ce1cfcc920f', 'b027097bd097c36b0b6fc9274c91aa', '97b6b97bd19801ec9210c965cc920e', '97bcf97c359801ec95f8c965cc920f', '97bd0b06bdb0722c965ce1cfcc920f', 'b027097bd097c36b0b6fc9274c91aa', '9778397bd19801ec9210c965cc920e', '97b6b97bd19801ec95f8c965cc920f', '97bd09801d98082c95f8e1cfcc920f', '97bd097bd097c36b0b6fc9210c8dc2', '9778397bd197c36c9210c9274c91aa', '97b6b97bd19801ec95f8c965cc920e', '97bd09801d98082c95f8e1cfcc920f', '97bd097bd097c36b0b6fc9210c8dc2', '9778397bd097c36c9210c9274c91aa', '97b6b97bd19801ec95f8c965cc920e', '97bcf97c3598082c95f8e1cfcc920f', '97bd097bd097c36b0b6fc9210c8dc2', '9778397bd097c36c9210c9274c91aa', '97b6b97bd19801ec9210c965cc920e', '97bcf97c3598082c95f8c965cc920f', '97bd097bd097c35b0b6fc920fb0722', '9778397bd097c36b0b6fc9274c91aa', '97b6b97bd19801ec9210c965cc920e', '97bcf97c3598082c95f8c965cc920f', '97bd097bd097c35b0b6fc920fb0722', '9778397bd097c36b0b6fc9274c91aa', '97b6b97bd19801ec9210c965cc920e', '97bcf97c359801ec95f8c965cc920f', '97bd097bd097c35b0b6fc920fb0722', '9778397bd097c36b0b6fc9274c91aa', '97b6b97bd19801ec9210c965cc920e', '97bcf97c359801ec95f8c965cc920f', '97bd097bd097c35b0b6fc920fb0722', '9778397bd097c36b0b6fc9274c91aa', '97b6b97bd19801ec9210c965cc920e', '97bcf97c359801ec95f8c965cc920f', '97bd097bd07f595b0b6fc920fb0722', '9778397bd097c36b0b6fc9210c8dc2', '9778397bd19801ec9210c9274c920e', '97b6b97bd19801ec95f8c965cc920f', '97bd07f5307f595b0b0bc920fb0722', '7f0e397bd097c36b0b6fc9210c8dc2', '9778397bd097c36c9210c9274c920e', '97b6b97bd19801ec95f8c965cc920f', '97bd07f5307f595b0b0bc920fb0722', '7f0e397bd097c36b0b6fc9210c8dc2', '9778397bd097c36c9210c9274c91aa', '97b6b97bd19801ec9210c965cc920e', '97bd07f1487f595b0b0bc920fb0722', '7f0e397bd097c36b0b6fc9210c8dc2', '9778397bd097c36b0b6fc9274c91aa', '97b6b97bd19801ec9210c965cc920e', '97bcf7f1487f595b0b0bb0b6fb0722', '7f0e397bd097c35b0b6fc920fb0722', '9778397bd097c36b0b6fc9274c91aa', '97b6b97bd19801ec9210c965cc920e', '97bcf7f1487f595b0b0bb0b6fb0722', '7f0e397bd097c35b0b6fc920fb0722', '9778397bd097c36b0b6fc9274c91aa', '97b6b97bd19801ec9210c965cc920e', '97bcf7f1487f531b0b0bb0b6fb0722', '7f0e397bd097c35b0b6fc920fb0722', '9778397bd097c36b0b6fc9274c91aa', '97b6b97bd19801ec9210c965cc920e', '97bcf7f1487f531b0b0bb0b6fb0722', '7f0e397bd07f595b0b6fc920fb0722', '9778397bd097c36b0b6fc9274c91aa', '97b6b97bd19801ec9210c9274c920e', '97bcf7f0e47f531b0b0bb0b6fb0722', '7f0e397bd07f595b0b0bc920fb0722', '9778397bd097c36b0b6fc9210c91aa', '97b6b97bd197c36c9210c9274c920e', '97bcf7f0e47f531b0b0bb0b6fb0722', '7f0e397bd07f595b0b0bc920fb0722', '9778397bd097c36b0b6fc9210c8dc2', '9778397bd097c36c9210c9274c920e', '97b6b7f0e47f531b0723b0b6fb0722', '7f0e37f5307f595b0b0bc920fb0722', '7f0e397bd097c36b0b6fc9210c8dc2', '9778397bd097c36b0b70c9274c91aa', '97b6b7f0e47f531b0723b0b6fb0721', '7f0e37f1487f595b0b0bb0b6fb0722', '7f0e397bd097c35b0b6fc9210c8dc2', '9778397bd097c36b0b6fc9274c91aa', '97b6b7f0e47f531b0723b0b6fb0721', '7f0e27f1487f595b0b0bb0b6fb0722', '7f0e397bd097c35b0b6fc920fb0722', '9778397bd097c36b0b6fc9274c91aa', '97b6b7f0e47f531b0723b0b6fb0721', '7f0e27f1487f531b0b0bb0b6fb0722', '7f0e397bd097c35b0b6fc920fb0722', '9778397bd097c36b0b6fc9274c91aa', '97b6b7f0e47f531b0723b0b6fb0721', '7f0e27f1487f531b0b0bb0b6fb0722', '7f0e397bd097c35b0b6fc920fb0722', '9778397bd097c36b0b6fc9274c91aa', '97b6b7f0e47f531b0723b0b6fb0721', '7f0e27f1487f531b0b0bb0b6fb0722', '7f0e397bd07f595b0b0bc920fb0722', '9778397bd097c36b0b6fc9274c91aa', '97b6b7f0e47f531b0723b0787b0721', '7f0e27f0e47f531b0b0bb0b6fb0722', '7f0e397bd07f595b0b0bc920fb0722', '9778397bd097c36b0b6fc9210c91aa', '97b6b7f0e47f149b0723b0787b0721', '7f0e27f0e47f531b0723b0b6fb0722', '7f0e397bd07f595b0b0bc920fb0722', '9778397bd097c36b0b6fc9210c8dc2', '977837f0e37f149b0723b0787b0721', '7f07e7f0e47f531b0723b0b6fb0722', '7f0e37f5307f595b0b0bc920fb0722', '7f0e397bd097c35b0b6fc9210c8dc2', '977837f0e37f14998082b0787b0721', '7f07e7f0e47f531b0723b0b6fb0721', '7f0e37f1487f595b0b0bb0b6fb0722', '7f0e397bd097c35b0b6fc9210c8dc2', '977837f0e37f14998082b0787b06bd', '7f07e7f0e47f531b0723b0b6fb0721', '7f0e27f1487f531b0b0bb0b6fb0722', '7f0e397bd097c35b0b6fc920fb0722', '977837f0e37f14998082b0787b06bd', '7f07e7f0e47f531b0723b0b6fb0721', '7f0e27f1487f531b0b0bb0b6fb0722', '7f0e397bd097c35b0b6fc920fb0722', '977837f0e37f14998082b0787b06bd', '7f07e7f0e47f531b0723b0b6fb0721', '7f0e27f1487f531b0b0bb0b6fb0722', '7f0e397bd07f595b0b0bc920fb0722', '977837f0e37f14998082b0787b06bd', '7f07e7f0e47f531b0723b0b6fb0721', '7f0e27f1487f531b0b0bb0b6fb0722', '7f0e397bd07f595b0b0bc920fb0722', '977837f0e37f14998082b0787b06bd', '7f07e7f0e47f149b0723b0787b0721', '7f0e27f0e47f531b0b0bb0b6fb0722', '7f0e397bd07f595b0b0bc920fb0722', '977837f0e37f14998082b0723b06bd', '7f07e7f0e37f149b0723b0787b0721', '7f0e27f0e47f531b0723b0b6fb0722', '7f0e397bd07f595b0b0bc920fb0722', '977837f0e37f14898082b0723b02d5', '7ec967f0e37f14998082b0787b0721', '7f07e7f0e47f531b0723b0b6fb0722', '7f0e37f1487f595b0b0bb0b6fb0722', '7f0e37f0e37f14898082b0723b02d5', '7ec967f0e37f14998082b0787b0721', '7f07e7f0e47f531b0723b0b6fb0722', '7f0e37f1487f531b0b0bb0b6fb0722', '7f0e37f0e37f14898082b0723b02d5', '7ec967f0e37f14998082b0787b06bd', '7f07e7f0e47f531b0723b0b6fb0721', '7f0e37f1487f531b0b0bb0b6fb0722', '7f0e37f0e37f14898082b072297c35', '7ec967f0e37f14998082b0787b06bd', '7f07e7f0e47f531b0723b0b6fb0721', '7f0e27f1487f531b0b0bb0b6fb0722', '7f0e37f0e37f14898082b072297c35', '7ec967f0e37f14998082b0787b06bd', '7f07e7f0e47f531b0723b0b6fb0721', '7f0e27f1487f531b0b0bb0b6fb0722', '7f0e37f0e366aa89801eb072297c35', '7ec967f0e37f14998082b0787b06bd', '7f07e7f0e47f149b0723b0787b0721', '7f0e27f1487f531b0b0bb0b6fb0722', '7f0e37f0e366aa89801eb072297c35', '7ec967f0e37f14998082b0723b06bd', '7f07e7f0e47f149b0723b0787b0721', '7f0e27f0e47f531b0723b0b6fb0722', '7f0e37f0e366aa89801eb072297c35', '7ec967f0e37f14998082b0723b06bd', '7f07e7f0e37f14998083b0787b0721', '7f0e27f0e47f531b0723b0b6fb0722', '7f0e37f0e366aa89801eb072297c35', '7ec967f0e37f14898082b0723b02d5', '7f07e7f0e37f14998082b0787b0721', '7f07e7f0e47f531b0723b0b6fb0722', '7f0e36665b66aa89801e9808297c35', '665f67f0e37f14898082b0723b02d5', '7ec967f0e37f14998082b0787b0721', '7f07e7f0e47f531b0723b0b6fb0722', '7f0e36665b66a449801e9808297c35', '665f67f0e37f14898082b0723b02d5', '7ec967f0e37f14998082b0787b06bd', '7f07e7f0e47f531b0723b0b6fb0721', '7f0e36665b66a449801e9808297c35', '665f67f0e37f14898082b072297c35', '7ec967f0e37f14998082b0787b06bd', '7f07e7f0e47f531b0723b0b6fb0721', '7f0e26665b66a449801e9808297c35', '665f67f0e37f1489801eb072297c35', '7ec967f0e37f14998082b0787b06bd', '7f07e7f0e47f531b0723b0b6fb0721', '7f0e27f1487f531b0b0bb0b6fb0722'],
-  festivals: {
-    '1-1': '元旦',
-    '2-14': '情人节',
-    '3-8': '妇女节',
-    '3-12': '植树节',
-    '4-1': '愚人节',
-    '5-1': '劳动节',
-    '5-4': '青年节',
-    '5-12': '护士节',
-    '6-1': '儿童节',
-    '8-1': '建军节',
-    '9-10': '教师节',
-    '10-1': '国庆',
-    '11-1': '万圣节',
-    '12-24': '圣诞节',
-    '正月初一': '春节',
-    '二月初二': '龙抬头',
-    '五月初五': '端午节',
-    '七月初七': '七夕节',
-    '七月十五': '中元节',
-    '八月十五': '中秋节',
-    '九月初九': '重阳节',
-    '腊月初八': '腊八节',
-    '腊月廿三': '小年',
-    '腊月三十': '除夕'
-  },
   /**
-   * 数字转中文速查表
-   * @Array Of Property
-   * @trans ['日','一','二','三','四','五','六','七','八','九','十']
-   * @return Cn string
-   */
+      * 数字转中文速查表
+      * @Array Of Property
+      * @trans ['日','一','二','三','四','五','六','七','八','九','十']
+      * @return Cn string
+      */
   nStr1: ["\u65E5", "\u4E00", "\u4E8C", "\u4E09", "\u56DB", "\u4E94", "\u516D", "\u4E03", "\u516B", "\u4E5D", "\u5341"],
   /**
-   * 日期转农历称呼速查表
-   * @Array Of Property
-   * @trans ['初','十','廿','卅']
-   * @return Cn string
-   */
+      * 日期转农历称呼速查表
+      * @Array Of Property
+      * @trans ['初','十','廿','卅']
+      * @return Cn string
+      */
   nStr2: ["\u521D", "\u5341", "\u5EFF", "\u5345"],
   /**
-   * 月份转农历称呼速查表
-   * @Array Of Property
-   * @trans ['正','一','二','三','四','五','六','七','八','九','十','冬','腊']
-   * @return Cn string
-   */
+      * 月份转农历称呼速查表
+      * @Array Of Property
+      * @trans ['正','一','二','三','四','五','六','七','八','九','十','冬','腊']
+      * @return Cn string
+      */
   nStr3: ["\u6B63", "\u4E8C", "\u4E09", "\u56DB", "\u4E94", "\u516D", "\u4E03", "\u516B", "\u4E5D", "\u5341", "\u51AC", "\u814A"],
   /**
-   * 返回农历y年一整年的总天数
-   * @param lunar Year
-   * @return Number
-   * @eg:var count = calendar.lYearDays(1987) ;//count=387
-   */
+      * 返回农历y年一整年的总天数
+      * @param lunar Year
+      * @return Number
+      * @eg:var count = calendar.lYearDays(1987) ;//count=387
+      */
   lYearDays: function lYearDays(y) {
     var i;
     var sum = 348;
@@ -20191,21 +20023,21 @@ var calendar = {
     return sum + this.leapDays(y);
   },
   /**
-   * 返回农历y年闰月是哪个月；若y年没有闰月 则返回0
-   * @param lunar Year
-   * @return Number (0-12)
-   * @eg:var leapMonth = calendar.leapMonth(1987) ;//leapMonth=6
-   */
+      * 返回农历y年闰月是哪个月；若y年没有闰月 则返回0
+      * @param lunar Year
+      * @return Number (0-12)
+      * @eg:var leapMonth = calendar.leapMonth(1987) ;//leapMonth=6
+      */
   leapMonth: function leapMonth(y) {
     // 闰字编码 \u95f0
     return this.lunarInfo[y - 1900] & 0xf;
   },
   /**
-   * 返回农历y年闰月的天数 若该年没有闰月则返回0
-   * @param lunar Year
-   * @return Number (0、29、30)
-   * @eg:var leapMonthDay = calendar.leapDays(1987) ;//leapMonthDay=29
-   */
+      * 返回农历y年闰月的天数 若该年没有闰月则返回0
+      * @param lunar Year
+      * @return Number (0、29、30)
+      * @eg:var leapMonthDay = calendar.leapDays(1987) ;//leapMonthDay=29
+      */
   leapDays: function leapDays(y) {
     if (this.leapMonth(y)) {
       return this.lunarInfo[y - 1900] & 0x10000 ? 30 : 29;
@@ -20213,11 +20045,11 @@ var calendar = {
     return 0;
   },
   /**
-   * 返回农历y年m月（非闰月）的总天数，计算m为闰月时的天数请使用leapDays方法
-   * @param lunar Year
-   * @return Number (-1、29、30)
-   * @eg:var MonthDay = calendar.monthDays(1987,9) ;//MonthDay=29
-   */
+      * 返回农历y年m月（非闰月）的总天数，计算m为闰月时的天数请使用leapDays方法
+      * @param lunar Year
+      * @return Number (-1、29、30)
+      * @eg:var MonthDay = calendar.monthDays(1987,9) ;//MonthDay=29
+      */
   monthDays: function monthDays(y, m) {
     if (m > 12 || m < 1) {
       return -1;
@@ -20225,11 +20057,11 @@ var calendar = {
     return this.lunarInfo[y - 1900] & 0x10000 >> m ? 30 : 29;
   },
   /**
-   * 返回公历(!)y年m月的天数
-   * @param solar Year
-   * @return Number (-1、28、29、30、31)
-   * @eg:var solarMonthDay = calendar.leapDays(1987) ;//solarMonthDay=30
-   */
+      * 返回公历(!)y年m月的天数
+      * @param solar Year
+      * @return Number (-1、28、29、30、31)
+      * @eg:var solarMonthDay = calendar.leapDays(1987) ;//solarMonthDay=30
+      */
   solarDays: function solarDays(y, m) {
     if (m > 12 || m < 1) {
       return -1;
@@ -20243,10 +20075,10 @@ var calendar = {
     }
   },
   /**
-   * 农历年份转换为干支纪年
-   * @param  lYear 农历年的年份数
-   * @return Cn string
-   */
+     * 农历年份转换为干支纪年
+     * @param  lYear 农历年的年份数
+     * @return Cn string
+     */
   toGanZhiYear: function toGanZhiYear(lYear) {
     var ganKey = (lYear - 3) % 10;
     var zhiKey = (lYear - 3) % 12;
@@ -20255,11 +20087,11 @@ var calendar = {
     return this.Gan[ganKey - 1] + this.Zhi[zhiKey - 1];
   },
   /**
-   * 公历月、日判断所属星座
-   * @param  cMonth [description]
-   * @param  cDay [description]
-   * @return Cn string
-   */
+     * 公历月、日判断所属星座
+     * @param  cMonth [description]
+     * @param  cDay [description]
+     * @return Cn string
+     */
   toAstro: function toAstro(cMonth, cDay) {
     var s = "\u9B54\u7FAF\u6C34\u74F6\u53CC\u9C7C\u767D\u7F8A\u91D1\u725B\u53CC\u5B50\u5DE8\u87F9\u72EE\u5B50\u5904\u5973\u5929\u79E4\u5929\u874E\u5C04\u624B\u9B54\u7FAF";
     var arr = [20, 19, 21, 21, 21, 22, 23, 23, 23, 23, 22, 22];
@@ -20267,19 +20099,19 @@ var calendar = {
   },
 
   /**
-   * 传入offset偏移量返回干支
-   * @param offset 相对甲子的偏移量
-   * @return Cn string
-   */
+      * 传入offset偏移量返回干支
+      * @param offset 相对甲子的偏移量
+      * @return Cn string
+      */
   toGanZhi: function toGanZhi(offset) {
     return this.Gan[offset % 10] + this.Zhi[offset % 12];
   },
   /**
-   * 传入公历(!)y年获得该年第n个节气的公历日期
-   * @param y公历年(1900-2100)；n二十四节气中的第几个节气(1~24)；从n=1(小寒)算起
-   * @return day Number
-   * @eg:var _24 = calendar.getTerm(1987,3) ;//_24=4;意即1987年2月4日立春
-   */
+      * 传入公历(!)y年获得该年第n个节气的公历日期
+      * @param y公历年(1900-2100)；n二十四节气中的第几个节气(1~24)；从n=1(小寒)算起
+      * @return day Number
+      * @eg:var _24 = calendar.getTerm(1987,3) ;//_24=4;意即1987年2月4日立春
+      */
   getTerm: function getTerm(y, n) {
     if (y < 1900 || y > 2100) {
       return -1;
@@ -20293,11 +20125,11 @@ var calendar = {
     return parseInt(_calday[n - 1]);
   },
   /**
-   * 传入农历数字月份返回汉语通俗表示法
-   * @param lunar month
-   * @return Cn string
-   * @eg:var cnMonth = calendar.toChinaMonth(12) ;//cnMonth='腊月'
-   */
+      * 传入农历数字月份返回汉语通俗表示法
+      * @param lunar month
+      * @return Cn string
+      * @eg:var cnMonth = calendar.toChinaMonth(12) ;//cnMonth='腊月'
+      */
   toChinaMonth: function toChinaMonth(m) {
     // 月 => \u6708
     if (m > 12 || m < 1) {
@@ -20308,11 +20140,11 @@ var calendar = {
     return s;
   },
   /**
-   * 传入农历日期数字返回汉字表示法
-   * @param lunar day
-   * @return Cn string
-   * @eg:var cnDay = calendar.toChinaDay(21) ;//cnMonth='廿一'
-   */
+      * 传入农历日期数字返回汉字表示法
+      * @param lunar day
+      * @return Cn string
+      * @eg:var cnDay = calendar.toChinaDay(21) ;//cnMonth='廿一'
+      */
   toChinaDay: function toChinaDay(d) {
     // 日 => \u65e5
     var s;
@@ -20335,22 +20167,22 @@ var calendar = {
     return s;
   },
   /**
-   * 年份转生肖[!仅能大致转换] => 精确划分生肖分界线是“立春”
-   * @param y year
-   * @return Cn string
-   * @eg:var animal = calendar.getAnimal(1987) ;//animal='兔'
-   */
+      * 年份转生肖[!仅能大致转换] => 精确划分生肖分界线是“立春”
+      * @param y year
+      * @return Cn string
+      * @eg:var animal = calendar.getAnimal(1987) ;//animal='兔'
+      */
   getAnimal: function getAnimal(y) {
     return this.Animals[(y - 4) % 12];
   },
   /**
-   * 传入阳历年月日获得详细的公历、农历object信息 <=>JSON
-   * @param y  solar year
-   * @param m  solar month
-   * @param d  solar day
-   * @return JSON object
-   * @eg:console.log(calendar.solar2lunar(1987,11,01));
-   */
+      * 传入阳历年月日获得详细的公历、农历object信息 <=>JSON
+      * @param y  solar year
+      * @param m  solar month
+      * @param d  solar day
+      * @return JSON object
+      * @eg:console.log(calendar.solar2lunar(1987,11,01));
+      */
   solar2lunar: function solar2lunar(y, m, d) {
     // 参数区间1900.1.31~2100.12.31
     // 年份限定、上限
@@ -20461,24 +20293,6 @@ var calendar = {
       isTerm = true;
       Term = this.solarTerm[m * 2 - 1];
     }
-
-    // 计算农历日期
-    var IMonthCn = (isLeap ? "\u95F0" : '') + this.toChinaMonth(month);
-    // 农历日期的汉字表述法
-    var IDayCn = this.toChinaDay(day);
-
-    // 节日
-    var festival = '';
-    // 农历的月日汉字表述
-    var lMDcn = IMonthCn + IDayCn;
-    // 月份日期
-    var MD = m + '-' + d;
-    if (this.festivals.hasOwnProperty(lMDcn)) {
-      festival = this.festivals[lMDcn];
-    } else if (this.festivals.hasOwnProperty(MD)) {
-      festival = this.festivals[MD];
-    }
-
     // 日柱 当月一日与 1900/1/1 相差天数
     var dayCyclical = Date.UTC(y, sm, 1, 0, 0, 0, 0) / 86400000 + 25567 + 10;
     var gzD = this.toGanZhi(dayCyclical + d - 1);
@@ -20489,8 +20303,8 @@ var calendar = {
       'lMonth': month,
       'lDay': day,
       'Animal': this.getAnimal(year),
-      'IMonthCn': IMonthCn,
-      'IDayCn': IDayCn,
+      'IMonthCn': (isLeap ? "\u95F0" : '') + this.toChinaMonth(month),
+      'IDayCn': this.toChinaDay(day),
       'cYear': y,
       'cMonth': m,
       'cDay': d,
@@ -20503,19 +20317,18 @@ var calendar = {
       'ncWeek': "\u661F\u671F" + cWeek,
       'isTerm': isTerm,
       'Term': Term,
-      'astro': astro,
-      'festival': festival
+      'astro': astro
     };
   },
   /**
-   * 传入农历年月日以及传入的月份是否闰月获得详细的公历、农历object信息 <=>JSON
-   * @param y  lunar year
-   * @param m  lunar month
-   * @param d  lunar day
-   * @param isLeapMonth  lunar month is leap or not.[如果是农历闰月第四个参数赋值true即可]
-   * @return JSON object
-   * @eg:console.log(calendar.lunar2solar(1987,9,10));
-   */
+      * 传入农历年月日以及传入的月份是否闰月获得详细的公历、农历object信息 <=>JSON
+      * @param y  lunar year
+      * @param m  lunar month
+      * @param d  lunar day
+      * @param isLeapMonth  lunar month is leap or not.[如果是农历闰月第四个参数赋值true即可]
+      * @return JSON object
+      * @eg:console.log(calendar.lunar2solar(1987,9,10));
+      */
   lunar2solar: function lunar2solar(y, m, d, isLeapMonth) {
     // 参数区间1900.1.31~2100.12.1
     var isLeapMonth = !!isLeapMonth;
@@ -20574,3800 +20387,118 @@ var _default = calendar;
 exports.default = _default;
 
 /***/ }),
-/* 232 */
-/*!**********************************************************************!*\
-  !*** D:/1/feimi/feimi/uni_modules/wu-ui-tools/libs/mixin/mpMixin.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  // 将自定义节点设置成虚拟的（去掉自定义组件包裹层），更加接近Vue组件的表现，能更好的使用flex属性
-  options: {
-    virtualHost: true
-  }
-};
-exports.default = _default;
-
-/***/ }),
-/* 233 */
-/*!********************************************************************!*\
-  !*** D:/1/feimi/feimi/uni_modules/wu-ui-tools/libs/mixin/mixin.js ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ 13);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var index = _interopRequireWildcard(__webpack_require__(/*! ../function/index.js */ 234));
-var test = _interopRequireWildcard(__webpack_require__(/*! ../function/test.js */ 235));
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
-function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-var _default2 = {
-  // 定义每个组件都可能需要用到的外部样式以及类名
-  props: {
-    // 每个组件都有的父组件传递的样式，可以为字符串或者对象形式
-    customStyle: {
-      type: [Object, String],
-      default: function _default() {
-        return {};
-      }
-    },
-    customClass: {
-      type: String,
-      default: ''
-    },
-    // 跳转的页面路径
-    url: {
-      type: String,
-      default: ''
-    },
-    // 页面跳转的类型
-    linkType: {
-      type: String,
-      default: 'navigateTo'
-    }
-  },
-  data: function data() {
-    return {};
-  },
-  onLoad: function onLoad() {
-    // getRect挂载到$w上，因为这方法需要使用in(this)，所以无法把它独立成一个单独的文件导出
-    this.$w.getRect = this.$wuGetRect;
-  },
-  created: function created() {
-    // 组件当中，只有created声明周期，为了能在组件使用，故也在created中将方法挂载到$w
-    this.$w.getRect = this.$wuGetRect;
-  },
-  computed: {
-    $w: function $w() {
-      return _objectSpread(_objectSpread({}, index), {}, {
-        test: test
-      });
-    },
-    /**
-     * 生成bem规则类名
-     * 由于微信小程序，H5，nvue之间绑定class的差异，无法通过:class="[bem()]"的形式进行同用
-     * 故采用如下折中做法，最后返回的是数组（一般平台）或字符串（支付宝和字节跳动平台），类似['a', 'b', 'c']或'a b c'的形式
-     * @param {String} name 组件名称
-     * @param {Array} fixed 一直会存在的类名
-     * @param {Array} change 会根据变量值为true或者false而出现或者隐藏的类名
-     * @returns {Array|string}
-     */
-    bem: function bem() {
-      return function (name, fixed, change) {
-        var _this2 = this;
-        // 类名前缀
-        var prefix = "wu-".concat(name, "--");
-        var classes = {};
-        if (fixed) {
-          fixed.map(function (item) {
-            // 这里的类名，会一直存在
-            classes[prefix + _this2[item]] = true;
-          });
-        }
-        if (change) {
-          change.map(function (item) {
-            // 这里的类名，会根据this[item]的值为true或者false，而进行添加或者移除某一个类
-            _this2[item] ? classes[prefix + item] = _this2[item] : delete classes[prefix + item];
-          });
-        }
-        return Object.keys(classes);
-        // 支付宝，头条小程序无法动态绑定一个数组类名，否则解析出来的结果会带有","，而导致失效
-      };
-    }
-  },
-
-  methods: {
-    // 跳转某一个页面
-    openPage: function openPage() {
-      var urlKey = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'url';
-      var url = this[urlKey];
-      if (url) {
-        // 执行类似uni.navigateTo的方法
-        uni[this.linkType]({
-          url: url
-        });
-      }
-    },
-    // 查询节点信息
-    // 目前此方法在支付宝小程序中无法获取组件跟接点的尺寸，为支付宝的bug(2020-07-21)
-    // 解决办法为在组件根部再套一个没有任何作用的view元素
-    $wuGetRect: function $wuGetRect(selector, all) {
-      var _this3 = this;
-      return new Promise(function (resolve) {
-        uni.createSelectorQuery().in(_this3)[all ? 'selectAll' : 'select'](selector).boundingClientRect(function (rect) {
-          if (all && Array.isArray(rect) && rect.length) {
-            resolve(rect);
-          }
-          if (!all && rect) {
-            resolve(rect);
-          }
-        }).exec();
-      });
-    },
-    // 查询节点布局是否相交
-    IntersectionObserver: function IntersectionObserver(_this, nodeName, callback) {
-      var _this4 = this;
-      this.$nextTick(function () {
-        var intersectionObserver = uni.createIntersectionObserver(_this);
-        intersectionObserver.relativeToViewport({
-          bottom: Number(_this4.lazyLoadRootMargin)
-        }).observe(nodeName, function (res) {
-          callback(res, function () {
-            return intersectionObserver.disconnect();
-          });
-        });
-      });
-    },
-    getParentData: function getParentData() {
-      var _this5 = this;
-      var parentName = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-      // 避免在created中去定义parent变量
-      if (!this.parent) this.parent = {};
-      // 这里的本质原理是，通过获取父组件实例(也即类似wu-radio的父组件wu-radio-group的this)
-      // 将父组件this中对应的参数，赋值给本组件(wu-radio的this)的parentData对象中对应的属性
-      // 之所以需要这么做，是因为所有端中，头条小程序不支持通过this.parent.xxx去监听父组件参数的变化
-      // 此处并不会自动更新子组件的数据，而是依赖父组件wu-radio-group去监听data的变化，手动调用更新子组件的方法去重新获取
-      this.parent = this.$w.$parent.call(this, parentName);
-      if (this.parent.children) {
-        // 如果父组件的children不存在本组件的实例，才将本实例添加到父组件的children中
-        this.parent.children.indexOf(this) === -1 && this.parent.children.push(this);
-      }
-      if (this.parent && this.parentData) {
-        // 历遍parentData中的属性，将parent中的同名属性赋值给parentData
-        Object.keys(this.parentData).map(function (key) {
-          _this5.parentData[key] = _this5.parent[key];
-        });
-      }
-    },
-    // 阻止事件冒泡
-    preventEvent: function preventEvent(e) {
-      e && typeof e.stopPropagation === 'function' && e.stopPropagation();
-    },
-    // 空操作
-    noop: function noop(e) {
-      this.preventEvent(e);
-    }
-  },
-  onReachBottom: function onReachBottom() {
-    uni.$emit('wuOnReachBottom');
-  },
-  beforeDestroy: function beforeDestroy() {
-    var _this6 = this;
-    // 判断当前页面是否存在parent和chldren，一般在checkbox和checkbox-group父子联动的场景会有此情况
-    // 组件销毁时，移除子组件在父组件children数组中的实例，释放资源，避免数据混乱
-    if (this.parent && test.array(this.parent.children)) {
-      // 组件销毁时，移除父组件中的children数组中对应的实例
-      var childrenList = this.parent.children;
-      childrenList.map(function (child, index) {
-        // 如果相等，则移除
-        if (child === _this6) {
-          childrenList.splice(index, 1);
-        }
-      });
-    }
-  }
-};
-exports.default = _default2;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-/* 234 */
-/*!***********************************************************************!*\
-  !*** D:/1/feimi/feimi/uni_modules/wu-ui-tools/libs/function/index.js ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.$parent = $parent;
-Object.defineProperty(exports, "Color", {
-  enumerable: true,
-  get: function get() {
-    return _color.default;
-  }
-});
-exports.addStyle = addStyle;
-exports.addUnit = addUnit;
-exports.deepClone = deepClone;
-exports.deepMerge = deepMerge;
-exports.error = error;
-exports.formValidate = formValidate;
-exports.getDuration = getDuration;
-exports.getHistoryPage = getHistoryPage;
-exports.getProperty = getProperty;
-exports.getPx = getPx;
-exports.guid = guid;
-exports.os = os;
-exports.padZero = padZero;
-exports.page = page;
-exports.pages = pages;
-exports.priceFormat = priceFormat;
-exports.queryParams = queryParams;
-exports.random = random;
-exports.randomArray = randomArray;
-exports.range = range;
-exports.setConfig = setConfig;
-exports.setProperty = setProperty;
-exports.sleep = sleep;
-exports.sys = sys;
-exports.timeFormat = timeFormat;
-exports.timeFrom = timeFrom;
-exports.toast = toast;
-exports.trim = trim;
-exports.type2icon = type2icon;
-var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ 5));
-var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ 13));
-var _test = __webpack_require__(/*! ./test.js */ 235);
-var _digit = __webpack_require__(/*! ./digit.js */ 236);
-var _color = _interopRequireDefault(__webpack_require__(/*! ./color */ 237));
-// 颜色操作方法
-
-/**
- * @description 如果value小于min，取min；如果value大于max，取max
- * @param {number} min
- * @param {number} max
- * @param {number} value
- */
-function range() {
-  var min = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-  var max = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-  var value = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
-  return Math.max(min, Math.min(max, Number(value)));
-}
-
-/**
- * @description 用于获取用户传递值的px值  如果用户传递了"xxpx"或者"xxrpx"，取出其数值部分，如果是"xxxrpx"还需要用过uni.upx2px进行转换
- * @param {number|string} value 用户传递值的px值
- * @param {boolean} unit
- * @returns {number|string}
- */
-function getPx(value) {
-  var unit = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-  if ((0, _test.number)(value)) {
-    return unit ? "".concat(value, "px") : Number(value);
-  }
-  // 如果带有rpx，先取出其数值部分，再转为px值
-  if (/(rpx|upx)$/.test(value)) {
-    return unit ? "".concat(uni.upx2px(parseInt(value)), "px") : Number(uni.upx2px(parseInt(value)));
-  }
-  return unit ? "".concat(parseInt(value), "px") : parseInt(value);
-}
-
-/**
- * @description 进行延时，以达到可以简写代码的目的 比如: await uni.$w.sleep(20)将会阻塞20ms
- * @param {number} value 堵塞时间 单位ms 毫秒
- * @returns {Promise} 返回promise
- */
-function sleep() {
-  var value = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 30;
-  return new Promise(function (resolve) {
-    setTimeout(function () {
-      resolve();
-    }, value);
-  });
-}
-/**
- * @description 运行期判断平台
- * @returns {string} 返回所在平台(小写)
- * @link 运行期判断平台 https://uniapp.dcloud.io/frame?id=判断平台
- */
-function os() {
-  return uni.getSystemInfoSync().platform.toLowerCase();
-}
-/**
- * @description 获取系统信息同步接口
- * @link 获取系统信息同步接口 https://uniapp.dcloud.io/api/system/info?id=getsysteminfosync
- */
-function sys() {
-  return uni.getSystemInfoSync();
-}
-
-/**
- * @description 取一个区间数
- * @param {Number} min 最小值
- * @param {Number} max 最大值
- */
-function random(min, max) {
-  if (min >= 0 && max > 0 && max >= min) {
-    var gab = max - min + 1;
-    return Math.floor(Math.random() * gab + min);
-  }
-  return 0;
-}
-
-/**
- * @param {Number} len uuid的长度
- * @param {Boolean} firstU 将返回的首字母置为"u"
- * @param {Nubmer} radix 生成uuid的基数(意味着返回的字符串都是这个基数),2-二进制,8-八进制,10-十进制,16-十六进制
- */
-function guid() {
-  var len = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 32;
-  var firstU = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-  var radix = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
-  var chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.split('');
-  var uuid = [];
-  radix = radix || chars.length;
-  if (len) {
-    // 如果指定uuid长度,只是取随机的字符,0|x为位运算,能去掉x的小数位,返回整数位
-    for (var i = 0; i < len; i++) {
-      uuid[i] = chars[0 | Math.random() * radix];
-    }
-  } else {
-    var r;
-    // rfc4122标准要求返回的uuid中,某些位为固定的字符
-    uuid[8] = uuid[13] = uuid[18] = uuid[23] = '-';
-    uuid[14] = '4';
-    for (var _i = 0; _i < 36; _i++) {
-      if (!uuid[_i]) {
-        r = 0 | Math.random() * 16;
-        uuid[_i] = chars[_i == 19 ? r & 0x3 | 0x8 : r];
-      }
-    }
-  }
-  // 移除第一个字符,并用u替代,因为第一个字符为数值时,该guuid不能用作id或者class
-  if (firstU) {
-    uuid.shift();
-    return "u".concat(uuid.join(''));
-  }
-  return uuid.join('');
-}
-
-/**
-* @description 获取父组件的参数，因为支付宝小程序不支持provide/inject的写法
-   this.$parent在非H5中，可以准确获取到父组件，但是在H5中，需要多次this.$parent.$parent.xxx
-   这里默认值等于undefined有它的含义，因为最顶层元素(组件)的$parent就是undefined，意味着不传name
-   值(默认为undefined)，就是查找最顶层的$parent
-*  @param {string|undefined} name 父组件的参数名
-*/
-function $parent() {
-  var name = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : undefined;
-  var parent = this.$parent;
-  // 通过while历遍，这里主要是为了H5需要多层解析的问题
-  while (parent) {
-    // 父组件
-    if (parent.$options && parent.$options.name !== name) {
-      // 如果组件的name不相等，继续上一级寻找
-      parent = parent.$parent;
-    } else {
-      return parent;
-    }
-  }
-  return false;
-}
-
-/**
- * @description 样式转换
- * 对象转字符串，或者字符串转对象
- * @param {object | string} customStyle 需要转换的目标
- * @param {String} target 转换的目的，object-转为对象，string-转为字符串
- * @returns {object|string}
- */
-function addStyle(customStyle) {
-  var target = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'object';
-  // 字符串转字符串，对象转对象情形，直接返回
-  if ((0, _test.empty)(customStyle) || (0, _typeof2.default)(customStyle) === 'object' && target === 'object' || target === 'string' && typeof customStyle === 'string') {
-    return customStyle;
-  }
-  // 字符串转对象
-  if (target === 'object') {
-    // 去除字符串样式中的两端空格(中间的空格不能去掉，比如padding: 20px 0如果去掉了就错了)，空格是无用的
-    customStyle = trim(customStyle);
-    // 根据";"将字符串转为数组形式
-    var styleArray = customStyle.split(';');
-    var style = {};
-    // 历遍数组，拼接成对象
-    for (var i = 0; i < styleArray.length; i++) {
-      // 'font-size:20px;color:red;'，如此最后字符串有";"的话，会导致styleArray最后一个元素为空字符串，这里需要过滤
-      if (styleArray[i]) {
-        var item = styleArray[i].split(':');
-        style[trim(item[0])] = trim(item[1]);
-      }
-    }
-    return style;
-  }
-  // 这里为对象转字符串形式
-  var string = '';
-  for (var _i2 in customStyle) {
-    // 驼峰转为中划线的形式，否则css内联样式，无法识别驼峰样式属性名
-    var key = _i2.replace(/([A-Z])/g, '-$1').toLowerCase();
-    string += "".concat(key, ":").concat(customStyle[_i2], ";");
-  }
-  // 去除两端空格
-  return trim(string);
-}
-
-/**
- * @description 添加单位，如果有rpx，upx，%，px等单位结尾或者值为auto，直接返回，否则加上px单位结尾
- * @param {string|number} value 需要添加单位的值
- * @param {string} unit 添加的单位名 比如px
- */
-function addUnit() {
-  var _uni, _uni$$w, _uni$$w$config, _uni2, _uni2$$w, _uni2$$w$config;
-  var value = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'auto';
-  var unit = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : (_uni = uni) !== null && _uni !== void 0 && (_uni$$w = _uni.$w) !== null && _uni$$w !== void 0 && (_uni$$w$config = _uni$$w.config) !== null && _uni$$w$config !== void 0 && _uni$$w$config.unit ? (_uni2 = uni) === null || _uni2 === void 0 ? void 0 : (_uni2$$w = _uni2.$w) === null || _uni2$$w === void 0 ? void 0 : (_uni2$$w$config = _uni2$$w.config) === null || _uni2$$w$config === void 0 ? void 0 : _uni2$$w$config.unit : 'px';
-  value = String(value);
-  // 用wuui内置验证规则中的number判断是否为数值
-  return (0, _test.number)(value) ? "".concat(value).concat(unit) : value;
-}
-
-/**
- * @description 深度克隆
- * @param {object} obj 需要深度克隆的对象
- * @param cache 缓存
- * @returns {*} 克隆后的对象或者原值（不是对象）
- */
-function deepClone(obj) {
-  var cache = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : new WeakMap();
-  if (obj === null || (0, _typeof2.default)(obj) !== 'object') return obj;
-  if (cache.has(obj)) return cache.get(obj);
-  var clone;
-  if (obj instanceof Date) {
-    clone = new Date(obj.getTime());
-  } else if (obj instanceof RegExp) {
-    clone = new RegExp(obj);
-  } else if (obj instanceof Map) {
-    clone = new Map(Array.from(obj, function (_ref) {
-      var _ref2 = (0, _slicedToArray2.default)(_ref, 2),
-        key = _ref2[0],
-        value = _ref2[1];
-      return [key, deepClone(value, cache)];
-    }));
-  } else if (obj instanceof Set) {
-    clone = new Set(Array.from(obj, function (value) {
-      return deepClone(value, cache);
-    }));
-  } else if (Array.isArray(obj)) {
-    clone = obj.map(function (value) {
-      return deepClone(value, cache);
-    });
-  } else if (Object.prototype.toString.call(obj) === '[object Object]') {
-    clone = Object.create(Object.getPrototypeOf(obj));
-    cache.set(obj, clone);
-    for (var _i3 = 0, _Object$entries = Object.entries(obj); _i3 < _Object$entries.length; _i3++) {
-      var _Object$entries$_i = (0, _slicedToArray2.default)(_Object$entries[_i3], 2),
-        key = _Object$entries$_i[0],
-        value = _Object$entries$_i[1];
-      clone[key] = deepClone(value, cache);
-    }
-  } else {
-    clone = Object.assign({}, obj);
-  }
-  cache.set(obj, clone);
-  return clone;
-}
-
-/**
- * @description JS对象深度合并
- * @param {object} target 需要拷贝的对象
- * @param {object} source 拷贝的来源对象
- * @returns {object|boolean} 深度合并后的对象或者false（入参有不是对象）
- */
-function deepMerge() {
-  var target = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  var source = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-  target = deepClone(target);
-  if ((0, _typeof2.default)(target) !== 'object' || target === null || (0, _typeof2.default)(source) !== 'object' || source === null) return target;
-  var merged = Array.isArray(target) ? target.slice() : Object.assign({}, target);
-  for (var prop in source) {
-    if (!source.hasOwnProperty(prop)) continue;
-    var sourceValue = source[prop];
-    var targetValue = merged[prop];
-    if (sourceValue instanceof Date) {
-      merged[prop] = new Date(sourceValue);
-    } else if (sourceValue instanceof RegExp) {
-      merged[prop] = new RegExp(sourceValue);
-    } else if (sourceValue instanceof Map) {
-      merged[prop] = new Map(sourceValue);
-    } else if (sourceValue instanceof Set) {
-      merged[prop] = new Set(sourceValue);
-    } else if ((0, _typeof2.default)(sourceValue) === 'object' && sourceValue !== null) {
-      merged[prop] = deepMerge(targetValue, sourceValue);
-    } else {
-      merged[prop] = sourceValue;
-    }
-  }
-  return merged;
-}
-
-/**
- * @description error提示
- * @param {*} err 错误内容
- */
-function error(err) {
-  // 开发环境才提示，生产环境不会提示
-  if (true) {
-    console.error("wuui\u63D0\u793A\uFF1A".concat(err));
-  }
-}
-
-/**
- * @description 打乱数组
- * @param {array} array 需要打乱的数组
- * @returns {array} 打乱后的数组
- */
-function randomArray() {
-  var array = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-  // 原理是sort排序,Math.random()产生0<= x < 1之间的数,会导致x-0.05大于或者小于0
-  return array.sort(function () {
-    return Math.random() - 0.5;
-  });
-}
-
-// padStart 的 polyfill，因为某些机型或情况，还无法支持es7的padStart，比如电脑版的微信小程序
-// 所以这里做一个兼容polyfill的兼容处理
-if (!String.prototype.padStart) {
-  // 为了方便表示这里 fillString 用了ES6 的默认参数，不影响理解
-  String.prototype.padStart = function (maxLength) {
-    var fillString = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : ' ';
-    if (Object.prototype.toString.call(fillString) !== '[object String]') {
-      throw new TypeError('fillString must be String');
-    }
-    var str = this;
-    // 返回 String(str) 这里是为了使返回的值是字符串字面量，在控制台中更符合直觉
-    if (str.length >= maxLength) return String(str);
-    var fillLength = maxLength - str.length;
-    var times = Math.ceil(fillLength / fillString.length);
-    while (times >>= 1) {
-      fillString += fillString;
-      if (times === 1) {
-        fillString += fillString;
-      }
-    }
-    return fillString.slice(0, fillLength) + str;
-  };
-}
-
-/**
- * @description 格式化时间
- * @param {String|Number} dateTime 需要格式化的时间戳
- * @param {String} fmt 格式化规则 yyyy:mm:dd|yyyy:mm|yyyy年mm月dd日|yyyy年mm月dd日 hh时MM分等,可自定义组合 默认yyyy-mm-dd
- * @returns {string} 返回格式化后的字符串
- */
-function timeFormat() {
-  var dateTime = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
-  var formatStr = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'yyyy-mm-dd';
-  var date;
-  // 若传入时间为假值，则取当前时间
-  if (!dateTime) {
-    date = new Date();
-  }
-  // 若为unix秒时间戳，则转为毫秒时间戳（逻辑有点奇怪，但不敢改，以保证历史兼容）
-  else if (/^\d{10}$/.test(dateTime === null || dateTime === void 0 ? void 0 : dateTime.toString().trim())) {
-    date = new Date(dateTime * 1000);
-  }
-  // 若用户传入字符串格式时间戳，new Date无法解析，需做兼容
-  else if (typeof dateTime === 'string' && /^\d+$/.test(dateTime.trim())) {
-    date = new Date(Number(dateTime));
-  }
-  // 处理平台性差异，在Safari/Webkit中，new Date仅支持/作为分割符的字符串时间
-  // 处理 '2022-07-10 01:02:03'，跳过 '2022-07-10T01:02:03'
-  else if (typeof dateTime === 'string' && dateTime.includes('-') && !dateTime.includes('T')) {
-    date = new Date(dateTime.replace(/-/g, '/'));
-  }
-  // 其他都认为符合 RFC 2822 规范
-  else {
-    date = new Date(dateTime);
-  }
-  var timeSource = {
-    'y': date.getFullYear().toString(),
-    // 年
-    'm': (date.getMonth() + 1).toString().padStart(2, '0'),
-    // 月
-    'd': date.getDate().toString().padStart(2, '0'),
-    // 日
-    'h': date.getHours().toString().padStart(2, '0'),
-    // 时
-    'M': date.getMinutes().toString().padStart(2, '0'),
-    // 分
-    's': date.getSeconds().toString().padStart(2, '0') // 秒
-    // 有其他格式化字符需求可以继续添加，必须转化成字符串
-  };
-
-  for (var key in timeSource) {
-    var _ref3 = new RegExp("".concat(key, "+")).exec(formatStr) || [],
-      _ref4 = (0, _slicedToArray2.default)(_ref3, 1),
-      ret = _ref4[0];
-    if (ret) {
-      // 年可能只需展示两位
-      var beginIndex = key === 'y' && ret.length === 2 ? 2 : 0;
-      formatStr = formatStr.replace(ret, timeSource[key].slice(beginIndex));
-    }
-  }
-  return formatStr;
-}
-
-/**
- * @description 时间戳转为多久之前
- * @param {String|Number} timestamp 时间戳
- * @param {String|Boolean} format
- * 格式化规则如果为时间格式字符串，超出一定时间范围，返回固定的时间格式；
- * 如果为布尔值false，无论什么时间，都返回多久以前的格式
- * @returns {string} 转化后的内容
- */
-function timeFrom() {
-  var timestamp = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
-  var format = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'yyyy-mm-dd';
-  if (timestamp == null) timestamp = Number(new Date());
-  timestamp = parseInt(timestamp);
-  // 判断用户输入的时间戳是秒还是毫秒,一般前端js获取的时间戳是毫秒(13位),后端传过来的为秒(10位)
-  if (timestamp.toString().length == 10) timestamp *= 1000;
-  var timer = new Date().getTime() - timestamp;
-  timer = parseInt(timer / 1000);
-  // 如果小于5分钟,则返回"刚刚",其他以此类推
-  var tips = '';
-  switch (true) {
-    case timer < 300:
-      tips = '刚刚';
-      break;
-    case timer >= 300 && timer < 3600:
-      tips = "".concat(parseInt(timer / 60), "\u5206\u949F\u524D");
-      break;
-    case timer >= 3600 && timer < 86400:
-      tips = "".concat(parseInt(timer / 3600), "\u5C0F\u65F6\u524D");
-      break;
-    case timer >= 86400 && timer < 2592000:
-      tips = "".concat(parseInt(timer / 86400), "\u5929\u524D");
-      break;
-    default:
-      // 如果format为false，则无论什么时间戳，都显示xx之前
-      if (format === false) {
-        if (timer >= 2592000 && timer < 365 * 86400) {
-          tips = "".concat(parseInt(timer / (86400 * 30)), "\u4E2A\u6708\u524D");
-        } else {
-          tips = "".concat(parseInt(timer / (86400 * 365)), "\u5E74\u524D");
-        }
-      } else {
-        tips = timeFormat(timestamp, format);
-      }
-  }
-  return tips;
-}
-
-/**
- * @description 去除空格
- * @param String str 需要去除空格的字符串
- * @param String pos both(左右)|left|right|all 默认both
- */
-function trim(str) {
-  var pos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'both';
-  str = String(str);
-  if (pos == 'both') {
-    return str.replace(/^\s+|\s+$/g, '');
-  }
-  if (pos == 'left') {
-    return str.replace(/^\s*/, '');
-  }
-  if (pos == 'right') {
-    return str.replace(/(\s*$)/g, '');
-  }
-  if (pos == 'all') {
-    return str.replace(/\s+/g, '');
-  }
-  return str;
-}
-
-/**
- * @description 对象转url参数
- * @param {object} data,对象
- * @param {Boolean} isPrefix,是否自动加上"?"
- * @param {string} arrayFormat 规则 indices|brackets|repeat|comma
- */
-function queryParams() {
-  var data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  var isPrefix = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-  var arrayFormat = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'brackets';
-  var prefix = isPrefix ? '?' : '';
-  var _result = [];
-  if (['indices', 'brackets', 'repeat', 'comma'].indexOf(arrayFormat) == -1) arrayFormat = 'brackets';
-  var _loop = function _loop(key) {
-    var value = data[key];
-    // 去掉为空的参数
-    if (['', undefined, null].indexOf(value) >= 0) {
-      return "continue";
-    }
-    // 如果值为数组，另行处理
-    if (value.constructor === Array) {
-      // e.g. {ids: [1, 2, 3]}
-      switch (arrayFormat) {
-        case 'indices':
-          // 结果: ids[0]=1&ids[1]=2&ids[2]=3
-          for (var i = 0; i < value.length; i++) {
-            _result.push("".concat(key, "[").concat(i, "]=").concat(value[i]));
-          }
-          break;
-        case 'brackets':
-          // 结果: ids[]=1&ids[]=2&ids[]=3
-          value.forEach(function (_value) {
-            _result.push("".concat(key, "[]=").concat(_value));
-          });
-          break;
-        case 'repeat':
-          // 结果: ids=1&ids=2&ids=3
-          value.forEach(function (_value) {
-            _result.push("".concat(key, "=").concat(_value));
-          });
-          break;
-        case 'comma':
-          // 结果: ids=1,2,3
-          var commaStr = '';
-          value.forEach(function (_value) {
-            commaStr += (commaStr ? ',' : '') + _value;
-          });
-          _result.push("".concat(key, "=").concat(commaStr));
-          break;
-        default:
-          value.forEach(function (_value) {
-            _result.push("".concat(key, "[]=").concat(_value));
-          });
-      }
-    } else {
-      _result.push("".concat(key, "=").concat(value));
-    }
-  };
-  for (var key in data) {
-    var _ret = _loop(key);
-    if (_ret === "continue") continue;
-  }
-  return _result.length ? prefix + _result.join('&') : '';
-}
-
-/**
- * 显示消息提示框
- * @param {String} title 提示的内容，长度与 icon 取值有关。
- * @param {Number} duration 提示的延迟时间，单位毫秒，默认：2000
- */
-function toast(title) {
-  var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2000;
-  uni.showToast({
-    title: String(title),
-    icon: 'none',
-    duration: duration
-  });
-}
-
-/**
- * @description 根据主题type值,获取对应的图标
- * @param {String} type 主题名称,primary|info|error|warning|success
- * @param {boolean} fill 是否使用fill填充实体的图标
- */
-function type2icon() {
-  var type = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'success';
-  var fill = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-  // 如果非预置值,默认为success
-  if (['primary', 'info', 'error', 'warning', 'success'].indexOf(type) == -1) type = 'success';
-  var iconName = '';
-  // 目前(2019-12-12),info和primary使用同一个图标
-  switch (type) {
-    case 'primary':
-      iconName = 'info-circle';
-      break;
-    case 'info':
-      iconName = 'info-circle';
-      break;
-    case 'error':
-      iconName = 'close-circle';
-      break;
-    case 'warning':
-      iconName = 'error-circle';
-      break;
-    case 'success':
-      iconName = 'checkmark-circle';
-      break;
-    default:
-      iconName = 'checkmark-circle';
-  }
-  // 是否是实体类型,加上-fill,在icon组件库中,实体的类名是后面加-fill的
-  if (fill) iconName += '-fill';
-  return iconName;
-}
-
-/**
- * @description 数字格式化
- * @param {number|string} number 要格式化的数字
- * @param {number} decimals 保留几位小数
- * @param {string} decimalPoint 小数点符号
- * @param {string} thousandsSeparator 千分位符号
- * @returns {string} 格式化后的数字
- */
-function priceFormat(number) {
-  var decimals = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-  var decimalPoint = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '.';
-  var thousandsSeparator = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : ',';
-  number = "".concat(number).replace(/[^0-9+-Ee.]/g, '');
-  var n = !isFinite(+number) ? 0 : +number;
-  var prec = !isFinite(+decimals) ? 0 : Math.abs(decimals);
-  var sep = typeof thousandsSeparator === 'undefined' ? ',' : thousandsSeparator;
-  var dec = typeof decimalPoint === 'undefined' ? '.' : decimalPoint;
-  var s = '';
-  s = (prec ? (0, _digit.round)(n, prec) + '' : "".concat(Math.round(n))).split('.');
-  var re = /(-?\d+)(\d{3})/;
-  while (re.test(s[0])) {
-    s[0] = s[0].replace(re, "$1".concat(sep, "$2"));
-  }
-  if ((s[1] || '').length < prec) {
-    s[1] = s[1] || '';
-    s[1] += new Array(prec - s[1].length + 1).join('0');
-  }
-  return s.join(dec);
-}
-
-/**
- * @description 获取duration值
- * 如果带有ms或者s直接返回，如果大于一定值，认为是ms单位，小于一定值，认为是s单位
- * 比如以30位阈值，那么300大于30，可以理解为用户想要的是300ms，而不是想花300s去执行一个动画
- * @param {String|number} value 比如: "1s"|"100ms"|1|100
- * @param {boolean} unit  提示: 如果是false 默认返回number
- * @return {string|number}
- */
-function getDuration(value) {
-  var unit = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-  var valueNum = parseInt(value);
-  if (unit) {
-    if (/s$/.test(value)) return value;
-    return value > 30 ? "".concat(value, "ms") : "".concat(value, "s");
-  }
-  if (/ms$/.test(value)) return valueNum;
-  if (/s$/.test(value)) return valueNum > 30 ? valueNum : valueNum * 1000;
-  return valueNum;
-}
-
-/**
- * @description 日期的月或日补零操作
- * @param {String} value 需要补零的值
- */
-function padZero(value) {
-  return "00".concat(value).slice(-2);
-}
-
-/**
- * @description 在wu-form的子组件内容发生变化，或者失去焦点时，尝试通知wu-form执行校验方法
- * @param {*} instance
- * @param {*} event
- */
-function formValidate(instance, event) {
-  var formItem = $parent.call(instance, 'wu-form-item');
-  var form = $parent.call(instance, 'wu-form');
-  // 如果发生变化的input或者textarea等，其父组件中有wu-form-item或者wu-form等，就执行form的validate方法
-  // 同时将form-item的pros传递给form，让其进行精确对象验证
-  if (formItem && form) {
-    form.validateField(formItem.prop, function () {}, event);
-  }
-}
-
-/**
- * @description 获取某个对象下的属性，用于通过类似'a.b.c'的形式去获取一个对象的的属性的形式
- * @param {object} obj 对象
- * @param {string} key 需要获取的属性字段
- * @returns {*}
- */
-function getProperty(obj, key) {
-  if (!obj) {
-    return;
-  }
-  if (typeof key !== 'string' || key === '') {
-    return '';
-  }
-  if (key.indexOf('.') !== -1) {
-    var keys = key.split('.');
-    var firstObj = obj[keys[0]] || {};
-    for (var i = 1; i < keys.length; i++) {
-      if (firstObj) {
-        firstObj = firstObj[keys[i]];
-      }
-    }
-    return firstObj;
-  }
-  return obj[key];
-}
-
-/**
- * @description 设置对象的属性值，如果'a.b.c'的形式进行设置
- * @param {object} obj 对象
- * @param {string} key 需要设置的属性
- * @param {string} value 设置的值
- */
-function setProperty(obj, key, value) {
-  if (!obj) {
-    return;
-  }
-  // 递归赋值
-  var inFn = function inFn(_obj, keys, v) {
-    // 最后一个属性key
-    if (keys.length === 1) {
-      _obj[keys[0]] = v;
-      return;
-    }
-    // 0~length-1个key
-    while (keys.length > 1) {
-      var k = keys[0];
-      if (!_obj[k] || (0, _typeof2.default)(_obj[k]) !== 'object') {
-        _obj[k] = {};
-      }
-      var _key = keys.shift();
-      // 自调用判断是否存在属性，不存在则自动创建对象
-      inFn(_obj[k], keys, v);
-    }
-  };
-  if (typeof key !== 'string' || key === '') {} else if (key.indexOf('.') !== -1) {
-    // 支持多层级赋值操作
-    var keys = key.split('.');
-    inFn(obj, keys, value);
-  } else {
-    obj[key] = value;
-  }
-}
-
-/**
- * @description 获取当前页面路径
- */
-function page() {
-  var _pages;
-  var pages = getCurrentPages();
-  var route = (_pages = pages[pages.length - 1]) === null || _pages === void 0 ? void 0 : _pages.route;
-  // 某些特殊情况下(比如页面进行redirectTo时的一些时机)，pages可能为空数组
-  return "/".concat(route ? route : '');
-}
-
-/**
- * @description 获取当前路由栈实例数组
- */
-function pages() {
-  var pages = getCurrentPages();
-  return pages;
-}
-
-/**
- * 获取页面历史栈指定层实例
- * @param back {number} [0] - 0或者负数，表示获取历史栈的哪一层，0表示获取当前页面实例，-1 表示获取上一个页面实例。默认0。
- */
-function getHistoryPage() {
-  var back = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-  var pages = getCurrentPages();
-  var len = pages.length;
-  return pages[len - 1 + back];
-}
-
-/**
- * @description 修改wuui内置属性值
- * @param {object} props 修改内置props属性
- * @param {object} config 修改内置config属性
- * @param {object} color 修改内置color属性
- * @param {object} zIndex 修改内置zIndex属性
- */
-function setConfig(_ref5) {
-  var _ref5$props = _ref5.props,
-    props = _ref5$props === void 0 ? {} : _ref5$props,
-    _ref5$config = _ref5.config,
-    config = _ref5$config === void 0 ? {} : _ref5$config,
-    _ref5$color = _ref5.color,
-    color = _ref5$color === void 0 ? {} : _ref5$color,
-    _ref5$zIndex = _ref5.zIndex,
-    zIndex = _ref5$zIndex === void 0 ? {} : _ref5$zIndex;
-  var deepMerge = uni.$w.deepMerge;
-  uni.$w.config = deepMerge(uni.$w.config, config);
-  uni.$w.props = deepMerge(uni.$w.props, props);
-  uni.$w.color = deepMerge(uni.$w.color, color);
-  uni.$w.zIndex = deepMerge(uni.$w.zIndex, zIndex);
-}
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-/* 235 */
-/*!**********************************************************************!*\
-  !*** D:/1/feimi/feimi/uni_modules/wu-ui-tools/libs/function/test.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.amount = amount;
-exports.array = array;
-exports.carNo = carNo;
-exports.chinese = chinese;
-exports.code = code;
-exports.contains = contains;
-exports.date = date;
-exports.dateISO = dateISO;
-exports.digits = digits;
-exports.email = email;
-exports.empty = empty;
-exports.enOrNum = enOrNum;
-exports.func = func;
-exports.idCard = idCard;
-exports.image = image;
-exports.jsonString = jsonString;
-exports.landline = landline;
-exports.letter = letter;
-exports.mobile = mobile;
-exports.number = number;
-exports.object = object;
-exports.promise = promise;
-exports.range = range;
-exports.rangeLength = rangeLength;
-exports.regExp = regExp;
-exports.string = string;
-exports.url = url;
-exports.video = video;
-var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ 13));
-/**
- * 验证电子邮箱格式
- */
-function email(value) {
-  return /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/.test(value);
-}
-
-/**
- * 验证手机格式
- */
-function mobile(value) {
-  return /^1([3589]\d|4[5-9]|6[1-2,4-7]|7[0-8])\d{8}$/.test(value);
-}
-
-/**
- * 验证URL格式
- */
-function url(value) {
-  return /^((https|http|ftp|rtsp|mms):\/\/)(([0-9a-zA-Z_!~*'().&=+$%-]+: )?[0-9a-zA-Z_!~*'().&=+$%-]+@)?(([0-9]{1,3}.){3}[0-9]{1,3}|([0-9a-zA-Z_!~*'()-]+.)*([0-9a-zA-Z][0-9a-zA-Z-]{0,61})?[0-9a-zA-Z].[a-zA-Z]{2,6})(:[0-9]{1,4})?((\/?)|(\/[0-9a-zA-Z_!~*'().;?:@&=+$,%#-]+)+\/?)$/.test(value);
-}
-
-/**
- * 验证日期格式
- */
-function date(value) {
-  if (!value) return false;
-  // 判断是否数值或者字符串数值(意味着为时间戳)，转为数值，否则new Date无法识别字符串时间戳
-  if (number(value)) value = +value;
-  return !/Invalid|NaN/.test(new Date(value).toString());
-}
-
-/**
- * 验证ISO类型的日期格式
- */
-function dateISO(value) {
-  return /^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/.test(value);
-}
-
-/**
- * 验证十进制数字
- */
-function number(value) {
-  return /^[\+-]?(\d+\.?\d*|\.\d+|\d\.\d+e\+\d+)$/.test(value);
-}
-
-/**
- * 验证字符串
- */
-function string(value) {
-  return typeof value === 'string';
-}
-
-/**
- * 验证整数
- */
-function digits(value) {
-  return /^\d+$/.test(value);
-}
-
-/**
- * 验证身份证号码
- */
-function idCard(value) {
-  return /^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/.test(value);
-}
-
-/**
- * 是否车牌号
- */
-function carNo(value) {
-  // 新能源车牌
-  var xreg = /^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}(([0-9]{5}[DF]$)|([DF][A-HJ-NP-Z0-9][0-9]{4}$))/;
-  // 旧车牌
-  var creg = /^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}[A-HJ-NP-Z0-9]{4}[A-HJ-NP-Z0-9挂学警港澳]{1}$/;
-  if (value.length === 7) {
-    return creg.test(value);
-  }
-  if (value.length === 8) {
-    return xreg.test(value);
-  }
-  return false;
-}
-
-/**
- * 金额,只允许2位小数
- */
-function amount(value) {
-  // 金额，只允许保留两位小数
-  return /^[1-9]\d*(,\d{3})*(\.\d{1,2})?$|^0\.\d{1,2}$/.test(value);
-}
-
-/**
- * 中文
- */
-function chinese(value) {
-  var reg = /^[\u4e00-\u9fa5]+$/gi;
-  return reg.test(value);
-}
-
-/**
- * 只能输入字母
- */
-function letter(value) {
-  return /^[a-zA-Z]*$/.test(value);
-}
-
-/**
- * 只能是字母或者数字
- */
-function enOrNum(value) {
-  // 英文或者数字
-  var reg = /^[0-9a-zA-Z]*$/g;
-  return reg.test(value);
-}
-
-/**
- * 验证是否包含某个值
- */
-function contains(value, param) {
-  return value.indexOf(param) >= 0;
-}
-
-/**
- * 验证一个值范围[min, max]
- */
-function range(value, param) {
-  return value >= param[0] && value <= param[1];
-}
-
-/**
- * 验证一个长度范围[min, max]
- */
-function rangeLength(value, param) {
-  return value.length >= param[0] && value.length <= param[1];
-}
-
-/**
- * 是否固定电话
- */
-function landline(value) {
-  var reg = /^\d{3,4}-\d{7,8}(-\d{3,4})?$/;
-  return reg.test(value);
-}
-
-/**
- * 判断是否为空
- */
-function empty(value) {
-  switch ((0, _typeof2.default)(value)) {
-    case 'undefined':
-      return true;
-    case 'string':
-      if (value.replace(/(^[ \t\n\r]*)|([ \t\n\r]*$)/g, '').length == 0) return true;
-      break;
-    case 'boolean':
-      if (!value) return true;
-      break;
-    case 'number':
-      if (value === 0 || isNaN(value)) return true;
-      break;
-    case 'object':
-      if (value === null || value.length === 0) return true;
-      for (var i in value) {
-        return false;
-      }
-      return true;
-  }
-  return false;
-}
-
-/**
- * 是否json字符串
- */
-function jsonString(value) {
-  if (typeof value === 'string') {
-    try {
-      var obj = JSON.parse(value);
-      if ((0, _typeof2.default)(obj) === 'object' && obj) {
-        return true;
-      }
-      return false;
-    } catch (e) {
-      return false;
-    }
-  }
-  return false;
-}
-
-/**
- * 是否数组
- */
-function array(value) {
-  if (typeof Array.isArray === 'function') {
-    return Array.isArray(value);
-  }
-  return Object.prototype.toString.call(value) === '[object Array]';
-}
-
-/**
- * 是否对象
- */
-function object(value) {
-  return Object.prototype.toString.call(value) === '[object Object]';
-}
-
-/**
- * 是否短信验证码
- */
-function code(value) {
-  var len = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 6;
-  return new RegExp("^\\d{".concat(len, "}$")).test(value);
-}
-
-/**
- * 是否函数方法
- * @param {Object} value
- */
-function func(value) {
-  return typeof value === 'function';
-}
-
-/**
- * 是否promise对象
- * @param {Object} value
- */
-function promise(value) {
-  return object(value) && func(value.then) && func(value.catch);
-}
-
-/** 是否图片格式
- * @param {Object} value
- */
-function image(value) {
-  var newValue = value.split('?')[0];
-  var IMAGE_REGEXP = /\.(jpeg|jpg|gif|png|svg|webp|jfif|bmp|dpg)/i;
-  return IMAGE_REGEXP.test(newValue);
-}
-
-/**
- * 是否视频格式
- * @param {Object} value
- */
-function video(value) {
-  var VIDEO_REGEXP = /\.(mp4|mpg|mpeg|dat|asf|avi|rm|rmvb|mov|wmv|flv|mkv|m3u8)/i;
-  return VIDEO_REGEXP.test(value);
-}
-
-/**
- * 是否为正则对象
- * @param {Object}
- * @return {Boolean}
- */
-function regExp(o) {
-  return o && Object.prototype.toString.call(o) === '[object RegExp]';
-}
-
-/***/ }),
-/* 236 */
-/*!***********************************************************************!*\
-  !*** D:/1/feimi/feimi/uni_modules/wu-ui-tools/libs/function/digit.js ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-exports.divide = divide;
-exports.enableBoundaryChecking = enableBoundaryChecking;
-exports.minus = minus;
-exports.plus = plus;
-exports.round = round;
-exports.times = times;
-var _toArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/toArray */ 65));
-var _boundaryCheckingState = true; // 是否进行越界检查的全局开关
-
-/**
- * 把错误的数据转正
- * @private
- * @example strip(0.09999999999999998)=0.1
- */
-function strip(num) {
-  var precision = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 15;
-  return +parseFloat(Number(num).toPrecision(precision));
-}
-
-/**
- * Return digits length of a number
- * @private
- * @param {*number} num Input number
- */
-function digitLength(num) {
-  // Get digit length of e
-  var eSplit = num.toString().split(/[eE]/);
-  var len = (eSplit[0].split('.')[1] || '').length - +(eSplit[1] || 0);
-  return len > 0 ? len : 0;
-}
-
-/**
- * 把小数转成整数,如果是小数则放大成整数
- * @private
- * @param {*number} num 输入数
- */
-function float2Fixed(num) {
-  if (num.toString().indexOf('e') === -1) {
-    return Number(num.toString().replace('.', ''));
-  }
-  var dLen = digitLength(num);
-  return dLen > 0 ? strip(Number(num) * Math.pow(10, dLen)) : Number(num);
-}
-
-/**
- * 检测数字是否越界，如果越界给出提示
- * @private
- * @param {*number} num 输入数
- */
-function checkBoundary(num) {
-  if (_boundaryCheckingState) {
-    if (num > Number.MAX_SAFE_INTEGER || num < Number.MIN_SAFE_INTEGER) {
-      console.warn("".concat(num, " \u8D85\u51FA\u4E86\u7CBE\u5EA6\u9650\u5236\uFF0C\u7ED3\u679C\u53EF\u80FD\u4E0D\u6B63\u786E"));
-    }
-  }
-}
-
-/**
- * 把递归操作扁平迭代化
- * @param {number[]} arr 要操作的数字数组
- * @param {function} operation 迭代操作
- * @private
- */
-function iteratorOperation(arr, operation) {
-  var _arr = (0, _toArray2.default)(arr),
-    num1 = _arr[0],
-    num2 = _arr[1],
-    others = _arr.slice(2);
-  var res = operation(num1, num2);
-  others.forEach(function (num) {
-    res = operation(res, num);
-  });
-  return res;
-}
-
-/**
- * 高精度乘法
- * @export
- */
-function times() {
-  for (var _len = arguments.length, nums = new Array(_len), _key = 0; _key < _len; _key++) {
-    nums[_key] = arguments[_key];
-  }
-  if (nums.length > 2) {
-    return iteratorOperation(nums, times);
-  }
-  var num1 = nums[0],
-    num2 = nums[1];
-  var num1Changed = float2Fixed(num1);
-  var num2Changed = float2Fixed(num2);
-  var baseNum = digitLength(num1) + digitLength(num2);
-  var leftValue = num1Changed * num2Changed;
-  checkBoundary(leftValue);
-  return leftValue / Math.pow(10, baseNum);
-}
-
-/**
- * 高精度加法
- * @export
- */
-function plus() {
-  for (var _len2 = arguments.length, nums = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-    nums[_key2] = arguments[_key2];
-  }
-  if (nums.length > 2) {
-    return iteratorOperation(nums, plus);
-  }
-  var num1 = nums[0],
-    num2 = nums[1];
-  // 取最大的小数位
-  var baseNum = Math.pow(10, Math.max(digitLength(num1), digitLength(num2)));
-  // 把小数都转为整数然后再计算
-  return (times(num1, baseNum) + times(num2, baseNum)) / baseNum;
-}
-
-/**
- * 高精度减法
- * @export
- */
-function minus() {
-  for (var _len3 = arguments.length, nums = new Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
-    nums[_key3] = arguments[_key3];
-  }
-  if (nums.length > 2) {
-    return iteratorOperation(nums, minus);
-  }
-  var num1 = nums[0],
-    num2 = nums[1];
-  var baseNum = Math.pow(10, Math.max(digitLength(num1), digitLength(num2)));
-  return (times(num1, baseNum) - times(num2, baseNum)) / baseNum;
-}
-
-/**
- * 高精度除法
- * @export
- */
-function divide() {
-  for (var _len4 = arguments.length, nums = new Array(_len4), _key4 = 0; _key4 < _len4; _key4++) {
-    nums[_key4] = arguments[_key4];
-  }
-  if (nums.length > 2) {
-    return iteratorOperation(nums, divide);
-  }
-  var num1 = nums[0],
-    num2 = nums[1];
-  var num1Changed = float2Fixed(num1);
-  var num2Changed = float2Fixed(num2);
-  checkBoundary(num1Changed);
-  checkBoundary(num2Changed);
-  // 重要，这里必须用strip进行修正
-  return times(num1Changed / num2Changed, strip(Math.pow(10, digitLength(num2) - digitLength(num1))));
-}
-
-/**
- * 四舍五入
- * @export
- */
-function round(num, ratio) {
-  var base = Math.pow(10, ratio);
-  var result = divide(Math.round(Math.abs(times(num, base))), base);
-  if (num < 0 && result !== 0) {
-    result = times(result, -1);
-  }
-  // 位数不足则补0
-  return result;
-}
-
-/**
- * 是否进行边界检查，默认开启
- * @param flag 标记开关，true 为开启，false 为关闭，默认为 true
- * @export
- */
-function enableBoundaryChecking() {
-  var flag = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
-  _boundaryCheckingState = flag;
-}
-var _default = {
-  times: times,
-  plus: plus,
-  minus: minus,
-  divide: divide,
-  round: round,
-  enableBoundaryChecking: enableBoundaryChecking
-};
-exports.default = _default;
-
-/***/ }),
-/* 237 */
-/*!*****************************************************************************!*\
-  !*** D:/1/feimi/feimi/uni_modules/wu-ui-tools/libs/function/color/index.js ***!
-  \*****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _color = _interopRequireDefault(__webpack_require__(/*! ./color */ 238));
-/**
- * 转换颜色格式。
- * @param {Object} params - 参数对象。
- * @param {string} color - 输入的颜色，默认为 '#fff'。
- * @param {string} format - 需要转换的格式（支持 'rgb', 'hex', 'hsl', 'hsv', 'hwb'）。
- * @param {string} type - 转换后的类型（支持 'string', 'object', 'array', 'round'）。
- * @returns {string|Object|Array} 转换后的颜色表示。
- */
-function convertFormat() {
-  var color = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '#fff';
-  var format = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'rgb';
-  var type = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'string';
-  var colorObj = (0, _color.default)(color);
-  // 如果格式存在
-  if (colorObj[format]) {
-    // hex 无法直接转换为 除string类型外的任何类型
-    // 所以转为rgb 后 获取其他类型
-    if (format == 'hex' && type != 'string') format = 'rgb';
-    // 类型名称
-    var typeName = '';
-    switch (type) {
-      case 'string':
-        typeName = 'toString';
-        break;
-      case 'object':
-        typeName = 'object';
-        break;
-      case 'array':
-        typeName = 'array';
-        break;
-      case 'round':
-        typeName = 'round';
-        break;
-      default:
-        throw Error('Unsupported target type:' + type);
-    }
-    return colorObj[format]()[typeName]();
-  } else {
-    throw Error('Unsupported target format: ' + format);
-  }
-}
-
-/**
- * 计算两个颜色之间的渐变值。
- * @param {string} startColor - 开始的颜色，默认为黑色。
- * @param {string} endColor - 结束的颜色，默认为白色。
- * @param {number} step - 渐变的步数，默认为10。
- * @returns {Array<string>} 两个颜色之间的渐变颜色数组。
- */
-function gradient() {
-  var startColor = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'rgb(0, 0, 0)';
-  var endColor = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'rgb(255, 255, 255)';
-  var step = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 10;
-  var startRGB = convertFormat(startColor, 'rgb', 'array'); // 转换为rgb数组模式
-  var startR = startRGB[0];
-  var startG = startRGB[1];
-  var startB = startRGB[2];
-  var endRGB = convertFormat(endColor, 'rgb', 'array');
-  var endR = endRGB[0];
-  var endG = endRGB[1];
-  var endB = endRGB[2];
-  var sR = (endR - startR) / step; // 总差值
-  var sG = (endG - startG) / step;
-  var sB = (endB - startB) / step;
-  var colorArr = [];
-  for (var i = 0; i < step; i++) {
-    // 计算每一步的hex值
-    var hex = convertFormat("rgb(".concat(Math.round(sR * i + startR), ",").concat(Math.round(sG * i + startG), ",").concat(Math.round(sB * i + startB), ")"), 'hex');
-    // 确保第一个颜色值为startColor的值
-    if (i === 0) hex = convertFormat(startColor, 'hex');
-    // 确保最后一个颜色值为endColor的值
-    if (i === step - 1) hex = convertFormat(endColor, 'hex');
-    colorArr.push(hex);
-  }
-  return colorArr;
-}
-var _default = {
-  /**
-   * 格式转换。
-   */
-  convertFormat: convertFormat,
-  /**
-   * 计算两个颜色之间的渐变值。
-   */
-  gradient: gradient,
-  /**
-   * 增加颜色的亮度。
-   * @param {string} color - 输入的颜色。
-   * @param {number} value - 增加的亮度值（0-1）。
-   * @returns {string} 调整后的颜色。
-   */
-  lighten: function lighten(color, value) {
-    var format = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'rgb';
-    var type = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'string';
-    return convertFormat((0, _color.default)(color).lighten(value), format, type);
-  },
-  /**
-   * 减少颜色的亮度。
-   * @param {string} color - 输入的颜色。
-   * @param {number} value - 减少的亮度值（0-1）。
-   * @returns {string} 调整后的颜色。
-   */
-  darken: function darken(color, value) {
-    var format = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'rgb';
-    var type = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'string';
-    return convertFormat((0, _color.default)(color).darken(value), format, type);
-  },
-  /**
-   * 增加颜色的饱和度。
-   * @param {string} color - 输入的颜色。
-   * @param {number} value - 增加的饱和度值（0-1）。
-   * @returns {string} 调整后的颜色。
-   */
-  saturate: function saturate(color, value) {
-    var format = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'rgb';
-    var type = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'string';
-    return convertFormat((0, _color.default)(color).saturate(value), format, type);
-  },
-  /**
-   * 减少颜色的饱和度。
-   * @param {string} color - 输入的颜色。
-   * @param {number} value - 减少的饱和度值（0-1）。
-   * @returns {string} 调整后的颜色。
-   */
-  desaturate: function desaturate(color, value) {
-    var format = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'rgb';
-    var type = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'string';
-    return convertFormat((0, _color.default)(color).desaturate(value), format, type);
-  },
-  /**
-   * 旋转颜色的色相。
-   * @param {string} color - 输入的颜色。
-   * @param {number} degrees - 旋转的度数。
-   * @returns {string} 调整后的颜色。
-   */
-  rotate: function rotate(color, degrees) {
-    var format = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'rgb';
-    var type = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'string';
-    return convertFormat((0, _color.default)(color).rotate(degrees), format, type);
-  },
-  /**
-   * 调整颜色的透明度。
-   * @param {string} color - 输入的颜色。
-   * @param {number} value - 透明度值（0-1，其中 1 是不透明）。
-   * @returns {string} 调整后的颜色。
-   */
-  adjustAlpha: function adjustAlpha(color, value) {
-    var format = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'rgb';
-    var type = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'string';
-    return convertFormat((0, _color.default)(color).alpha(value), format, type);
-  },
-  /**
-   * 获取颜色的亮度。
-   * @param {string} color - 输入的颜色。
-   * @returns {number} 颜色的亮度值（0-1）。
-   */
-  luminosity: function luminosity(color, format) {
-    return (0, _color.default)(color).luminosity();
-  },
-  /**
-   * 判断颜色是否为暗色。
-   * @param {string} color - 输入的颜色。
-   * @returns {boolean} 如果是暗色则返回 true，否则返回 false。
-   */
-  isDark: function isDark(color, format) {
-    return (0, _color.default)(color).isDark();
-  },
-  /**
-   * 判断颜色是否为亮色。
-   * @param {string} color - 输入的颜色。
-   * @returns {boolean} 如果是亮色则返回 true，否则返回 false。
-   */
-  isLight: function isLight(color, format) {
-    return (0, _color.default)(color).isLight();
-  }
-};
-exports.default = _default;
-
-/***/ }),
-/* 238 */
-/*!*****************************************************************************!*\
-  !*** D:/1/feimi/feimi/uni_modules/wu-ui-tools/libs/function/color/color.js ***!
-  \*****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ 13));
-var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ 5));
-var _toConsumableArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ 18));
-var _colorString = _interopRequireDefault(__webpack_require__(/*! ./color-string */ 239));
-var _colorConvert = _interopRequireDefault(__webpack_require__(/*! ./color-convert */ 243));
-function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-var skippedModels = [
-// To be honest, I don't really feel like keyword belongs in color convert, but eh.
-'keyword',
-// Gray conflicts with some method names, and has its own method defined.
-'gray',
-// Shouldn't really be in color-convert either...
-'hex'];
-var hashedModelKeys = {};
-for (var _i = 0, _Object$keys = Object.keys(_colorConvert.default); _i < _Object$keys.length; _i++) {
-  var model = _Object$keys[_i];
-  hashedModelKeys[(0, _toConsumableArray2.default)(_colorConvert.default[model].labels).sort().join('')] = model;
-}
-var limiters = {};
-function Color(object, model) {
-  if (!(this instanceof Color)) {
-    return new Color(object, model);
-  }
-  if (model && model in skippedModels) {
-    model = null;
-  }
-  if (model && !(model in _colorConvert.default)) {
-    throw new Error('Unknown model: ' + model);
-  }
-  var i;
-  var channels;
-  if (object == null) {
-    // eslint-disable-line no-eq-null,eqeqeq
-    this.model = 'rgb';
-    this.color = [0, 0, 0];
-    this.valpha = 1;
-  } else if (object instanceof Color) {
-    this.model = object.model;
-    this.color = (0, _toConsumableArray2.default)(object.color);
-    this.valpha = object.valpha;
-  } else if (typeof object === 'string') {
-    var result = _colorString.default.get(object);
-    if (result === null) {
-      throw new Error('Unable to parse color from string: ' + object);
-    }
-    this.model = result.model;
-    channels = _colorConvert.default[this.model].channels;
-    this.color = result.value.slice(0, channels);
-    this.valpha = typeof result.value[channels] === 'number' ? result.value[channels] : 1;
-  } else if (object.length > 0) {
-    this.model = model || 'rgb';
-    channels = _colorConvert.default[this.model].channels;
-    var newArray = Array.prototype.slice.call(object, 0, channels);
-    this.color = zeroArray(newArray, channels);
-    this.valpha = typeof object[channels] === 'number' ? object[channels] : 1;
-  } else if (typeof object === 'number') {
-    // This is always RGB - can be converted later on.
-    this.model = 'rgb';
-    this.color = [object >> 16 & 0xFF, object >> 8 & 0xFF, object & 0xFF];
-    this.valpha = 1;
-  } else {
-    this.valpha = 1;
-    var keys = Object.keys(object);
-    if ('alpha' in object) {
-      keys.splice(keys.indexOf('alpha'), 1);
-      this.valpha = typeof object.alpha === 'number' ? object.alpha : 0;
-    }
-    var hashedKeys = keys.sort().join('');
-    if (!(hashedKeys in hashedModelKeys)) {
-      throw new Error('Unable to parse color from object: ' + JSON.stringify(object));
-    }
-    this.model = hashedModelKeys[hashedKeys];
-    var labels = _colorConvert.default[this.model].labels;
-    var color = [];
-    for (i = 0; i < labels.length; i++) {
-      color.push(object[labels[i]]);
-    }
-    this.color = zeroArray(color);
-  }
-
-  // Perform limitations (clamping, etc.)
-  if (limiters[this.model]) {
-    channels = _colorConvert.default[this.model].channels;
-    for (i = 0; i < channels; i++) {
-      var limit = limiters[this.model][i];
-      if (limit) {
-        this.color[i] = limit(this.color[i]);
-      }
-    }
-  }
-  this.valpha = Math.max(0, Math.min(1, this.valpha));
-  if (Object.freeze) {
-    Object.freeze(this);
-  }
-}
-Color.prototype = {
-  toString: function toString() {
-    return this.string();
-  },
-  toJSON: function toJSON() {
-    return this[this.model]();
-  },
-  string: function string(places) {
-    var self = this.model in _colorString.default.to ? this : this.rgb();
-    self = self.round(typeof places === 'number' ? places : 1);
-    var args = self.valpha === 1 ? self.color : [].concat((0, _toConsumableArray2.default)(self.color), [this.valpha]);
-    return _colorString.default.to[self.model](args);
-  },
-  percentString: function percentString(places) {
-    var self = this.rgb().round(typeof places === 'number' ? places : 1);
-    var args = self.valpha === 1 ? self.color : [].concat((0, _toConsumableArray2.default)(self.color), [this.valpha]);
-    return _colorString.default.to.rgb.percent(args);
-  },
-  array: function array() {
-    return this.valpha === 1 ? (0, _toConsumableArray2.default)(this.color) : [].concat((0, _toConsumableArray2.default)(this.color), [this.valpha]);
-  },
-  object: function object() {
-    var result = {};
-    var channels = _colorConvert.default[this.model].channels;
-    var labels = _colorConvert.default[this.model].labels;
-    for (var i = 0; i < channels; i++) {
-      result[labels[i]] = this.color[i];
-    }
-    if (this.valpha !== 1) {
-      result.alpha = this.valpha;
-    }
-    return result;
-  },
-  unitArray: function unitArray() {
-    var rgb = this.rgb().color;
-    rgb[0] /= 255;
-    rgb[1] /= 255;
-    rgb[2] /= 255;
-    if (this.valpha !== 1) {
-      rgb.push(this.valpha);
-    }
-    return rgb;
-  },
-  unitObject: function unitObject() {
-    var rgb = this.rgb().object();
-    rgb.r /= 255;
-    rgb.g /= 255;
-    rgb.b /= 255;
-    if (this.valpha !== 1) {
-      rgb.alpha = this.valpha;
-    }
-    return rgb;
-  },
-  round: function round(places) {
-    places = Math.max(places || 0, 0);
-    return new Color([].concat((0, _toConsumableArray2.default)(this.color.map(roundToPlace(places))), [this.valpha]), this.model);
-  },
-  alpha: function alpha(value) {
-    if (value !== undefined) {
-      return new Color([].concat((0, _toConsumableArray2.default)(this.color), [Math.max(0, Math.min(1, value))]), this.model);
-    }
-    return this.valpha;
-  },
-  // Rgb
-  red: getset('rgb', 0, maxfn(255)),
-  green: getset('rgb', 1, maxfn(255)),
-  blue: getset('rgb', 2, maxfn(255)),
-  hue: getset(['hsl', 'hsv', 'hsl', 'hwb', 'hcg'], 0, function (value) {
-    return (value % 360 + 360) % 360;
-  }),
-  saturationl: getset('hsl', 1, maxfn(100)),
-  lightness: getset('hsl', 2, maxfn(100)),
-  saturationv: getset('hsv', 1, maxfn(100)),
-  value: getset('hsv', 2, maxfn(100)),
-  chroma: getset('hcg', 1, maxfn(100)),
-  gray: getset('hcg', 2, maxfn(100)),
-  white: getset('hwb', 1, maxfn(100)),
-  wblack: getset('hwb', 2, maxfn(100)),
-  cyan: getset('cmyk', 0, maxfn(100)),
-  magenta: getset('cmyk', 1, maxfn(100)),
-  yellow: getset('cmyk', 2, maxfn(100)),
-  black: getset('cmyk', 3, maxfn(100)),
-  x: getset('xyz', 0, maxfn(95.047)),
-  y: getset('xyz', 1, maxfn(100)),
-  z: getset('xyz', 2, maxfn(108.833)),
-  l: getset('lab', 0, maxfn(100)),
-  a: getset('lab', 1),
-  b: getset('lab', 2),
-  keyword: function keyword(value) {
-    if (value !== undefined) {
-      return new Color(value);
-    }
-    return _colorConvert.default[this.model].keyword(this.color);
-  },
-  hex: function hex(value) {
-    if (value !== undefined) {
-      return new Color(value);
-    }
-    return _colorString.default.to.hex(this.rgb().round().color);
-  },
-  hexa: function hexa(value) {
-    if (value !== undefined) {
-      return new Color(value);
-    }
-    var rgbArray = this.rgb().round().color;
-    var alphaHex = Math.round(this.valpha * 255).toString(16).toUpperCase();
-    if (alphaHex.length === 1) {
-      alphaHex = '0' + alphaHex;
-    }
-    return _colorString.default.to.hex(rgbArray) + alphaHex;
-  },
-  rgbNumber: function rgbNumber() {
-    var rgb = this.rgb().color;
-    return (rgb[0] & 0xFF) << 16 | (rgb[1] & 0xFF) << 8 | rgb[2] & 0xFF;
-  },
-  luminosity: function luminosity() {
-    // http://www.w3.org/TR/WCAG20/#relativeluminancedef
-    var rgb = this.rgb().color;
-    var lum = [];
-    var _iterator = _createForOfIteratorHelper(rgb.entries()),
-      _step;
-    try {
-      for (_iterator.s(); !(_step = _iterator.n()).done;) {
-        var _step$value = (0, _slicedToArray2.default)(_step.value, 2),
-          i = _step$value[0],
-          element = _step$value[1];
-        var chan = element / 255;
-        lum[i] = chan <= 0.04045 ? chan / 12.92 : Math.pow((chan + 0.055) / 1.055, 2.4);
-      }
-    } catch (err) {
-      _iterator.e(err);
-    } finally {
-      _iterator.f();
-    }
-    return 0.2126 * lum[0] + 0.7152 * lum[1] + 0.0722 * lum[2];
-  },
-  contrast: function contrast(color2) {
-    // http://www.w3.org/TR/WCAG20/#contrast-ratiodef
-    var lum1 = this.luminosity();
-    var lum2 = color2.luminosity();
-    if (lum1 > lum2) {
-      return (lum1 + 0.05) / (lum2 + 0.05);
-    }
-    return (lum2 + 0.05) / (lum1 + 0.05);
-  },
-  level: function level(color2) {
-    // https://www.w3.org/TR/WCAG/#contrast-enhanced
-    var contrastRatio = this.contrast(color2);
-    if (contrastRatio >= 7) {
-      return 'AAA';
-    }
-    return contrastRatio >= 4.5 ? 'AA' : '';
-  },
-  isDark: function isDark() {
-    // YIQ equation from http://24ways.org/2010/calculating-color-contrast
-    var rgb = this.rgb().color;
-    var yiq = (rgb[0] * 2126 + rgb[1] * 7152 + rgb[2] * 722) / 10000;
-    return yiq < 128;
-  },
-  isLight: function isLight() {
-    return !this.isDark();
-  },
-  negate: function negate() {
-    var rgb = this.rgb();
-    for (var i = 0; i < 3; i++) {
-      rgb.color[i] = 255 - rgb.color[i];
-    }
-    return rgb;
-  },
-  lighten: function lighten(ratio) {
-    var hsl = this.hsl();
-    hsl.color[2] += hsl.color[2] * ratio;
-    return hsl;
-  },
-  darken: function darken(ratio) {
-    var hsl = this.hsl();
-    hsl.color[2] -= hsl.color[2] * ratio;
-    return hsl;
-  },
-  saturate: function saturate(ratio) {
-    var hsl = this.hsl();
-    hsl.color[1] += hsl.color[1] * ratio;
-    return hsl;
-  },
-  desaturate: function desaturate(ratio) {
-    var hsl = this.hsl();
-    hsl.color[1] -= hsl.color[1] * ratio;
-    return hsl;
-  },
-  whiten: function whiten(ratio) {
-    var hwb = this.hwb();
-    hwb.color[1] += hwb.color[1] * ratio;
-    return hwb;
-  },
-  blacken: function blacken(ratio) {
-    var hwb = this.hwb();
-    hwb.color[2] += hwb.color[2] * ratio;
-    return hwb;
-  },
-  grayscale: function grayscale() {
-    // http://en.wikipedia.org/wiki/Grayscale#Converting_color_to_grayscale
-    var rgb = this.rgb().color;
-    var value = rgb[0] * 0.3 + rgb[1] * 0.59 + rgb[2] * 0.11;
-    return Color.rgb(value, value, value);
-  },
-  fade: function fade(ratio) {
-    return this.alpha(this.valpha - this.valpha * ratio);
-  },
-  opaquer: function opaquer(ratio) {
-    return this.alpha(this.valpha + this.valpha * ratio);
-  },
-  rotate: function rotate(degrees) {
-    var hsl = this.hsl();
-    var hue = hsl.color[0];
-    hue = (hue + degrees) % 360;
-    hue = hue < 0 ? 360 + hue : hue;
-    hsl.color[0] = hue;
-    return hsl;
-  },
-  mix: function mix(mixinColor, weight) {
-    // Ported from sass implementation in C
-    // https://github.com/sass/libsass/blob/0e6b4a2850092356aa3ece07c6b249f0221caced/functions.cpp#L209
-    if (!mixinColor || !mixinColor.rgb) {
-      throw new Error('Argument to "mix" was not a Color instance, but rather an instance of ' + (0, _typeof2.default)(mixinColor));
-    }
-    var color1 = mixinColor.rgb();
-    var color2 = this.rgb();
-    var p = weight === undefined ? 0.5 : weight;
-    var w = 2 * p - 1;
-    var a = color1.alpha() - color2.alpha();
-    var w1 = ((w * a === -1 ? w : (w + a) / (1 + w * a)) + 1) / 2;
-    var w2 = 1 - w1;
-    return Color.rgb(w1 * color1.red() + w2 * color2.red(), w1 * color1.green() + w2 * color2.green(), w1 * color1.blue() + w2 * color2.blue(), color1.alpha() * p + color2.alpha() * (1 - p));
-  }
-};
-
-// Model conversion methods and static constructors
-var _loop = function _loop() {
-  var model = _Object$keys2[_i2];
-  if (skippedModels.includes(model)) {
-    return "continue";
-  }
-  var channels = _colorConvert.default[model].channels;
-
-  // Conversion methods
-  Color.prototype[model] = function () {
-    if (this.model === model) {
-      return new Color(this);
-    }
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-    if (args.length > 0) {
-      return new Color(args, model);
-    }
-    return new Color([].concat((0, _toConsumableArray2.default)(assertArray(_colorConvert.default[this.model][model].raw(this.color))), [this.valpha]), model);
-  };
-
-  // 'static' construction methods
-  Color[model] = function () {
-    for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-      args[_key2] = arguments[_key2];
-    }
-    var color = args[0];
-    if (typeof color === 'number') {
-      color = zeroArray(args, channels);
-    }
-    return new Color(color, model);
-  };
-};
-for (var _i2 = 0, _Object$keys2 = Object.keys(_colorConvert.default); _i2 < _Object$keys2.length; _i2++) {
-  var _ret = _loop();
-  if (_ret === "continue") continue;
-}
-function roundTo(number, places) {
-  return Number(number.toFixed(places));
-}
-function roundToPlace(places) {
-  return function (number) {
-    return roundTo(number, places);
-  };
-}
-function getset(model, channel, modifier) {
-  model = Array.isArray(model) ? model : [model];
-  var _iterator2 = _createForOfIteratorHelper(model),
-    _step2;
-  try {
-    for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-      var m = _step2.value;
-      (limiters[m] || (limiters[m] = []))[channel] = modifier;
-    }
-  } catch (err) {
-    _iterator2.e(err);
-  } finally {
-    _iterator2.f();
-  }
-  model = model[0];
-  return function (value) {
-    var result;
-    if (value !== undefined) {
-      if (modifier) {
-        value = modifier(value);
-      }
-      result = this[model]();
-      result.color[channel] = value;
-      return result;
-    }
-    result = this[model]().color[channel];
-    if (modifier) {
-      result = modifier(result);
-    }
-    return result;
-  };
-}
-function maxfn(max) {
-  return function (v) {
-    return Math.max(0, Math.min(max, v));
-  };
-}
-function assertArray(value) {
-  return Array.isArray(value) ? value : [value];
-}
-function zeroArray(array, length) {
-  for (var i = 0; i < length; i++) {
-    if (typeof array[i] !== 'number') {
-      array[i] = 0;
-    }
-  }
-  return array;
-}
-var _default = Color;
-exports.default = _default;
-
-/***/ }),
-/* 239 */
-/*!******************************************************************************************!*\
-  !*** D:/1/feimi/feimi/uni_modules/wu-ui-tools/libs/function/color/color-string/index.js ***!
-  \******************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _colorName = _interopRequireDefault(__webpack_require__(/*! ../color-name */ 240));
-var _simpleSwizzle = _interopRequireDefault(__webpack_require__(/*! ../simple-swizzle */ 241));
-/* MIT license */
-
-var hasOwnProperty = Object.hasOwnProperty;
-var reverseNames = Object.create(null);
-
-// create a list of reverse color names
-for (var name in _colorName.default) {
-  if (hasOwnProperty.call(_colorName.default, name)) {
-    reverseNames[_colorName.default[name]] = name;
-  }
-}
-var cs = {
-  to: {},
-  get: {}
-};
-cs.get = function (string) {
-  var prefix = string.substring(0, 3).toLowerCase();
-  var val;
-  var model;
-  switch (prefix) {
-    case 'hsl':
-      val = cs.get.hsl(string);
-      model = 'hsl';
-      break;
-    case 'hwb':
-      val = cs.get.hwb(string);
-      model = 'hwb';
-      break;
-    default:
-      val = cs.get.rgb(string);
-      model = 'rgb';
-      break;
-  }
-  if (!val) {
-    return null;
-  }
-  return {
-    model: model,
-    value: val
-  };
-};
-cs.get.rgb = function (string) {
-  if (!string) {
-    return null;
-  }
-  var abbr = /^#([a-f0-9]{3,4})$/i;
-  var hex = /^#([a-f0-9]{6})([a-f0-9]{2})?$/i;
-  var rgba = /^rgba?\(\s*([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/;
-  var per = /^rgba?\(\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/;
-  var keyword = /^(\w+)$/;
-  var rgb = [0, 0, 0, 1];
-  var match;
-  var i;
-  var hexAlpha;
-  if (match = string.match(hex)) {
-    hexAlpha = match[2];
-    match = match[1];
-    for (i = 0; i < 3; i++) {
-      // https://jsperf.com/slice-vs-substr-vs-substring-methods-long-string/19
-      var i2 = i * 2;
-      rgb[i] = parseInt(match.slice(i2, i2 + 2), 16);
-    }
-    if (hexAlpha) {
-      rgb[3] = parseInt(hexAlpha, 16) / 255;
-    }
-  } else if (match = string.match(abbr)) {
-    match = match[1];
-    hexAlpha = match[3];
-    for (i = 0; i < 3; i++) {
-      rgb[i] = parseInt(match[i] + match[i], 16);
-    }
-    if (hexAlpha) {
-      rgb[3] = parseInt(hexAlpha + hexAlpha, 16) / 255;
-    }
-  } else if (match = string.match(rgba)) {
-    for (i = 0; i < 3; i++) {
-      rgb[i] = parseInt(match[i + 1], 0);
-    }
-    if (match[4]) {
-      if (match[5]) {
-        rgb[3] = parseFloat(match[4]) * 0.01;
-      } else {
-        rgb[3] = parseFloat(match[4]);
-      }
-    }
-  } else if (match = string.match(per)) {
-    for (i = 0; i < 3; i++) {
-      rgb[i] = Math.round(parseFloat(match[i + 1]) * 2.55);
-    }
-    if (match[4]) {
-      if (match[5]) {
-        rgb[3] = parseFloat(match[4]) * 0.01;
-      } else {
-        rgb[3] = parseFloat(match[4]);
-      }
-    }
-  } else if (match = string.match(keyword)) {
-    if (match[1] === 'transparent') {
-      return [0, 0, 0, 0];
-    }
-    if (!hasOwnProperty.call(_colorName.default, match[1])) {
-      return null;
-    }
-    rgb = _colorName.default[match[1]];
-    rgb[3] = 1;
-    return rgb;
-  } else {
-    return null;
-  }
-  for (i = 0; i < 3; i++) {
-    rgb[i] = clamp(rgb[i], 0, 255);
-  }
-  rgb[3] = clamp(rgb[3], 0, 1);
-  return rgb;
-};
-cs.get.hsl = function (string) {
-  if (!string) {
-    return null;
-  }
-  var hsl = /^hsla?\(\s*([+-]?(?:\d{0,3}\.)?\d+)(?:deg)?\s*,?\s*([+-]?[\d\.]+)%\s*,?\s*([+-]?[\d\.]+)%\s*(?:[,|\/]\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/;
-  var match = string.match(hsl);
-  if (match) {
-    var alpha = parseFloat(match[4]);
-    var h = (parseFloat(match[1]) % 360 + 360) % 360;
-    var s = clamp(parseFloat(match[2]), 0, 100);
-    var l = clamp(parseFloat(match[3]), 0, 100);
-    var a = clamp(isNaN(alpha) ? 1 : alpha, 0, 1);
-    return [h, s, l, a];
-  }
-  return null;
-};
-cs.get.hwb = function (string) {
-  if (!string) {
-    return null;
-  }
-  var hwb = /^hwb\(\s*([+-]?\d{0,3}(?:\.\d+)?)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/;
-  var match = string.match(hwb);
-  if (match) {
-    var alpha = parseFloat(match[4]);
-    var h = (parseFloat(match[1]) % 360 + 360) % 360;
-    var w = clamp(parseFloat(match[2]), 0, 100);
-    var b = clamp(parseFloat(match[3]), 0, 100);
-    var a = clamp(isNaN(alpha) ? 1 : alpha, 0, 1);
-    return [h, w, b, a];
-  }
-  return null;
-};
-cs.to.hex = function () {
-  var rgba = (0, _simpleSwizzle.default)(arguments);
-  return '#' + hexDouble(rgba[0]) + hexDouble(rgba[1]) + hexDouble(rgba[2]) + (rgba[3] < 1 ? hexDouble(Math.round(rgba[3] * 255)) : '');
-};
-cs.to.rgb = function () {
-  var rgba = (0, _simpleSwizzle.default)(arguments);
-  return rgba.length < 4 || rgba[3] === 1 ? 'rgb(' + Math.round(rgba[0]) + ', ' + Math.round(rgba[1]) + ', ' + Math.round(rgba[2]) + ')' : 'rgba(' + Math.round(rgba[0]) + ', ' + Math.round(rgba[1]) + ', ' + Math.round(rgba[2]) + ', ' + rgba[3] + ')';
-};
-cs.to.rgb.percent = function () {
-  var rgba = (0, _simpleSwizzle.default)(arguments);
-  var r = Math.round(rgba[0] / 255 * 100);
-  var g = Math.round(rgba[1] / 255 * 100);
-  var b = Math.round(rgba[2] / 255 * 100);
-  return rgba.length < 4 || rgba[3] === 1 ? 'rgb(' + r + '%, ' + g + '%, ' + b + '%)' : 'rgba(' + r + '%, ' + g + '%, ' + b + '%, ' + rgba[3] + ')';
-};
-cs.to.hsl = function () {
-  var hsla = (0, _simpleSwizzle.default)(arguments);
-  return hsla.length < 4 || hsla[3] === 1 ? 'hsl(' + hsla[0] + ', ' + hsla[1] + '%, ' + hsla[2] + '%)' : 'hsla(' + hsla[0] + ', ' + hsla[1] + '%, ' + hsla[2] + '%, ' + hsla[3] + ')';
-};
-
-// hwb is a bit different than rgb(a) & hsl(a) since there is no alpha specific syntax
-// (hwb have alpha optional & 1 is default value)
-cs.to.hwb = function () {
-  var hwba = (0, _simpleSwizzle.default)(arguments);
-  var a = '';
-  if (hwba.length >= 4 && hwba[3] !== 1) {
-    a = ', ' + hwba[3];
-  }
-  return 'hwb(' + hwba[0] + ', ' + hwba[1] + '%, ' + hwba[2] + '%' + a + ')';
-};
-cs.to.keyword = function (rgb) {
-  return reverseNames[rgb.slice(0, 3)];
-};
-
-// helpers
-function clamp(num, min, max) {
-  return Math.min(Math.max(min, num), max);
-}
-function hexDouble(num) {
-  var str = Math.round(num).toString(16).toUpperCase();
-  return str.length < 2 ? '0' + str : str;
-}
-var _default = cs;
-exports.default = _default;
-
-/***/ }),
-/* 240 */
-/*!****************************************************************************************!*\
-  !*** D:/1/feimi/feimi/uni_modules/wu-ui-tools/libs/function/color/color-name/index.js ***!
-  \****************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  "aliceblue": [240, 248, 255],
-  "antiquewhite": [250, 235, 215],
-  "aqua": [0, 255, 255],
-  "aquamarine": [127, 255, 212],
-  "azure": [240, 255, 255],
-  "beige": [245, 245, 220],
-  "bisque": [255, 228, 196],
-  "black": [0, 0, 0],
-  "blanchedalmond": [255, 235, 205],
-  "blue": [0, 0, 255],
-  "blueviolet": [138, 43, 226],
-  "brown": [165, 42, 42],
-  "burlywood": [222, 184, 135],
-  "cadetblue": [95, 158, 160],
-  "chartreuse": [127, 255, 0],
-  "chocolate": [210, 105, 30],
-  "coral": [255, 127, 80],
-  "cornflowerblue": [100, 149, 237],
-  "cornsilk": [255, 248, 220],
-  "crimson": [220, 20, 60],
-  "cyan": [0, 255, 255],
-  "darkblue": [0, 0, 139],
-  "darkcyan": [0, 139, 139],
-  "darkgoldenrod": [184, 134, 11],
-  "darkgray": [169, 169, 169],
-  "darkgreen": [0, 100, 0],
-  "darkgrey": [169, 169, 169],
-  "darkkhaki": [189, 183, 107],
-  "darkmagenta": [139, 0, 139],
-  "darkolivegreen": [85, 107, 47],
-  "darkorange": [255, 140, 0],
-  "darkorchid": [153, 50, 204],
-  "darkred": [139, 0, 0],
-  "darksalmon": [233, 150, 122],
-  "darkseagreen": [143, 188, 143],
-  "darkslateblue": [72, 61, 139],
-  "darkslategray": [47, 79, 79],
-  "darkslategrey": [47, 79, 79],
-  "darkturquoise": [0, 206, 209],
-  "darkviolet": [148, 0, 211],
-  "deeppink": [255, 20, 147],
-  "deepskyblue": [0, 191, 255],
-  "dimgray": [105, 105, 105],
-  "dimgrey": [105, 105, 105],
-  "dodgerblue": [30, 144, 255],
-  "firebrick": [178, 34, 34],
-  "floralwhite": [255, 250, 240],
-  "forestgreen": [34, 139, 34],
-  "fuchsia": [255, 0, 255],
-  "gainsboro": [220, 220, 220],
-  "ghostwhite": [248, 248, 255],
-  "gold": [255, 215, 0],
-  "goldenrod": [218, 165, 32],
-  "gray": [128, 128, 128],
-  "green": [0, 128, 0],
-  "greenyellow": [173, 255, 47],
-  "grey": [128, 128, 128],
-  "honeydew": [240, 255, 240],
-  "hotpink": [255, 105, 180],
-  "indianred": [205, 92, 92],
-  "indigo": [75, 0, 130],
-  "ivory": [255, 255, 240],
-  "khaki": [240, 230, 140],
-  "lavender": [230, 230, 250],
-  "lavenderblush": [255, 240, 245],
-  "lawngreen": [124, 252, 0],
-  "lemonchiffon": [255, 250, 205],
-  "lightblue": [173, 216, 230],
-  "lightcoral": [240, 128, 128],
-  "lightcyan": [224, 255, 255],
-  "lightgoldenrodyellow": [250, 250, 210],
-  "lightgray": [211, 211, 211],
-  "lightgreen": [144, 238, 144],
-  "lightgrey": [211, 211, 211],
-  "lightpink": [255, 182, 193],
-  "lightsalmon": [255, 160, 122],
-  "lightseagreen": [32, 178, 170],
-  "lightskyblue": [135, 206, 250],
-  "lightslategray": [119, 136, 153],
-  "lightslategrey": [119, 136, 153],
-  "lightsteelblue": [176, 196, 222],
-  "lightyellow": [255, 255, 224],
-  "lime": [0, 255, 0],
-  "limegreen": [50, 205, 50],
-  "linen": [250, 240, 230],
-  "magenta": [255, 0, 255],
-  "maroon": [128, 0, 0],
-  "mediumaquamarine": [102, 205, 170],
-  "mediumblue": [0, 0, 205],
-  "mediumorchid": [186, 85, 211],
-  "mediumpurple": [147, 112, 219],
-  "mediumseagreen": [60, 179, 113],
-  "mediumslateblue": [123, 104, 238],
-  "mediumspringgreen": [0, 250, 154],
-  "mediumturquoise": [72, 209, 204],
-  "mediumvioletred": [199, 21, 133],
-  "midnightblue": [25, 25, 112],
-  "mintcream": [245, 255, 250],
-  "mistyrose": [255, 228, 225],
-  "moccasin": [255, 228, 181],
-  "navajowhite": [255, 222, 173],
-  "navy": [0, 0, 128],
-  "oldlace": [253, 245, 230],
-  "olive": [128, 128, 0],
-  "olivedrab": [107, 142, 35],
-  "orange": [255, 165, 0],
-  "orangered": [255, 69, 0],
-  "orchid": [218, 112, 214],
-  "palegoldenrod": [238, 232, 170],
-  "palegreen": [152, 251, 152],
-  "paleturquoise": [175, 238, 238],
-  "palevioletred": [219, 112, 147],
-  "papayawhip": [255, 239, 213],
-  "peachpuff": [255, 218, 185],
-  "peru": [205, 133, 63],
-  "pink": [255, 192, 203],
-  "plum": [221, 160, 221],
-  "powderblue": [176, 224, 230],
-  "purple": [128, 0, 128],
-  "rebeccapurple": [102, 51, 153],
-  "red": [255, 0, 0],
-  "rosybrown": [188, 143, 143],
-  "royalblue": [65, 105, 225],
-  "saddlebrown": [139, 69, 19],
-  "salmon": [250, 128, 114],
-  "sandybrown": [244, 164, 96],
-  "seagreen": [46, 139, 87],
-  "seashell": [255, 245, 238],
-  "sienna": [160, 82, 45],
-  "silver": [192, 192, 192],
-  "skyblue": [135, 206, 235],
-  "slateblue": [106, 90, 205],
-  "slategray": [112, 128, 144],
-  "slategrey": [112, 128, 144],
-  "snow": [255, 250, 250],
-  "springgreen": [0, 255, 127],
-  "steelblue": [70, 130, 180],
-  "tan": [210, 180, 140],
-  "teal": [0, 128, 128],
-  "thistle": [216, 191, 216],
-  "tomato": [255, 99, 71],
-  "turquoise": [64, 224, 208],
-  "violet": [238, 130, 238],
-  "wheat": [245, 222, 179],
-  "white": [255, 255, 255],
-  "whitesmoke": [245, 245, 245],
-  "yellow": [255, 255, 0],
-  "yellowgreen": [154, 205, 50]
-};
-exports.default = _default;
-
-/***/ }),
-/* 241 */
-/*!********************************************************************************************!*\
-  !*** D:/1/feimi/feimi/uni_modules/wu-ui-tools/libs/function/color/simple-swizzle/index.js ***!
-  \********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = swizzle;
-var _isArrayish = _interopRequireDefault(__webpack_require__(/*! ../is-arrayish */ 242));
-var concat = Array.prototype.concat;
-var slice = Array.prototype.slice;
-function swizzle(args) {
-  var results = [];
-  for (var i = 0, len = args.length; i < len; i++) {
-    var arg = args[i];
-    if ((0, _isArrayish.default)(arg)) {
-      // http://jsperf.com/javascript-array-concat-vs-push/98
-      results = concat.call(results, slice.call(arg));
-    } else {
-      results.push(arg);
-    }
-  }
-  return results;
-}
-;
-swizzle.wrap = function (fn) {
-  return function () {
-    return fn(swizzle(arguments));
-  };
-};
-
-/***/ }),
-/* 242 */
-/*!*****************************************************************************************!*\
-  !*** D:/1/feimi/feimi/uni_modules/wu-ui-tools/libs/function/color/is-arrayish/index.js ***!
-  \*****************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isArrayish;
-function isArrayish(obj) {
-  if (!obj || typeof obj === 'string') {
-    return false;
-  }
-  return obj instanceof Array || Array.isArray(obj) || obj.length >= 0 && (obj.splice instanceof Function || Object.getOwnPropertyDescriptor(obj, obj.length - 1) && obj.constructor.name !== 'String');
-}
-;
-
-/***/ }),
-/* 243 */
-/*!*******************************************************************************************!*\
-  !*** D:/1/feimi/feimi/uni_modules/wu-ui-tools/libs/function/color/color-convert/index.js ***!
-  \*******************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ 13));
-var _route = _interopRequireDefault(__webpack_require__(/*! ./route */ 244));
-var _conversions = _interopRequireDefault(__webpack_require__(/*! ./conversions */ 245));
-var convert = {};
-var models = Object.keys(_conversions.default);
-function wrapRaw(fn) {
-  var wrappedFn = function wrappedFn() {
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-    var arg0 = args[0];
-    if (arg0 === undefined || arg0 === null) {
-      return arg0;
-    }
-    if (arg0.length > 1) {
-      args = arg0;
-    }
-    return fn(args);
-  };
-
-  // Preserve .conversion property if there is one
-  if ('conversion' in fn) {
-    wrappedFn.conversion = fn.conversion;
-  }
-  return wrappedFn;
-}
-function wrapRounded(fn) {
-  var wrappedFn = function wrappedFn() {
-    for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-      args[_key2] = arguments[_key2];
-    }
-    var arg0 = args[0];
-    if (arg0 === undefined || arg0 === null) {
-      return arg0;
-    }
-    if (arg0.length > 1) {
-      args = arg0;
-    }
-    var result = fn(args);
-
-    // We're assuming the result is an array here.
-    // see notice in conversions.js; don't use box types
-    // in conversion functions.
-    if ((0, _typeof2.default)(result) === 'object') {
-      for (var len = result.length, i = 0; i < len; i++) {
-        result[i] = Math.round(result[i]);
-      }
-    }
-    return result;
-  };
-
-  // Preserve .conversion property if there is one
-  if ('conversion' in fn) {
-    wrappedFn.conversion = fn.conversion;
-  }
-  return wrappedFn;
-}
-models.forEach(function (fromModel) {
-  convert[fromModel] = {};
-  Object.defineProperty(convert[fromModel], 'channels', {
-    value: _conversions.default[fromModel].channels
-  });
-  Object.defineProperty(convert[fromModel], 'labels', {
-    value: _conversions.default[fromModel].labels
-  });
-  var routes = (0, _route.default)(fromModel);
-  var routeModels = Object.keys(routes);
-  routeModels.forEach(function (toModel) {
-    var fn = routes[toModel];
-    convert[fromModel][toModel] = wrapRounded(fn);
-    convert[fromModel][toModel].raw = wrapRaw(fn);
-  });
-});
-var _default = convert;
-exports.default = _default;
-
-/***/ }),
-/* 244 */
-/*!*******************************************************************************************!*\
-  !*** D:/1/feimi/feimi/uni_modules/wu-ui-tools/libs/function/color/color-convert/route.js ***!
-  \*******************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = _default;
-var _conversions = _interopRequireDefault(__webpack_require__(/*! ./conversions */ 245));
-/*
-	This function routes a model to all other models.
-
-	all functions that are routed have a property `.conversion` attached
-	to the returned synthetic function. This property is an array
-	of strings, each with the steps in between the 'from' and 'to'
-	color models (inclusive).
-
-	conversions that are not possible simply are not included.
-*/
-
-function buildGraph() {
-  var graph = {};
-  // https://jsperf.com/object-keys-vs-for-in-with-closure/3
-  var models = Object.keys(_conversions.default);
-  for (var len = models.length, i = 0; i < len; i++) {
-    graph[models[i]] = {
-      // http://jsperf.com/1-vs-infinity
-      // micro-opt, but this is simple.
-      distance: -1,
-      parent: null
-    };
-  }
-  return graph;
-}
-
-// https://en.wikipedia.org/wiki/Breadth-first_search
-function deriveBFS(fromModel) {
-  var graph = buildGraph();
-  var queue = [fromModel]; // Unshift -> queue -> pop
-
-  graph[fromModel].distance = 0;
-  while (queue.length) {
-    var current = queue.pop();
-    var adjacents = Object.keys(_conversions.default[current]);
-    for (var len = adjacents.length, i = 0; i < len; i++) {
-      var adjacent = adjacents[i];
-      var node = graph[adjacent];
-      if (node.distance === -1) {
-        node.distance = graph[current].distance + 1;
-        node.parent = current;
-        queue.unshift(adjacent);
-      }
-    }
-  }
-  return graph;
-}
-function link(from, to) {
-  return function (args) {
-    return to(from(args));
-  };
-}
-function wrapConversion(toModel, graph) {
-  var path = [graph[toModel].parent, toModel];
-  var fn = _conversions.default[graph[toModel].parent][toModel];
-  var cur = graph[toModel].parent;
-  while (graph[cur].parent) {
-    path.unshift(graph[cur].parent);
-    fn = link(_conversions.default[graph[cur].parent][cur], fn);
-    cur = graph[cur].parent;
-  }
-  fn.conversion = path;
-  return fn;
-}
-function _default(fromModel) {
-  var graph = deriveBFS(fromModel);
-  var conversion = {};
-  var models = Object.keys(graph);
-  for (var len = models.length, i = 0; i < len; i++) {
-    var toModel = models[i];
-    var node = graph[toModel];
-    if (node.parent === null) {
-      // No possible conversion, or this node is the source model.
-      continue;
-    }
-    conversion[toModel] = wrapConversion(toModel, graph);
-  }
-  return conversion;
-}
-;
-
-/***/ }),
-/* 245 */
-/*!*************************************************************************************************!*\
-  !*** D:/1/feimi/feimi/uni_modules/wu-ui-tools/libs/function/color/color-convert/conversions.js ***!
-  \*************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ 5));
-var _colorName = _interopRequireDefault(__webpack_require__(/*! ../color-name */ 240));
-/* MIT license */
-/* eslint-disable no-mixed-operators */
-
-// NOTE: conversions should only return primitive values (i.e. arrays, or
-//       values that give correct `typeof` results).
-//       do not use box values types (i.e. Number(), String(), etc.)
-
-var reverseKeywords = {};
-for (var _i = 0, _Object$keys = Object.keys(_colorName.default); _i < _Object$keys.length; _i++) {
-  var key = _Object$keys[_i];
-  reverseKeywords[_colorName.default[key]] = key;
-}
-var convert = {
-  rgb: {
-    channels: 3,
-    labels: 'rgb'
-  },
-  hsl: {
-    channels: 3,
-    labels: 'hsl'
-  },
-  hsv: {
-    channels: 3,
-    labels: 'hsv'
-  },
-  hwb: {
-    channels: 3,
-    labels: 'hwb'
-  },
-  cmyk: {
-    channels: 4,
-    labels: 'cmyk'
-  },
-  xyz: {
-    channels: 3,
-    labels: 'xyz'
-  },
-  lab: {
-    channels: 3,
-    labels: 'lab'
-  },
-  lch: {
-    channels: 3,
-    labels: 'lch'
-  },
-  hex: {
-    channels: 1,
-    labels: ['hex']
-  },
-  keyword: {
-    channels: 1,
-    labels: ['keyword']
-  },
-  ansi16: {
-    channels: 1,
-    labels: ['ansi16']
-  },
-  ansi256: {
-    channels: 1,
-    labels: ['ansi256']
-  },
-  hcg: {
-    channels: 3,
-    labels: ['h', 'c', 'g']
-  },
-  apple: {
-    channels: 3,
-    labels: ['r16', 'g16', 'b16']
-  },
-  gray: {
-    channels: 1,
-    labels: ['gray']
-  }
-};
-var _default = convert; // Hide .channels and .labels properties
-exports.default = _default;
-for (var _i2 = 0, _Object$keys2 = Object.keys(convert); _i2 < _Object$keys2.length; _i2++) {
-  var model = _Object$keys2[_i2];
-  if (!('channels' in convert[model])) {
-    throw new Error('missing channels property: ' + model);
-  }
-  if (!('labels' in convert[model])) {
-    throw new Error('missing channel labels property: ' + model);
-  }
-  if (convert[model].labels.length !== convert[model].channels) {
-    throw new Error('channel and label counts mismatch: ' + model);
-  }
-  var _convert$model = convert[model],
-    channels = _convert$model.channels,
-    labels = _convert$model.labels;
-  delete convert[model].channels;
-  delete convert[model].labels;
-  Object.defineProperty(convert[model], 'channels', {
-    value: channels
-  });
-  Object.defineProperty(convert[model], 'labels', {
-    value: labels
-  });
-}
-convert.rgb.hsl = function (rgb) {
-  var r = rgb[0] / 255;
-  var g = rgb[1] / 255;
-  var b = rgb[2] / 255;
-  var min = Math.min(r, g, b);
-  var max = Math.max(r, g, b);
-  var delta = max - min;
-  var h;
-  var s;
-  if (max === min) {
-    h = 0;
-  } else if (r === max) {
-    h = (g - b) / delta;
-  } else if (g === max) {
-    h = 2 + (b - r) / delta;
-  } else if (b === max) {
-    h = 4 + (r - g) / delta;
-  }
-  h = Math.min(h * 60, 360);
-  if (h < 0) {
-    h += 360;
-  }
-  var l = (min + max) / 2;
-  if (max === min) {
-    s = 0;
-  } else if (l <= 0.5) {
-    s = delta / (max + min);
-  } else {
-    s = delta / (2 - max - min);
-  }
-  return [h, s * 100, l * 100];
-};
-convert.rgb.hsv = function (rgb) {
-  var rdif;
-  var gdif;
-  var bdif;
-  var h;
-  var s;
-  var r = rgb[0] / 255;
-  var g = rgb[1] / 255;
-  var b = rgb[2] / 255;
-  var v = Math.max(r, g, b);
-  var diff = v - Math.min(r, g, b);
-  var diffc = function diffc(c) {
-    return (v - c) / 6 / diff + 1 / 2;
-  };
-  if (diff === 0) {
-    h = 0;
-    s = 0;
-  } else {
-    s = diff / v;
-    rdif = diffc(r);
-    gdif = diffc(g);
-    bdif = diffc(b);
-    if (r === v) {
-      h = bdif - gdif;
-    } else if (g === v) {
-      h = 1 / 3 + rdif - bdif;
-    } else if (b === v) {
-      h = 2 / 3 + gdif - rdif;
-    }
-    if (h < 0) {
-      h += 1;
-    } else if (h > 1) {
-      h -= 1;
-    }
-  }
-  return [h * 360, s * 100, v * 100];
-};
-convert.rgb.hwb = function (rgb) {
-  var r = rgb[0];
-  var g = rgb[1];
-  var b = rgb[2];
-  var h = convert.rgb.hsl(rgb)[0];
-  var w = 1 / 255 * Math.min(r, Math.min(g, b));
-  b = 1 - 1 / 255 * Math.max(r, Math.max(g, b));
-  return [h, w * 100, b * 100];
-};
-convert.rgb.cmyk = function (rgb) {
-  var r = rgb[0] / 255;
-  var g = rgb[1] / 255;
-  var b = rgb[2] / 255;
-  var k = Math.min(1 - r, 1 - g, 1 - b);
-  var c = (1 - r - k) / (1 - k) || 0;
-  var m = (1 - g - k) / (1 - k) || 0;
-  var y = (1 - b - k) / (1 - k) || 0;
-  return [c * 100, m * 100, y * 100, k * 100];
-};
-function comparativeDistance(x, y) {
-  /*
-  	See https://en.m.wikipedia.org/wiki/Euclidean_distance#Squared_Euclidean_distance
-  */
-  return Math.pow(x[0] - y[0], 2) + Math.pow(x[1] - y[1], 2) + Math.pow(x[2] - y[2], 2);
-}
-convert.rgb.keyword = function (rgb) {
-  var reversed = reverseKeywords[rgb];
-  if (reversed) {
-    return reversed;
-  }
-  var currentClosestDistance = Infinity;
-  var currentClosestKeyword;
-  for (var _i3 = 0, _Object$keys3 = Object.keys(_colorName.default); _i3 < _Object$keys3.length; _i3++) {
-    var keyword = _Object$keys3[_i3];
-    var value = _colorName.default[keyword];
-
-    // Compute comparative distance
-    var distance = comparativeDistance(rgb, value);
-
-    // Check if its less, if so set as closest
-    if (distance < currentClosestDistance) {
-      currentClosestDistance = distance;
-      currentClosestKeyword = keyword;
-    }
-  }
-  return currentClosestKeyword;
-};
-convert.keyword.rgb = function (keyword) {
-  return _colorName.default[keyword];
-};
-convert.rgb.xyz = function (rgb) {
-  var r = rgb[0] / 255;
-  var g = rgb[1] / 255;
-  var b = rgb[2] / 255;
-
-  // Assume sRGB
-  r = r > 0.04045 ? Math.pow((r + 0.055) / 1.055, 2.4) : r / 12.92;
-  g = g > 0.04045 ? Math.pow((g + 0.055) / 1.055, 2.4) : g / 12.92;
-  b = b > 0.04045 ? Math.pow((b + 0.055) / 1.055, 2.4) : b / 12.92;
-  var x = r * 0.4124 + g * 0.3576 + b * 0.1805;
-  var y = r * 0.2126 + g * 0.7152 + b * 0.0722;
-  var z = r * 0.0193 + g * 0.1192 + b * 0.9505;
-  return [x * 100, y * 100, z * 100];
-};
-convert.rgb.lab = function (rgb) {
-  var xyz = convert.rgb.xyz(rgb);
-  var x = xyz[0];
-  var y = xyz[1];
-  var z = xyz[2];
-  x /= 95.047;
-  y /= 100;
-  z /= 108.883;
-  x = x > 0.008856 ? Math.pow(x, 1 / 3) : 7.787 * x + 16 / 116;
-  y = y > 0.008856 ? Math.pow(y, 1 / 3) : 7.787 * y + 16 / 116;
-  z = z > 0.008856 ? Math.pow(z, 1 / 3) : 7.787 * z + 16 / 116;
-  var l = 116 * y - 16;
-  var a = 500 * (x - y);
-  var b = 200 * (y - z);
-  return [l, a, b];
-};
-convert.hsl.rgb = function (hsl) {
-  var h = hsl[0] / 360;
-  var s = hsl[1] / 100;
-  var l = hsl[2] / 100;
-  var t2;
-  var t3;
-  var val;
-  if (s === 0) {
-    val = l * 255;
-    return [val, val, val];
-  }
-  if (l < 0.5) {
-    t2 = l * (1 + s);
-  } else {
-    t2 = l + s - l * s;
-  }
-  var t1 = 2 * l - t2;
-  var rgb = [0, 0, 0];
-  for (var i = 0; i < 3; i++) {
-    t3 = h + 1 / 3 * -(i - 1);
-    if (t3 < 0) {
-      t3++;
-    }
-    if (t3 > 1) {
-      t3--;
-    }
-    if (6 * t3 < 1) {
-      val = t1 + (t2 - t1) * 6 * t3;
-    } else if (2 * t3 < 1) {
-      val = t2;
-    } else if (3 * t3 < 2) {
-      val = t1 + (t2 - t1) * (2 / 3 - t3) * 6;
-    } else {
-      val = t1;
-    }
-    rgb[i] = val * 255;
-  }
-  return rgb;
-};
-convert.hsl.hsv = function (hsl) {
-  var h = hsl[0];
-  var s = hsl[1] / 100;
-  var l = hsl[2] / 100;
-  var smin = s;
-  var lmin = Math.max(l, 0.01);
-  l *= 2;
-  s *= l <= 1 ? l : 2 - l;
-  smin *= lmin <= 1 ? lmin : 2 - lmin;
-  var v = (l + s) / 2;
-  var sv = l === 0 ? 2 * smin / (lmin + smin) : 2 * s / (l + s);
-  return [h, sv * 100, v * 100];
-};
-convert.hsv.rgb = function (hsv) {
-  var h = hsv[0] / 60;
-  var s = hsv[1] / 100;
-  var v = hsv[2] / 100;
-  var hi = Math.floor(h) % 6;
-  var f = h - Math.floor(h);
-  var p = 255 * v * (1 - s);
-  var q = 255 * v * (1 - s * f);
-  var t = 255 * v * (1 - s * (1 - f));
-  v *= 255;
-  switch (hi) {
-    case 0:
-      return [v, t, p];
-    case 1:
-      return [q, v, p];
-    case 2:
-      return [p, v, t];
-    case 3:
-      return [p, q, v];
-    case 4:
-      return [t, p, v];
-    case 5:
-      return [v, p, q];
-  }
-};
-convert.hsv.hsl = function (hsv) {
-  var h = hsv[0];
-  var s = hsv[1] / 100;
-  var v = hsv[2] / 100;
-  var vmin = Math.max(v, 0.01);
-  var sl;
-  var l;
-  l = (2 - s) * v;
-  var lmin = (2 - s) * vmin;
-  sl = s * vmin;
-  sl /= lmin <= 1 ? lmin : 2 - lmin;
-  sl = sl || 0;
-  l /= 2;
-  return [h, sl * 100, l * 100];
-};
-
-// http://dev.w3.org/csswg/css-color/#hwb-to-rgb
-convert.hwb.rgb = function (hwb) {
-  var h = hwb[0] / 360;
-  var wh = hwb[1] / 100;
-  var bl = hwb[2] / 100;
-  var ratio = wh + bl;
-  var f;
-
-  // Wh + bl cant be > 1
-  if (ratio > 1) {
-    wh /= ratio;
-    bl /= ratio;
-  }
-  var i = Math.floor(6 * h);
-  var v = 1 - bl;
-  f = 6 * h - i;
-  if ((i & 0x01) !== 0) {
-    f = 1 - f;
-  }
-  var n = wh + f * (v - wh); // Linear interpolation
-
-  var r;
-  var g;
-  var b;
-  /* eslint-disable max-statements-per-line,no-multi-spaces */
-  switch (i) {
-    default:
-    case 6:
-    case 0:
-      r = v;
-      g = n;
-      b = wh;
-      break;
-    case 1:
-      r = n;
-      g = v;
-      b = wh;
-      break;
-    case 2:
-      r = wh;
-      g = v;
-      b = n;
-      break;
-    case 3:
-      r = wh;
-      g = n;
-      b = v;
-      break;
-    case 4:
-      r = n;
-      g = wh;
-      b = v;
-      break;
-    case 5:
-      r = v;
-      g = wh;
-      b = n;
-      break;
-  }
-  /* eslint-enable max-statements-per-line,no-multi-spaces */
-
-  return [r * 255, g * 255, b * 255];
-};
-convert.cmyk.rgb = function (cmyk) {
-  var c = cmyk[0] / 100;
-  var m = cmyk[1] / 100;
-  var y = cmyk[2] / 100;
-  var k = cmyk[3] / 100;
-  var r = 1 - Math.min(1, c * (1 - k) + k);
-  var g = 1 - Math.min(1, m * (1 - k) + k);
-  var b = 1 - Math.min(1, y * (1 - k) + k);
-  return [r * 255, g * 255, b * 255];
-};
-convert.xyz.rgb = function (xyz) {
-  var x = xyz[0] / 100;
-  var y = xyz[1] / 100;
-  var z = xyz[2] / 100;
-  var r;
-  var g;
-  var b;
-  r = x * 3.2406 + y * -1.5372 + z * -0.4986;
-  g = x * -0.9689 + y * 1.8758 + z * 0.0415;
-  b = x * 0.0557 + y * -0.2040 + z * 1.0570;
-
-  // Assume sRGB
-  r = r > 0.0031308 ? 1.055 * Math.pow(r, 1.0 / 2.4) - 0.055 : r * 12.92;
-  g = g > 0.0031308 ? 1.055 * Math.pow(g, 1.0 / 2.4) - 0.055 : g * 12.92;
-  b = b > 0.0031308 ? 1.055 * Math.pow(b, 1.0 / 2.4) - 0.055 : b * 12.92;
-  r = Math.min(Math.max(0, r), 1);
-  g = Math.min(Math.max(0, g), 1);
-  b = Math.min(Math.max(0, b), 1);
-  return [r * 255, g * 255, b * 255];
-};
-convert.xyz.lab = function (xyz) {
-  var x = xyz[0];
-  var y = xyz[1];
-  var z = xyz[2];
-  x /= 95.047;
-  y /= 100;
-  z /= 108.883;
-  x = x > 0.008856 ? Math.pow(x, 1 / 3) : 7.787 * x + 16 / 116;
-  y = y > 0.008856 ? Math.pow(y, 1 / 3) : 7.787 * y + 16 / 116;
-  z = z > 0.008856 ? Math.pow(z, 1 / 3) : 7.787 * z + 16 / 116;
-  var l = 116 * y - 16;
-  var a = 500 * (x - y);
-  var b = 200 * (y - z);
-  return [l, a, b];
-};
-convert.lab.xyz = function (lab) {
-  var l = lab[0];
-  var a = lab[1];
-  var b = lab[2];
-  var x;
-  var y;
-  var z;
-  y = (l + 16) / 116;
-  x = a / 500 + y;
-  z = y - b / 200;
-  var y2 = Math.pow(y, 3);
-  var x2 = Math.pow(x, 3);
-  var z2 = Math.pow(z, 3);
-  y = y2 > 0.008856 ? y2 : (y - 16 / 116) / 7.787;
-  x = x2 > 0.008856 ? x2 : (x - 16 / 116) / 7.787;
-  z = z2 > 0.008856 ? z2 : (z - 16 / 116) / 7.787;
-  x *= 95.047;
-  y *= 100;
-  z *= 108.883;
-  return [x, y, z];
-};
-convert.lab.lch = function (lab) {
-  var l = lab[0];
-  var a = lab[1];
-  var b = lab[2];
-  var h;
-  var hr = Math.atan2(b, a);
-  h = hr * 360 / 2 / Math.PI;
-  if (h < 0) {
-    h += 360;
-  }
-  var c = Math.sqrt(a * a + b * b);
-  return [l, c, h];
-};
-convert.lch.lab = function (lch) {
-  var l = lch[0];
-  var c = lch[1];
-  var h = lch[2];
-  var hr = h / 360 * 2 * Math.PI;
-  var a = c * Math.cos(hr);
-  var b = c * Math.sin(hr);
-  return [l, a, b];
-};
-convert.rgb.ansi16 = function (args) {
-  var saturation = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-  var _args = (0, _slicedToArray2.default)(args, 3),
-    r = _args[0],
-    g = _args[1],
-    b = _args[2];
-  var value = saturation === null ? convert.rgb.hsv(args)[2] : saturation; // Hsv -> ansi16 optimization
-
-  value = Math.round(value / 50);
-  if (value === 0) {
-    return 30;
-  }
-  var ansi = 30 + (Math.round(b / 255) << 2 | Math.round(g / 255) << 1 | Math.round(r / 255));
-  if (value === 2) {
-    ansi += 60;
-  }
-  return ansi;
-};
-convert.hsv.ansi16 = function (args) {
-  // Optimization here; we already know the value and don't need to get
-  // it converted for us.
-  return convert.rgb.ansi16(convert.hsv.rgb(args), args[2]);
-};
-convert.rgb.ansi256 = function (args) {
-  var r = args[0];
-  var g = args[1];
-  var b = args[2];
-
-  // We use the extended greyscale palette here, with the exception of
-  // black and white. normal palette only has 4 greyscale shades.
-  if (r === g && g === b) {
-    if (r < 8) {
-      return 16;
-    }
-    if (r > 248) {
-      return 231;
-    }
-    return Math.round((r - 8) / 247 * 24) + 232;
-  }
-  var ansi = 16 + 36 * Math.round(r / 255 * 5) + 6 * Math.round(g / 255 * 5) + Math.round(b / 255 * 5);
-  return ansi;
-};
-convert.ansi16.rgb = function (args) {
-  var color = args % 10;
-
-  // Handle greyscale
-  if (color === 0 || color === 7) {
-    if (args > 50) {
-      color += 3.5;
-    }
-    color = color / 10.5 * 255;
-    return [color, color, color];
-  }
-  var mult = (~~(args > 50) + 1) * 0.5;
-  var r = (color & 1) * mult * 255;
-  var g = (color >> 1 & 1) * mult * 255;
-  var b = (color >> 2 & 1) * mult * 255;
-  return [r, g, b];
-};
-convert.ansi256.rgb = function (args) {
-  // Handle greyscale
-  if (args >= 232) {
-    var c = (args - 232) * 10 + 8;
-    return [c, c, c];
-  }
-  args -= 16;
-  var rem;
-  var r = Math.floor(args / 36) / 5 * 255;
-  var g = Math.floor((rem = args % 36) / 6) / 5 * 255;
-  var b = rem % 6 / 5 * 255;
-  return [r, g, b];
-};
-convert.rgb.hex = function (args) {
-  var integer = ((Math.round(args[0]) & 0xFF) << 16) + ((Math.round(args[1]) & 0xFF) << 8) + (Math.round(args[2]) & 0xFF);
-  var string = integer.toString(16).toUpperCase();
-  return '000000'.substring(string.length) + string;
-};
-convert.hex.rgb = function (args) {
-  var match = args.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
-  if (!match) {
-    return [0, 0, 0];
-  }
-  var colorString = match[0];
-  if (match[0].length === 3) {
-    colorString = colorString.split('').map(function (char) {
-      return char + char;
-    }).join('');
-  }
-  var integer = parseInt(colorString, 16);
-  var r = integer >> 16 & 0xFF;
-  var g = integer >> 8 & 0xFF;
-  var b = integer & 0xFF;
-  return [r, g, b];
-};
-convert.rgb.hcg = function (rgb) {
-  var r = rgb[0] / 255;
-  var g = rgb[1] / 255;
-  var b = rgb[2] / 255;
-  var max = Math.max(Math.max(r, g), b);
-  var min = Math.min(Math.min(r, g), b);
-  var chroma = max - min;
-  var grayscale;
-  var hue;
-  if (chroma < 1) {
-    grayscale = min / (1 - chroma);
-  } else {
-    grayscale = 0;
-  }
-  if (chroma <= 0) {
-    hue = 0;
-  } else if (max === r) {
-    hue = (g - b) / chroma % 6;
-  } else if (max === g) {
-    hue = 2 + (b - r) / chroma;
-  } else {
-    hue = 4 + (r - g) / chroma;
-  }
-  hue /= 6;
-  hue %= 1;
-  return [hue * 360, chroma * 100, grayscale * 100];
-};
-convert.hsl.hcg = function (hsl) {
-  var s = hsl[1] / 100;
-  var l = hsl[2] / 100;
-  var c = l < 0.5 ? 2.0 * s * l : 2.0 * s * (1.0 - l);
-  var f = 0;
-  if (c < 1.0) {
-    f = (l - 0.5 * c) / (1.0 - c);
-  }
-  return [hsl[0], c * 100, f * 100];
-};
-convert.hsv.hcg = function (hsv) {
-  var s = hsv[1] / 100;
-  var v = hsv[2] / 100;
-  var c = s * v;
-  var f = 0;
-  if (c < 1.0) {
-    f = (v - c) / (1 - c);
-  }
-  return [hsv[0], c * 100, f * 100];
-};
-convert.hcg.rgb = function (hcg) {
-  var h = hcg[0] / 360;
-  var c = hcg[1] / 100;
-  var g = hcg[2] / 100;
-  if (c === 0.0) {
-    return [g * 255, g * 255, g * 255];
-  }
-  var pure = [0, 0, 0];
-  var hi = h % 1 * 6;
-  var v = hi % 1;
-  var w = 1 - v;
-  var mg = 0;
-
-  /* eslint-disable max-statements-per-line */
-  switch (Math.floor(hi)) {
-    case 0:
-      pure[0] = 1;
-      pure[1] = v;
-      pure[2] = 0;
-      break;
-    case 1:
-      pure[0] = w;
-      pure[1] = 1;
-      pure[2] = 0;
-      break;
-    case 2:
-      pure[0] = 0;
-      pure[1] = 1;
-      pure[2] = v;
-      break;
-    case 3:
-      pure[0] = 0;
-      pure[1] = w;
-      pure[2] = 1;
-      break;
-    case 4:
-      pure[0] = v;
-      pure[1] = 0;
-      pure[2] = 1;
-      break;
-    default:
-      pure[0] = 1;
-      pure[1] = 0;
-      pure[2] = w;
-  }
-  /* eslint-enable max-statements-per-line */
-
-  mg = (1.0 - c) * g;
-  return [(c * pure[0] + mg) * 255, (c * pure[1] + mg) * 255, (c * pure[2] + mg) * 255];
-};
-convert.hcg.hsv = function (hcg) {
-  var c = hcg[1] / 100;
-  var g = hcg[2] / 100;
-  var v = c + g * (1.0 - c);
-  var f = 0;
-  if (v > 0.0) {
-    f = c / v;
-  }
-  return [hcg[0], f * 100, v * 100];
-};
-convert.hcg.hsl = function (hcg) {
-  var c = hcg[1] / 100;
-  var g = hcg[2] / 100;
-  var l = g * (1.0 - c) + 0.5 * c;
-  var s = 0;
-  if (l > 0.0 && l < 0.5) {
-    s = c / (2 * l);
-  } else if (l >= 0.5 && l < 1.0) {
-    s = c / (2 * (1 - l));
-  }
-  return [hcg[0], s * 100, l * 100];
-};
-convert.hcg.hwb = function (hcg) {
-  var c = hcg[1] / 100;
-  var g = hcg[2] / 100;
-  var v = c + g * (1.0 - c);
-  return [hcg[0], (v - c) * 100, (1 - v) * 100];
-};
-convert.hwb.hcg = function (hwb) {
-  var w = hwb[1] / 100;
-  var b = hwb[2] / 100;
-  var v = 1 - b;
-  var c = v - w;
-  var g = 0;
-  if (c < 1) {
-    g = (v - c) / (1 - c);
-  }
-  return [hwb[0], c * 100, g * 100];
-};
-convert.apple.rgb = function (apple) {
-  return [apple[0] / 65535 * 255, apple[1] / 65535 * 255, apple[2] / 65535 * 255];
-};
-convert.rgb.apple = function (rgb) {
-  return [rgb[0] / 255 * 65535, rgb[1] / 255 * 65535, rgb[2] / 255 * 65535];
-};
-convert.gray.rgb = function (args) {
-  return [args[0] / 100 * 255, args[0] / 100 * 255, args[0] / 100 * 255];
-};
-convert.gray.hsl = function (args) {
-  return [0, 0, args[0]];
-};
-convert.gray.hsv = convert.gray.hsl;
-convert.gray.hwb = function (gray) {
-  return [0, 100, gray[0]];
-};
-convert.gray.cmyk = function (gray) {
-  return [0, 0, 0, gray[0]];
-};
-convert.gray.lab = function (gray) {
-  return [gray[0], 0, 0];
-};
-convert.gray.hex = function (gray) {
-  var val = Math.round(gray[0] / 100 * 255) & 0xFF;
-  var integer = (val << 16) + (val << 8) + val;
-  var string = integer.toString(16).toUpperCase();
-  return '000000'.substring(string.length) + string;
-};
-convert.rgb.gray = function (rgb) {
-  var val = (rgb[0] + rgb[1] + rgb[2]) / 3;
-  return [val / 255 * 100];
-};
-
-/***/ }),
-/* 246 */
-/*!********************************************************************************!*\
-  !*** D:/1/feimi/feimi/uni_modules/wu-calendar/components/wu-calendar/props.js ***!
-  \********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var _uni$$w, _uni$$w$props;
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-var _default2 = {
-  props: _objectSpread({
-    // 自定义当前时间
-    date: {
-      type: [String, Array],
-      default: ''
-    },
-    // 日历类型(默认为month)
-    type: {
-      type: String,
-      default: 'month',
-      validator: function validator(value) {
-        return ['month', 'week'].includes(value);
-      }
-    },
-    // 日期选择模式
-    mode: {
-      type: String,
-      default: 'single'
-    },
-    // 是否使用默认日期(今天，默认为true)
-    useToday: {
-      type: Boolean,
-      default: true
-    },
-    // 是否使用折叠功能
-    fold: {
-      type: Boolean,
-      default: null
-    },
-    // 主题色
-    color: {
-      type: String,
-      default: '#3c9cff'
-    },
-    // 日历中每一项日期的高度(默认64),单位px
-    itemHeight: {
-      type: Number,
-      default: 64
-    },
-    // 取消文字的颜色
-    cancelColor: {
-      type: String,
-      default: '#333'
-    },
-    // 确定文字的颜色
-    confirmColor: {
-      type: String,
-      default: '#333'
-    },
-    // 	mode=range时，第一个日期底部的提示文字
-    startText: {
-      type: String,
-      default: '开始'
-    },
-    // mode=range时，最后一个日期底部的提示文字
-    endText: {
-      type: String,
-      default: '结束'
-    },
-    // 日历以周几开始
-    startWeek: {
-      type: String,
-      default: 'sun',
-      validator: function validator(value) {
-        return ['sun', 'mon'].includes(value);
-      }
-    },
-    // 打点，期待格式[{date: '2019-06-27', info: '签到', data: { custom: '自定义信息', name: '自定义消息头',xxx:xxx... }}]
-    selected: {
-      type: Array,
-      default: function _default() {
-        return [];
-      }
-    },
-    // 是否显示农历
-    lunar: {
-      type: Boolean,
-      default: false
-    },
-    // 日期选择范围-开始日期
-    startDate: {
-      type: String,
-      default: ''
-    },
-    // 日期选择范围-结束日期
-    endDate: {
-      type: String,
-      default: ''
-    },
-    // 允许日期选择范围内重选结束日期
-    rangeEndRepick: {
-      type: Boolean,
-      default: false
-    },
-    // 允许日期选择范围起始日期为同一天
-    rangeSameDay: {
-      type: Boolean,
-      default: false
-    },
-    // 允许日期选择范围内遇到打点禁用日期进行截断
-    rangeHaveDisableTruncation: {
-      type: Boolean,
-      default: false
-    },
-    // 每月仅显示当月日期
-    monthShowCurrentMonth: {
-      type: Boolean,
-      default: false
-    },
-    // 插入模式,可选值，ture：插入模式；false：弹窗模式； 默认为插入模式
-    insert: {
-      type: Boolean,
-      default: true
-    },
-    // 滑动切换模式，可选值 horizontal: 横向 vertical：纵向 none： 不使用滑动切换
-    slideSwitchMode: {
-      type: String,
-      default: 'horizontal'
-    },
-    // 是否显示月份为背景
-    showMonth: {
-      type: Boolean,
-      default: true
-    },
-    // 弹窗模式是否清空上次选择内容
-    clearDate: {
-      type: Boolean,
-      default: true
-    },
-    // 是否点击遮罩层关闭
-    maskClick: {
-      type: Boolean,
-      default: false
-    },
-    // 是否禁止点击日历
-    disabledChoice: {
-      type: Boolean,
-      default: false
-    }
-  }, (_uni$$w = uni.$w) === null || _uni$$w === void 0 ? void 0 : (_uni$$w$props = _uni$$w.props) === null || _uni$$w$props === void 0 ? void 0 : _uni$$w$props.calendar)
-};
-exports.default = _default2;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
+/* 226 */,
+/* 227 */,
+/* 228 */,
+/* 229 */,
+/* 230 */,
+/* 231 */,
+/* 232 */,
+/* 233 */,
+/* 234 */,
+/* 235 */,
+/* 236 */,
+/* 237 */,
+/* 238 */,
+/* 239 */,
+/* 240 */,
+/* 241 */,
+/* 242 */,
+/* 243 */,
+/* 244 */,
+/* 245 */,
+/* 246 */,
 /* 247 */
-/*!*************************************************************************!*\
-  !*** D:/1/feimi/feimi/uni_modules/wu-calendar/components/i18n/index.js ***!
-  \*************************************************************************/
+/*!************************************************************************!*\
+  !*** D:/1/feimi/feimi/node_modules/uview-ui/components/u-row/props.js ***!
+  \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
 
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 248));
-var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 249));
-var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 250));
 var _default = {
-  en: _en.default,
-  'zh-Hans': _zhHans.default,
-  'zh-Hant': _zhHant.default
+  props: {
+    // 给col添加间距，左右边距各占一半
+    gutter: {
+      type: [String, Number],
+      default: uni.$u.props.row.gutter
+    },
+    // 水平排列方式，可选值为`start`(或`flex-start`)、`end`(或`flex-end`)、`center`、`around`(或`space-around`)、`between`(或`space-between`)
+    justify: {
+      type: String,
+      default: uni.$u.props.row.justify
+    },
+    // 垂直对齐方式，可选值为top、center、bottom
+    align: {
+      type: String,
+      default: uni.$u.props.row.align
+    }
+  }
 };
 exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 248 */
-/*!************************************************************************!*\
-  !*** D:/1/feimi/feimi/uni_modules/wu-calendar/components/i18n/en.json ***!
-  \************************************************************************/
-/*! exports provided: wu-calender.ok, wu-calender.cancel, wu-calender.year, wu-calender.month, wu-calender.today, wu-calender.MON, wu-calender.TUE, wu-calender.WED, wu-calender.THU, wu-calender.FRI, wu-calender.SAT, wu-calender.SUN, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"wu-calender.ok\":\"ok\",\"wu-calender.cancel\":\"cancel\",\"wu-calender.year\":\"year\",\"wu-calender.month\":\"month\",\"wu-calender.today\":\"today\",\"wu-calender.MON\":\"MON\",\"wu-calender.TUE\":\"TUE\",\"wu-calender.WED\":\"WED\",\"wu-calender.THU\":\"THU\",\"wu-calender.FRI\":\"FRI\",\"wu-calender.SAT\":\"SAT\",\"wu-calender.SUN\":\"SUN\"}");
-
-/***/ }),
-/* 249 */
-/*!*****************************************************************************!*\
-  !*** D:/1/feimi/feimi/uni_modules/wu-calendar/components/i18n/zh-Hans.json ***!
-  \*****************************************************************************/
-/*! exports provided: wu-calender.ok, wu-calender.cancel, wu-calender.year, wu-calender.month, wu-calender.today, wu-calender.SUN, wu-calender.MON, wu-calender.TUE, wu-calender.WED, wu-calender.THU, wu-calender.FRI, wu-calender.SAT, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"wu-calender.ok\":\"确定\",\"wu-calender.cancel\":\"取消\",\"wu-calender.year\":\"年\",\"wu-calender.month\":\"月\",\"wu-calender.today\":\"今日\",\"wu-calender.SUN\":\"日\",\"wu-calender.MON\":\"一\",\"wu-calender.TUE\":\"二\",\"wu-calender.WED\":\"三\",\"wu-calender.THU\":\"四\",\"wu-calender.FRI\":\"五\",\"wu-calender.SAT\":\"六\"}");
-
-/***/ }),
-/* 250 */
-/*!*****************************************************************************!*\
-  !*** D:/1/feimi/feimi/uni_modules/wu-calendar/components/i18n/zh-Hant.json ***!
-  \*****************************************************************************/
-/*! exports provided: wu-calender.ok, wu-calender.cancel, wu-calender.year, wu-calender.month, wu-calender.today, wu-calender.SUN, wu-calender.MON, wu-calender.TUE, wu-calender.WED, wu-calender.THU, wu-calender.FRI, wu-calender.SAT, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"wu-calender.ok\":\"確定\",\"wu-calender.cancel\":\"取消\",\"wu-calender.year\":\"年\",\"wu-calender.month\":\"月\",\"wu-calender.today\":\"今日\",\"wu-calender.SUN\":\"日\",\"wu-calender.MON\":\"一\",\"wu-calender.TUE\":\"二\",\"wu-calender.WED\":\"三\",\"wu-calender.THU\":\"四\",\"wu-calender.FRI\":\"五\",\"wu-calender.SAT\":\"六\"}");
-
-/***/ }),
+/* 248 */,
+/* 249 */,
+/* 250 */,
 /* 251 */,
 /* 252 */,
 /* 253 */,
 /* 254 */,
-/* 255 */,
+/* 255 */
+/*!************************************************************************!*\
+  !*** D:/1/feimi/feimi/node_modules/uview-ui/components/u-col/props.js ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  props: {
+    // 占父容器宽度的多少等分，总分为12份
+    span: {
+      type: [String, Number],
+      default: uni.$u.props.col.span
+    },
+    // 指定栅格左侧的间隔数(总12栏)
+    offset: {
+      type: [String, Number],
+      default: uni.$u.props.col.offset
+    },
+    // 水平排列方式，可选值为`start`(或`flex-start`)、`end`(或`flex-end`)、`center`、`around`(或`space-around`)、`between`(或`space-between`)
+    justify: {
+      type: String,
+      default: uni.$u.props.col.justify
+    },
+    // 垂直对齐方式，可选值为top、center、bottom、stretch
+    align: {
+      type: String,
+      default: uni.$u.props.col.align
+    },
+    // 文字对齐方式
+    textAlign: {
+      type: String,
+      default: uni.$u.props.col.textAlign
+    }
+  }
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
 /* 256 */,
 /* 257 */,
 /* 258 */,
@@ -24384,7 +20515,33 @@ module.exports = JSON.parse("{\"wu-calender.ok\":\"確定\",\"wu-calender.cancel
 /* 269 */,
 /* 270 */,
 /* 271 */,
-/* 272 */
+/* 272 */,
+/* 273 */,
+/* 274 */,
+/* 275 */,
+/* 276 */,
+/* 277 */,
+/* 278 */,
+/* 279 */,
+/* 280 */,
+/* 281 */,
+/* 282 */,
+/* 283 */,
+/* 284 */,
+/* 285 */,
+/* 286 */,
+/* 287 */,
+/* 288 */,
+/* 289 */,
+/* 290 */,
+/* 291 */,
+/* 292 */,
+/* 293 */,
+/* 294 */,
+/* 295 */,
+/* 296 */,
+/* 297 */,
+/* 298 */
 /*!*******************************************************************************************!*\
   !*** D:/1/feimi/feimi/uni_modules/uni-search-bar/components/uni-search-bar/i18n/index.js ***!
   \*******************************************************************************************/
@@ -24399,9 +20556,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 273));
-var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 274));
-var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 275));
+var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 299));
+var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 300));
+var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 301));
 var _default = {
   en: _en.default,
   'zh-Hans': _zhHans.default,
@@ -24410,7 +20567,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 273 */
+/* 299 */
 /*!******************************************************************************************!*\
   !*** D:/1/feimi/feimi/uni_modules/uni-search-bar/components/uni-search-bar/i18n/en.json ***!
   \******************************************************************************************/
@@ -24420,7 +20577,7 @@ exports.default = _default;
 module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"cancel\",\"uni-search-bar.placeholder\":\"Search enter content\"}");
 
 /***/ }),
-/* 274 */
+/* 300 */
 /*!***********************************************************************************************!*\
   !*** D:/1/feimi/feimi/uni_modules/uni-search-bar/components/uni-search-bar/i18n/zh-Hans.json ***!
   \***********************************************************************************************/
@@ -24430,7 +20587,7 @@ module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"cancel\",\"uni-search-
 module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"取消\",\"uni-search-bar.placeholder\":\"请输入搜索内容\"}");
 
 /***/ }),
-/* 275 */
+/* 301 */
 /*!***********************************************************************************************!*\
   !*** D:/1/feimi/feimi/uni_modules/uni-search-bar/components/uni-search-bar/i18n/zh-Hant.json ***!
   \***********************************************************************************************/
@@ -24440,421 +20597,415 @@ module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"取消\",\"uni-search-
 module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"取消\",\"uni-search-bar.placeholder\":\"請輸入搜索內容\"}");
 
 /***/ }),
-/* 276 */,
-/* 277 */,
-/* 278 */,
-/* 279 */,
-/* 280 */,
-/* 281 */,
-/* 282 */,
-/* 283 */
-/*!**************************************************************************************!*\
-  !*** D:/1/feimi/feimi/uni_modules/wu-calendar/components/wu-calendar-block/props.js ***!
-  \**************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default2 = {
-  props: {
-    showMonth: {
-      type: Boolean,
-      default: false
-    },
-    // 折叠状态
-    FoldStatus: {
-      type: String,
-      default: null
-    },
-    month: {
-      type: [Number, String],
-      default: null
-    },
-    color: {
-      type: String,
-      default: '#3c9cff'
-    },
-    startText: {
-      type: String,
-      default: '开始'
-    },
-    endText: {
-      type: String,
-      default: '结束'
-    },
-    weeks: {
-      type: [Object, Array],
-      default: function _default() {
-        return [];
-      }
-    },
-    calendar: {
-      type: Object,
-      default: function _default() {
-        return {};
-      }
-    },
-    selected: {
-      type: Array,
-      default: function _default() {
-        return [];
-      }
-    },
-    lunar: {
-      type: Boolean,
-      default: false
-    },
-    itemHeight: {
-      type: Number,
-      default: 64
-    },
-    monthShowCurrentMonth: {
-      type: Boolean,
-      default: false
-    }
-  }
-};
-exports.default = _default2;
-
-/***/ }),
-/* 284 */,
-/* 285 */,
-/* 286 */,
-/* 287 */,
-/* 288 */,
-/* 289 */,
-/* 290 */,
-/* 291 */
-/*!************************************************************************!*\
-  !*** D:/1/feimi/feimi/uni_modules/wu-icon/components/wu-icon/icons.js ***!
-  \************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  'wuicon-level': 'e68f',
-  'wuicon-download': 'e670',
-  'wuicon-search': 'e632',
-  'wuicon-reload': 'e627',
-  'wuicon-scan': 'e631',
-  'wuicon-calendar': 'e65c',
-  'wuicon-bag': 'e647',
-  'wuicon-checkbox-mark': 'e659',
-  'wuicon-attach': 'e640',
-  'wuicon-wifi-off': 'e6cc',
-  'wuicon-woman': 'e626',
-  'wuicon-man': 'e675',
-  'wuicon-chat': 'e656',
-  'wuicon-chat-fill': 'e63f',
-  'wuicon-red-packet': 'e6c3',
-  'wuicon-folder': 'e694',
-  'wuicon-order': 'e695',
-  'wuicon-arrow-up-fill': 'e636',
-  'wuicon-arrow-down-fill': 'e638',
-  'wuicon-backspace': 'e64d',
-  'wuicon-photo': 'e60d',
-  'wuicon-photo-fill': 'e6b4',
-  'wuicon-lock': 'e69d',
-  'wuicon-lock-fill': 'e6a6',
-  'wuicon-lock-open': 'e68d',
-  'wuicon-lock-opened-fill': 'e6a1',
-  'wuicon-home': 'e67b',
-  'wuicon-home-fill': 'e68e',
-  'wuicon-star': 'e618',
-  'wuicon-star-fill': 'e61e',
-  'wuicon-share': 'e629',
-  'wuicon-share-fill': 'e6bb',
-  'wuicon-share-square': 'e6c4',
-  'wuicon-volume': 'e605',
-  'wuicon-volume-fill': 'e624',
-  'wuicon-volume-off': 'e6bd',
-  'wuicon-volume-off-fill': 'e6c8',
-  'wuicon-trash': 'e623',
-  'wuicon-trash-fill': 'e6ce',
-  'wuicon-shopping-cart': 'e6cb',
-  'wuicon-shopping-cart-fill': 'e630',
-  'wuicon-question-circle': 'e622',
-  'wuicon-question-circle-fill': 'e6bc',
-  'wuicon-plus': 'e625',
-  'wuicon-plus-circle': 'e603',
-  'wuicon-plus-circle-fill': 'e611',
-  'wuicon-tags': 'e621',
-  'wuicon-tags-fill': 'e613',
-  'wuicon-pause': 'e61c',
-  'wuicon-pause-circle': 'e696',
-  'wuicon-pause-circle-fill': 'e60c',
-  'wuicon-play-circle': 'e6af',
-  'wuicon-play-circle-fill': 'e62a',
-  'wuicon-map': 'e665',
-  'wuicon-map-fill': 'e6a8',
-  'wuicon-phone': 'e6ba',
-  'wuicon-phone-fill': 'e6ac',
-  'wuicon-list': 'e690',
-  'wuicon-list-dot': 'e6a9',
-  'wuicon-info-circle': 'e69f',
-  'wuicon-info-circle-fill': 'e6a7',
-  'wuicon-minus': 'e614',
-  'wuicon-minus-circle': 'e6a5',
-  'wuicon-mic': 'e66d',
-  'wuicon-mic-off': 'e691',
-  'wuicon-grid': 'e68c',
-  'wuicon-grid-fill': 'e698',
-  'wuicon-eye': 'e664',
-  'wuicon-eye-fill': 'e697',
-  'wuicon-eye-off': 'e69c',
-  'wuicon-eye-off-outline': 'e688',
-  'wuicon-file-text': 'e687',
-  'wuicon-file-text-fill': 'e67f',
-  'wuicon-edit-pen': 'e65d',
-  'wuicon-edit-pen-fill': 'e679',
-  'wuicon-email': 'e673',
-  'wuicon-email-fill': 'e683',
-  'wuicon-checkmark': 'e64a',
-  'wuicon-checkmark-circle': 'e643',
-  'wuicon-checkmark-circle-fill': 'e668',
-  'wuicon-clock': 'e66c',
-  'wuicon-clock-fill': 'e64b',
-  'wuicon-close': 'e65a',
-  'wuicon-close-circle': 'e64e',
-  'wuicon-close-circle-fill': 'e666',
-  'wuicon-car': 'e64f',
-  'wuicon-car-fill': 'e648',
-  'wuicon-bell': 'e651',
-  'wuicon-bell-fill': 'e604',
-  'wuicon-play-left': 'e6bf',
-  'wuicon-play-right': 'e6b3',
-  'wuicon-play-left-fill': 'e6ae',
-  'wuicon-play-right-fill': 'e6ad',
-  'wuicon-skip-back-left': 'e6c5',
-  'wuicon-skip-forward-right': 'e61f',
-  'wuicon-setting': 'e602',
-  'wuicon-setting-fill': 'e6d0',
-  'wuicon-more-dot-fill': 'e66f',
-  'wuicon-more-circle': 'e69e',
-  'wuicon-more-circle-fill': 'e684',
-  'wuicon-arrow-upward': 'e641',
-  'wuicon-arrow-downward': 'e634',
-  'wuicon-arrow-leftward': 'e63b',
-  'wuicon-arrow-rightward': 'e644',
-  'wuicon-arrow-up': 'e633',
-  'wuicon-arrow-down': 'e63e',
-  'wuicon-arrow-left': 'e646',
-  'wuicon-arrow-right': 'e63c',
-  'wuicon-thumb-up': 'e612',
-  'wuicon-thumb-up-fill': 'e62c',
-  'wuicon-thumb-down': 'e60a',
-  'wuicon-thumb-down-fill': 'e628',
-  'wuicon-coupon': 'e65f',
-  'wuicon-coupon-fill': 'e64c',
-  'wuicon-kefu-ermai': 'e660',
-  'wuicon-server-fill': 'e610',
-  'wuicon-server-man': 'e601',
-  'wuicon-warning': 'e6c1',
-  'wuicon-warning-fill': 'e6c7',
-  'wuicon-camera': 'e642',
-  'wuicon-camera-fill': 'e650',
-  'wuicon-pushpin': 'e6d1',
-  'wuicon-pushpin-fill': 'e6b6',
-  'wuicon-heart': 'e6a2',
-  'wuicon-heart-fill': 'e68b',
-  'wuicon-account': 'e63a',
-  'wuicon-account-fill': 'e653',
-  'wuicon-integral': 'e693',
-  'wuicon-integral-fill': 'e6b1',
-  'wuicon-gift': 'e680',
-  'wuicon-gift-fill': 'e6b0',
-  'wuicon-empty-data': 'e671',
-  'wuicon-empty-address': 'e68a',
-  'wuicon-empty-favor': 'e662',
-  'wuicon-empty-car': 'e656',
-  'wuicon-empty-order': 'e66b',
-  'wuicon-empty-list': 'e671',
-  'wuicon-empty-search': 'e677',
-  'wuicon-empty-permission': 'e67c',
-  'wuicon-empty-news': 'e67d',
-  'wuicon-empty-history': 'e684',
-  'wuicon-empty-coupon': 'e69b',
-  'wuicon-empty-page': 'e60e',
-  'wuicon-apple-fill': 'e635',
-  'wuicon-zhifubao-circle-fill': 'e617',
-  'wuicon-weixin-circle-fill': 'e6cd',
-  'wuicon-weixin-fill': 'e620',
-  'wuicon-qq-fill': 'e608',
-  'wuicon-qq-circle-fill': 'e6b9',
-  'wuicon-moments': 'e6a0',
-  'wuicon-moments-circel-fill': 'e6c2',
-  'wuicon-twitter': 'e607',
-  'wuicon-twitter-circle-fill': 'e6cf'
-};
-exports.default = _default;
-
-/***/ }),
-/* 292 */
-/*!************************************************************************!*\
-  !*** D:/1/feimi/feimi/uni_modules/wu-icon/components/wu-icon/props.js ***!
-  \************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var _uni$$w, _uni$$w$props;
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-var _default = {
-  props: _objectSpread({
-    // 图标类名
-    name: {
-      type: String,
-      default: ''
-    },
-    // 图标颜色，可接受主题色
-    color: {
-      type: String,
-      default: '#606266'
-    },
-    // 字体大小，单位px
-    size: {
-      type: [String, Number],
-      default: '16px'
-    },
-    // 是否显示粗体
-    bold: {
-      type: Boolean,
-      default: false
-    },
-    // 点击图标的时候传递事件出去的index（用于区分点击了哪一个）
-    index: {
-      type: [String, Number],
-      default: null
-    },
-    // 触摸图标时的类名
-    hoverClass: {
-      type: String,
-      default: ''
-    },
-    // 自定义扩展前缀，方便用户扩展自己的图标库
-    customPrefix: {
-      type: String,
-      default: 'wuicon'
-    },
-    // 图标右边或者下面的文字
-    label: {
-      type: [String, Number],
-      default: ''
-    },
-    // label的位置，只能右边或者下边
-    labelPos: {
-      type: String,
-      default: 'right'
-    },
-    // label的大小
-    labelSize: {
-      type: [String, Number],
-      default: '15px'
-    },
-    // label的颜色
-    labelColor: {
-      type: String,
-      default: '#606266'
-    },
-    // label与图标的距离
-    space: {
-      type: [String, Number],
-      default: '3px'
-    },
-    // 图片的mode
-    imgMode: {
-      type: String,
-      default: ''
-    },
-    // 用于显示图片小图标时，图片的宽度
-    width: {
-      type: [String, Number],
-      default: ''
-    },
-    // 用于显示图片小图标时，图片的高度
-    height: {
-      type: [String, Number],
-      default: ''
-    },
-    // 用于解决某些情况下，让图标垂直居中的用途
-    top: {
-      type: [String, Number],
-      default: 0
-    },
-    // 是否阻止事件传播
-    stop: {
-      type: Boolean,
-      default: false
-    }
-  }, (_uni$$w = uni.$w) === null || _uni$$w === void 0 ? void 0 : (_uni$$w$props = _uni$$w.props) === null || _uni$$w$props === void 0 ? void 0 : _uni$$w$props.icon)
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-/* 293 */,
-/* 294 */,
-/* 295 */,
-/* 296 */,
-/* 297 */,
-/* 298 */,
-/* 299 */,
-/* 300 */
-/*!**************************************************************************************!*\
-  !*** D:/1/feimi/feimi/uni_modules/wu-safe-bottom/components/wu-safe-bottom/props.js ***!
-  \**************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var _uni$$w, _uni$$w$props;
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-var _default = {
-  props: _objectSpread({}, (_uni$$w = uni.$w) === null || _uni$$w === void 0 ? void 0 : (_uni$$w$props = _uni$$w.props) === null || _uni$$w$props === void 0 ? void 0 : _uni$$w$props.safeBottom)
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-/* 301 */,
 /* 302 */,
 /* 303 */,
 /* 304 */,
 /* 305 */,
 /* 306 */,
 /* 307 */,
-/* 308 */
+/* 308 */,
+/* 309 */
+/*!**************************************************************************!*\
+  !*** D:/1/feimi/feimi/node_modules/uview-ui/components/u-popup/props.js ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  props: {
+    // 是否展示弹窗
+    show: {
+      type: Boolean,
+      default: uni.$u.props.popup.show
+    },
+    // 是否显示遮罩
+    overlay: {
+      type: Boolean,
+      default: uni.$u.props.popup.overlay
+    },
+    // 弹出的方向，可选值为 top bottom right left center
+    mode: {
+      type: String,
+      default: uni.$u.props.popup.mode
+    },
+    // 动画时长，单位ms
+    duration: {
+      type: [String, Number],
+      default: uni.$u.props.popup.duration
+    },
+    // 是否显示关闭图标
+    closeable: {
+      type: Boolean,
+      default: uni.$u.props.popup.closeable
+    },
+    // 自定义遮罩的样式
+    overlayStyle: {
+      type: [Object, String],
+      default: uni.$u.props.popup.overlayStyle
+    },
+    // 点击遮罩是否关闭弹窗
+    closeOnClickOverlay: {
+      type: Boolean,
+      default: uni.$u.props.popup.closeOnClickOverlay
+    },
+    // 层级
+    zIndex: {
+      type: [String, Number],
+      default: uni.$u.props.popup.zIndex
+    },
+    // 是否为iPhoneX留出底部安全距离
+    safeAreaInsetBottom: {
+      type: Boolean,
+      default: uni.$u.props.popup.safeAreaInsetBottom
+    },
+    // 是否留出顶部安全距离（状态栏高度）
+    safeAreaInsetTop: {
+      type: Boolean,
+      default: uni.$u.props.popup.safeAreaInsetTop
+    },
+    // 自定义关闭图标位置，top-left为左上角，top-right为右上角，bottom-left为左下角，bottom-right为右下角
+    closeIconPos: {
+      type: String,
+      default: uni.$u.props.popup.closeIconPos
+    },
+    // 是否显示圆角
+    round: {
+      type: [Boolean, String, Number],
+      default: uni.$u.props.popup.round
+    },
+    // mode=center，也即中部弹出时，是否使用缩放模式
+    zoom: {
+      type: Boolean,
+      default: uni.$u.props.popup.zoom
+    },
+    // 弹窗背景色，设置为transparent可去除白色背景
+    bgColor: {
+      type: String,
+      default: uni.$u.props.popup.bgColor
+    },
+    // 遮罩的透明度，0-1之间
+    overlayOpacity: {
+      type: [Number, String],
+      default: uni.$u.props.popup.overlayOpacity
+    }
+  }
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 310 */,
+/* 311 */,
+/* 312 */,
+/* 313 */,
+/* 314 */,
+/* 315 */,
+/* 316 */,
+/* 317 */
+/*!*******************************************************************!*\
+  !*** D:/1/feimi/feimi/node_modules/uview-ui/libs/mixin/button.js ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  props: {
+    lang: String,
+    sessionFrom: String,
+    sendMessageTitle: String,
+    sendMessagePath: String,
+    sendMessageImg: String,
+    showMessageCard: Boolean,
+    appParameter: String,
+    formType: String,
+    openType: String
+  }
+};
+exports.default = _default;
+
+/***/ }),
+/* 318 */
+/*!*********************************************************************!*\
+  !*** D:/1/feimi/feimi/node_modules/uview-ui/libs/mixin/openType.js ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  props: {
+    openType: String
+  },
+  methods: {
+    onGetUserInfo: function onGetUserInfo(event) {
+      this.$emit('getuserinfo', event.detail);
+    },
+    onContact: function onContact(event) {
+      this.$emit('contact', event.detail);
+    },
+    onGetPhoneNumber: function onGetPhoneNumber(event) {
+      this.$emit('getphonenumber', event.detail);
+    },
+    onError: function onError(event) {
+      this.$emit('error', event.detail);
+    },
+    onLaunchApp: function onLaunchApp(event) {
+      this.$emit('launchapp', event.detail);
+    },
+    onOpenSetting: function onOpenSetting(event) {
+      this.$emit('opensetting', event.detail);
+    }
+  }
+};
+exports.default = _default;
+
+/***/ }),
+/* 319 */
+/*!***************************************************************************!*\
+  !*** D:/1/feimi/feimi/node_modules/uview-ui/components/u-button/props.js ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+/*
+ * @Author       : LQ
+ * @Description  :
+ * @version      : 1.0
+ * @Date         : 2021-08-16 10:04:04
+ * @LastAuthor   : LQ
+ * @lastTime     : 2021-08-16 10:04:24
+ * @FilePath     : /u-view2.0/uview-ui/components/u-button/props.js
+ */
+var _default = {
+  props: {
+    // 是否细边框
+    hairline: {
+      type: Boolean,
+      default: uni.$u.props.button.hairline
+    },
+    // 按钮的预置样式，info，primary，error，warning，success
+    type: {
+      type: String,
+      default: uni.$u.props.button.type
+    },
+    // 按钮尺寸，large，normal，small，mini
+    size: {
+      type: String,
+      default: uni.$u.props.button.size
+    },
+    // 按钮形状，circle（两边为半圆），square（带圆角）
+    shape: {
+      type: String,
+      default: uni.$u.props.button.shape
+    },
+    // 按钮是否镂空
+    plain: {
+      type: Boolean,
+      default: uni.$u.props.button.plain
+    },
+    // 是否禁止状态
+    disabled: {
+      type: Boolean,
+      default: uni.$u.props.button.disabled
+    },
+    // 是否加载中
+    loading: {
+      type: Boolean,
+      default: uni.$u.props.button.loading
+    },
+    // 加载中提示文字
+    loadingText: {
+      type: [String, Number],
+      default: uni.$u.props.button.loadingText
+    },
+    // 加载状态图标类型
+    loadingMode: {
+      type: String,
+      default: uni.$u.props.button.loadingMode
+    },
+    // 加载图标大小
+    loadingSize: {
+      type: [String, Number],
+      default: uni.$u.props.button.loadingSize
+    },
+    // 开放能力，具体请看uniapp稳定关于button组件部分说明
+    // https://uniapp.dcloud.io/component/button
+    openType: {
+      type: String,
+      default: uni.$u.props.button.openType
+    },
+    // 用于 <form> 组件，点击分别会触发 <form> 组件的 submit/reset 事件
+    // 取值为submit（提交表单），reset（重置表单）
+    formType: {
+      type: String,
+      default: uni.$u.props.button.formType
+    },
+    // 打开 APP 时，向 APP 传递的参数，open-type=launchApp时有效
+    // 只微信小程序、QQ小程序有效
+    appParameter: {
+      type: String,
+      default: uni.$u.props.button.appParameter
+    },
+    // 指定是否阻止本节点的祖先节点出现点击态，微信小程序有效
+    hoverStopPropagation: {
+      type: Boolean,
+      default: uni.$u.props.button.hoverStopPropagation
+    },
+    // 指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文。只微信小程序有效
+    lang: {
+      type: String,
+      default: uni.$u.props.button.lang
+    },
+    // 会话来源，open-type="contact"时有效。只微信小程序有效
+    sessionFrom: {
+      type: String,
+      default: uni.$u.props.button.sessionFrom
+    },
+    // 会话内消息卡片标题，open-type="contact"时有效
+    // 默认当前标题，只微信小程序有效
+    sendMessageTitle: {
+      type: String,
+      default: uni.$u.props.button.sendMessageTitle
+    },
+    // 会话内消息卡片点击跳转小程序路径，open-type="contact"时有效
+    // 默认当前分享路径，只微信小程序有效
+    sendMessagePath: {
+      type: String,
+      default: uni.$u.props.button.sendMessagePath
+    },
+    // 会话内消息卡片图片，open-type="contact"时有效
+    // 默认当前页面截图，只微信小程序有效
+    sendMessageImg: {
+      type: String,
+      default: uni.$u.props.button.sendMessageImg
+    },
+    // 是否显示会话内消息卡片，设置此参数为 true，用户进入客服会话会在右下角显示"可能要发送的小程序"提示，
+    // 用户点击后可以快速发送小程序消息，open-type="contact"时有效
+    showMessageCard: {
+      type: Boolean,
+      default: uni.$u.props.button.showMessageCard
+    },
+    // 额外传参参数，用于小程序的data-xxx属性，通过target.dataset.name获取
+    dataName: {
+      type: String,
+      default: uni.$u.props.button.dataName
+    },
+    // 节流，一定时间内只能触发一次
+    throttleTime: {
+      type: [String, Number],
+      default: uni.$u.props.button.throttleTime
+    },
+    // 按住后多久出现点击态，单位毫秒
+    hoverStartTime: {
+      type: [String, Number],
+      default: uni.$u.props.button.hoverStartTime
+    },
+    // 手指松开后点击态保留时间，单位毫秒
+    hoverStayTime: {
+      type: [String, Number],
+      default: uni.$u.props.button.hoverStayTime
+    },
+    // 按钮文字，之所以通过props传入，是因为slot传入的话
+    // nvue中无法控制文字的样式
+    text: {
+      type: [String, Number],
+      default: uni.$u.props.button.text
+    },
+    // 按钮图标
+    icon: {
+      type: String,
+      default: uni.$u.props.button.icon
+    },
+    // 按钮图标
+    iconColor: {
+      type: String,
+      default: uni.$u.props.button.icon
+    },
+    // 按钮颜色，支持传入linear-gradient渐变色
+    color: {
+      type: String,
+      default: uni.$u.props.button.color
+    }
+  }
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 320 */,
+/* 321 */,
+/* 322 */,
+/* 323 */,
+/* 324 */,
+/* 325 */,
+/* 326 */,
+/* 327 */,
+/* 328 */,
+/* 329 */,
+/* 330 */,
+/* 331 */,
+/* 332 */,
+/* 333 */,
+/* 334 */,
+/* 335 */,
+/* 336 */,
+/* 337 */,
+/* 338 */,
+/* 339 */,
+/* 340 */,
+/* 341 */,
+/* 342 */,
+/* 343 */,
+/* 344 */,
+/* 345 */,
+/* 346 */,
+/* 347 */,
+/* 348 */,
+/* 349 */,
+/* 350 */,
+/* 351 */,
+/* 352 */,
+/* 353 */,
+/* 354 */,
+/* 355 */,
+/* 356 */,
+/* 357 */,
+/* 358 */,
+/* 359 */,
+/* 360 */,
+/* 361 */,
+/* 362 */,
+/* 363 */,
+/* 364 */,
+/* 365 */,
+/* 366 */
 /*!************************************************************************************************!*\
   !*** D:/1/feimi/feimi/uni_modules/uni-transition/components/uni-transition/createAnimation.js ***!
   \************************************************************************************************/
@@ -24988,12 +21139,12 @@ function createAnimation(option, _this) {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 309 */,
-/* 310 */,
-/* 311 */,
-/* 312 */,
-/* 313 */,
-/* 314 */
+/* 367 */,
+/* 368 */,
+/* 369 */,
+/* 370 */,
+/* 371 */,
+/* 372 */
 /*!****************************************************************************************!*\
   !*** D:/1/feimi/feimi/uni_modules/uni-icons/components/uni-icons/uniicons_file_vue.js ***!
   \****************************************************************************************/
@@ -25496,17 +21647,217 @@ var fontData = [{
 exports.fontData = fontData;
 
 /***/ }),
-/* 315 */,
-/* 316 */,
-/* 317 */,
-/* 318 */,
-/* 319 */,
-/* 320 */,
-/* 321 */,
-/* 322 */
-/*!*************************************************************************************!*\
-  !*** D:/1/feimi/feimi/uni_modules/wu-calendar/components/wu-calendar-item/props.js ***!
-  \*************************************************************************************/
+/* 373 */,
+/* 374 */,
+/* 375 */,
+/* 376 */,
+/* 377 */,
+/* 378 */,
+/* 379 */,
+/* 380 */
+/*!****************************************************************************!*\
+  !*** D:/1/feimi/feimi/node_modules/uview-ui/components/u-overlay/props.js ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  props: {
+    // 是否显示遮罩
+    show: {
+      type: Boolean,
+      default: uni.$u.props.overlay.show
+    },
+    // 层级z-index
+    zIndex: {
+      type: [String, Number],
+      default: uni.$u.props.overlay.zIndex
+    },
+    // 遮罩的过渡时间，单位为ms
+    duration: {
+      type: [String, Number],
+      default: uni.$u.props.overlay.duration
+    },
+    // 不透明度值，当做rgba的第四个参数
+    opacity: {
+      type: [String, Number],
+      default: uni.$u.props.overlay.opacity
+    }
+  }
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 381 */,
+/* 382 */,
+/* 383 */,
+/* 384 */,
+/* 385 */,
+/* 386 */,
+/* 387 */,
+/* 388 */
+/*!*******************************************************************************!*\
+  !*** D:/1/feimi/feimi/node_modules/uview-ui/components/u-transition/props.js ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  props: {
+    // 是否展示组件
+    show: {
+      type: Boolean,
+      default: uni.$u.props.transition.show
+    },
+    // 使用的动画模式
+    mode: {
+      type: String,
+      default: uni.$u.props.transition.mode
+    },
+    // 动画的执行时间，单位ms
+    duration: {
+      type: [String, Number],
+      default: uni.$u.props.transition.duration
+    },
+    // 使用的动画过渡函数
+    timingFunction: {
+      type: String,
+      default: uni.$u.props.transition.timingFunction
+    }
+  }
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 389 */
+/*!************************************************************************************!*\
+  !*** D:/1/feimi/feimi/node_modules/uview-ui/components/u-transition/transition.js ***!
+  \************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 56));
+var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 58));
+var _nvueAniMap = _interopRequireDefault(__webpack_require__(/*! ./nvue.ani-map.js */ 390));
+// 定义一个一定时间后自动成功的promise，让调用nextTick方法处，进入下一个then方法
+var nextTick = function nextTick() {
+  return new Promise(function (resolve) {
+    return setTimeout(resolve, 1000 / 50);
+  });
+};
+// nvue动画模块实现细节抽离在外部文件
+
+// 定义类名，通过给元素动态切换类名，赋予元素一定的css动画样式
+var getClassNames = function getClassNames(name) {
+  return {
+    enter: "u-".concat(name, "-enter u-").concat(name, "-enter-active"),
+    'enter-to': "u-".concat(name, "-enter-to u-").concat(name, "-enter-active"),
+    leave: "u-".concat(name, "-leave u-").concat(name, "-leave-active"),
+    'leave-to': "u-".concat(name, "-leave-to u-").concat(name, "-leave-active")
+  };
+};
+var _default = {
+  methods: {
+    // 组件被点击发出事件
+    clickHandler: function clickHandler() {
+      this.$emit('click');
+    },
+    // vue版本的组件进场处理
+    vueEnter: function vueEnter() {
+      var _this = this;
+      // 动画进入时的类名
+      var classNames = getClassNames(this.mode);
+      // 定义状态和发出动画进入前事件
+      this.status = 'enter';
+      this.$emit('beforeEnter');
+      this.inited = true;
+      this.display = true;
+      this.classes = classNames.enter;
+      this.$nextTick( /*#__PURE__*/(0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
+        return _regenerator.default.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                // 标识动画尚未结束
+                _this.$emit('enter');
+                _this.transitionEnded = false;
+                // 组件动画进入后触发的事件
+                _this.$emit('afterEnter');
+                // 赋予组件enter-to类名
+                _this.classes = classNames['enter-to'];
+              case 4:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      })));
+    },
+    // 动画离场处理
+    vueLeave: function vueLeave() {
+      var _this2 = this;
+      // 如果不是展示状态，无需执行逻辑
+      if (!this.display) return;
+      var classNames = getClassNames(this.mode);
+      // 标记离开状态和发出事件
+      this.status = 'leave';
+      this.$emit('beforeLeave');
+      // 获得类名
+      this.classes = classNames.leave;
+      this.$nextTick(function () {
+        // 动画正在离场的状态
+        _this2.transitionEnded = false;
+        _this2.$emit('leave');
+        // 组件执行动画，到了执行的执行时间后，执行一些额外处理
+        setTimeout(_this2.onTransitionEnd, _this2.duration);
+        _this2.classes = classNames['leave-to'];
+      });
+    },
+    // 完成过渡后触发
+    onTransitionEnd: function onTransitionEnd() {
+      // 如果已经是结束的状态，无需再处理
+      if (this.transitionEnded) return;
+      this.transitionEnded = true;
+      // 发出组件动画执行后的事件
+      this.$emit(this.status === 'leave' ? 'afterLeave' : 'afterEnter');
+      if (!this.show && this.display) {
+        this.display = false;
+        this.inited = false;
+      }
+    }
+  }
+};
+exports.default = _default;
+
+/***/ }),
+/* 390 */
+/*!**************************************************************************************!*\
+  !*** D:/1/feimi/feimi/node_modules/uview-ui/components/u-transition/nvue.ani-map.js ***!
+  \**************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -25517,49 +21868,672 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _default2 = {
-  props: {
-    color: {
-      type: String,
-      default: '#3c9cff'
+var _default = {
+  fade: {
+    enter: {
+      opacity: 0
     },
-    startText: {
-      type: String,
-      default: '开始'
+    'enter-to': {
+      opacity: 1
     },
-    endText: {
-      type: String,
-      default: '结束'
+    leave: {
+      opacity: 1
     },
-    weeks: {
-      type: Object,
-      default: function _default() {
-        return {};
-      }
+    'leave-to': {
+      opacity: 0
+    }
+  },
+  'fade-up': {
+    enter: {
+      opacity: 0,
+      transform: 'translateY(100%)'
     },
-    calendar: {
-      type: Object,
-      default: function _default() {
-        return {};
-      }
+    'enter-to': {
+      opacity: 1,
+      transform: 'translateY(0)'
     },
-    selected: {
-      type: Array,
-      default: function _default() {
-        return [];
-      }
+    leave: {
+      opacity: 1,
+      transform: 'translateY(0)'
     },
-    lunar: {
-      type: Boolean,
-      default: false
+    'leave-to': {
+      opacity: 0,
+      transform: 'translateY(100%)'
+    }
+  },
+  'fade-down': {
+    enter: {
+      opacity: 0,
+      transform: 'translateY(-100%)'
     },
-    itemHeight: {
-      type: Number,
-      default: 64
+    'enter-to': {
+      opacity: 1,
+      transform: 'translateY(0)'
+    },
+    leave: {
+      opacity: 1,
+      transform: 'translateY(0)'
+    },
+    'leave-to': {
+      opacity: 0,
+      transform: 'translateY(-100%)'
+    }
+  },
+  'fade-left': {
+    enter: {
+      opacity: 0,
+      transform: 'translateX(-100%)'
+    },
+    'enter-to': {
+      opacity: 1,
+      transform: 'translateY(0)'
+    },
+    leave: {
+      opacity: 1,
+      transform: 'translateY(0)'
+    },
+    'leave-to': {
+      opacity: 0,
+      transform: 'translateX(-100%)'
+    }
+  },
+  'fade-right': {
+    enter: {
+      opacity: 0,
+      transform: 'translateX(100%)'
+    },
+    'enter-to': {
+      opacity: 1,
+      transform: 'translateY(0)'
+    },
+    leave: {
+      opacity: 1,
+      transform: 'translateY(0)'
+    },
+    'leave-to': {
+      opacity: 0,
+      transform: 'translateX(100%)'
+    }
+  },
+  'slide-up': {
+    enter: {
+      transform: 'translateY(100%)'
+    },
+    'enter-to': {
+      transform: 'translateY(0)'
+    },
+    leave: {
+      transform: 'translateY(0)'
+    },
+    'leave-to': {
+      transform: 'translateY(100%)'
+    }
+  },
+  'slide-down': {
+    enter: {
+      transform: 'translateY(-100%)'
+    },
+    'enter-to': {
+      transform: 'translateY(0)'
+    },
+    leave: {
+      transform: 'translateY(0)'
+    },
+    'leave-to': {
+      transform: 'translateY(-100%)'
+    }
+  },
+  'slide-left': {
+    enter: {
+      transform: 'translateX(-100%)'
+    },
+    'enter-to': {
+      transform: 'translateY(0)'
+    },
+    leave: {
+      transform: 'translateY(0)'
+    },
+    'leave-to': {
+      transform: 'translateX(-100%)'
+    }
+  },
+  'slide-right': {
+    enter: {
+      transform: 'translateX(100%)'
+    },
+    'enter-to': {
+      transform: 'translateY(0)'
+    },
+    leave: {
+      transform: 'translateY(0)'
+    },
+    'leave-to': {
+      transform: 'translateX(100%)'
+    }
+  },
+  zoom: {
+    enter: {
+      transform: 'scale(0.95)'
+    },
+    'enter-to': {
+      transform: 'scale(1)'
+    },
+    leave: {
+      transform: 'scale(1)'
+    },
+    'leave-to': {
+      transform: 'scale(0.95)'
+    }
+  },
+  'fade-zoom': {
+    enter: {
+      opacity: 0,
+      transform: 'scale(0.95)'
+    },
+    'enter-to': {
+      opacity: 1,
+      transform: 'scale(1)'
+    },
+    leave: {
+      opacity: 1,
+      transform: 'scale(1)'
+    },
+    'leave-to': {
+      opacity: 0,
+      transform: 'scale(0.95)'
     }
   }
 };
-exports.default = _default2;
+exports.default = _default;
+
+/***/ }),
+/* 391 */,
+/* 392 */,
+/* 393 */,
+/* 394 */,
+/* 395 */,
+/* 396 */,
+/* 397 */,
+/* 398 */
+/*!*******************************************************************************!*\
+  !*** D:/1/feimi/feimi/node_modules/uview-ui/components/u-status-bar/props.js ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  props: {
+    bgColor: {
+      type: String,
+      default: uni.$u.props.statusBar.bgColor
+    }
+  }
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 399 */,
+/* 400 */,
+/* 401 */,
+/* 402 */,
+/* 403 */,
+/* 404 */,
+/* 405 */,
+/* 406 */
+/*!*************************************************************************!*\
+  !*** D:/1/feimi/feimi/node_modules/uview-ui/components/u-icon/icons.js ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  'uicon-level': "\uE693",
+  'uicon-column-line': "\uE68E",
+  'uicon-checkbox-mark': "\uE807",
+  'uicon-folder': "\uE7F5",
+  'uicon-movie': "\uE7F6",
+  'uicon-star-fill': "\uE669",
+  'uicon-star': "\uE65F",
+  'uicon-phone-fill': "\uE64F",
+  'uicon-phone': "\uE622",
+  'uicon-apple-fill': "\uE881",
+  'uicon-chrome-circle-fill': "\uE885",
+  'uicon-backspace': "\uE67B",
+  'uicon-attach': "\uE632",
+  'uicon-cut': "\uE948",
+  'uicon-empty-car': "\uE602",
+  'uicon-empty-coupon': "\uE682",
+  'uicon-empty-address': "\uE646",
+  'uicon-empty-favor': "\uE67C",
+  'uicon-empty-permission': "\uE686",
+  'uicon-empty-news': "\uE687",
+  'uicon-empty-search': "\uE664",
+  'uicon-github-circle-fill': "\uE887",
+  'uicon-rmb': "\uE608",
+  'uicon-person-delete-fill': "\uE66A",
+  'uicon-reload': "\uE788",
+  'uicon-order': "\uE68F",
+  'uicon-server-man': "\uE6BC",
+  'uicon-search': "\uE62A",
+  'uicon-fingerprint': "\uE955",
+  'uicon-more-dot-fill': "\uE630",
+  'uicon-scan': "\uE662",
+  'uicon-share-square': "\uE60B",
+  'uicon-map': "\uE61D",
+  'uicon-map-fill': "\uE64E",
+  'uicon-tags': "\uE629",
+  'uicon-tags-fill': "\uE651",
+  'uicon-bookmark-fill': "\uE63B",
+  'uicon-bookmark': "\uE60A",
+  'uicon-eye': "\uE613",
+  'uicon-eye-fill': "\uE641",
+  'uicon-mic': "\uE64A",
+  'uicon-mic-off': "\uE649",
+  'uicon-calendar': "\uE66E",
+  'uicon-calendar-fill': "\uE634",
+  'uicon-trash': "\uE623",
+  'uicon-trash-fill': "\uE658",
+  'uicon-play-left': "\uE66D",
+  'uicon-play-right': "\uE610",
+  'uicon-minus': "\uE618",
+  'uicon-plus': "\uE62D",
+  'uicon-info': "\uE653",
+  'uicon-info-circle': "\uE7D2",
+  'uicon-info-circle-fill': "\uE64B",
+  'uicon-question': "\uE715",
+  'uicon-error': "\uE6D3",
+  'uicon-close': "\uE685",
+  'uicon-checkmark': "\uE6A8",
+  'uicon-android-circle-fill': "\uE67E",
+  'uicon-android-fill': "\uE67D",
+  'uicon-ie': "\uE87B",
+  'uicon-IE-circle-fill': "\uE889",
+  'uicon-google': "\uE87A",
+  'uicon-google-circle-fill': "\uE88A",
+  'uicon-setting-fill': "\uE872",
+  'uicon-setting': "\uE61F",
+  'uicon-minus-square-fill': "\uE855",
+  'uicon-plus-square-fill': "\uE856",
+  'uicon-heart': "\uE7DF",
+  'uicon-heart-fill': "\uE851",
+  'uicon-camera': "\uE7D7",
+  'uicon-camera-fill': "\uE870",
+  'uicon-more-circle': "\uE63E",
+  'uicon-more-circle-fill': "\uE645",
+  'uicon-chat': "\uE620",
+  'uicon-chat-fill': "\uE61E",
+  'uicon-bag-fill': "\uE617",
+  'uicon-bag': "\uE619",
+  'uicon-error-circle-fill': "\uE62C",
+  'uicon-error-circle': "\uE624",
+  'uicon-close-circle': "\uE63F",
+  'uicon-close-circle-fill': "\uE637",
+  'uicon-checkmark-circle': "\uE63D",
+  'uicon-checkmark-circle-fill': "\uE635",
+  'uicon-question-circle-fill': "\uE666",
+  'uicon-question-circle': "\uE625",
+  'uicon-share': "\uE631",
+  'uicon-share-fill': "\uE65E",
+  'uicon-shopping-cart': "\uE621",
+  'uicon-shopping-cart-fill': "\uE65D",
+  'uicon-bell': "\uE609",
+  'uicon-bell-fill': "\uE640",
+  'uicon-list': "\uE650",
+  'uicon-list-dot': "\uE616",
+  'uicon-zhihu': "\uE6BA",
+  'uicon-zhihu-circle-fill': "\uE709",
+  'uicon-zhifubao': "\uE6B9",
+  'uicon-zhifubao-circle-fill': "\uE6B8",
+  'uicon-weixin-circle-fill': "\uE6B1",
+  'uicon-weixin-fill': "\uE6B2",
+  'uicon-twitter-circle-fill': "\uE6AB",
+  'uicon-twitter': "\uE6AA",
+  'uicon-taobao-circle-fill': "\uE6A7",
+  'uicon-taobao': "\uE6A6",
+  'uicon-weibo-circle-fill': "\uE6A5",
+  'uicon-weibo': "\uE6A4",
+  'uicon-qq-fill': "\uE6A1",
+  'uicon-qq-circle-fill': "\uE6A0",
+  'uicon-moments-circel-fill': "\uE69A",
+  'uicon-moments': "\uE69B",
+  'uicon-qzone': "\uE695",
+  'uicon-qzone-circle-fill': "\uE696",
+  'uicon-baidu-circle-fill': "\uE680",
+  'uicon-baidu': "\uE681",
+  'uicon-facebook-circle-fill': "\uE68A",
+  'uicon-facebook': "\uE689",
+  'uicon-car': "\uE60C",
+  'uicon-car-fill': "\uE636",
+  'uicon-warning-fill': "\uE64D",
+  'uicon-warning': "\uE694",
+  'uicon-clock-fill': "\uE638",
+  'uicon-clock': "\uE60F",
+  'uicon-edit-pen': "\uE612",
+  'uicon-edit-pen-fill': "\uE66B",
+  'uicon-email': "\uE611",
+  'uicon-email-fill': "\uE642",
+  'uicon-minus-circle': "\uE61B",
+  'uicon-minus-circle-fill': "\uE652",
+  'uicon-plus-circle': "\uE62E",
+  'uicon-plus-circle-fill': "\uE661",
+  'uicon-file-text': "\uE663",
+  'uicon-file-text-fill': "\uE665",
+  'uicon-pushpin': "\uE7E3",
+  'uicon-pushpin-fill': "\uE86E",
+  'uicon-grid': "\uE673",
+  'uicon-grid-fill': "\uE678",
+  'uicon-play-circle': "\uE647",
+  'uicon-play-circle-fill': "\uE655",
+  'uicon-pause-circle-fill': "\uE654",
+  'uicon-pause': "\uE8FA",
+  'uicon-pause-circle': "\uE643",
+  'uicon-eye-off': "\uE648",
+  'uicon-eye-off-outline': "\uE62B",
+  'uicon-gift-fill': "\uE65C",
+  'uicon-gift': "\uE65B",
+  'uicon-rmb-circle-fill': "\uE657",
+  'uicon-rmb-circle': "\uE677",
+  'uicon-kefu-ermai': "\uE656",
+  'uicon-server-fill': "\uE751",
+  'uicon-coupon-fill': "\uE8C4",
+  'uicon-coupon': "\uE8AE",
+  'uicon-integral': "\uE704",
+  'uicon-integral-fill': "\uE703",
+  'uicon-home-fill': "\uE964",
+  'uicon-home': "\uE965",
+  'uicon-hourglass-half-fill': "\uE966",
+  'uicon-hourglass': "\uE967",
+  'uicon-account': "\uE628",
+  'uicon-plus-people-fill': "\uE626",
+  'uicon-minus-people-fill': "\uE615",
+  'uicon-account-fill': "\uE614",
+  'uicon-thumb-down-fill': "\uE726",
+  'uicon-thumb-down': "\uE727",
+  'uicon-thumb-up': "\uE733",
+  'uicon-thumb-up-fill': "\uE72F",
+  'uicon-lock-fill': "\uE979",
+  'uicon-lock-open': "\uE973",
+  'uicon-lock-opened-fill': "\uE974",
+  'uicon-lock': "\uE97A",
+  'uicon-red-packet-fill': "\uE690",
+  'uicon-photo-fill': "\uE98B",
+  'uicon-photo': "\uE98D",
+  'uicon-volume-off-fill': "\uE659",
+  'uicon-volume-off': "\uE644",
+  'uicon-volume-fill': "\uE670",
+  'uicon-volume': "\uE633",
+  'uicon-red-packet': "\uE691",
+  'uicon-download': "\uE63C",
+  'uicon-arrow-up-fill': "\uE6B0",
+  'uicon-arrow-down-fill': "\uE600",
+  'uicon-play-left-fill': "\uE675",
+  'uicon-play-right-fill': "\uE676",
+  'uicon-rewind-left-fill': "\uE679",
+  'uicon-rewind-right-fill': "\uE67A",
+  'uicon-arrow-downward': "\uE604",
+  'uicon-arrow-leftward': "\uE601",
+  'uicon-arrow-rightward': "\uE603",
+  'uicon-arrow-upward': "\uE607",
+  'uicon-arrow-down': "\uE60D",
+  'uicon-arrow-right': "\uE605",
+  'uicon-arrow-left': "\uE60E",
+  'uicon-arrow-up': "\uE606",
+  'uicon-skip-back-left': "\uE674",
+  'uicon-skip-forward-right': "\uE672",
+  'uicon-rewind-right': "\uE66F",
+  'uicon-rewind-left': "\uE671",
+  'uicon-arrow-right-double': "\uE68D",
+  'uicon-arrow-left-double': "\uE68C",
+  'uicon-wifi-off': "\uE668",
+  'uicon-wifi': "\uE667",
+  'uicon-empty-data': "\uE62F",
+  'uicon-empty-history': "\uE684",
+  'uicon-empty-list': "\uE68B",
+  'uicon-empty-page': "\uE627",
+  'uicon-empty-order': "\uE639",
+  'uicon-man': "\uE697",
+  'uicon-woman': "\uE69C",
+  'uicon-man-add': "\uE61C",
+  'uicon-man-add-fill': "\uE64C",
+  'uicon-man-delete': "\uE61A",
+  'uicon-man-delete-fill': "\uE66A",
+  'uicon-zh': "\uE70A",
+  'uicon-en': "\uE692"
+};
+exports.default = _default;
+
+/***/ }),
+/* 407 */
+/*!*************************************************************************!*\
+  !*** D:/1/feimi/feimi/node_modules/uview-ui/components/u-icon/props.js ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  props: {
+    // 图标类名
+    name: {
+      type: String,
+      default: uni.$u.props.icon.name
+    },
+    // 图标颜色，可接受主题色
+    color: {
+      type: String,
+      default: uni.$u.props.icon.color
+    },
+    // 字体大小，单位px
+    size: {
+      type: [String, Number],
+      default: uni.$u.props.icon.size
+    },
+    // 是否显示粗体
+    bold: {
+      type: Boolean,
+      default: uni.$u.props.icon.bold
+    },
+    // 点击图标的时候传递事件出去的index（用于区分点击了哪一个）
+    index: {
+      type: [String, Number],
+      default: uni.$u.props.icon.index
+    },
+    // 触摸图标时的类名
+    hoverClass: {
+      type: String,
+      default: uni.$u.props.icon.hoverClass
+    },
+    // 自定义扩展前缀，方便用户扩展自己的图标库
+    customPrefix: {
+      type: String,
+      default: uni.$u.props.icon.customPrefix
+    },
+    // 图标右边或者下面的文字
+    label: {
+      type: [String, Number],
+      default: uni.$u.props.icon.label
+    },
+    // label的位置，只能右边或者下边
+    labelPos: {
+      type: String,
+      default: uni.$u.props.icon.labelPos
+    },
+    // label的大小
+    labelSize: {
+      type: [String, Number],
+      default: uni.$u.props.icon.labelSize
+    },
+    // label的颜色
+    labelColor: {
+      type: String,
+      default: uni.$u.props.icon.labelColor
+    },
+    // label与图标的距离
+    space: {
+      type: [String, Number],
+      default: uni.$u.props.icon.space
+    },
+    // 图片的mode
+    imgMode: {
+      type: String,
+      default: uni.$u.props.icon.imgMode
+    },
+    // 用于显示图片小图标时，图片的宽度
+    width: {
+      type: [String, Number],
+      default: uni.$u.props.icon.width
+    },
+    // 用于显示图片小图标时，图片的高度
+    height: {
+      type: [String, Number],
+      default: uni.$u.props.icon.height
+    },
+    // 用于解决某些情况下，让图标垂直居中的用途
+    top: {
+      type: [String, Number],
+      default: uni.$u.props.icon.top
+    },
+    // 是否阻止事件传播
+    stop: {
+      type: Boolean,
+      default: uni.$u.props.icon.stop
+    }
+  }
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 408 */,
+/* 409 */,
+/* 410 */,
+/* 411 */,
+/* 412 */,
+/* 413 */,
+/* 414 */,
+/* 415 */
+/*!********************************************************************************!*\
+  !*** D:/1/feimi/feimi/node_modules/uview-ui/components/u-safe-bottom/props.js ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  props: {}
+};
+exports.default = _default;
+
+/***/ }),
+/* 416 */,
+/* 417 */,
+/* 418 */,
+/* 419 */,
+/* 420 */,
+/* 421 */,
+/* 422 */,
+/* 423 */
+/*!*********************************************************************************!*\
+  !*** D:/1/feimi/feimi/node_modules/uview-ui/components/u-loading-icon/props.js ***!
+  \*********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  props: {
+    // 是否显示组件
+    show: {
+      type: Boolean,
+      default: uni.$u.props.loadingIcon.show
+    },
+    // 颜色
+    color: {
+      type: String,
+      default: uni.$u.props.loadingIcon.color
+    },
+    // 提示文字颜色
+    textColor: {
+      type: String,
+      default: uni.$u.props.loadingIcon.textColor
+    },
+    // 文字和图标是否垂直排列
+    vertical: {
+      type: Boolean,
+      default: uni.$u.props.loadingIcon.vertical
+    },
+    // 模式选择，circle-圆形，spinner-花朵形，semicircle-半圆形
+    mode: {
+      type: String,
+      default: uni.$u.props.loadingIcon.mode
+    },
+    // 图标大小，单位默认px
+    size: {
+      type: [String, Number],
+      default: uni.$u.props.loadingIcon.size
+    },
+    // 文字大小
+    textSize: {
+      type: [String, Number],
+      default: uni.$u.props.loadingIcon.textSize
+    },
+    // 文字内容
+    text: {
+      type: [String, Number],
+      default: uni.$u.props.loadingIcon.text
+    },
+    // 动画模式
+    timingFunction: {
+      type: String,
+      default: uni.$u.props.loadingIcon.timingFunction
+    },
+    // 动画执行周期时间
+    duration: {
+      type: [String, Number],
+      default: uni.$u.props.loadingIcon.duration
+    },
+    // mode=circle时的暗边颜色
+    inactiveColor: {
+      type: String,
+      default: uni.$u.props.loadingIcon.inactiveColor
+    }
+  }
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ })
 ]]);

@@ -27,6 +27,59 @@
 .box.data-v-74c2a0ba {
   background-color: #FFFFFF;
 }
+.tabs.data-v-74c2a0ba {
+  background-color: #FFD1DB;
+  display: flex;
+}
+.tabs .paixu.data-v-74c2a0ba, .tabs .chongwu.data-v-74c2a0ba, .tabs .shijian.data-v-74c2a0ba, .tabs .shaixuan.data-v-74c2a0ba {
+  width: 116rpx;
+  height: 88rpx;
+  font-family: PingFangSC, PingFang SC;
+  font-weight: 400;
+  font-size: 28rpx;
+  color: #000000;
+  line-height: 88rpx;
+  text-align: center;
+  position: relative;
+}
+.tabs .paixu image.data-v-74c2a0ba, .tabs .chongwu image.data-v-74c2a0ba, .tabs .shijian image.data-v-74c2a0ba, .tabs .shaixuan image.data-v-74c2a0ba {
+  position: absolute;
+  width: 12rpx;
+  height: 12rpx;
+  bottom: 20rpx;
+}
+.tabs .paixu.data-v-74c2a0ba {
+  padding-left: 40rpx;
+}
+.didian.data-v-74c2a0ba {
+  display: flex;
+  width: 200rpx;
+  height: 92rpx;
+}
+.didian .dingwei.data-v-74c2a0ba {
+  width: 160rpx;
+  height: 92rpx;
+  font-family: PingFangSC, PingFang SC;
+  font-weight: 400;
+  font-size: 20rpx;
+  color: #000000;
+  line-height: 92rpx;
+  text-align: left;
+  font-style: normal;
+  white-space: nowrap;
+  /* 不换行 */
+  overflow: hidden;
+  /* 隐藏溢出部分 */
+  text-overflow: ellipsis;
+  /* 使用省略号 */
+}
+.didian ._img.data-v-74c2a0ba {
+  line-height: 110rpx;
+}
+.didian ._img image.data-v-74c2a0ba {
+  width: 46rpx;
+  height: 46rpx;
+}
 .aa.data-v-74c2a0ba {
   background-color: #FFFFFF;
 }

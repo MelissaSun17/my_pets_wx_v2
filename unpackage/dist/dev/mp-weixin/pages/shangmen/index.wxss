@@ -27,6 +27,15 @@
 .box.data-v-713ca44d {
   background-color: #FFFFFF;
 }
+.shiduan.data-v-713ca44d {
+  display: flex;
+  padding: 0 33rpx;
+  justify-content: space-around;
+  padding-top: 20rpx;
+}
+.selected.data-v-713ca44d {
+  background-color: #FFD1DB !important;
+}
 .fuwushiduan-top.data-v-713ca44d {
   display: flex;
   justify-content: space-between;
@@ -181,6 +190,7 @@
   line-height: 120rpx;
   text-align: center;
   border-top: 2rpx solid #EBE9E9;
+  margin-top: 60rpx;
 }
 .open text.data-v-713ca44d {
   width: 750rpx;

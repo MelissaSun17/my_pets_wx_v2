@@ -18,8 +18,8 @@
 					<view class="list-radio">
 						<view class="radio-text">
 							<view class="radio-text-left">
-								<view class="text" :class="{ active: currentTab === 'xuanzhe1' }"
-									@click="changeTab('xuanzhe1')">
+								<view class="text" :class="{ active: currentTabText === 'xuanzhe1' }"
+									@click="changeTabText ('xuanzhe1')">
 									<text v-if="currentTabText === 'xuanzhe1'">
 										日托
 									</text>
@@ -27,8 +27,8 @@
 								</view>
 							</view>
 							<view class="radio-text-right">
-								<view class="text" :class="{ active: currentTab === 'xuanzhe2' }"
-									@click="changeTab('xuanzhe2')">
+								<view class="text" :class="{ active: currentTabText === 'xuanzhe2' }"
+									@click="changeTabText ('xuanzhe2')">
 									<text v-if="currentTabText === 'xuanzhe2'">
 										寄养
 									</text>
@@ -160,9 +160,9 @@
 					</view>
 					<view class="">
 						<view class="index">
-							<wu-calendar mode="multiple" color="#FF5C7F" slideSwitchMode="vertical" :selected="selected"
-								ref="calendar" @confirm="calendarConfirm" :insert="false" startWeek="mon"></wu-calendar>
-							<view class="fuwu-time" @click="open">
+							<u-calendar  title="服务日期" rowHeight="80" :maxDate="maxDate" color="#FFD1DB" round="30rpx" :show="show"
+								:mode="mode" @confirm="confirm" @close="close" ></u-calendar>
+							<view class="fuwu-time" @click="show = true">
 								<view class="time-icon">
 									<image src="../../static/icon_time@3x.png" mode=""></image>
 								</view>
@@ -179,7 +179,7 @@
 			</view>
 			<view class="chazhao">
 				<view class="chazhao-img">
-					<image src="../../static/btn_dis@3x.png" mode=""></image>
+					<image :src="isDisabled ? '../../static/btn_dis@3x.png' : '../../static/btn_nor@3x.png'" mode=""></image>
 				</view>
 			</view>
 		</view>
@@ -187,21 +187,31 @@
 </template>
 
 <script>
-	import ownCheck from '@/components/own-checkBtn/own-check.vue';
+	const d = new Date()
+	const year = d.getFullYear()
+	let month = d.getMonth() + 1
+	month = month < 10 ? `0${month}` : month
+	const date = d.getDate()
+	// import ownCheck from '@/components/own-checkBtn/own-check.vue';
+	// import calendar from '@/components/wpc-calendar/wpc-calendar.vue'
 	export default {
 		components: {
-			ownCheck
+			// ownCheck,
+			// calendar
 		},
 		data() {
 			return {
+				isDisabled:true,
+				show: false,
+				mode: 'multiple',
+				maxDate: `${year}-${month}-${date + 90}`,
+				showDefault: true,
+				position: 'bottom',
 				type: 'center',
 				currentTab: '', // 默认显示第一个选项卡
+				currentTabText:'',
 				currentImg: '',
 				single: '',
-				range: ['2021-02-1', '2021-3-28'],
-				start: Date.now() - 1000000000,
-				end: Date.now() + 1000000000,
-				title: 'Hello',
 				btnStyle: {
 					"height": "64rpx",
 					"line-height": "64rpx",
@@ -223,39 +233,35 @@
 		},
 
 		watch: {
-			range(newval) {
-				console.log('范围选:', this.range);
-				this.toggle('bottom');
-			},
+			
 		},
-		mounted() {
-		},
+		mounted() {},
 
 		methods: {
 			calendarConfirm(e) {
-				console.log(e);
+				this.show = false,
+					console.log(e);
 			},
-			// 打开日历
-			open() {
-				this.$refs.calendar.open();
+			confirm(e) {
+				console.log('日历选择：', e)
+				this.show = false
 			},
-			// handleConfirm() {
-			// 	this.toggle('bottom');
+			close(){
+				this.show = false
+			},
+
+			// change(e) {
+			// 	console.log('当前模式：' + e.type + ',状态：' + e.show);
 			// },
-			change(e) {
-				console.log('当前模式：' + e.type + ',状态：' + e.show);
-			},
-			toggle(type) {
-				this.type = type
-				// open 方法传入参数 等同在 uni-popup 组件上绑定 type属性
-				this.$refs.popup.open(type)
-			},
-			// chooseItems(e) {
-			// 	console.log(e)
-			// },
+			
 			// 切换选项卡
 			changeTab(tab) {
 				this.currentTab = tab;
+				this.isDisabled = false
+			},
+			changeTabText(tab){
+				this.currentTabText = tab;
+				this.isDisabled = false
 			},
 			changeImg(img) {
 				this.currentImg = img
@@ -273,16 +279,19 @@
 	.box {
 		background-color: #FFFFFF;
 	}
-	.xinzeng{
+
+	.xinzeng {
 		display: flex;
-		.xinzeng-img{
+
+		.xinzeng-img {
 			margin-top: 16rpx;
 			margin-left: 44rpx;
 			width: 104rpx;
 			height: 104rpx;
 			border-radius: 0rpx 0rpx 0rpx 0rpx;
 			margin-bottom: 40rpx;
-			.text{
+
+			.text {
 				margin-top: 8rpx;
 				width: 104rpx;
 				height: 34rpx;
@@ -295,17 +304,20 @@
 				font-style: normal;
 				text-transform: none;
 			}
-			image{
+
+			image {
 				width: 104rpx;
 				height: 104rpx;
 				border-radius: 100rpx;
 			}
 		}
 	}
-	.fuwushiduan-top{
+
+	.fuwushiduan-top {
 		display: flex;
 		justify-content: space-between;
-		.fuwushiduan-top-text{
+
+		.fuwushiduan-top-text {
 			width: 128rpx;
 			height: 44rpx;
 			font-family: PingFang SC, PingFang SC;
@@ -319,29 +331,34 @@
 			margin-left: 312rpx;
 			margin-top: 48rpx;
 		}
-		.fuwushiduan-top-img{
+
+		.fuwushiduan-top-img {
 			width: 25rpx;
 			height: 25rpx;
 			border-radius: 0rpx 0rpx 0rpx 0rpx;
 			margin-right: 48rpx;
 			margin-top: 40rpx;
-			image{
+
+			image {
 				width: 25rpx;
 				height: 25rpx;
 				border-radius: 0rpx 0rpx 0rpx 0rpx;
 			}
 		}
 	}
-	.shiduan_1{
+
+	.shiduan_1 {
 		display: flex;
-		.shiduan_1-left{
+
+		.shiduan_1-left {
 			width: 312rpx;
 			height: 96rpx;
 			background: #F2F2F2;
 			border-radius: 16rpx 16rpx 16rpx 16rpx;
 			margin-left: 48rpx;
 			margin-right: 30rpx;
-			text{
+
+			text {
 				width: 154rpx;
 				height: 32rpx;
 				font-family: PingFang SC, PingFang SC;
@@ -354,15 +371,17 @@
 				text-transform: none;
 				margin-left: 80rpx;
 				margin-top: 32rpx;
-				
+
 			}
 		}
-		.shiduan_1-right{
+
+		.shiduan_1-right {
 			width: 312rpx;
 			height: 96rpx;
 			background: #F2F2F2;
 			border-radius: 16rpx 16rpx 16rpx 16rpx;
-			text{
+
+			text {
 				width: 154rpx;
 				height: 32rpx;
 				font-family: PingFang SC, PingFang SC;
@@ -378,6 +397,7 @@
 			}
 		}
 	}
+
 	.content {
 		background-image: url('../../static/bg@3x.png');
 		background-size: 100%;

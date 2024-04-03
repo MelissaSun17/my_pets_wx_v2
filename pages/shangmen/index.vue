@@ -18,8 +18,8 @@
 					<view class="list-radio">
 						<view class="radio-text">
 							<view class="radio-text-left">
-								<view class="text" :class="{ active: currentTab === 'xuanzhe1' }"
-									@click="changeTab('xuanzhe1')">
+								<view class="text" :class="{ active: currentTabText === 'xuanzhe1' }"
+									@click="changeTabText('xuanzhe1')">
 									<text v-if="currentTabText === 'xuanzhe1'">
 										喂食
 									</text>
@@ -27,8 +27,8 @@
 								</view>
 							</view>
 							<view class="radio-text-right">
-								<view class="text" :class="{ active: currentTab === 'xuanzhe2' }"
-									@click="changeTab('xuanzhe2')">
+								<view class="text" :class="{ active: currentTabText === 'xuanzhe2' }"
+									@click="changeTabText('xuanzhe2')">
 									<text v-if="currentTabText === 'xuanzhe2'">
 										遛狗
 									</text>
@@ -128,9 +128,9 @@
 					</view>
 					<view class="">
 						<view class="index">
-							<wu-calendar mode="multiple" color="#FF5C7F" slideSwitchMode="vertical" :selected="selected"
-								ref="calendar" @confirm="calendarConfirm" :insert="false" startWeek="mon"></wu-calendar>
-							<view class="fuwu-time" @click="open">
+							<u-calendar  title="服务日期" rowHeight="80" :maxDate="maxDate" color="#FFD1DB" round="30rpx" :show="show"
+								:mode="mode" @confirm="confirm" @close="close" ></u-calendar>
+							<view class="fuwu-time" @click="show = true">
 								<view class="time-icon">
 									<image src="../../static/icon_time@3x.png" mode=""></image>
 								</view>
@@ -156,30 +156,26 @@
 									<view class="fuwushiduan-top-text">
 										服务时段
 									</view>
-									<view class="fuwushiduan-top-img">
+									<view class="fuwushiduan-top-img" @click="guan">
 										<image src="../../static/QQ截图20240401171515.png" mode=""></image>
 									</view>
 								</view>
-								<view class="shiduan_1">
-									<view class="shiduan_1-left">
-										<text>6:00 ~ 11:00</text>
-									</view>
-									<view class="shiduan_1-right">
-										<text>11:00 ~ 14:00</text>
-									</view>
+								<view class="shiduan">
+									<own-check :list="list1" color="#333" bgColor="#F2F2F2" activeTextColor="#666666" activeBgColor="#FFD1DB" type="2"
+										:btnStyle="btnStyle" fontSize="22rpx" @chooseItem="chooseItems">
+									</own-check>
 								</view>
-								<view class="shiduan_2">
-									<view class="shiduan_2-left">
-										<text>14:00 ~ 18:00</text>
-									</view>
-									<view class="shiduan_2-right">
-										<text>18:00 ~ 20:00</text>
-									</view>
+								<view class="shiduan">
+									<own-check :list="list2" color="#333" bgColor="#F2F2F2" activeTextColor="#666666" activeBgColor="#FFD1DB" type="2"
+										:btnStyle="btnStyle" fontSize="22rpx" @chooseItem="chooseItems">
+									</own-check>
 								</view>
-								<view class="quantian">
-									<text>全天</text>
+								<view class="shiduan">
+									<own-check :list="list3" color="#333" bgColor="#F2F2F2" activeTextColor="#666666" activeBgColor="#FFD1DB" type="2"
+										:btnStyle="btnStyle2" fontSize="22rpx" @chooseItem="chooseItems">
+									</own-check>
 								</view>
-								<view class="open">
+								<view class="open" @click="queren">
 									<text>确认</text>
 								</view>
 							</view>
@@ -189,7 +185,7 @@
 			</view>
 			<view class="chazhao">
 				<view class="chazhao-img">
-					<image src="../../static/btn_dis@3x.png" mode=""></image>
+					<image :src="isDisabled ? '../../static/btn_dis@3x.png' : '../../static/btn_nor@3x.png'" mode=""></image>
 				</view>
 			</view>
 		</view>
@@ -197,6 +193,11 @@
 </template>
 
 <script>
+	const d = new Date()
+	const year = d.getFullYear()
+	let month = d.getMonth() + 1
+	month = month < 10 ? `0${month}` : month
+	const date = d.getDate()
 	import ownCheck from '@/components/own-checkBtn/own-check.vue';
 	export default {
 		components: {
@@ -204,8 +205,15 @@
 		},
 		data() {
 			return {
+				isDisabled:true,
+				show: false,
+				mode: 'multiple',
+				maxDate: `${year}-${month}-${date + 90}`,
+				showDefault: true,
 				currentTab: '', // 默认显示第一个选项卡
+				currentTabText:'',
 				currentImg: '',
+				selectedTime:[],
 				single: '',
 				datetimesingle: '',
 				range: ['2021-02-1', '2021-3-28'],
@@ -213,72 +221,99 @@
 				start: Date.now() - 1000000000,
 				end: Date.now() + 1000000000,
 				title: 'Hello',
+				inputstyle: {
+					"borderRadius": "12px",
+					'width':'750rpx',
+				},
 				btnStyle: {
-					"height": "64rpx",
-					"line-height": "64rpx",
-					"width": "128rpx",
-					"border-radius": "32rpx",
+					"height": "96rpx",
+					"line-height": "96rpx",
+					"width": "312rpx",
+					"border-radius": "11rpx",
 					"font-size": '24rpx',
 					"font-weight": "600",
 				},
+				btnStyle2:{
+					"height": "96rpx",
+					"line-height": "96rpx",
+					"width": "654rpx",
+					"font-size": '24rpx',
+					"font-weight": "600",
+					"border-radius": "11rpx",
+				},
+				list1: [{
+						name: "6:00 ~ 11:00",
+						type: 1,
+					},
+					{
+						name: "11:00 ~ 14:00",
+						type: 2,
+					}
+				],
+				list2: [
+					{
+						name: "14:00 ~ 18:00",
+						type: 3,
+						isCheck: true
+					},
+					{
+						name: "18:00 ~ 20:00",
+						type: 4,
+						isCheck: true
+					}
+				],
+				list3: [
+					{
+						name: "全天",
+						type: 5,
+						isCheck: true
+					},
+				],
 			}
 		},
 
 		watch: {
-			datetimesingle(newval) {
-				console.log('单选:', this.datetimesingle);
-			},
-			range(newval) {
-				console.log('范围选:', this.range);
-			},
-			datetimerange(newval) {
-				console.log('范围选:', this.datetimerange);
-			}
+
 		},
 		mounted() {
-			setTimeout(() => {
-				this.datetimesingle = Date.now() - 2 * 24 * 3600 * 1000
-				this.single = '2021-2-12'
-				this.datetimerange = ["2021-07-08 0:01:10", "2021-08-08 23:59:59"]
-			}, 3000)
+
 		},
 
 		methods: {
-			calendarConfirm(e) {
-				console.log(e);
-				this.toggle('bottom');
-			},
-			// 打开日历
-			open() {
-				this.$refs.calendar.open();
-			},
-			handleConfirm() {
-				this.toggle('bottom');
+			chooseItems(e) {
+				console.log(e)
 			},
 			change(e) {
 				console.log('当前模式：' + e.type + ',状态：' + e.show);
+				this.show=false
+			},
+			queren(){
+				this.$refs.popup.close();
+			},
+			guan(){
+				this.$refs.popup.close();
 			},
 			toggle(type) {
 				this.type = type
 				// open 方法传入参数 等同在 uni-popup 组件上绑定 type属性
 				this.$refs.popup.open(type)
 			},
-			// change(e) {
-			// 	this.single = e
-			// 	console.log('change事件:', this.single = e);
-			// },
-			// changeLog(e) {
-			// 	console.log('change事件:', e);
-			// },
-			// maskClick(e) {
-			// 	console.log('maskClick事件:', e);
-			// },
-			// chooseItems(e) {
-			// 	console.log(e)
-			// },
+			confirm(e) {
+				console.log('日历选择：', e)
+				this.show = false
+				this.toggle('bottom');
+			},
+			close(){
+				this.show = false
+			},
 			// 切换选项卡
 			changeTab(tab) {
 				this.currentTab = tab;
+				this.isDisabled = false
+			},
+			changeTabText(tab){
+				this.currentTabText = tab;
+				this.isDisabled = false
 			},
 			changeImg(img) {
 				this.currentImg = img
@@ -296,7 +331,15 @@
 	.box {
 		background-color: #FFFFFF;
 	}
-
+	.shiduan{
+		display: flex;
+		padding: 0 33rpx;
+		justify-content: space-around;
+		padding-top: 20rpx;
+	}
+	.selected {
+	  background-color: #FFD1DB !important; // 设置选中时间段的背景色
+	}
 	.fuwushiduan-top {
 		display: flex;
 		justify-content: space-between;
@@ -465,6 +508,7 @@
 		line-height: 120rpx;
 		text-align: center;
 		border-top: 2rpx solid #EBE9E9 ;
+		margin-top: 60rpx;
 		text{
 			width: 750rpx;
 			height: 120rpx;

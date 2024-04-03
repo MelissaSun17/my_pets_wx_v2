@@ -1,5 +1,31 @@
 <template>
 	<view class="box">
+		<view class="tabs">
+			<view class="paixu">
+				排序
+				<image src="../../static/QQ截图20240403141954.png" mode=""></image>
+			</view>
+			<view class="chongwu">
+				宠物
+				<image src="../../static/QQ截图20240403141954.png" mode=""></image>
+			</view>
+			<view class="shijian">
+				时间
+				<image src="../../static/QQ截图20240403141954.png" mode=""></image>
+			</view>
+			<view class="shaixuan">
+				筛选
+				<image src="../../static/QQ截图20240403141954.png" mode=""></image>
+			</view>
+			<view class="didian">
+				<view class="_img">
+					<image src="../../static/地标-家@3x.png" mode=""></image>
+				</view>
+				<view class="dingwei">
+					星巴克星巴克星巴克星巴克星巴克星巴克星巴克
+				</view>
+			</view>
+		</view>
 		<view class="kongtai">
 			<view class="_image_">
 				<image src="../../static/空态图-什么都没有@3x.png" mode=""></image>
@@ -686,6 +712,56 @@
 <style lang="scss" scoped>
 	.box{
 		background-color: #FFFFFF;
+	}
+	.tabs{
+		background-color: #FFD1DB;
+		display: flex;
+		.paixu,.chongwu,.shijian,.shaixuan{
+			width: 116rpx;
+			height: 88rpx;
+			font-family: PingFangSC, PingFang SC;
+			font-weight: 400;
+			font-size: 28rpx;
+			color: #000000;
+			line-height: 88rpx;
+			text-align: center;
+			position: relative;
+			image{
+				position: absolute;
+				width: 12rpx;
+				height: 12rpx;
+				bottom: 20rpx;
+			}
+		}
+		.paixu{
+			padding-left: 40rpx;
+		}
+	}
+	.didian{
+		display: flex;
+		width: 200rpx;
+		height: 92rpx;
+		.dingwei{
+			width: 160rpx;
+			height: 92rpx;
+			font-family: PingFangSC, PingFang SC;
+			font-weight: 400;
+			font-size: 20rpx;
+			color: #000000;
+			line-height: 92rpx;
+			text-align: left;
+			font-style: normal;
+			white-space: nowrap; /* 不换行 */
+			overflow: hidden; /* 隐藏溢出部分 */
+			text-overflow: ellipsis; /* 使用省略号 */
+		}
+		._img{
+			line-height: 110rpx;
+			image{
+				width: 46rpx;
+				height: 46rpx;
+			}
+		}
 	}
 	.aa{
 		background-color: #FFFFFF;

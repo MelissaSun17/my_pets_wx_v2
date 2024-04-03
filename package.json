@@ -19,6 +19,11 @@
     },
     "dependencies": {
         "@vant/weapp": "^1.11.4",
-        "uview-ui": "^2.0.37"
+        "uview-ui": "^2.0.36",
+        "vant": "^4.8.8"
+    },
+    "devDependencies": {
+        "sass": "^1.72.0",
+        "sass-loader": "^10.5.2"
     }
 }
