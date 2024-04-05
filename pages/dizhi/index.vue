@@ -272,7 +272,7 @@
 		}
 
 		.dizhi-text {
-			width: 462rpx;
+			width: 532rpx;
 			height: 32rpx;
 			font-family: PingFang SC, PingFang SC;
 			font-weight: 500;
@@ -301,7 +301,7 @@
 			text-align: left;
 			font-style: normal;
 			text-transform: none;
-			margin-left: 168rpx;
+			// margin-left: 168rpx;
 			margin-top: 4rpx;
 		}
 	}

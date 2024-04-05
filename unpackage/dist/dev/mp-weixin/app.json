@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/chongtuoshixiangqing/index",
     "pages/index/index",
     "pages/chongtuoshi/index",
     "pages/serve/index",
@@ -7,7 +8,8 @@
     "pages/main/index",
     "pages/tuoguan/index",
     "pages/shangmen/index",
-    "pages/dizhi/index"
+    "pages/dizhi/index",
+    "pages/cheshi/new_file"
   ],
   "subPackages": [],
   "window": {
