@@ -89,6 +89,9 @@
 				</view>
 			</view>
 			<view class="shangmenfuwu">
+				<view class="_title">
+					上门服务
+				</view>
 				<view class="shangmenfuwu-tabs">
 					<view class="">
 						<view class="tabs-container"
@@ -280,8 +283,458 @@
 								</view>
 							</view>
 							<view class="tab-content" v-if="currentIndex == 1">
-								2222
+								<view class="biaozhunfuwu">
+									<view class="biaozhunfuwu-top">
+										<view class="biaozhunfuwu-top-text">
+											标准服务
+										</view>
+										<view class="biaozhunfuwu-jiage">
+											<view class="jiage1">
+												￥
+											</view>
+											<view class="money">
+												40
+											</view>
+										</view>
+										<view class="biaozhunfuwu-shijian">
+											/30分钟
+										</view>
+									</view>
+									<view class="biaozhunfuwu-list">
+										<view class="biaozhunfuwu-list-box">
+											<view class="biaozhunfuwu-list-img">
+												<image src="/static/服务icon/互动陪玩.png" mode=""></image>
+											</view>
+											<view class="biaozhunfuwu-list-text">
+												互动陪玩
+											</view>
+										</view>
+										<view class="biaozhunfuwu-list-box">
+											<view class="biaozhunfuwu-list-img">
+												<image src="/static/服务icon/轨迹记录.png" mode=""></image>
+											</view>
+											<view class="biaozhunfuwu-list-text">
+												轨迹记录
+											</view>
+										</view>
+										<view class="biaozhunfuwu-list-box">
+											<view class="biaozhunfuwu-list-img">
+												<image src="/static/服务icon/全程拍照.png" mode=""></image>
+											</view>
+											<view class="biaozhunfuwu-list-text">
+												全程拍照
+											</view>
+										</view>
+										<view class="biaozhunfuwu-list-box">
+											<view class="biaozhunfuwu-list-img">
+												<image src="/static/服务icon/安全保证.png" mode=""></image>
+											</view>
+											<view class="biaozhunfuwu-list-text">
+												安全保证
+											</view>
+										</view>
+										<view class="biaozhunfuwu-list-box">
+											<view class="biaozhunfuwu-list-img">
+												<image src="/static/技能icon/正向引导.png" mode=""></image>
+											</view>
+											<view class="biaozhunfuwu-list-text">
+												正向引导
+											</view>
+										</view>
+										<view class="biaozhunfuwu-list-box">
+											<view class="biaozhunfuwu-list-img">
+												<image src="/static/服务icon/排泄清理.png" mode=""></image>
+											</view>
+											<view class="biaozhunfuwu-list-text">
+												排泄清理
+											</view>
+										</view>
+									</view>
+									<view class="jiajia">
+										<view class="jiajia-box">
+											<view class="jiajia-box-top">
+												<view class="jiajia-box-top-icon">
+													<image src="../../static/加价icon/节假日.png" mode=""></image>
+												</view>
+												<view class="jiajia-box-top-text">
+													节假日加价
+												</view>
+											</view>
+											<view class="jiajia-box-bottom">
+												<view class="jiajia-box-bottom-left">
+													每次上门收取
+												</view>
+												<view class="jiajia-box-bottom-right">
+													￥40
+												</view>
+											</view>
+										</view>
+										<view class="jiajia-box">
+											<view class="jiajia-box-top">
+												<view class="jiajia-box-top-icon">
+													<image src="../../static/加价icon/交通.png" mode=""></image>
+												</view>
+												<view class="jiajia-box-top-text">
+													交通加价
+												</view>
+											</view>
+											<view class="jiajia-box-bottom">
+												<view class="jiajia-box-bottom-left">
+													>2km，每km收取
+												</view>
+												<view class="jiajia-box-bottom-right">
+													￥40
+												</view>
+											</view>
+										</view>
+										<view class="jiajia-box">
+											<view class="jiajia-box-top">
+												<view class="jiajia-box-top-icon">
+													<image src="../../static/加价icon/时长.png" mode=""></image>
+												</view>
+												<view class="jiajia-box-top-text">
+													时长加价
+												</view>
+											</view>
+											<view class="jiajia-box-bottom">
+												<view class="jiajia-box-bottom-left">
+													每多15分钟收取
+												</view>
+												<view class="jiajia-box-bottom-right">
+													￥40
+												</view>
+											</view>
+										</view>
+										<view class="jiajia-box">
+											<view class="jiajia-box-top">
+												<view class="jiajia-box-top-icon">
+													<image src="../../static/加价icon/多宠.png" mode=""></image>
+												</view>
+												<view class="jiajia-box-top-text">
+													多宠加价
+												</view>
+											</view>
+											<view class="jiajia-box-bottom">
+												<view class="jiajia-box-bottom-left">
+													每多一只收取
+												</view>
+												<view class="jiajia-box-bottom-right">
+													￥40
+												</view>
+											</view>
+										</view>
+									</view>
+									<view class="jiedan">
+										<view class="jiedan-top">
+											接单能力
+										</view>
+										<view class="jiedan-text">
+											<view class="text1">
+												至多接2只
+											</view>
+											<view class="text2">
+												|
+											</view>
+											<view class="text1">
+												发情期不接
+											</view>
+											<view class="text2">
+												|
+											</view>
+											<view class="text1">
+												未绝育不接
+											</view>
+											<view class="text2">
+												|
+											</view>
+											<view class="text1">
+												全体型猫
+											</view>
+										</view>
+										<view class="jiedan-text2">
+											小型犬
+										</view>
+									</view>
+								</view>
 							</view>
+							<!-- <view class="tab-content" v-if="currentIndex == 2">
+								<view class="biaozhunfuwu">
+									<view class="biaozhunfuwu-top">
+										<view class="biaozhunfuwu-top-text">
+											标准服务
+										</view>
+										<view class="biaozhunfuwu-jiage">
+											<view class="jiage1">
+												￥
+											</view>
+											<view class="money">
+												40
+											</view>
+										</view>
+										<view class="biaozhunfuwu-shijian">
+											/30分钟
+										</view>
+									</view>
+									<view class="biaozhunfuwu-list">
+										<view class="biaozhunfuwu-list-box">
+											<view class="biaozhunfuwu-list-img">
+												<image src="/static/服务icon/日夜陪伴.png" mode=""></image>
+											</view>
+											<view class="biaozhunfuwu-list-text">
+												日夜陪伴
+											</view>
+										</view>
+										<view class="biaozhunfuwu-list-box">
+											<view class="biaozhunfuwu-list-img">
+												<image src="/static/服务icon/家庭环境.png" mode=""></image>
+											</view>
+											<view class="biaozhunfuwu-list-text">
+												家庭环境
+											</view>
+										</view>
+										<view class="biaozhunfuwu-list-box">
+											<view class="biaozhunfuwu-list-img">
+												<image src="/static/服务icon/健康检测.png" mode=""></image>
+											</view>
+											<view class="biaozhunfuwu-list-text">
+												健康检测
+											</view>
+										</view>
+										<view class="biaozhunfuwu-list-box">
+											<view class="biaozhunfuwu-list-img">
+												<image src="/static/服务icon/互动陪玩.png" mode=""></image>
+											</view>
+											<view class="biaozhunfuwu-list-text">
+												互动陪玩
+											</view>
+										</view>
+										<view class="biaozhunfuwu-list-box">
+											<view class="biaozhunfuwu-list-img">
+												<image src="/static/服务icon/拒绝笼养.png" mode=""></image>
+											</view>
+											<view class="biaozhunfuwu-list-text">
+												拒绝笼养
+											</view>
+										</view>
+										<view class="biaozhunfuwu-list-box">
+											<view class="biaozhunfuwu-list-img">
+												<image src="/static/服务icon/卫生保持.png" mode=""></image>
+											</view>
+											<view class="biaozhunfuwu-list-text">
+												卫生保持
+											</view>
+										</view>
+									</view>
+									<view class="jiajia">
+										<view class="jiajia-box">
+											<view class="jiajia-box-top">
+												<view class="jiajia-box-top-icon">
+													<image src="../../static/加价icon/节假日.png" mode=""></image>
+												</view>
+												<view class="jiajia-box-top-text">
+													节假日加价
+												</view>
+											</view>
+											<view class="jiajia-box-bottom">
+												<view class="jiajia-box-bottom-left">
+													每次上门收取
+												</view>
+												<view class="jiajia-box-bottom-right">
+													￥40
+												</view>
+											</view>
+										</view>
+										<view class="jiajia-box">
+											<view class="jiajia-box-top">
+												<view class="jiajia-box-top-icon">
+													<image src="../../static/加价icon/多宠.png" mode=""></image>
+												</view>
+												<view class="jiajia-box-top-text">
+													多宠加价
+												</view>
+											</view>
+											<view class="jiajia-box-bottom">
+												<view class="jiajia-box-bottom-left">
+													每多一只收取
+												</view>
+												<view class="jiajia-box-bottom-right">
+													￥40
+												</view>
+											</view>
+										</view>
+									</view>
+									<view class="jiedan">
+										<view class="jiedan-top">
+											接单能力
+										</view>
+										<view class="jiedan-text">
+											<view class="text1">
+												至多接2只
+											</view>
+											<view class="text2">
+												|
+											</view>
+											<view class="text1">
+												发情期不接
+											</view>
+											<view class="text2">
+												|
+											</view>
+											<view class="text1">
+												未绝育不接
+											</view>
+											<view class="text2">
+												|
+											</view>
+											<view class="text1">
+												全体型猫
+											</view>
+										</view>
+										<view class="jiedan-text2">
+											小型犬
+										</view>
+									</view>
+								</view>
+							</view>
+							<view class="tab-content" v-if="currentIndex == 3">
+								<view class="biaozhunfuwu">
+									<view class="biaozhunfuwu-top">
+										<view class="biaozhunfuwu-top-text">
+											标准服务
+										</view>
+										<view class="biaozhunfuwu-jiage">
+											<view class="jiage1">
+												￥
+											</view>
+											<view class="money">
+												40
+											</view>
+										</view>
+										<view class="biaozhunfuwu-shijian">
+											/30分钟
+										</view>
+									</view>
+									<view class="biaozhunfuwu-list">
+										<view class="biaozhunfuwu-list-box">
+											<view class="biaozhunfuwu-list-img">
+												<image src="/static/服务icon/日夜陪伴.png" mode=""></image>
+											</view>
+											<view class="biaozhunfuwu-list-text">
+												日夜陪伴
+											</view>
+										</view>
+										<view class="biaozhunfuwu-list-box">
+											<view class="biaozhunfuwu-list-img">
+												<image src="/static/服务icon/家庭环境.png" mode=""></image>
+											</view>
+											<view class="biaozhunfuwu-list-text">
+												家庭环境
+											</view>
+										</view>
+										<view class="biaozhunfuwu-list-box">
+											<view class="biaozhunfuwu-list-img">
+												<image src="/static/服务icon/健康检测.png" mode=""></image>
+											</view>
+											<view class="biaozhunfuwu-list-text">
+												健康检测
+											</view>
+										</view>
+										<view class="biaozhunfuwu-list-box">
+											<view class="biaozhunfuwu-list-img">
+												<image src="/static/服务icon/互动陪玩.png" mode=""></image>
+											</view>
+											<view class="biaozhunfuwu-list-text">
+												互动陪玩
+											</view>
+										</view>
+										<view class="biaozhunfuwu-list-box">
+											<view class="biaozhunfuwu-list-img">
+												<image src="/static/服务icon/拒绝笼养.png" mode=""></image>
+											</view>
+											<view class="biaozhunfuwu-list-text">
+												拒绝笼养
+											</view>
+										</view>
+										<view class="biaozhunfuwu-list-box">
+											<view class="biaozhunfuwu-list-img">
+												<image src="/static/服务icon/卫生保持.png" mode=""></image>
+											</view>
+											<view class="biaozhunfuwu-list-text">
+												卫生保持
+											</view>
+										</view>
+									</view>
+									<view class="jiajia">
+										<view class="jiajia-box">
+											<view class="jiajia-box-top">
+												<view class="jiajia-box-top-icon">
+													<image src="../../static/加价icon/节假日.png" mode=""></image>
+												</view>
+												<view class="jiajia-box-top-text">
+													节假日加价
+												</view>
+											</view>
+											<view class="jiajia-box-bottom">
+												<view class="jiajia-box-bottom-left">
+													每次上门收取
+												</view>
+												<view class="jiajia-box-bottom-right">
+													￥40
+												</view>
+											</view>
+										</view>
+										<view class="jiajia-box">
+											<view class="jiajia-box-top">
+												<view class="jiajia-box-top-icon">
+													<image src="../../static/加价icon/多宠.png" mode=""></image>
+												</view>
+												<view class="jiajia-box-top-text">
+													多宠加价
+												</view>
+											</view>
+											<view class="jiajia-box-bottom">
+												<view class="jiajia-box-bottom-left">
+													每多一只收取
+												</view>
+												<view class="jiajia-box-bottom-right">
+													￥40
+												</view>
+											</view>
+										</view>
+									</view>
+									<view class="jiedan">
+										<view class="jiedan-top">
+											接单能力
+										</view>
+										<view class="jiedan-text">
+											<view class="text1">
+												至多接2只
+											</view>
+											<view class="text2">
+												|
+											</view>
+											<view class="text1">
+												发情期不接
+											</view>
+											<view class="text2">
+												|
+											</view>
+											<view class="text1">
+												未绝育不接
+											</view>
+											<view class="text2">
+												|
+											</view>
+											<view class="text1">
+												全体型猫
+											</view>
+										</view>
+										<view class="jiedan-text2">
+											小型犬
+										</view>
+									</view>
+								</view>
+							</view> -->
 						</view>
 					</view>
 				</view>
@@ -531,11 +984,15 @@
 			return {
 				list1: [{
 						name: '喂养',
-						content: 'Content for Tab 1111'
 					},
 					{
 						name: '遛狗',
-						content: 'Content for Tab 2'
+					},
+					{
+						name: '托管',
+					},
+					{
+						name: '日托',
 					}
 				],
 				currentIndex: 0
@@ -551,6 +1008,19 @@
 </script>
 
 <style lang="scss" scoped>
+	._title{
+		width: 112rpx;
+		height: 40rpx;
+		font-family: PingFangSC, PingFang SC;
+		font-weight: 600;
+		font-size: 28rpx;
+		color: #000000;
+		line-height: 40rpx;
+		text-align: left;
+		font-style: normal;
+		margin-left: 32rpx;
+		margin-top: 24rpx;
+	}
 	.tabs-container {
 		width: 100%;
 		width: 100%;
@@ -563,7 +1033,6 @@
 	.box1 {
 		display: flex;
 		padding-top: 20px;
-		// margin-top: 20rpx;
 		justify-content: space-around;
 
 	}
@@ -593,7 +1062,7 @@
 
 	.box {
 		background-color: #FFFFFF;
-		// padding-bottom: 150rpx;
+		height: 100vh;
 	}
 
 	.biaozhunfuwu {
@@ -833,6 +1302,7 @@
 		background-size: 100%;
 		background-repeat: no-repeat;
 		padding-top: 68rpx;
+		height: 100%;
 
 		.xiangqing-jianjie {
 			width: 660rpx;
@@ -1116,10 +1586,6 @@
 			background-size: 100%;
 			background-repeat: no-repeat;
 			box-shadow: 10rpx 0rpx rgba(0, 0, 0, 2);
-
-			.shangmenfuwu-tabs {
-				margin-top: 72rpx;
-			}
 		}
 
 		.gengduo {
@@ -1479,6 +1945,7 @@
 			box-shadow: 10rpx 15rpx rgba(0, 0, 0, 2);
 			margin-top: 34rpx;
 
+
 			.zhengche-top {
 				width: 112rpx;
 				height: 40rpx;
@@ -1590,6 +2057,7 @@
 			height: 100rpx;
 			line-height: 70rpx;
 			padding-bottom: 70rpx;
+
 			.peiban-left {
 				width: 20rpx;
 				height: 44rpx;
@@ -1615,7 +2083,7 @@
 				line-height: 80rpx;
 				text-align: left;
 				font-style: normal;
-				
+
 			}
 
 			.peiban-shijian {
@@ -1637,7 +2105,8 @@
 				background: #FFF133;
 				border-radius: 88rpx;
 				margin-left: 180rpx;
-				.peiban-right-text{
+
+				.peiban-right-text {
 					width: 134rpx;
 					height: 44rpx;
 					font-family: PingFangSC, PingFang SC;

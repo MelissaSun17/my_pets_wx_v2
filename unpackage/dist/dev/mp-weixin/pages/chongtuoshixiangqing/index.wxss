@@ -24,6 +24,19 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+._title.data-v-2cfaa1ad {
+  width: 112rpx;
+  height: 40rpx;
+  font-family: PingFangSC, PingFang SC;
+  font-weight: 600;
+  font-size: 28rpx;
+  color: #000000;
+  line-height: 40rpx;
+  text-align: left;
+  font-style: normal;
+  margin-left: 32rpx;
+  margin-top: 24rpx;
+}
 .tabs-container.data-v-2cfaa1ad {
   width: 100%;
   width: 100%;
@@ -54,6 +67,7 @@
 }
 .box.data-v-2cfaa1ad {
   background-color: #FFFFFF;
+  height: 100vh;
 }
 .biaozhunfuwu .biaozhunfuwu-top.data-v-2cfaa1ad {
   display: flex;
@@ -256,6 +270,7 @@
   background-size: 100%;
   background-repeat: no-repeat;
   padding-top: 68rpx;
+  height: 100%;
 }
 .xiangqing .xiangqing-jianjie.data-v-2cfaa1ad {
   width: 660rpx;
@@ -508,9 +523,6 @@
   background-size: 100%;
   background-repeat: no-repeat;
   box-shadow: 10rpx 0rpx black;
-}
-.xiangqing .shangmenfuwu .shangmenfuwu-tabs.data-v-2cfaa1ad {
-  margin-top: 72rpx;
 }
 .xiangqing .gengduo.data-v-2cfaa1ad {
   width: 660rpx;
