@@ -303,7 +303,7 @@
 				console.log('日历选择：', e)
 				this.show = false
 				this.toggle('bottom');
-					this.isColor = true
+				this.isColor = true
 			},
 			close(){
 				this.show = false
@@ -377,135 +377,6 @@
 				height: 25rpx;
 				border-radius: 0rpx 0rpx 0rpx 0rpx;
 			}
-		}
-	}
-
-	.shiduan_1 {
-		display: flex;
-		margin-top: 64rpx;
-
-		.shiduan_1-left {
-			width: 312rpx;
-			height: 96rpx;
-			background: #F2F2F2;
-			border-radius: 16rpx 16rpx 16rpx 16rpx;
-			margin-left: 48rpx;
-			margin-right: 30rpx;
-			line-height: 96rpx;
-
-			text {
-				width: 154rpx;
-				height: 32rpx;
-				font-family: PingFang SC, PingFang SC;
-				font-weight: 400;
-				font-size: 28rpx;
-				color: #666666;
-				line-height: 32rpx;
-				text-align: center;
-				font-style: normal;
-				text-transform: none;
-				margin-left: 80rpx;
-				margin-top: 32rpx !important;
-
-			}
-		}
-
-		.shiduan_1-right {
-			width: 312rpx;
-			height: 96rpx;
-			background: #F2F2F2;
-			border-radius: 16rpx 16rpx 16rpx 16rpx;
-			line-height: 96rpx;
-
-			text {
-				width: 154rpx;
-				height: 32rpx;
-				font-family: PingFang SC, PingFang SC;
-				font-weight: 400;
-				font-size: 28rpx;
-				color: #666666;
-				line-height: 32rpx;
-				text-align: center;
-				font-style: normal;
-				text-transform: none;
-				margin-left: 80rpx;
-				margin-top: 32rpx;
-			}
-		}
-	}
-	.shiduan_2 {
-		display: flex;
-		margin-top: 32rpx;
-	
-		.shiduan_2-left {
-			width: 312rpx;
-			height: 96rpx;
-			background: #F2F2F2;
-			border-radius: 16rpx 16rpx 16rpx 16rpx;
-			margin-left: 48rpx;
-			margin-right: 30rpx;
-			line-height: 96rpx;
-	
-			text {
-				width: 154rpx;
-				height: 32rpx;
-				font-family: PingFang SC, PingFang SC;
-				font-weight: 400;
-				font-size: 28rpx;
-				color: #666666;
-				line-height: 32rpx;
-				text-align: center;
-				font-style: normal;
-				text-transform: none;
-				margin-left: 80rpx;
-				margin-top: 32rpx !important;
-	
-			}
-		}
-	
-		.shiduan_2-right {
-			width: 312rpx;
-			height: 96rpx;
-			background: #F2F2F2;
-			border-radius: 16rpx 16rpx 16rpx 16rpx;
-			line-height: 96rpx;
-	
-			text {
-				width: 154rpx;
-				height: 32rpx;
-				font-family: PingFang SC, PingFang SC;
-				font-weight: 400;
-				font-size: 28rpx;
-				color: #666666;
-				line-height: 32rpx;
-				text-align: center;
-				font-style: normal;
-				text-transform: none;
-				margin-left: 80rpx;
-				margin-top: 32rpx;
-			}
-		}
-	}
-	.quantian{
-		width: 654rpx;
-		height: 96rpx;
-		background: #F2F2F2;
-		border-radius: 16rpx 16rpx 16rpx 16rpx;
-		text-align: center;
-		line-height: 96rpx;
-		margin-left: 48rpx;
-		margin-top: 32rpx;
-		margin-bottom: 74rpx;
-		text{
-			width: 56rpx;
-			height: 32rpx;
-			font-family: PingFang SC, PingFang SC;
-			font-weight: 400;
-			font-size: 28rpx;
-			color: #666666;
-			line-height: 32rpx;
-			font-style: normal;
-			text-transform: none;
 		}
 	}
 	.open{
@@ -753,7 +624,7 @@
 					width: 24rpx;
 					height: 24rpx;
 					border-radius: 0rpx 0rpx 0rpx 0rpx;
-					margin-left: 182rpx;
+					// margin-left: 12rpx;
 					margin-top: 20rpx;
 
 					image {
@@ -921,7 +792,7 @@
 					width: 24rpx;
 					height: 24rpx;
 					border-radius: 0rpx 0rpx 0rpx 0rpx;
-					margin-left: 182rpx;
+					// margin-left: 182rpx;
 					margin-top: 20rpx;
 
 					image {

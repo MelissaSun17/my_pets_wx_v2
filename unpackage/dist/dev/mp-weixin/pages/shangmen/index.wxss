@@ -70,124 +70,6 @@
   height: 25rpx;
   border-radius: 0rpx 0rpx 0rpx 0rpx;
 }
-.shiduan_1.data-v-713ca44d {
-  display: flex;
-  margin-top: 64rpx;
-}
-.shiduan_1 .shiduan_1-left.data-v-713ca44d {
-  width: 312rpx;
-  height: 96rpx;
-  background: #F2F2F2;
-  border-radius: 16rpx 16rpx 16rpx 16rpx;
-  margin-left: 48rpx;
-  margin-right: 30rpx;
-  line-height: 96rpx;
-}
-.shiduan_1 .shiduan_1-left text.data-v-713ca44d {
-  width: 154rpx;
-  height: 32rpx;
-  font-family: PingFang SC, PingFang SC;
-  font-weight: 400;
-  font-size: 28rpx;
-  color: #666666;
-  line-height: 32rpx;
-  text-align: center;
-  font-style: normal;
-  text-transform: none;
-  margin-left: 80rpx;
-  margin-top: 32rpx !important;
-}
-.shiduan_1 .shiduan_1-right.data-v-713ca44d {
-  width: 312rpx;
-  height: 96rpx;
-  background: #F2F2F2;
-  border-radius: 16rpx 16rpx 16rpx 16rpx;
-  line-height: 96rpx;
-}
-.shiduan_1 .shiduan_1-right text.data-v-713ca44d {
-  width: 154rpx;
-  height: 32rpx;
-  font-family: PingFang SC, PingFang SC;
-  font-weight: 400;
-  font-size: 28rpx;
-  color: #666666;
-  line-height: 32rpx;
-  text-align: center;
-  font-style: normal;
-  text-transform: none;
-  margin-left: 80rpx;
-  margin-top: 32rpx;
-}
-.shiduan_2.data-v-713ca44d {
-  display: flex;
-  margin-top: 32rpx;
-}
-.shiduan_2 .shiduan_2-left.data-v-713ca44d {
-  width: 312rpx;
-  height: 96rpx;
-  background: #F2F2F2;
-  border-radius: 16rpx 16rpx 16rpx 16rpx;
-  margin-left: 48rpx;
-  margin-right: 30rpx;
-  line-height: 96rpx;
-}
-.shiduan_2 .shiduan_2-left text.data-v-713ca44d {
-  width: 154rpx;
-  height: 32rpx;
-  font-family: PingFang SC, PingFang SC;
-  font-weight: 400;
-  font-size: 28rpx;
-  color: #666666;
-  line-height: 32rpx;
-  text-align: center;
-  font-style: normal;
-  text-transform: none;
-  margin-left: 80rpx;
-  margin-top: 32rpx !important;
-}
-.shiduan_2 .shiduan_2-right.data-v-713ca44d {
-  width: 312rpx;
-  height: 96rpx;
-  background: #F2F2F2;
-  border-radius: 16rpx 16rpx 16rpx 16rpx;
-  line-height: 96rpx;
-}
-.shiduan_2 .shiduan_2-right text.data-v-713ca44d {
-  width: 154rpx;
-  height: 32rpx;
-  font-family: PingFang SC, PingFang SC;
-  font-weight: 400;
-  font-size: 28rpx;
-  color: #666666;
-  line-height: 32rpx;
-  text-align: center;
-  font-style: normal;
-  text-transform: none;
-  margin-left: 80rpx;
-  margin-top: 32rpx;
-}
-.quantian.data-v-713ca44d {
-  width: 654rpx;
-  height: 96rpx;
-  background: #F2F2F2;
-  border-radius: 16rpx 16rpx 16rpx 16rpx;
-  text-align: center;
-  line-height: 96rpx;
-  margin-left: 48rpx;
-  margin-top: 32rpx;
-  margin-bottom: 74rpx;
-}
-.quantian text.data-v-713ca44d {
-  width: 56rpx;
-  height: 32rpx;
-  font-family: PingFang SC, PingFang SC;
-  font-weight: 400;
-  font-size: 28rpx;
-  color: #666666;
-  line-height: 32rpx;
-  font-style: normal;
-  text-transform: none;
-}
 .open.data-v-713ca44d {
   width: 750rpx;
   height: 120rpx;
@@ -406,7 +288,6 @@
   width: 24rpx;
   height: 24rpx;
   border-radius: 0rpx 0rpx 0rpx 0rpx;
-  margin-left: 182rpx;
   margin-top: 20rpx;
 }
 .trusteeship .trusteeship-list .dingwei .dingwei-icon-right image.data-v-713ca44d {
@@ -555,7 +436,6 @@
   width: 24rpx;
   height: 24rpx;
   border-radius: 0rpx 0rpx 0rpx 0rpx;
-  margin-left: 182rpx;
   margin-top: 20rpx;
 }
 .fuwu-baby .fuwu-baby-list .fuwu-time .time-right image.data-v-713ca44d {

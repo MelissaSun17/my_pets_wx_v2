@@ -19299,21 +19299,7 @@ exports.default = _default;
 /* 219 */,
 /* 220 */,
 /* 221 */,
-/* 222 */,
-/* 223 */,
-/* 224 */,
-/* 225 */,
-/* 226 */,
-/* 227 */,
-/* 228 */,
-/* 229 */,
-/* 230 */,
-/* 231 */,
-/* 232 */,
-/* 233 */,
-/* 234 */,
-/* 235 */,
-/* 236 */
+/* 222 */
 /*!************************************************************************!*\
   !*** D:/1/feimi/feimi/node_modules/uview-ui/components/u-row/props.js ***!
   \************************************************************************/
@@ -19350,14 +19336,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 237 */,
-/* 238 */,
-/* 239 */,
-/* 240 */,
-/* 241 */,
-/* 242 */,
-/* 243 */,
-/* 244 */
+/* 223 */,
+/* 224 */,
+/* 225 */,
+/* 226 */,
+/* 227 */,
+/* 228 */,
+/* 229 */,
+/* 230 */
 /*!************************************************************************!*\
   !*** D:/1/feimi/feimi/node_modules/uview-ui/components/u-col/props.js ***!
   \************************************************************************/
@@ -19404,14 +19390,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 245 */,
-/* 246 */,
-/* 247 */,
-/* 248 */,
-/* 249 */,
-/* 250 */,
-/* 251 */,
-/* 252 */
+/* 231 */,
+/* 232 */,
+/* 233 */,
+/* 234 */,
+/* 235 */,
+/* 236 */,
+/* 237 */,
+/* 238 */
 /*!*****************************************************************************!*\
   !*** D:/1/feimi/feimi/node_modules/uview-ui/components/u-calendar/props.js ***!
   \*****************************************************************************/
@@ -19573,7 +19559,7 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 253 */
+/* 239 */
 /*!****************************************************************************!*\
   !*** D:/1/feimi/feimi/node_modules/uview-ui/components/u-calendar/util.js ***!
   \****************************************************************************/
@@ -19670,7 +19656,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 254 */
+/* 240 */
 /*!*****************************************************************!*\
   !*** D:/1/feimi/feimi/node_modules/uview-ui/libs/util/dayjs.js ***!
   \*****************************************************************/
@@ -19982,7 +19968,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;var _typeof = 
 });
 
 /***/ }),
-/* 255 */
+/* 241 */
 /*!********************************************************************!*\
   !*** D:/1/feimi/feimi/node_modules/uview-ui/libs/util/calendar.js ***!
   \********************************************************************/
@@ -20499,6 +20485,20 @@ var _default = calendar;
 exports.default = _default;
 
 /***/ }),
+/* 242 */,
+/* 243 */,
+/* 244 */,
+/* 245 */,
+/* 246 */,
+/* 247 */,
+/* 248 */,
+/* 249 */,
+/* 250 */,
+/* 251 */,
+/* 252 */,
+/* 253 */,
+/* 254 */,
+/* 255 */,
 /* 256 */,
 /* 257 */,
 /* 258 */,
@@ -20506,21 +20506,7 @@ exports.default = _default;
 /* 260 */,
 /* 261 */,
 /* 262 */,
-/* 263 */,
-/* 264 */,
-/* 265 */,
-/* 266 */,
-/* 267 */,
-/* 268 */,
-/* 269 */,
-/* 270 */,
-/* 271 */,
-/* 272 */,
-/* 273 */,
-/* 274 */,
-/* 275 */,
-/* 276 */,
-/* 277 */
+/* 263 */
 /*!*******************************************************************************************!*\
   !*** D:/1/feimi/feimi/uni_modules/uni-search-bar/components/uni-search-bar/i18n/index.js ***!
   \*******************************************************************************************/
@@ -20535,9 +20521,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 278));
-var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 279));
-var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 280));
+var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 264));
+var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 265));
+var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 266));
 var _default = {
   en: _en.default,
   'zh-Hans': _zhHans.default,
@@ -20546,7 +20532,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 278 */
+/* 264 */
 /*!******************************************************************************************!*\
   !*** D:/1/feimi/feimi/uni_modules/uni-search-bar/components/uni-search-bar/i18n/en.json ***!
   \******************************************************************************************/
@@ -20556,7 +20542,7 @@ exports.default = _default;
 module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"cancel\",\"uni-search-bar.placeholder\":\"Search enter content\"}");
 
 /***/ }),
-/* 279 */
+/* 265 */
 /*!***********************************************************************************************!*\
   !*** D:/1/feimi/feimi/uni_modules/uni-search-bar/components/uni-search-bar/i18n/zh-Hans.json ***!
   \***********************************************************************************************/
@@ -20566,7 +20552,7 @@ module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"cancel\",\"uni-search-
 module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"取消\",\"uni-search-bar.placeholder\":\"请输入搜索内容\"}");
 
 /***/ }),
-/* 280 */
+/* 266 */
 /*!***********************************************************************************************!*\
   !*** D:/1/feimi/feimi/uni_modules/uni-search-bar/components/uni-search-bar/i18n/zh-Hant.json ***!
   \***********************************************************************************************/
@@ -20576,14 +20562,14 @@ module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"取消\",\"uni-search-
 module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"取消\",\"uni-search-bar.placeholder\":\"請輸入搜索內容\"}");
 
 /***/ }),
-/* 281 */,
-/* 282 */,
-/* 283 */,
-/* 284 */,
-/* 285 */,
-/* 286 */,
-/* 287 */,
-/* 288 */
+/* 267 */,
+/* 268 */,
+/* 269 */,
+/* 270 */,
+/* 271 */,
+/* 272 */,
+/* 273 */,
+/* 274 */
 /*!**************************************************************************!*\
   !*** D:/1/feimi/feimi/node_modules/uview-ui/components/u-popup/props.js ***!
   \**************************************************************************/
@@ -20680,14 +20666,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 289 */,
-/* 290 */,
-/* 291 */,
-/* 292 */,
-/* 293 */,
-/* 294 */,
-/* 295 */,
-/* 296 */
+/* 275 */,
+/* 276 */,
+/* 277 */,
+/* 278 */,
+/* 279 */,
+/* 280 */,
+/* 281 */,
+/* 282 */
 /*!*******************************************************************!*\
   !*** D:/1/feimi/feimi/node_modules/uview-ui/libs/mixin/button.js ***!
   \*******************************************************************/
@@ -20717,7 +20703,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 297 */
+/* 283 */
 /*!*********************************************************************!*\
   !*** D:/1/feimi/feimi/node_modules/uview-ui/libs/mixin/openType.js ***!
   \*********************************************************************/
@@ -20759,7 +20745,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 298 */
+/* 284 */
 /*!***************************************************************************!*\
   !*** D:/1/feimi/feimi/node_modules/uview-ui/components/u-button/props.js ***!
   \***************************************************************************/
@@ -20938,6 +20924,20 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
+/* 285 */,
+/* 286 */,
+/* 287 */,
+/* 288 */,
+/* 289 */,
+/* 290 */,
+/* 291 */,
+/* 292 */,
+/* 293 */,
+/* 294 */,
+/* 295 */,
+/* 296 */,
+/* 297 */,
+/* 298 */,
 /* 299 */,
 /* 300 */,
 /* 301 */,
@@ -20945,21 +20945,7 @@ exports.default = _default;
 /* 303 */,
 /* 304 */,
 /* 305 */,
-/* 306 */,
-/* 307 */,
-/* 308 */,
-/* 309 */,
-/* 310 */,
-/* 311 */,
-/* 312 */,
-/* 313 */,
-/* 314 */,
-/* 315 */,
-/* 316 */,
-/* 317 */,
-/* 318 */,
-/* 319 */,
-/* 320 */
+/* 306 */
 /*!************************************************************************************************!*\
   !*** D:/1/feimi/feimi/uni_modules/uni-transition/components/uni-transition/createAnimation.js ***!
   \************************************************************************************************/
@@ -21093,12 +21079,12 @@ function createAnimation(option, _this) {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 321 */,
-/* 322 */,
-/* 323 */,
-/* 324 */,
-/* 325 */,
-/* 326 */
+/* 307 */,
+/* 308 */,
+/* 309 */,
+/* 310 */,
+/* 311 */,
+/* 312 */
 /*!****************************************************************************************!*\
   !*** D:/1/feimi/feimi/uni_modules/uni-icons/components/uni-icons/uniicons_file_vue.js ***!
   \****************************************************************************************/
@@ -21601,14 +21587,14 @@ var fontData = [{
 exports.fontData = fontData;
 
 /***/ }),
-/* 327 */,
-/* 328 */,
-/* 329 */,
-/* 330 */,
-/* 331 */,
-/* 332 */,
-/* 333 */,
-/* 334 */
+/* 313 */,
+/* 314 */,
+/* 315 */,
+/* 316 */,
+/* 317 */,
+/* 318 */,
+/* 319 */,
+/* 320 */
 /*!****************************************************************************!*\
   !*** D:/1/feimi/feimi/node_modules/uview-ui/components/u-overlay/props.js ***!
   \****************************************************************************/
@@ -21650,14 +21636,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 335 */,
-/* 336 */,
-/* 337 */,
-/* 338 */,
-/* 339 */,
-/* 340 */,
-/* 341 */,
-/* 342 */
+/* 321 */,
+/* 322 */,
+/* 323 */,
+/* 324 */,
+/* 325 */,
+/* 326 */,
+/* 327 */,
+/* 328 */
 /*!*******************************************************************************!*\
   !*** D:/1/feimi/feimi/node_modules/uview-ui/components/u-transition/props.js ***!
   \*******************************************************************************/
@@ -21699,7 +21685,7 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 343 */
+/* 329 */
 /*!************************************************************************************!*\
   !*** D:/1/feimi/feimi/node_modules/uview-ui/components/u-transition/transition.js ***!
   \************************************************************************************/
@@ -21716,7 +21702,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 56));
 var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 58));
-var _nvueAniMap = _interopRequireDefault(__webpack_require__(/*! ./nvue.ani-map.js */ 344));
+var _nvueAniMap = _interopRequireDefault(__webpack_require__(/*! ./nvue.ani-map.js */ 330));
 // 定义一个一定时间后自动成功的promise，让调用nextTick方法处，进入下一个then方法
 var nextTick = function nextTick() {
   return new Promise(function (resolve) {
@@ -21808,7 +21794,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 344 */
+/* 330 */
 /*!**************************************************************************************!*\
   !*** D:/1/feimi/feimi/node_modules/uview-ui/components/u-transition/nvue.ani-map.js ***!
   \**************************************************************************************/
@@ -22001,14 +21987,14 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 345 */,
-/* 346 */,
-/* 347 */,
-/* 348 */,
-/* 349 */,
-/* 350 */,
-/* 351 */,
-/* 352 */
+/* 331 */,
+/* 332 */,
+/* 333 */,
+/* 334 */,
+/* 335 */,
+/* 336 */,
+/* 337 */,
+/* 338 */
 /*!*******************************************************************************!*\
   !*** D:/1/feimi/feimi/node_modules/uview-ui/components/u-status-bar/props.js ***!
   \*******************************************************************************/
@@ -22034,14 +22020,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 353 */,
-/* 354 */,
-/* 355 */,
-/* 356 */,
-/* 357 */,
-/* 358 */,
-/* 359 */,
-/* 360 */
+/* 339 */,
+/* 340 */,
+/* 341 */,
+/* 342 */,
+/* 343 */,
+/* 344 */,
+/* 345 */,
+/* 346 */
 /*!*************************************************************************!*\
   !*** D:/1/feimi/feimi/node_modules/uview-ui/components/u-icon/icons.js ***!
   \*************************************************************************/
@@ -22272,7 +22258,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 361 */
+/* 347 */
 /*!*************************************************************************!*\
   !*** D:/1/feimi/feimi/node_modules/uview-ui/components/u-icon/props.js ***!
   \*************************************************************************/
@@ -22379,14 +22365,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 362 */,
-/* 363 */,
-/* 364 */,
-/* 365 */,
-/* 366 */,
-/* 367 */,
-/* 368 */,
-/* 369 */
+/* 348 */,
+/* 349 */,
+/* 350 */,
+/* 351 */,
+/* 352 */,
+/* 353 */,
+/* 354 */,
+/* 355 */
 /*!********************************************************************************!*\
   !*** D:/1/feimi/feimi/node_modules/uview-ui/components/u-safe-bottom/props.js ***!
   \********************************************************************************/
@@ -22406,14 +22392,14 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 370 */,
-/* 371 */,
-/* 372 */,
-/* 373 */,
-/* 374 */,
-/* 375 */,
-/* 376 */,
-/* 377 */
+/* 356 */,
+/* 357 */,
+/* 358 */,
+/* 359 */,
+/* 360 */,
+/* 361 */,
+/* 362 */,
+/* 363 */
 /*!*********************************************************************************!*\
   !*** D:/1/feimi/feimi/node_modules/uview-ui/components/u-loading-icon/props.js ***!
   \*********************************************************************************/
@@ -22483,6 +22469,200 @@ var _default = {
     inactiveColor: {
       type: String,
       default: uni.$u.props.loadingIcon.inactiveColor
+    }
+  }
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 364 */,
+/* 365 */,
+/* 366 */,
+/* 367 */,
+/* 368 */,
+/* 369 */,
+/* 370 */,
+/* 371 */,
+/* 372 */,
+/* 373 */,
+/* 374 */,
+/* 375 */,
+/* 376 */,
+/* 377 */,
+/* 378 */,
+/* 379 */,
+/* 380 */,
+/* 381 */,
+/* 382 */,
+/* 383 */,
+/* 384 */,
+/* 385 */,
+/* 386 */,
+/* 387 */,
+/* 388 */,
+/* 389 */,
+/* 390 */,
+/* 391 */,
+/* 392 */,
+/* 393 */,
+/* 394 */,
+/* 395 */,
+/* 396 */,
+/* 397 */,
+/* 398 */,
+/* 399 */,
+/* 400 */,
+/* 401 */,
+/* 402 */
+/*!***************************************************************************!*\
+  !*** D:/1/feimi/feimi/node_modules/uview-ui/components/u-picker/props.js ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  props: {
+    // 是否展示picker弹窗
+    show: {
+      type: Boolean,
+      default: uni.$u.props.picker.show
+    },
+    // 是否展示顶部的操作栏
+    showToolbar: {
+      type: Boolean,
+      default: uni.$u.props.picker.showToolbar
+    },
+    // 顶部标题
+    title: {
+      type: String,
+      default: uni.$u.props.picker.title
+    },
+    // 对象数组，设置每一列的数据
+    columns: {
+      type: Array,
+      default: uni.$u.props.picker.columns
+    },
+    // 是否显示加载中状态
+    loading: {
+      type: Boolean,
+      default: uni.$u.props.picker.loading
+    },
+    // 各列中，单个选项的高度
+    itemHeight: {
+      type: [String, Number],
+      default: uni.$u.props.picker.itemHeight
+    },
+    // 取消按钮的文字
+    cancelText: {
+      type: String,
+      default: uni.$u.props.picker.cancelText
+    },
+    // 确认按钮的文字
+    confirmText: {
+      type: String,
+      default: uni.$u.props.picker.confirmText
+    },
+    // 取消按钮的颜色
+    cancelColor: {
+      type: String,
+      default: uni.$u.props.picker.cancelColor
+    },
+    // 确认按钮的颜色
+    confirmColor: {
+      type: String,
+      default: uni.$u.props.picker.confirmColor
+    },
+    // 每列中可见选项的数量
+    visibleItemCount: {
+      type: [String, Number],
+      default: uni.$u.props.picker.visibleItemCount
+    },
+    // 选项对象中，需要展示的属性键名
+    keyName: {
+      type: String,
+      default: uni.$u.props.picker.keyName
+    },
+    // 是否允许点击遮罩关闭选择器
+    closeOnClickOverlay: {
+      type: Boolean,
+      default: uni.$u.props.picker.closeOnClickOverlay
+    },
+    // 各列的默认索引
+    defaultIndex: {
+      type: Array,
+      default: uni.$u.props.picker.defaultIndex
+    },
+    // 是否在手指松开时立即触发 change 事件。若不开启则会在滚动动画结束后触发 change 事件，只在微信2.21.1及以上有效
+    immediateChange: {
+      type: Boolean,
+      default: uni.$u.props.picker.immediateChange
+    }
+  }
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 403 */,
+/* 404 */,
+/* 405 */,
+/* 406 */,
+/* 407 */,
+/* 408 */,
+/* 409 */,
+/* 410 */
+/*!****************************************************************************!*\
+  !*** D:/1/feimi/feimi/node_modules/uview-ui/components/u-toolbar/props.js ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  props: {
+    // 是否展示工具条
+    show: {
+      type: Boolean,
+      default: uni.$u.props.toolbar.show
+    },
+    // 取消按钮的文字
+    cancelText: {
+      type: String,
+      default: uni.$u.props.toolbar.cancelText
+    },
+    // 确认按钮的文字
+    confirmText: {
+      type: String,
+      default: uni.$u.props.toolbar.confirmText
+    },
+    // 取消按钮的颜色
+    cancelColor: {
+      type: String,
+      default: uni.$u.props.toolbar.cancelColor
+    },
+    // 确认按钮的颜色
+    confirmColor: {
+      type: String,
+      default: uni.$u.props.toolbar.confirmColor
+    },
+    // 标题文字
+    title: {
+      type: String,
+      default: uni.$u.props.toolbar.title
     }
   }
 };

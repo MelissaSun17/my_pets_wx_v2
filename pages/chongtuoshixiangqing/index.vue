@@ -955,6 +955,9 @@
 							</view>
 						</view>
 					</view>
+					<view class="aa">
+						
+					</view>
 					<view class="peiban">
 						<view class="peiban-left">
 							￥
@@ -1302,6 +1305,7 @@
 		background-size: 100%;
 		background-repeat: no-repeat;
 		padding-top: 68rpx;
+		padding-bottom: 300rpx;
 		height: 100%;
 
 		.xiangqing-jianjie {
@@ -1944,8 +1948,7 @@
 			border: 2rpx solid #000000;
 			box-shadow: 10rpx 15rpx rgba(0, 0, 0, 2);
 			margin-top: 34rpx;
-
-
+			margin-bottom: 200rpx;
 			.zhengche-top {
 				width: 112rpx;
 				height: 40rpx;
@@ -2044,15 +2047,18 @@
 				}
 			}
 		}
-
+		.aa{
+			height: 100rpx;
+		}
 		.peiban {
-			padding-top: 20rpx;
+			padding-top: 30rpx;
 			width: 100%;
 			background-color: #FFFFFF;
-			// position: fixed;
-			// bottom: 0;
-			// left: 0;
-			margin-top: 56rpx;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			// z-index: -1;
+			// margin-top: 56rpx;
 			display: flex;
 			height: 100rpx;
 			line-height: 70rpx;

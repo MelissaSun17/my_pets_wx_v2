@@ -270,6 +270,7 @@
   background-size: 100%;
   background-repeat: no-repeat;
   padding-top: 68rpx;
+  padding-bottom: 300rpx;
   height: 100%;
 }
 .xiangqing .xiangqing-jianjie.data-v-2cfaa1ad {
@@ -836,6 +837,7 @@
   border: 2rpx solid #000000;
   box-shadow: 10rpx 15rpx black;
   margin-top: 34rpx;
+  margin-bottom: 200rpx;
 }
 .xiangqing .zhengche .zhengche-top.data-v-2cfaa1ad {
   width: 112rpx;
@@ -926,11 +928,16 @@
   text-align: right;
   font-style: normal;
 }
+.xiangqing .aa.data-v-2cfaa1ad {
+  height: 100rpx;
+}
 .xiangqing .peiban.data-v-2cfaa1ad {
-  padding-top: 20rpx;
+  padding-top: 30rpx;
   width: 100%;
   background-color: #FFFFFF;
-  margin-top: 56rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   display: flex;
   height: 100rpx;
   line-height: 70rpx;

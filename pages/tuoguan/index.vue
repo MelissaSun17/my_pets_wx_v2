@@ -208,6 +208,7 @@
 				show: false,
 				mode: 'multiple',
 				maxDate: `${year}-${month}-${date + 90}`,
+				defaultDateMultiple:[],
 				showDefault: true,
 				position: 'bottom',
 				type: 'center',
@@ -245,12 +246,14 @@
 				this.show = false,
 					console.log(e);
 			},
-			confirm(e) {
-				console.log('日历选择：', e)
+			confirm(selectedDates) {
+				this.defaultDateMultiple = selectedDates;
+				console.log('日历选择：', selectedDates)
 				this.show = false,
-					this.isColor = true;
+				this.isColor = true;
 			},
 			close() {
+				console.log(111);
 				this.show = false
 			},
 

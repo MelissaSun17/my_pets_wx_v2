@@ -24,13 +24,13 @@
 		// 		"navigationBarBackgroundColor": "#FFD1DB"
 		// 	}
 		// },
-		{
-			"path": "pages/chongtuoshixiangqing/index",
-			"style": {
-				"navigationBarTitleText": "宠托师主页",
-				"navigationBarBackgroundColor": "#FFD1DB"
-			}
-		},
+		// {
+		// 	"path": "pages/chongtuoshixiangqing/index",
+		// 	"style": {
+		// 		"navigationBarTitleText": "宠托师主页",
+		// 		"navigationBarBackgroundColor": "#FFD1DB"
+		// 	}
+		// },
 		{
 			"path": "pages/index/index",
 			"style": {
@@ -91,20 +91,20 @@
 				"navigationBarBackgroundColor": "#FFFFFF"
 			}
 		},
+		// {
+		// 	"path": "pages/cheshi/new_file",
+		// 	"style": {
+		// 		"navigationBarTitleText": "宠托师主页",
+		// 		"navigationBarBackgroundColor": "#FFD1DB"
+		// 	}
+		// },
 		{
-			"path": "pages/cheshi/new_file",
+			"path": "pages/chongtuoshixiangqing/index",
 			"style": {
 				"navigationBarTitleText": "宠托师主页",
 				"navigationBarBackgroundColor": "#FFD1DB"
 			}
 		}
-		// {
-		// 	"path": "pages/chongtuoshixiangqing/index",
-		// 	"style": {
-		// 		"navigationBarTitleText": "宠托师主页",
-		// 		"navigationBarBackgroundColor": "#FFD1DB"
-		// 	}
-		// }
 		
 	], 
 	// "tabBar": {
