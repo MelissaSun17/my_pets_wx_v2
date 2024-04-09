@@ -149,13 +149,13 @@
 									</view>
 									<view class="pet-trainer-intro-list-img-info">
 										<view class="list-img-info-top">
-											<view class="list-img-info-top-left">泡泡</view>
+											<view class="list-img-info-top-left">泡泡泡泡</view>
 											<view class="list-img-info-top-right">
 												<text class="text_1">
 													距您
 												</text>
 												<text class="text_2">
-													0.8
+													0.888888
 												</text>
 												<text class="text_3">
 													km

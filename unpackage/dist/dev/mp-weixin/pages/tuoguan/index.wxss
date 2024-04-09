@@ -332,6 +332,10 @@
   font-style: normal;
   text-transform: none;
   margin-top: 26rpx;
+  white-space: nowrap;
+  /* 不换行 */
+  -webkit-animation: scroll-left 10s linear infinite;
+          animation: scroll-left 10s linear infinite;
 }
 .trusteeship .trusteeship-list .dingwei .dingwei-icon-right.data-v-18f91b7a {
   width: 24rpx;
@@ -480,6 +484,10 @@
   text-transform: none;
   margin-top: 24rpx;
   margin-left: 16rpx;
+  white-space: nowrap;
+  /* 不换行 */
+  -webkit-animation: scroll-left 10s linear infinite;
+          animation: scroll-left 10s linear infinite;
 }
 .fuwu-baby .fuwu-baby-list .fuwu-time .time-right.data-v-18f91b7a {
   width: 24rpx;

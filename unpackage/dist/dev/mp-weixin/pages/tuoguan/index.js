@@ -101,7 +101,7 @@ var components
 try {
   components = {
     uCalendar: function () {
-      return Promise.all(/*! import() | node-modules/uview-ui/components/u-calendar/u-calendar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-calendar/u-calendar")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-calendar/u-calendar.vue */ 233))
+      return Promise.all(/*! import() | node-modules/uview-ui/components/u-calendar/u-calendar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-calendar/u-calendar")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-calendar/u-calendar.vue */ 255))
     },
   }
 } catch (e) {

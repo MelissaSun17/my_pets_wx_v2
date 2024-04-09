@@ -1,10 +1,13 @@
 <template>
-  <view class="container_btn3">
-    <view class="btn" :class="{ 'selected': isSelected(0, 3) }" @click="changeRange(0, 3)">1-3年</view>
-    <view class="btn" :class="{ 'selected': isSelected(3, 5) }" @click="changeRange(3, 5)">3-5年</view>
-    <view class="btn" :class="{ 'selected': isSelected(5, 7) }" @click="changeRange(5, 7)">5-7年</view>
-    <view class="btn" :class="{ 'selected': isSelected(7, 10) }" @click="changeRange(7, 10)">7-10年</view>
-    <view class="btn" :class="{ 'selected': isSelected(10, 30) }" @click="changeRange(10, 30)">10年以上</view>
+  <view class="baby-content">
+    <view class="baby-content-neirong">
+      <!-- 文本域 -->
+      <textarea class="wenbenyu" v-model="textareaContent" rows="5"></textarea>
+    </view>
+    <view class="kuaijiejian">
+      <!-- 标签 -->
+      <view class="biaoqian" v-for="(tag, index) in tags" :key="index" @click="toggleContent(tag)">{{ tag }},</view>
+    </view>
   </view>
 </template>
 
@@ -12,40 +15,21 @@
 export default {
   data() {
     return {
-      selectedDistance: [0, 0] // 初始状态为未选中
+      tags: ['害怕陌生人', '胆子很小', '喜欢所有人', '对猫很友好', '对狗很友好', '社牛', '爱玩玩具', '爱叫的话唠'],
+      textareaContent: '' // 存储文本域中的内容
     };
   },
   methods: {
-    changeRange(min, max) {
-      if (this.selectedDistance[0] === min && this.selectedDistance[1] === max) {
-        // 如果当前选中的年限范围等于点击的年限范围，取消选中
-        this.selectedDistance = [0, 0];
+    toggleContent(tag) {
+      // 检查文本域中是否已经包含了该标签内容
+      if (this.textareaContent.includes(tag)) {
+        // 如果包含，则移除该标签内容
+        this.textareaContent = this.textareaContent.replace(tag + ', ', '').replace(tag, '').trim();
       } else {
-        // 否则，设置为点击的年限范围
-        this.selectedDistance = [min, max];
+        // 如果不包含，则添加该标签内容
+        this.textareaContent += tag + ', ';
       }
-    },
-    isSelected(min, max) {
-      // 判断当前按钮是否被选中
-      return this.selectedDistance[0] === min && this.selectedDistance[1] === max;
     }
   }
-};
+}
 </script>
-
-<style>
-.container_btn3 {
-  display: flex;
-}
-
-.btn {
-  margin-right: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  cursor: pointer;
-}
-
-.selected {
-  background-color: #e0e0e0; /* 选中状态的背景颜色 */
-}
-</style>

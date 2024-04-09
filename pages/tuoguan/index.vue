@@ -641,6 +641,9 @@
 					font-style: normal;
 					text-transform: none;
 					margin-top: 26rpx;
+					white-space: nowrap;
+					/* 不换行 */
+					animation: scroll-left 10s linear infinite;
 				}
 
 				.dingwei-icon-right {
@@ -809,6 +812,9 @@
 					text-transform: none;
 					margin-top: 24rpx;
 					margin-left: 16rpx;
+					white-space: nowrap;
+					/* 不换行 */
+					animation: scroll-left 10s linear infinite;
 				}
 
 				.time-right {

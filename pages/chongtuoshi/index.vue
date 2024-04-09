@@ -430,7 +430,7 @@
 					<view class="chongtuoshi-list-right">
 						<view class="text1">
 							<view class="text1-left">
-								泡泡泡泡泡泡
+								泡泡泡泡
 							</view>
 							<view class="text1-left-img">
 								<image src="../../static/女生@2x.png" mode=""></image>
@@ -476,7 +476,7 @@
 					<view class="chongtuoshi-list-right">
 						<view class="text1">
 							<view class="text1-left">
-								泡泡泡泡泡泡
+								泡泡泡泡
 							</view>
 							<view class="text1-left-img">
 								<image src="../../static/女生@2x.png" mode=""></image>
@@ -522,7 +522,7 @@
 					<view class="chongtuoshi-list-right">
 						<view class="text1">
 							<view class="text1-left">
-								泡泡泡泡泡泡
+								泡泡泡泡
 							</view>
 							<view class="text1-left-img">
 								<image src="../../static/女生@2x.png" mode=""></image>
@@ -568,7 +568,7 @@
 					<view class="chongtuoshi-list-right">
 						<view class="text1">
 							<view class="text1-left">
-								泡泡泡泡泡泡
+								泡泡泡泡
 							</view>
 							<view class="text1-left-img">
 								<image src="../../static/女生@2x.png" mode=""></image>
@@ -618,14 +618,14 @@
 				<view class="chongtuoshi-list-right">
 					<view class="text1">
 						<view class="text1-left">
-							泡泡泡泡泡泡
+							泡泡泡泡
 						</view>
 						<view class="text1-left-img">
 							<image src="../../static/女生@2x.png" mode=""></image>
 						</view>
 						<view class="text1-left-right">
 							<text class="text_1">距您</text>
-							<text class="text_2">0.8</text>
+							<text class="text_2">0.888888</text>
 							<text class="text_3">km</text>
 						</view>
 					</view>
@@ -660,14 +660,14 @@
 				<view class="chongtuoshi-list-right">
 					<view class="text1">
 						<view class="text1-left">
-							泡泡泡泡泡泡
+							泡泡泡泡
 						</view>
 						<view class="text1-left-img">
 							<image src="../../static/女生@2x.png" mode=""></image>
 						</view>
 						<view class="text1-left-right">
 							<text class="text_1">距您</text>
-							<text class="text_2">0.8</text>
+							<text class="text_2">0.888888</text>
 							<text class="text_3">km</text>
 						</view>
 					</view>
@@ -702,14 +702,14 @@
 				<view class="chongtuoshi-list-right">
 					<view class="text1">
 						<view class="text1-left">
-							泡泡泡泡泡泡
+							泡泡泡泡
 						</view>
 						<view class="text1-left-img">
 							<image src="../../static/女生@2x.png" mode=""></image>
 						</view>
 						<view class="text1-left-right">
 							<text class="text_1">距您</text>
-							<text class="text_2">0.8</text>
+							<text class="text_2">0.888800</text>
 							<text class="text_3">km</text>
 						</view>
 					</view>
@@ -742,14 +742,14 @@
 					<view class="chongtuoshi-list-right">
 						<view class="text1">
 							<view class="text1-left">
-								泡泡泡泡泡泡
+								泡泡泡泡
 							</view>
 							<view class="text1-left-img">
 								<image src="../../static/女生@2x.png" mode=""></image>
 							</view>
 							<view class="text1-left-right">
 								<text class="text_1">距您</text>
-								<text class="text_2">0.8</text>
+								<text class="text_2">0.800000</text>
 								<text class="text_3">km</text>
 							</view>
 						</view>
@@ -777,14 +777,14 @@
 					<view class="chongtuoshi-list-right">
 						<view class="text1">
 							<view class="text1-left">
-								泡泡泡泡泡泡
+								泡泡泡泡
 							</view>
 							<view class="text1-left-img">
 								<image src="../../static/女生@2x.png" mode=""></image>
 							</view>
 							<view class="text1-left-right">
 								<text class="text_1">距您</text>
-								<text class="text_2">0.8</text>
+								<text class="text_2">0.80000</text>
 								<text class="text_3">km</text>
 							</view>
 						</view>
@@ -812,7 +812,7 @@
 					<view class="chongtuoshi-list-right">
 						<view class="text1">
 							<view class="text1-left">
-								泡泡泡泡泡泡
+								泡泡泡泡
 							</view>
 							<view class="text1-left-img">
 								<image src="../../static/女生@2x.png" mode=""></image>
@@ -925,7 +925,7 @@
 				currentTab: '',
 				currentImg: '',
 				columns: [
-					['综合优先', '评分优先', '距离优先']
+					['综合优先', '评分优先', '距离优先','价格优先','经验优先']
 				],
 				btnStyle: {
 					"height": "96rpx",
@@ -1152,9 +1152,43 @@
 	}
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 	.box {
 		background-color: #FFFFFF;
+	}
+	/deep/.u-picker{
+		height: 400rpx;
+		border-radius: 30rpx !important;
+	}
+	/deep/.u-toolbar__wrapper__cancel.data-v-6d25fc6f{
+		width: 160rpx;
+		// height: 90rpx;
+		background: #FFFFFF;
+		border-radius: 102rpx;
+		text-align: center;
+		border: 4rpx solid #F6F8FA;
+		padding-top: 22rpx;
+		padding-bottom: 22rpx;
+		margin-left: 40rpx;
+		color: #000 !important;
+		font-weight: 600;
+		margin-top: 34rpx;
+	}
+	/deep/.u-toolbar__wrapper__confirm.data-v-6d25fc6f{
+		width: 350rpx;
+		text-align: center;
+		padding-top: 22rpx;
+		padding-bottom: 22rpx;
+		background: #FFF133;
+		border-radius: 102rpx;
+		margin-right: 40rpx;
+		color: #000 !important;
+		font-weight: 600;
+		margin-top: 34rpx;
+	}
+	/deep/.u-picker__view__column__item.data-v-d45639b2{
+		// height: 80rpx !important;
+		line-height: 68rpx !important;
 	}
 	.color-scroll {
 	  height: 1350rpx; /* 设置滚动区域的高度 */
@@ -2169,7 +2203,7 @@
 					display: flex;
 
 					.text1-left {
-						width: 168rpx;
+						width: 110rpx;
 						height: 40rpx;
 						font-family: PingFangSC, PingFang SC;
 						font-weight: 600;
@@ -2181,7 +2215,7 @@
 					}
 
 					.text1-left-img {
-						width: 32rpx;
+						// width: 32rpx;
 						height: 32rpx;
 						background: #FFD1DB;
 						border-radius: 20rpx;
@@ -2196,7 +2230,7 @@
 
 					.text1-left-right {
 						.text_1 {
-							width: 44rpx;
+							// width: 44rpx;
 							height: 32rpx;
 							font-family: PingFangSC, PingFang SC;
 							font-weight: 400;
@@ -2205,11 +2239,11 @@
 							line-height: 32rpx;
 							text-align: center;
 							font-style: normal;
-							margin-left: 92rpx;
+							margin-left: 62rpx;
 						}
 
 						.text_2 {
-							width: 34rpx;
+							// width: 64rpx;
 							height: 32rpx;
 							font-family: PingFangSC, PingFang SC;
 							font-weight: 400;
@@ -2223,7 +2257,7 @@
 						}
 
 						.text_3 {
-							width: 32rpx;
+							// width: 32rpx;
 							height: 32rpx;
 							font-family: PingFangSC, PingFang SC;
 							font-weight: 400;
@@ -2411,7 +2445,8 @@
 					display: flex;
 
 					.text1-left {
-						width: 168rpx;
+						width: 110rpx;
+						// width: 168rpx;
 						height: 40rpx;
 						font-family: PingFangSC, PingFang SC;
 						font-weight: 600;
@@ -2438,7 +2473,7 @@
 
 					.text1-left-right {
 						.text_1 {
-							width: 44rpx;
+							// width: 44rpx;
 							height: 32rpx;
 							font-family: PingFangSC, PingFang SC;
 							font-weight: 400;
@@ -2447,11 +2482,11 @@
 							line-height: 32rpx;
 							text-align: center;
 							font-style: normal;
-							margin-left: 92rpx;
+							margin-left: 62rpx;
 						}
 
 						.text_2 {
-							width: 34rpx;
+							// width: 34rpx;
 							height: 32rpx;
 							font-family: PingFangSC, PingFang SC;
 							font-weight: 400;
@@ -2465,7 +2500,7 @@
 						}
 
 						.text_3 {
-							width: 32rpx;
+							// width: 32rpx;
 							height: 32rpx;
 							font-family: PingFangSC, PingFang SC;
 							font-weight: 400;
@@ -2634,7 +2669,8 @@
 						display: flex;
 
 						.text1-left {
-							width: 168rpx;
+							width: 110rpx;
+							// width: 168rpx;
 							height: 40rpx;
 							font-family: PingFangSC, PingFang SC;
 							font-weight: 600;
@@ -2660,8 +2696,9 @@
 						}
 
 						.text1-left-right {
+							
 							.text_1 {
-								width: 44rpx;
+								// width: 44rpx;
 								height: 32rpx;
 								font-family: PingFangSC, PingFang SC;
 								font-weight: 400;
@@ -2670,11 +2707,11 @@
 								line-height: 32rpx;
 								text-align: center;
 								font-style: normal;
-								margin-left: 92rpx;
+								margin-left: 62rpx;
 							}
 
 							.text_2 {
-								width: 34rpx;
+								// width: 34rpx;
 								height: 32rpx;
 								font-family: PingFangSC, PingFang SC;
 								font-weight: 400;
@@ -2688,7 +2725,7 @@
 							}
 
 							.text_3 {
-								width: 32rpx;
+								// width: 32rpx;
 								height: 32rpx;
 								font-family: PingFangSC, PingFang SC;
 								font-weight: 400;

@@ -1,13 +1,15 @@
 {
   "pages": [
+    "pages/newBaby/index",
     "pages/index/index",
-    "pages/chongtuoshi/index",
     "pages/serve/index",
     "pages/news/index",
     "pages/main/index",
     "pages/tuoguan/index",
     "pages/shangmen/index",
     "pages/dizhi/index",
+    "pages/cheshi/new_file",
+    "pages/chongtuoshi/index",
     "pages/chongtuoshixiangqing/index"
   ],
   "subPackages": [],
