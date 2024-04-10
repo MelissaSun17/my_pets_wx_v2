@@ -358,17 +358,17 @@
 		methods: {
 			gotuoguan(){
 				uni.navigateTo({
-					url:'/pages/tuoguan/index'
+					url:'/pagesA/pages/tuoguan/index'
 				})
 			},
 			goshangmen(){
 				uni.navigateTo({
-					url:'/pages/shangmen/index'
+					url:'/pagesA/pages/shangmen/index'
 				})
 			},
 			gochongtuoshi(){
 				uni.navigateTo({
-					url:'/pages/chongtuoshi/index'
+					url:'/pagesA/pages/chongtuoshi/index'
 				})
 			}
 		}

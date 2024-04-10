@@ -1,0 +1,149 @@
+.content.data-v-4d1fa2fd {
+  background-color: #F6F6F6;
+  height: 100vh;
+}
+.content-search.data-v-4d1fa2fd {
+  background-color: #FFFFFF;
+  width: 670rpx;
+  height: 72rpx;
+  padding-left: 40rpx;
+  margin-top: 24rpx;
+  padding-right: 40rpx;
+  padding-bottom: 48rpx;
+}
+.kongtai.data-v-4d1fa2fd {
+  width: 308rpx;
+  margin: 156rpx auto;
+}
+.kongtai .kongtai_img.data-v-4d1fa2fd {
+  width: 280rpx;
+  height: 280rpx;
+}
+.kongtai .kongtai_img image.data-v-4d1fa2fd {
+  width: 280rpx;
+  height: 280rpx;
+}
+.kongtai .kongtai-text.data-v-4d1fa2fd {
+  width: 308rpx;
+  height: 40rpx;
+  font-family: PingFangSC, PingFang SC;
+  font-weight: 400;
+  font-size: 28rpx;
+  color: rgba(51, 51, 51, 0.6);
+  line-height: 40rpx;
+  text-align: left;
+  font-style: normal;
+}
+.data-v-4d1fa2fd .u-icon__icon.data-v-172979f2 {
+  font-size: 50rpx !important;
+}
+.content-nearby.data-v-4d1fa2fd {
+  width: 750rpx;
+  height: 40rpx;
+  font-family: PingFangSC, PingFang SC;
+  font-weight: 400;
+  font-size: 28rpx;
+  color: #999999;
+  line-height: 40rpx;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  padding-left: 40rpx;
+  background-color: #FFFFFF;
+}
+.content-nearby-list.data-v-4d1fa2fd {
+  width: 750rpx;
+  background-color: #FFFFFF;
+}
+.content-nearby-list .content-nearby-list-text.data-v-4d1fa2fd {
+  line-height: 128rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  color: #000000;
+  border-bottom: 2rpx solid #EBE9E9;
+  white-space: nowrap;
+  /* 不换行 */
+  overflow: hidden;
+  /* 隐藏溢出部分 */
+  text-overflow: ellipsis;
+  /* 显示省略号 */
+}
+.main-dizhi.data-v-4d1fa2fd {
+  background-color: #FFFFFF;
+  margin-top: 16rpx;
+}
+.main-dizhi .main-dizhi-top.data-v-4d1fa2fd {
+  width: 112rpx;
+  height: 40rpx;
+  font-family: PingFang SC, PingFang SC;
+  font-weight: 400;
+  font-size: 28rpx;
+  color: #999999;
+  line-height: 33rpx;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  margin-left: 40rpx;
+  padding-top: 32rpx;
+}
+.main-dizhi .main-dizhi-list.data-v-4d1fa2fd {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 48rpx;
+  border-bottom: 1rpx solid #EBE9E9;
+}
+.main-dizhi .main-dizhi-list .dizhi_list.data-v-4d1fa2fd {
+  padding-left: 40rpx;
+}
+.main-dizhi .main-dizhi-list .dizhi_list .main-dizhi-list-text2.data-v-4d1fa2fd {
+  width: 600rpx;
+  height: 32rpx;
+  font-family: PingFang SC, PingFang SC;
+  font-weight: 500;
+  font-size: 28rpx;
+  color: #000000;
+  line-height: 32rpx;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  margin-top: 40rpx;
+  white-space: nowrap;
+  /* 不换行 */
+  overflow: hidden;
+  /* 隐藏溢出部分 */
+  text-overflow: ellipsis;
+  /* 显示省略号 */
+}
+.main-dizhi .main-dizhi-list .dizhi_list .main-dizhi-list-text3.data-v-4d1fa2fd {
+  width: 600rpx;
+  height: 34rpx;
+  font-family: PingFang HK, PingFang HK;
+  font-weight: 400;
+  font-size: 24rpx;
+  color: #999999;
+  line-height: 28rpx;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  margin-top: 16rpx;
+  white-space: nowrap;
+  /* 不换行 */
+  overflow: hidden;
+  /* 隐藏溢出部分 */
+  text-overflow: ellipsis;
+  /* 显示省略号 */
+}
+.main-dizhi .main-dizhi-list .main-dizhi-list-mi.data-v-4d1fa2fd {
+  width: 100rpx;
+  height: 32rpx;
+  font-family: PingFang SC, PingFang SC;
+  font-weight: 400;
+  font-size: 28rpx;
+  color: #666666;
+  line-height: 32rpx;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  margin-top: 64rpx;
+}
+

@@ -1,57 +1,9 @@
 {
 	"easycom": {
-			"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
-		},
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		// {
-		// 	"path": "pages/tabnav/index",
-		// 	"style": {
-		// 		"navigationBarTitleText": "菲咪Furmie",
-		// 		"navigationBarBackgroundColor": "#FFD1DB"
-		// 	}
-		// },
-		// {
-		// 	"path": "pages/tuoguan/index",
-		// 	"style": {
-		// 		"navigationBarTitleText": "托管服务",
-		// 		"navigationBarBackgroundColor": "#FFD1DB"
-		// 	}
-		// },
-		// {
-		// 	"path": "pages/shangmen/index",
-		// 	"style": {
-		// 		"navigationBarTitleText": "上门服务",
-		// 		"navigationBarBackgroundColor": "#FFD1DB"
-		// 	}
-		// },
-		// {
-		// 	"path": "pages/chongtuoshixiangqing/index",
-		// 	"style": {
-		// 		"navigationBarTitleText": "宠托师主页",
-		// 		"navigationBarBackgroundColor": "#FFD1DB"
-		// 	}
-		// },
-		// {
-		// 	"path": "pages/chongtuoshi/index",
-		// 	"style": {
-		// 		"navigationBarTitleText": "宠托师",
-		// 		"navigationBarBackgroundColor": "#FFD1DB"
-		// 	}
-		// },
-		{
-			"path": "pages/newBaby/index",
-			"style": {
-				"navigationBarTitleText": "宝贝档案",
-				"navigationBarBackgroundColor": "#FFD1DB"
-			}
-		},
-		// {
-		// 	"path": "pages/chongtuoshi/index",
-		// 	"style": {
-		// 		"navigationBarTitleText": "宠托师",
-		// 		"navigationBarBackgroundColor": "#FFD1DB"
-		// 	}
-		// },
+		
 		{
 			"path": "pages/index/index",
 			"style": {
@@ -76,75 +28,154 @@
 			"style": {
 				"navigationBarTitleText": "uni-app"
 			}
-		},
-		{
-			"path": "pages/tuoguan/index",
-			"style": {
-				"navigationBarTitleText": "托管服务",
-				"navigationBarBackgroundColor": "#FFD1DB"
-			}
-		},
-		{
-			"path": "pages/shangmen/index",
-			"style": {
-				"navigationBarTitleText": "上门服务",
-				"navigationBarBackgroundColor": "#FFD1DB"
-			}
-		},
-		{
-			"path": "pages/dizhi/index",
-			"style": {
-				"navigationBarTitleText": "地址簿",
-				"navigationBarBackgroundColor": "#FFFFFF"
-			}
-		},
-		{
-			"path": "pages/cheshi/new_file",
-			"style": {
-				"navigationBarTitleText": "测试",
-				"navigationBarBackgroundColor": "#FFD1DB"
-			}
-		},
-		{
-			"path": "pages/chongtuoshi/index",
-			"style": {
-				"navigationBarTitleText": "宠托师",
-				"navigationBarBackgroundColor": "#FFD1DB"
-			}
-		},
-		{
-			"path": "pages/chongtuoshixiangqing/index",
-			"style": {
-				"navigationBarTitleText": "宠托师主页",
-				"navigationBarBackgroundColor": "#FFD1DB"
-			}
 		}
-		// ,
+		// {
+		// 	"path": "pages/tuoguan/index",
+		// 	"style": {
+		// 		"navigationBarTitleText": "托管服务",
+		// 		"navigationBarBackgroundColor": "#FFD1DB"
+		// 	}
+		// },
+		// {
+		// 	"path": "pages/shangmen/index",
+		// 	"style": {
+		// 		"navigationBarTitleText": "上门服务",
+		// 		"navigationBarBackgroundColor": "#FFD1DB"
+		// 	}
+		// },
+		// {
+		// 	"path": "pages/dizhi/index",
+		// 	"style": {
+		// 		"navigationBarTitleText": "地址簿",
+		// 		"navigationBarBackgroundColor": "#FFFFFF"
+		// 	}
+		// },
+		// {
+		// 	"path": "pages/cheshi/new_file",
+		// 	"style": {
+		// 		"navigationBarTitleText": "测试",
+		// 		"navigationBarBackgroundColor": "#FFD1DB"
+		// 	}
+		// },
+		// {
+		// 	"path": "pages/chongtuoshi/index",
+		// 	"style": {
+		// 		"navigationBarTitleText": "宠托师",
+		// 		"navigationBarBackgroundColor": "#FFD1DB"
+		// 	}
+		// },
+		// {
+		// 	"path": "pages/chongtuoshixiangqing/index",
+		// 	"style": {
+		// 		"navigationBarTitleText": "宠托师主页",
+		// 		"navigationBarBackgroundColor": "#FFD1DB"
+		// 	}
+		// },
 		// {
 		// 	"path": "pages/newBaby/index",
 		// 	"style": {
 		// 		"navigationBarTitleText": "宝贝档案",
 		// 		"navigationBarBackgroundColor": "#FFD1DB"
 		// 	}
+		// },
+		// {
+		// 	"path": "pages/newDiZhi/index",
+		// 	"style": {
+		// 		"navigationBarTitleText": "新增地址",
+		// 		"navigationBarBackgroundColor": "#FFFFFF"
+		// 	}
+		// },
+		// {
+		// 	"path": "pages/newDiZhi/new_dizhi",
+		// 	"style": {
+		// 		"navigationBarTitleText": "新增地址",
+		// 		"navigationBarBackgroundColor": "#FFFFFF"
+		// 	}
+		// },
+		// {
+		// 	"path": "pages/dizhi/redact_index",
+		// 	"style": {
+		// 		"navigationBarTitleText": "编辑地址",
+		// 		"navigationBarBackgroundColor": "#FFFFFF"
+		// 	}
 		// }
 		
-	], 
-	// "tabBar": {
-	// 	// "custom": true,
-	// 	"list": [{
-	// 			"pagePath": "pages/index/index"
-	// 		},
-	// 		{
-	// 			"pagePath": "pages/serve/index"
-	// 		},
-	// 		{
-	// 			"pagePath": "pages/news/index"
-	// 		},
-	// 		{
-	// 			"pagePath": "pages/main/index"
-	// 		}
-	// 	]
-	// },
+	],
+	"subPackages": [{
+	        "root": "pagesA",
+	        "pages": [
+				{
+					"path": "pages/tuoguan/index",
+					"style": {
+						"navigationBarTitleText": "托管服务",
+						"navigationBarBackgroundColor": "#FFD1DB"
+					}
+				},
+				{
+					"path": "pages/shangmen/index",
+					"style": {
+						"navigationBarTitleText": "上门服务",
+						"navigationBarBackgroundColor": "#FFD1DB"
+					}
+				},
+				{
+					"path": "pages/dizhi/index",
+					"style": {
+						"navigationBarTitleText": "地址簿",
+						"navigationBarBackgroundColor": "#FFFFFF"
+					}
+				},
+				{
+					"path": "pages/cheshi/new_file",
+					"style": {
+						"navigationBarTitleText": "测试",
+						"navigationBarBackgroundColor": "#FFD1DB"
+					}
+				},
+				{
+					"path": "pages/chongtuoshi/index",
+					"style": {
+						"navigationBarTitleText": "宠托师",
+						"navigationBarBackgroundColor": "#FFD1DB"
+					}
+				},
+				{
+					"path": "pages/chongtuoshixiangqing/index",
+					"style": {
+						"navigationBarTitleText": "宠托师主页",
+						"navigationBarBackgroundColor": "#FFD1DB"
+					}
+				},
+				{
+					"path": "pages/newBaby/index",
+					"style": {
+						"navigationBarTitleText": "宝贝档案",
+						"navigationBarBackgroundColor": "#FFD1DB"
+					}
+				},
+				{
+					"path": "pages/newDiZhi/index",
+					"style": {
+						"navigationBarTitleText": "新增地址",
+						"navigationBarBackgroundColor": "#FFFFFF"
+					}
+				},
+				{
+					"path": "pages/newDiZhi/new_dizhi",
+					"style": {
+						"navigationBarTitleText": "新增地址",
+						"navigationBarBackgroundColor": "#FFFFFF"
+					}
+				},
+				{
+					"path": "pages/dizhi/redact_index",
+					"style": {
+						"navigationBarTitleText": "编辑地址",
+						"navigationBarBackgroundColor": "#FFFFFF"
+					}
+				}
+			]
+	    }],
 	"tabBar": {
 		// "custom": true,
 		"backgroundColor": "#FFFFFF ",
@@ -152,22 +183,22 @@
 				"pagePath": "pages/index/index",
 				// "text": "首页",
 				"iconPath": "static/首页未选中@3x.png",
-				"selectedIconPath": "static/首页已选中@2x.png" 
+				"selectedIconPath": "static/首页已选中@2x.png"
 			},
 			{
 				"pagePath": "pages/serve/index",
 				"iconPath": "static/服务未选中@2x.png",
-				"selectedIconPath": "static/服务已选中.png" 
+				"selectedIconPath": "static/服务已选中.png"
 			},
 			{
 				"pagePath": "pages/news/index",
 				"iconPath": "static/消息未选中@2x.png",
-				"selectedIconPath": "static/消息已选中@2x.png" 
+				"selectedIconPath": "static/消息已选中@2x.png"
 			},
 			{
 				"pagePath": "pages/main/index",
 				"iconPath": "static/我的未选中@2x.png",
-				"selectedIconPath": "static/我的已选中@2x.png" 
+				"selectedIconPath": "static/我的已选中@2x.png"
 			}
 
 		]

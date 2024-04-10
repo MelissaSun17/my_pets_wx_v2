@@ -1,0 +1,244 @@
+
+.data-v-a26291ec .u-swipe-action-item__right__button__wrapper.data-v-2fea6ae7 {
+  background-color: #FE3A3A !important;
+  border: none !important;
+}
+.content.data-v-a26291ec {
+  background-color: #F6F6F6;
+  height: 100vh;
+}
+.dizhi_list.data-v-a26291ec {
+  padding-left: 40rpx;
+}
+.dizhi_list .main-dizhi-list-text2.data-v-a26291ec {
+  height: 32rpx;
+  font-family: PingFang SC, PingFang SC;
+  font-weight: 500;
+  font-size: 28rpx;
+  color: #000000;
+  line-height: 32rpx;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  margin-top: 40rpx;
+}
+.dizhi_list .main-dizhi-list-text3.data-v-a26291ec {
+  height: 34rpx;
+  font-family: PingFang HK, PingFang HK;
+  font-weight: 400;
+  font-size: 24rpx;
+  color: #999999;
+  line-height: 28rpx;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  margin-top: 16rpx;
+}
+.main-dizhi-list-mi.data-v-a26291ec {
+  width: 100rpx;
+  height: 32rpx;
+  font-family: PingFang SC, PingFang SC;
+  font-weight: 400;
+  font-size: 28rpx;
+  color: #666666;
+  line-height: 32rpx;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  margin-top: 64rpx;
+}
+.search.data-v-a26291ec {
+  background-color: #FFFFFF;
+}
+.search .search-box.data-v-a26291ec {
+  display: flex;
+}
+.search .search-box .sousuo.data-v-a26291ec {
+  width: 540rpx;
+  height: 72rpx;
+  margin-left: 20rpx;
+}
+.search .search-box .btn.data-v-a26291ec {
+  margin-top: 20rpx;
+  width: 168rpx;
+  height: 72rpx;
+  margin-left: 8rpx;
+  background: rgba(255, 209, 219, 0.8);
+  border-radius: 102rpx 102rpx 102rpx 102rpx;
+}
+.search .search-box .btn text.data-v-a26291ec {
+  width: 104rpx;
+  height: 72rpx;
+  font-family: PingFang SC, PingFang SC;
+  font-weight: 600;
+  font-size: 26rpx;
+  color: #000000;
+  line-height: 72rpx;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  margin-left: 32rpx;
+}
+.dangqian.data-v-a26291ec {
+  width: 112rpx;
+  height: 40rpx;
+  font-family: PingFang SC, PingFang SC;
+  font-weight: 400;
+  font-size: 28rpx;
+  color: #999999;
+  line-height: 33rpx;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  margin-left: 40rpx;
+  margin-top: 48rpx;
+  margin-bottom: 28rpx;
+}
+.dizhi.data-v-a26291ec {
+  padding-bottom: 36rpx;
+  margin-left: 40rpx;
+  display: flex;
+}
+.dizhi .dizhi-img.data-v-a26291ec {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 0rpx 0rpx 0rpx 0rpx;
+  opacity: 0.5;
+}
+.dizhi .dizhi-img image.data-v-a26291ec {
+  width: 40rpx;
+  height: 40rpx;
+}
+.dizhi .dizhi-text.data-v-a26291ec {
+  width: 532rpx;
+  height: 32rpx;
+  font-family: PingFang SC, PingFang SC;
+  font-weight: 500;
+  font-size: 28rpx;
+  color: #000000;
+  line-height: 32rpx;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  margin-left: 8rpx;
+  margin-top: 4rpx;
+  white-space: nowrap;
+  /* 不换行 */
+  -webkit-animation: scroll-left 10s linear infinite;
+          animation: scroll-left 10s linear infinite;
+  /* 调用动画 */
+}
+.dizhi .dizhi-right.data-v-a26291ec {
+  width: 112rpx;
+  height: 32rpx;
+  font-family: PingFang SC, PingFang SC;
+  font-weight: 400;
+  font-size: 28rpx;
+  color: #FF5C7F;
+  line-height: 32rpx;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  margin-top: 4rpx;
+}
+.main-dizhi.data-v-a26291ec {
+  background-color: #FFFFFF;
+  margin-top: 16rpx;
+}
+.main-dizhi .main-dizhi-top.data-v-a26291ec {
+  width: 112rpx;
+  height: 40rpx;
+  font-family: PingFang SC, PingFang SC;
+  font-weight: 400;
+  font-size: 28rpx;
+  color: #999999;
+  line-height: 33rpx;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  margin-left: 40rpx;
+  padding-top: 32rpx;
+}
+.main-dizhi .main-dizhi-list.data-v-a26291ec {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 48rpx;
+  border-bottom: 1rpx solid #EBE9E9;
+}
+.main-dizhi .main-dizhi-list .main-dizhi-list-text.data-v-a26291ec {
+  width: 600rpx;
+  height: 32rpx;
+  font-family: PingFang SC, PingFang SC;
+  font-weight: 500;
+  font-size: 28rpx;
+  color: #000000;
+  line-height: 32rpx;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  margin-top: 48rpx;
+  margin-left: 40rpx;
+  white-space: nowrap;
+  /* 不换行 */
+  overflow: hidden;
+  /* 隐藏溢出部分 */
+  text-overflow: ellipsis;
+  /* 显示省略号 */
+}
+.main-dizhi .main-dizhi-list .main-dizhi-list-img.data-v-a26291ec {
+  width: 28rpx;
+  height: 28rpx;
+  background: #FFFFFF;
+  border-radius: 0rpx 0rpx 0rpx 0rpx;
+  margin-top: 48rpx;
+  margin-right: 56rpx;
+}
+.main-dizhi .main-dizhi-list .main-dizhi-list-img image.data-v-a26291ec {
+  width: 28rpx;
+  height: 28rpx;
+}
+.fujin-dizhi.data-v-a26291ec {
+  background-color: #FFFFFF;
+  margin-top: 16rpx;
+}
+.fujin-dizhi .fujin-dizhi-top.data-v-a26291ec {
+  width: 112rpx;
+  height: 40rpx;
+  font-family: PingFang SC, PingFang SC;
+  font-weight: 400;
+  font-size: 28rpx;
+  color: #999999;
+  line-height: 33rpx;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  margin-left: 40rpx;
+  padding-top: 32rpx;
+}
+.fujin-dizhi .fujin-dizhi-list.data-v-a26291ec {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 48rpx;
+  border-bottom: 1rpx solid #EBE9E9;
+}
+.fujin-dizhi .fujin-dizhi-list .fujin-dizhi-list-text.data-v-a26291ec {
+  width: 600rpx;
+  height: 32rpx;
+  font-family: PingFang SC, PingFang SC;
+  font-weight: 500;
+  font-size: 28rpx;
+  color: #000000;
+  line-height: 32rpx;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  margin-top: 48rpx;
+  margin-left: 40rpx;
+  white-space: nowrap;
+  /* 不换行 */
+  overflow: hidden;
+  /* 隐藏溢出部分 */
+  text-overflow: ellipsis;
+  /* 显示省略号 */
+}
+

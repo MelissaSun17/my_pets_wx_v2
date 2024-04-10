@@ -1,0 +1,6 @@
+<view class="box data-v-f0a60f50"><view class="content data-v-f0a60f50"><view data-event-opts="{{[['tap',[['selectAddress',['$event']]]]]}}" class="content-dizhi data-v-f0a60f50" bindtap="__e"><view class="content-dizhi-text data-v-f0a60f50">地址</view><view class="content-dizhi-seek data-v-f0a60f50"><view class="{{['dizhi-seek-text','data-v-f0a60f50',(dizhiColor)?'selecteddizhi':'']}}">请选择服务地址
+					请选择服务地址
+					请选择服务地址
+					请选择服务地址
+					请选择服务地址
+					请选择服务地址</view><view class="dizhi-seek-icon-right data-v-f0a60f50"><image src="../../../static/icon_arrow@3x.png" mode class="data-v-f0a60f50"></image></view></view></view><view class="content-number data-v-f0a60f50"><view class="content-number-text data-v-f0a60f50">门牌号</view><view class="content-number-box data-v-f0a60f50"><view class="content-number-box-text data-v-f0a60f50">请填写详细地址，例1号楼101 请填写详细地址，例1号楼101 请填写详细地址，例1号楼101</view></view></view><view class="new-button data-v-f0a60f50">确认新增</view></view></view>

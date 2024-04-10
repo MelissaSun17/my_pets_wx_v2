@@ -1,18 +1,27 @@
 {
   "pages": [
-    "pages/newBaby/index",
     "pages/index/index",
     "pages/serve/index",
     "pages/news/index",
-    "pages/main/index",
-    "pages/tuoguan/index",
-    "pages/shangmen/index",
-    "pages/dizhi/index",
-    "pages/cheshi/new_file",
-    "pages/chongtuoshi/index",
-    "pages/chongtuoshixiangqing/index"
+    "pages/main/index"
   ],
-  "subPackages": [],
+  "subPackages": [
+    {
+      "root": "pagesA",
+      "pages": [
+        "pages/tuoguan/index",
+        "pages/shangmen/index",
+        "pages/dizhi/index",
+        "pages/cheshi/new_file",
+        "pages/chongtuoshi/index",
+        "pages/chongtuoshixiangqing/index",
+        "pages/newBaby/index",
+        "pages/newDiZhi/index",
+        "pages/newDiZhi/new_dizhi",
+        "pages/dizhi/redact_index"
+      ]
+    }
+  ],
   "window": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",

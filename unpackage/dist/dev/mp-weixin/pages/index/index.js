@@ -101,10 +101,10 @@ var components
 try {
   components = {
     uRow: function () {
-      return Promise.all(/*! import() | node-modules/uview-ui/components/u-row/u-row */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-row/u-row")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-row/u-row.vue */ 239))
+      return Promise.all(/*! import() | node-modules/uview-ui/components/u-row/u-row */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-row/u-row")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-row/u-row.vue */ 265))
     },
     uCol: function () {
-      return Promise.all(/*! import() | node-modules/uview-ui/components/u-col/u-col */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-col/u-col")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-col/u-col.vue */ 247))
+      return Promise.all(/*! import() | node-modules/uview-ui/components/u-col/u-col */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-col/u-col")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-col/u-col.vue */ 273))
     },
   }
 } catch (e) {
@@ -524,17 +524,17 @@ var _default = {
   methods: {
     gotuoguan: function gotuoguan() {
       uni.navigateTo({
-        url: '/pages/tuoguan/index'
+        url: '/pagesA/pages/tuoguan/index'
       });
     },
     goshangmen: function goshangmen() {
       uni.navigateTo({
-        url: '/pages/shangmen/index'
+        url: '/pagesA/pages/shangmen/index'
       });
     },
     gochongtuoshi: function gochongtuoshi() {
       uni.navigateTo({
-        url: '/pages/chongtuoshi/index'
+        url: '/pagesA/pages/chongtuoshi/index'
       });
     }
   }

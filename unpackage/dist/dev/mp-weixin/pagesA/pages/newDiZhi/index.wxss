@@ -1,0 +1,111 @@
+.box.data-v-f0a60f50 {
+  background-color: #F6F6F6;
+  height: 100vh;
+}
+.content.data-v-f0a60f50 {
+  background-color: #FFFFFF;
+  padding-bottom: 30rpx;
+}
+.content-dizhi .content-dizhi-text.data-v-f0a60f50 {
+  width: 56rpx;
+  height: 40rpx;
+  font-family: PingFangSC, PingFang SC;
+  font-weight: 500;
+  font-size: 28rpx;
+  color: #000000;
+  line-height: 40rpx;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  margin-top: 24rpx;
+  margin-left: 40rpx;
+}
+.content-dizhi .content-dizhi-seek.data-v-f0a60f50 {
+  width: 670rpx;
+  height: 80rpx;
+  background: #F2F2F2;
+  border-radius: 20rpx;
+  line-height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 40rpx;
+  margin-top: 14rpx;
+}
+.content-dizhi .content-dizhi-seek .dizhi-seek-text.data-v-f0a60f50 {
+  font-family: PingFangSC, PingFang SC;
+  font-weight: 400;
+  font-size: 28rpx;
+  color: #999999;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  margin-left: 24rpx;
+  white-space: nowrap;
+  /* 不换行 */
+  overflow: hidden;
+  /* 隐藏溢出部分 */
+  text-overflow: ellipsis;
+  /* 显示省略号 */
+}
+.content-dizhi .content-dizhi-seek .dizhi-seek-icon-right.data-v-f0a60f50 {
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 24rpx;
+  margin-top: 2rpx;
+}
+.content-dizhi .content-dizhi-seek .dizhi-seek-icon-right image.data-v-f0a60f50 {
+  width: 24rpx;
+  height: 24rpx;
+}
+.content-number .content-number-text.data-v-f0a60f50 {
+  width: 84rpx;
+  height: 40rpx;
+  font-family: PingFangSC, PingFang SC;
+  font-weight: 500;
+  font-size: 28rpx;
+  color: #000000;
+  line-height: 40rpx;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  margin-top: 24rpx;
+  margin-left: 40rpx;
+}
+.content-number .content-number-box.data-v-f0a60f50 {
+  width: 670rpx;
+  height: 80rpx;
+  margin-top: 24rpx;
+  margin-left: 40rpx;
+  background: #F2F2F2;
+  border-radius: 20rpx;
+  line-height: 80rpx;
+}
+.content-number .content-number-box .content-number-box-text.data-v-f0a60f50 {
+  font-family: PingFangSC, PingFang SC;
+  font-weight: 400;
+  font-size: 28rpx;
+  color: #999999;
+  text-align: left;
+  margin-left: 24rpx;
+  font-style: normal;
+  text-transform: none;
+  white-space: nowrap;
+  /* 不换行 */
+  overflow: hidden;
+  /* 隐藏溢出部分 */
+  text-overflow: ellipsis;
+  /* 显示省略号 */
+}
+.new-button.data-v-f0a60f50 {
+  width: 670rpx;
+  height: 90rpx;
+  background: #FFF133;
+  border-radius: 50rpx;
+  line-height: 90rpx;
+  font-weight: 600;
+  font-size: 30rpx;
+  text-align: center;
+  margin-top: 40rpx;
+  margin-left: 40rpx;
+}
+

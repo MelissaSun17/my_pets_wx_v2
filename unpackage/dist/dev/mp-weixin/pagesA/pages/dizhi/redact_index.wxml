@@ -1,0 +1,6 @@
+<view class="box data-v-1c880d28"><view class="content data-v-1c880d28"><view data-event-opts="{{[['tap',[['selectAddress',['$event']]]]]}}" class="content-dizhi data-v-1c880d28" bindtap="__e"><view class="content-dizhi-text data-v-1c880d28">地址</view><view class="content-dizhi-seek data-v-1c880d28"><view class="{{['dizhi-seek-text','data-v-1c880d28',(dizhiColor)?'selecteddizhi':'']}}">请选择服务地址
+					请选择服务地址
+					请选择服务地址
+					请选择服务地址
+					请选择服务地址
+					请选择服务地址</view><view class="dizhi-seek-icon-right data-v-1c880d28"><image src="../../../static/icon_arrow@3x.png" mode class="data-v-1c880d28"></image></view></view></view><view class="content-number data-v-1c880d28"><view class="content-number-text data-v-1c880d28">门牌号</view><view class="content-number-box data-v-1c880d28"><view class="content-number-box-text data-v-1c880d28">请填写详细地址，例1号楼101 请填写详细地址，例1号楼101 请填写详细地址，例1号楼101</view></view></view><block wx:for="{{list}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view class="new-button data-v-1c880d28" titleStyle="{{({fontWeight:500})}}" isLink="{{true}}" data-event-opts="{{[['tap',[['openRedact',['$0'],[[['list','',index]]]]]]]}}" bindtap="__e">确认编辑</view></block><u-toast vue-id="45c3b51a-1" data-ref="uToast" class="data-v-1c880d28 vue-ref" bind:__l="__l"></u-toast></view></view>
