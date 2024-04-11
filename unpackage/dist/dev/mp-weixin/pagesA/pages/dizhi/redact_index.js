@@ -101,7 +101,7 @@ var components
 try {
   components = {
     uToast: function () {
-      return __webpack_require__.e(/*! import() | node-modules/uview-ui/components/u-toast/u-toast */ "node-modules/uview-ui/components/u-toast/u-toast").then(__webpack_require__.bind(null, /*! uview-ui/components/u-toast/u-toast.vue */ 335))
+      return __webpack_require__.e(/*! import() | node-modules/uview-ui/components/u-toast/u-toast */ "node-modules/uview-ui/components/u-toast/u-toast").then(__webpack_require__.bind(null, /*! uview-ui/components/u-toast/u-toast.vue */ 379))
     },
   }
 } catch (e) {
@@ -232,7 +232,7 @@ var _default = {
   methods: {
     selectAddress: function selectAddress() {
       uni.navigateTo({
-        url: '/pages/newDiZhi/new_dizhi'
+        url: '/pagesA/pages/newDiZhi/new_dizhi'
       });
     },
     openRedact: function openRedact(params) {

@@ -65,7 +65,7 @@
 		methods: {
 			selectAddress() {
 				uni.navigateTo({
-					url: ('/pages/newDiZhi/new_dizhi')
+					url: ('/pagesA/pages/newDiZhi/new_dizhi')
 				})
 			},
 	

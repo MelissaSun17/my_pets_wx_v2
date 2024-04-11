@@ -63,6 +63,18 @@
   height: 104rpx;
   border-radius: 100rpx;
 }
+.xinzeng .xinzeng-img .img_.data-v-567c295d {
+  position: relative;
+}
+.xinzeng .xinzeng-img .img_ .overlay.data-v-567c295d {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.xinzeng .xinzeng-img .img_ .overlay image.data-v-567c295d {
+  width: 40rpx;
+  height: 40rpx;
+}
 .fuwushiduan-top.data-v-567c295d {
   display: flex;
   justify-content: space-between;

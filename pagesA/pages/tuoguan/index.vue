@@ -72,7 +72,8 @@
 								<view class="fuwu-baby-img-left">
 									<view class="_img" :class="{ active: currentTab === 'tab1' }"
 										@click="changeTab('tab1')">
-										<image v-if="currentTab === 'tab1'" src="../../../static/QQ截图20240331115853.png">
+										<image v-if="currentTab === 'tab1'"
+											src="../../../static/QQ截图20240331115853.png">
 										</image>
 										<image v-else src="../../../static/QQ截图20240331120059.png"></image>
 									</view>
@@ -80,7 +81,8 @@
 								<view class="fuwu-baby-img-right">
 									<view class="_img" :class="{ active: currentTab === 'tab2' }"
 										@click="changeTab('tab2')">
-										<image v-if="currentTab === 'tab2'" src="../../../static/QQ截图20240331115936.png">
+										<image v-if="currentTab === 'tab2'"
+											src="../../../static/QQ截图20240331115936.png">
 										</image>
 										<image v-else src="../../../static/QQ截图20240331115754.png"></image>
 									</view>
@@ -123,30 +125,41 @@
 							</view>
 						</view>
 					</view>
-					<!-- <view class="xinzeng">
-						<view class="xinzeng-img">
+					<view class="xinzeng">
+						<view class="xinzeng-img" @click="optFor">
 							<view class="img_">
 								<image src="../../../static/logo.png" mode=""></image>
+								<view class="overlay" v-if="overlay">
+									<image src="../../../static/选择@2x.png" mode=""></image>
+								</view>
+							</view>
+							<view class="text">
+								妮妮
+							</view>
+						</view>
+						<view class="xinzeng-img" @click="optFor">
+							<view class="img_">
+								<image src="../../../static/logo.png" mode=""></image>
+								<view class="overlay" v-if="overlay">
+									<image src="../../../static/选择@2x.png" mode=""></image>
+								</view>
+							</view>
+							<view class="text">
+								妮妮
+							</view>
+						</view>
+						<view class="xinzeng-img" @click="optFor">
+							<view class="img_">
+								<image src="../../../static/logo.png" mode=""></image>
+								<view class="overlay" v-if="overlay">
+									<image src="../../../static/选择@2x.png" mode=""></image>
+								</view>
 							</view>
 							<view class="text">
 								妮妮
 							</view>
 						</view>
 						<view class="xinzeng-img">
-							<view class="img_">
-								<image src="../../../static/logo.png" mode=""></image>
-							</view>
-							<view class="text">
-								妮妮
-							</view>
-						</view><view class="xinzeng-img">
-							<view class="img_">
-								<image src="../../../static/logo.png" mode=""></image>
-							</view>
-							<view class="text">
-								妮妮
-							</view>
-						</view><view class="xinzeng-img">
 							<view class="img_">
 								<image src="../../../static/btn_add@3x.png" mode=""></image>
 							</view>
@@ -154,7 +167,7 @@
 								新增宝贝
 							</view>
 						</view>
-					</view> -->
+					</view>
 					<view class="time">
 						服务时间
 					</view>
@@ -179,7 +192,8 @@
 			</view>
 			<view class="chazhao">
 				<view class="chazhao-img">
-					<image :src="isDisabled ? '../../../static/btn_dis@3x.png' : '../../../static/btn_nor@3x.png'" mode="">
+					<image :src="isDisabled ? '../../../static/btn_dis@3x.png' : '../../../static/btn_nor@3x.png'"
+						mode="">
 					</image>
 				</view>
 			</view>
@@ -198,13 +212,14 @@
 
 		data() {
 			return {
+				overlay: false,
 				dizhiColor: false,
 				isColor: false,
 				isDisabled: true,
 				show: false,
 				mode: 'multiple',
 				maxDate: `${year}-${month}-${date + 90}`,
-				defaultDateMultiple:[],
+				defaultDateMultiple: [],
 				showDefault: true,
 				position: 'bottom',
 				type: 'center',
@@ -238,6 +253,9 @@
 		mounted() {},
 
 		methods: {
+			optFor() {
+				this.overlay = !this.overlay
+			},
 			calendarConfirm(e) {
 				this.show = false,
 					console.log(e);
@@ -246,7 +264,7 @@
 				this.defaultDateMultiple = selectedDates;
 				console.log('日历选择：', selectedDates)
 				this.show = false,
-				this.isColor = true;
+					this.isColor = true;
 			},
 			close() {
 				console.log(111);
@@ -291,12 +309,13 @@
 	.box {
 		background-color: #FFFFFF;
 	}
-	
+
 	.selected {
 		color: black !important;
 		/* 改变你想要的颜色 */
 	}
-	.selecteddizhi{
+
+	.selecteddizhi {
 		color: black !important;
 	}
 
@@ -329,6 +348,21 @@
 				width: 104rpx;
 				height: 104rpx;
 				border-radius: 100rpx;
+			}
+
+			.img_ {
+				position: relative;
+
+				.overlay {
+					position: absolute;
+					right: 0;
+					top: 0;
+
+					image {
+						width: 40rpx;
+						height: 40rpx;
+					}
+				}
 			}
 		}
 	}
