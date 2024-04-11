@@ -92,6 +92,7 @@
 				<view class="_title">
 					上门服务
 				</view>
+				<!-- 上门服务单个 -->
 				<!-- <view class="tab-content" >
 					<view class="biaozhunfuwu">
 						<view class="biaozhunfuwu-top">
@@ -264,6 +265,144 @@
 							<view class="jiedan-text2">
 								小型犬
 							</view>
+						</view>
+					</view>
+				</view> -->
+				<!-- 托管单个 -->
+				<!-- <view class="biaozhunfuwu">
+					<view class="biaozhunfuwu-top">
+						<view class="biaozhunfuwu-top-text">
+							标准服务
+						</view>
+						<view class="biaozhunfuwu-jiage">
+							<view class="jiage1">
+								￥
+							</view>
+							<view class="money">
+								40
+							</view>
+						</view>
+						<view class="biaozhunfuwu-shijian">
+							/30分钟
+						</view>
+					</view>
+					<view class="biaozhunfuwu-list">
+						<view class="biaozhunfuwu-list-box">
+							<view class="biaozhunfuwu-list-img">
+								<image src="../../../static/服务icon/日夜陪伴.png" mode=""></image>
+							</view>
+							<view class="biaozhunfuwu-list-text">
+								日夜陪伴
+							</view>
+						</view>
+						<view class="biaozhunfuwu-list-box">
+							<view class="biaozhunfuwu-list-img">
+								<image src="../../../static/服务icon/家庭环境.png" mode=""></image>
+							</view>
+							<view class="biaozhunfuwu-list-text">
+								家庭环境
+							</view>
+						</view>
+						<view class="biaozhunfuwu-list-box">
+							<view class="biaozhunfuwu-list-img">
+								<image src="../../../static/服务icon/健康检测.png" mode=""></image>
+							</view>
+							<view class="biaozhunfuwu-list-text">
+								健康检测
+							</view>
+						</view>
+						<view class="biaozhunfuwu-list-box">
+							<view class="biaozhunfuwu-list-img">
+								<image src="../../../static/服务icon/互动陪玩.png" mode=""></image>
+							</view>
+							<view class="biaozhunfuwu-list-text">
+								互动陪玩
+							</view>
+						</view>
+						<view class="biaozhunfuwu-list-box">
+							<view class="biaozhunfuwu-list-img">
+								<image src="../../../static/服务icon/拒绝笼养.png" mode=""></image>
+							</view>
+							<view class="biaozhunfuwu-list-text">
+								拒绝笼养
+							</view>
+						</view>
+						<view class="biaozhunfuwu-list-box">
+							<view class="biaozhunfuwu-list-img">
+								<image src="../../../static/服务icon/卫生保持.png" mode=""></image>
+							</view>
+							<view class="biaozhunfuwu-list-text">
+								卫生保持
+							</view>
+						</view>
+					</view>
+					<view class="jiajia">
+						<view class="jiajia-box">
+							<view class="jiajia-box-top">
+								<view class="jiajia-box-top-icon">
+									<image src="../../../static/加价icon/节假日.png" mode=""></image>
+								</view>
+								<view class="jiajia-box-top-text">
+									节假日加价
+								</view>
+							</view>
+							<view class="jiajia-box-bottom">
+								<view class="jiajia-box-bottom-left">
+									每次上门收取
+								</view>
+								<view class="jiajia-box-bottom-right">
+									￥40
+								</view>
+							</view>
+						</view>
+						<view class="jiajia-box">
+							<view class="jiajia-box-top">
+								<view class="jiajia-box-top-icon">
+									<image src="../../../static/加价icon/多宠.png" mode=""></image>
+								</view>
+								<view class="jiajia-box-top-text">
+									多宠加价
+								</view>
+							</view>
+							<view class="jiajia-box-bottom">
+								<view class="jiajia-box-bottom-left">
+									每多一只收取
+								</view>
+								<view class="jiajia-box-bottom-right">
+									￥40
+								</view>
+							</view>
+						</view>
+					</view>
+					<view class="jiedan">
+						<view class="jiedan-top">
+							接单能力
+						</view>
+						<view class="jiedan-text">
+							<view class="text1">
+								至多接2只
+							</view>
+							<view class="text2">
+								|
+							</view>
+							<view class="text1">
+								发情期不接
+							</view>
+							<view class="text2">
+								|
+							</view>
+							<view class="text1">
+								未绝育不接
+							</view>
+							<view class="text2">
+								|
+							</view>
+							<view class="text1">
+								全体型猫
+							</view>
+						</view>
+						<view class="jiedan-text2">
+							小型犬
 						</view>
 					</view>
 				</view> -->
@@ -1153,7 +1292,7 @@
 								<view class="fuwuxiangmu-top-text">
 									请选择服务项目
 								</view>
-								<view class="fuwuxiangmu-top-img">
+								<view class="fuwuxiangmu-top-img"  @click="guan">
 									<image src="../../../static/QQ截图20240401171515.png" mode=""></image>
 								</view>
 							</view>
@@ -1164,7 +1303,7 @@
 									</view>
 								</view>
 							</view>
-							<view class="open" @click="querenThree">
+							<view class="open"  @click="querenThree" :style="{ color: isAnySelected ? '#FF5C7F' : '#D8D8D8 ' }">
 								<text>确认</text>
 							</view>
 						</view>
@@ -1206,10 +1345,14 @@
 					}
 				],
 				currentIndex: 0,
-				 selectedIndex: null
+				 selectedIndex: null,
+				  isAnySelected: false // 表示是否有文本被选中
 			}
 		},
 		methods: {
+			guan() {
+				this.$refs.popup.close();
+			},
 			change(e) {
 				console.log('当前模式：' + e.type + ',状态：' + e.show);
 			},
@@ -1228,9 +1371,11 @@
 			      if (this.selectedIndex === index) {
 			        // 如果当前索引已经选中，则取消选中状态
 			        this.selectedIndex = null;
+					 this.isAnySelected = false; // 没有文本被选中
 			      } else {
 			        // 否则，设置当前索引为选中状态
 			        this.selectedIndex = index;
+					 this.isAnySelected = true; // 有文本被选中
 			      }
 			},
 			querenThree(){

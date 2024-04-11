@@ -1341,6 +1341,145 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   data: function data() {
     return {
@@ -1363,10 +1502,15 @@ var _default = {
         name: '日托'
       }],
       currentIndex: 0,
-      selectedIndex: null
+      selectedIndex: null,
+      isAnySelected: false // 表示是否有文本被选中
     };
   },
+
   methods: {
+    guan: function guan() {
+      this.$refs.popup.close();
+    },
     change: function change(e) {
       console.log('当前模式：' + e.type + ',状态：' + e.show);
     },
@@ -1385,9 +1529,11 @@ var _default = {
       if (this.selectedIndex === index) {
         // 如果当前索引已经选中，则取消选中状态
         this.selectedIndex = null;
+        this.isAnySelected = false; // 没有文本被选中
       } else {
         // 否则，设置当前索引为选中状态
         this.selectedIndex = index;
+        this.isAnySelected = true; // 有文本被选中
       }
     },
     querenThree: function querenThree() {
