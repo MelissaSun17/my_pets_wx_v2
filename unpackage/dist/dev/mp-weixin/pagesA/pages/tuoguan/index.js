@@ -1,4 +1,4 @@
-(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pagesA/pages/tuoguan/index"],{
+require('../../common/vendor.js');(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pagesA/pages/tuoguan/index"],{
 
 /***/ 193:
 /*!****************************************************************************!*\

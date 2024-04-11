@@ -1,4 +1,4 @@
-(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pagesA/pages/cheshi/new_file"],{
+require('../../common/vendor.js');(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pagesA/pages/cheshi/new_file"],{
 
 /***/ 217:
 /*!******************************************************************************!*\

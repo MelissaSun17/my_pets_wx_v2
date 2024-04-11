@@ -1105,11 +1105,6 @@
 			cancel() {
 				this.show = false
 			},
-			toggle(type) {
-				this.type = type
-				// open 方法传入参数 等同在 uni-popup 组件上绑定 type属性
-				this.$refs.popup.open(type)
-			},
 			open() {
 				// console.log('open');
 			},

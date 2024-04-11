@@ -1,4 +1,4 @@
-(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pagesA/pages/chongtuoshi/index"],{
+require('../../common/vendor.js');(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pagesA/pages/chongtuoshi/index"],{
 
 /***/ 225:
 /*!********************************************************************************!*\
@@ -226,13 +226,10 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni) {
 
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var _methods;
 var ownCheck = function ownCheck() {
   __webpack_require__.e(/*! require.ensure | components/own-checkBtn/own-check */ "components/own-checkBtn/own-check").then((function () {
     return resolve(__webpack_require__(/*! @/components/own-checkBtn/own-check.vue */ 343));
@@ -347,7 +344,7 @@ var _default = {
       }]
     };
   },
-  methods: (_methods = {
+  methods: {
     isTabActive: function isTabActive(tabName) {
       return this.selectedTabs.includes(tabName);
     },
@@ -480,43 +477,48 @@ var _default = {
     },
     cancel: function cancel() {
       this.show = false;
+    },
+    open: function open() {
+      // console.log('open');
+    },
+    close: function close() {
+      this.show = false;
+      // console.log('close');
+    },
+    changeTab: function changeTab(tabName) {
+      if (this.selectedTabs.includes(tabName)) {
+        // 如果已经选中，则取消选中
+        this.selectedTabs = this.selectedTabs.filter(function (tab) {
+          return tab !== tabName;
+        });
+      } else {
+        // 如果未选中，则添加到选中列表
+        this.selectedTabs.push(tabName);
+      }
+      console.log(tabName, 111);
+      // this.isDisabled = false
+    },
+    changeImg: function changeImg(img) {
+      this.currentImg = img;
+      console.log(img);
+    },
+    guanbi: function guanbi() {
+      this.show2 = false;
+    },
+    guanbiTwo: function guanbiTwo() {
+      this.tianjia = false;
+    },
+    queren: function queren() {
+      this.show2 = false;
+      this.tianjia = true;
+    },
+    querenTwo: function querenTwo() {
+      this.tianjia = false;
+    },
+    querenThree: function querenThree() {
+      this.$refs.popup.close();
     }
-  }, (0, _defineProperty2.default)(_methods, "toggle", function toggle(type) {
-    this.type = type;
-    // open 方法传入参数 等同在 uni-popup 组件上绑定 type属性
-    this.$refs.popup.open(type);
-  }), (0, _defineProperty2.default)(_methods, "open", function open() {
-    // console.log('open');
-  }), (0, _defineProperty2.default)(_methods, "close", function close() {
-    this.show = false;
-    // console.log('close');
-  }), (0, _defineProperty2.default)(_methods, "changeTab", function changeTab(tabName) {
-    if (this.selectedTabs.includes(tabName)) {
-      // 如果已经选中，则取消选中
-      this.selectedTabs = this.selectedTabs.filter(function (tab) {
-        return tab !== tabName;
-      });
-    } else {
-      // 如果未选中，则添加到选中列表
-      this.selectedTabs.push(tabName);
-    }
-    console.log(tabName, 111);
-    // this.isDisabled = false
-  }), (0, _defineProperty2.default)(_methods, "changeImg", function changeImg(img) {
-    this.currentImg = img;
-    console.log(img);
-  }), (0, _defineProperty2.default)(_methods, "guanbi", function guanbi() {
-    this.show2 = false;
-  }), (0, _defineProperty2.default)(_methods, "guanbiTwo", function guanbiTwo() {
-    this.tianjia = false;
-  }), (0, _defineProperty2.default)(_methods, "queren", function queren() {
-    this.show2 = false;
-    this.tianjia = true;
-  }), (0, _defineProperty2.default)(_methods, "querenTwo", function querenTwo() {
-    this.tianjia = false;
-  }), (0, _defineProperty2.default)(_methods, "querenThree", function querenThree() {
-    this.$refs.popup.close();
-  }), _methods)
+  }
 };
 exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))

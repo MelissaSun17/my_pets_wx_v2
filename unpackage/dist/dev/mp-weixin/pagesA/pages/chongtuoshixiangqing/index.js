@@ -98,6 +98,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components
+try {
+  components = {
+    uniPopup: function () {
+      return __webpack_require__.e(/*! import() | uni_modules/uni-popup/components/uni-popup/uni-popup */ "uni_modules/uni-popup/components/uni-popup/uni-popup").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-popup/components/uni-popup/uni-popup.vue */ 336))
+    },
+  }
+} catch (e) {
+  if (
+    e.message.indexOf("Cannot find module") !== -1 &&
+    e.message.indexOf(".vue") !== -1
+  ) {
+    console.error(e.message)
+    console.error("1. 排查组件名称拼写是否正确")
+    console.error(
+      "2. 排查组件是否符合 easycom 规范，文档：https://uniapp.dcloud.net.cn/collocation/pages?id=easycom"
+    )
+    console.error(
+      "3. 若组件不符合 easycom 规范，需手动引入，并在 components 中注册该组件"
+    )
+  } else {
+    throw e
+  }
+}
 var render = function () {
   var _vm = this
   var _h = _vm.$createElement
@@ -1124,6 +1147,200 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   data: function data() {
     return {
@@ -1136,12 +1353,45 @@ var _default = {
       }, {
         name: '日托'
       }],
-      currentIndex: 0
+      list2: [{
+        name: '上门喂食'
+      }, {
+        name: '上门遛狗'
+      }, {
+        name: '寄养'
+      }, {
+        name: '日托'
+      }],
+      currentIndex: 0,
+      selectedIndex: null
     };
   },
   methods: {
+    change: function change(e) {
+      console.log('当前模式：' + e.type + ',状态：' + e.show);
+    },
     changeTab: function changeTab(index) {
       this.currentIndex = index;
+    },
+    toggle: function toggle(type) {
+      this.type = type;
+      // open 方法传入参数 等同在 uni-popup 组件上绑定 type属性
+      this.$refs.popup.open(type);
+    },
+    goPeiBan: function goPeiBan() {
+      this.toggle('bottom');
+    },
+    toggleColor: function toggleColor(index) {
+      if (this.selectedIndex === index) {
+        // 如果当前索引已经选中，则取消选中状态
+        this.selectedIndex = null;
+      } else {
+        // 否则，设置当前索引为选中状态
+        this.selectedIndex = index;
+      }
+    },
+    querenThree: function querenThree() {
+      console.log(111);
     }
   }
 };

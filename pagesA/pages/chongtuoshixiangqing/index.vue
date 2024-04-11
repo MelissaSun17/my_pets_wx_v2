@@ -92,11 +92,185 @@
 				<view class="_title">
 					上门服务
 				</view>
+				<!-- <view class="tab-content" >
+					<view class="biaozhunfuwu">
+						<view class="biaozhunfuwu-top">
+							<view class="biaozhunfuwu-top-text">
+								标准服务
+							</view>
+							<view class="biaozhunfuwu-jiage">
+								<view class="jiage1">
+									￥
+								</view>
+								<view class="money">
+									40
+								</view>
+							</view>
+							<view class="biaozhunfuwu-shijian">
+								/30分钟
+							</view>
+						</view>
+						<view class="biaozhunfuwu-list">
+							<view class="biaozhunfuwu-list-box">
+								<view class="biaozhunfuwu-list-img">
+									<image src="../../../static/服务icon/互动陪玩.png" mode=""></image>
+								</view>
+								<view class="biaozhunfuwu-list-text">
+									互动陪玩
+								</view>
+							</view>
+							<view class="biaozhunfuwu-list-box">
+								<view class="biaozhunfuwu-list-img">
+									<image src="../../../static/服务icon/轨迹记录.png" mode=""></image>
+								</view>
+								<view class="biaozhunfuwu-list-text">
+									轨迹记录
+								</view>
+							</view>
+							<view class="biaozhunfuwu-list-box">
+								<view class="biaozhunfuwu-list-img">
+									<image src="../../../static/服务icon/全程拍照.png" mode=""></image>
+								</view>
+								<view class="biaozhunfuwu-list-text">
+									全程拍照
+								</view>
+							</view>
+							<view class="biaozhunfuwu-list-box">
+								<view class="biaozhunfuwu-list-img">
+									<image src="../../../static/服务icon/安全保证.png" mode=""></image>
+								</view>
+								<view class="biaozhunfuwu-list-text">
+									安全保证
+								</view>
+							</view>
+							<view class="biaozhunfuwu-list-box">
+								<view class="biaozhunfuwu-list-img">
+									<image src="../../../static/技能icon/正向引导.png" mode=""></image>
+								</view>
+								<view class="biaozhunfuwu-list-text">
+									正向引导
+								</view>
+							</view>
+							<view class="biaozhunfuwu-list-box">
+								<view class="biaozhunfuwu-list-img">
+									<image src="../../../static/服务icon/排泄清理.png" mode=""></image>
+								</view>
+								<view class="biaozhunfuwu-list-text">
+									排泄清理
+								</view>
+							</view>
+						</view>
+						<view class="jiajia">
+							<view class="jiajia-box">
+								<view class="jiajia-box-top">
+									<view class="jiajia-box-top-icon">
+										<image src="../../../static/加价icon/节假日.png" mode=""></image>
+									</view>
+									<view class="jiajia-box-top-text">
+										节假日加价
+									</view>
+								</view>
+								<view class="jiajia-box-bottom">
+									<view class="jiajia-box-bottom-left">
+										每次上门收取
+									</view>
+									<view class="jiajia-box-bottom-right">
+										￥40
+									</view>
+								</view>
+							</view>
+							<view class="jiajia-box">
+								<view class="jiajia-box-top">
+									<view class="jiajia-box-top-icon">
+										<image src="../../../static/加价icon/交通.png" mode=""></image>
+									</view>
+									<view class="jiajia-box-top-text">
+										交通加价
+									</view>
+								</view>
+								<view class="jiajia-box-bottom">
+									<view class="jiajia-box-bottom-left">
+										>2km，每km收取
+									</view>
+									<view class="jiajia-box-bottom-right">
+										￥40
+									</view>
+								</view>
+							</view>
+							<view class="jiajia-box">
+								<view class="jiajia-box-top">
+									<view class="jiajia-box-top-icon">
+										<image src="../../../static/加价icon/时长.png" mode=""></image>
+									</view>
+									<view class="jiajia-box-top-text">
+										时长加价
+									</view>
+								</view>
+								<view class="jiajia-box-bottom">
+									<view class="jiajia-box-bottom-left">
+										每多15分钟收取
+									</view>
+									<view class="jiajia-box-bottom-right">
+										￥40
+									</view>
+								</view>
+							</view>
+							<view class="jiajia-box">
+								<view class="jiajia-box-top">
+									<view class="jiajia-box-top-icon">
+										<image src="../../../static/加价icon/多宠.png" mode=""></image>
+									</view>
+									<view class="jiajia-box-top-text">
+										多宠加价
+									</view>
+								</view>
+								<view class="jiajia-box-bottom">
+									<view class="jiajia-box-bottom-left">
+										每多一只收取
+									</view>
+									<view class="jiajia-box-bottom-right">
+										￥40
+									</view>
+								</view>
+							</view>
+						</view>
+						<view class="jiedan">
+							<view class="jiedan-top">
+								接单能力
+							</view>
+							<view class="jiedan-text">
+								<view class="text1">
+									至多接2只
+								</view>
+								<view class="text2">
+									|
+								</view>
+								<view class="text1">
+									发情期不接
+								</view>
+								<view class="text2">
+									|
+								</view>
+								<view class="text1">
+									未绝育不接
+								</view>
+								<view class="text2">
+									|
+								</view>
+								<view class="text1">
+									全体型猫
+								</view>
+							</view>
+							<view class="jiedan-text2">
+								小型犬
+							</view>
+						</view>
+					</view>
+				</view> -->
 				<view class="shangmenfuwu-tabs">
 					<view class="">
 						<view class="tabs-container"
 							:style="{ backgroundImage: currentIndex === 0 ? 'url(../../../static/tab_sel_左.png)' : 'url(../../../static/tab_sel_右.png)' }">
-							<!-- Tab titles -->
 							<view class="box1">
 								<view @tap="changeTab(0)" :class="{ 'active': currentIndex === 0 }" class="tab-title">
 									{{ list1[0].name }}
@@ -106,7 +280,6 @@
 								</view>
 							</view>
 
-							<!-- Content for the selected tab -->
 							<view class="tab-content" v-if="currentIndex == 0">
 								<view class="biaozhunfuwu">
 									<view class="biaozhunfuwu-top">
@@ -968,13 +1141,34 @@
 						<view class="peiban-shijian">
 							/30分钟
 						</view>
-						<view class="peiban-right">
+						<view class="peiban-right" @click="goPeiBan">
 							<view class="peiban-right-text">
 								找Ta陪伴
 							</view>
-							
 						</view>
 					</view>
+					<uni-popup ref="popup" background-color="#fff" @change="change">
+						<view class="popup-content" :class="{ 'popup-height': type === 'left' || type === 'right' }">
+							<view class="fuwuxiangmu-top">
+								<view class="fuwuxiangmu-top-text">
+									请选择服务项目
+								</view>
+								<view class="fuwuxiangmu-top-img">
+									<image src="../../../static/QQ截图20240401171515.png" mode=""></image>
+								</view>
+							</view>
+							<view class="fuwuxiangmu">
+								<view class="" v-for="(item,index) in list2" :key="index" @click="toggleColor(index)">
+									<view class="fuwuxiangmu-text" :class="{ 'selected': index === selectedIndex }">
+										{{item.name}}
+									</view>
+								</view>
+							</view>
+							<view class="open" @click="querenThree">
+								<text>确认</text>
+							</view>
+						</view>
+					</uni-popup>
 				</view>
 			</view>
 		</view>
@@ -998,26 +1192,67 @@
 						name: '日托',
 					}
 				],
-				currentIndex: 0
+				list2: [{
+						name: '上门喂食',
+					},
+					{
+						name: '上门遛狗',
+					},
+					{
+						name: '寄养',
+					},
+					{
+						name: '日托',
+					}
+				],
+				currentIndex: 0,
+				 selectedIndex: null
 			}
 		},
 		methods: {
+			change(e) {
+				console.log('当前模式：' + e.type + ',状态：' + e.show);
+			},
 			changeTab(index) {
 				this.currentIndex = index;
+			},
+			toggle(type) {
+				this.type = type
+				// open 方法传入参数 等同在 uni-popup 组件上绑定 type属性
+				this.$refs.popup.open(type)
+			},
+			goPeiBan(){
+				this.toggle('bottom');
+			},
+			toggleColor(index) {
+			      if (this.selectedIndex === index) {
+			        // 如果当前索引已经选中，则取消选中状态
+			        this.selectedIndex = null;
+			      } else {
+			        // 否则，设置当前索引为选中状态
+			        this.selectedIndex = index;
+			      }
+			},
+			querenThree(){
+				console.log(111);
 			}
-
 		}
 	}
 </script>
 
 <style lang="scss" scoped>
+	.selected {
+	  background-color: #FFD1DB !important; /* 设置选中时的颜色 */
+	  // color:#000000;
+	  font-weight: 600;
+	}
 	._title{
 		width: 112rpx;
 		height: 40rpx;
 		font-family: PingFangSC, PingFang SC;
 		font-weight: 600;
 		font-size: 28rpx;
-		color: #000000;
+		color: #666666;
 		line-height: 40rpx;
 		text-align: left;
 		font-style: normal;
@@ -2127,5 +2362,58 @@
 				}
 			}
 		}
+		.popup-content{
+			.fuwuxiangmu-top{
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 38rpx;
+				.fuwuxiangmu-top-text{
+					width: 224rpx;
+					height: 44rpx;
+					font-family: PingFangSC, PingFang SC;
+					font-weight: 600;
+					font-size: 32rpx;
+					color: #000000;
+					line-height: 44rpx;
+					text-align: center;
+					font-style: normal;
+					margin-left: 264rpx;
+					margin-top: 38rpx;
+				}
+				.fuwuxiangmu-top-img{
+					image{
+						margin-right: 40rpx;
+						margin-top: 40rpx;
+						width: 40rpx;
+						height: 40rpx;
+					}
+				}
+			}
+			.fuwuxiangmu{
+				display: flex;
+				flex-wrap: wrap;
+				margin-left: 48rpx;
+				.fuwuxiangmu-text{
+					width: 312rpx;
+					height: 96rpx;
+					border-radius: 16rpx;
+					line-height: 96rpx;
+					text-align: center;
+					background: #F2F2F2;
+					margin-right: 30rpx;
+					margin-top: 32rpx;
+				}
+			}
+			.open{
+				width: 750rpx;
+				text-align: center;
+				padding-top: 28rpx;
+				border-top: 2rpx solid #EBE9E9;
+				margin-top: 72rpx;
+			}
+		}
+		
 	}
+	
+	
 </style>

@@ -1,5 +1,7 @@
 {
   "navigationBarTitleText": "宠托师主页",
   "navigationBarBackgroundColor": "#FFD1DB",
-  "usingComponents": {}
+  "usingComponents": {
+    "uni-popup": "/uni_modules/uni-popup/components/uni-popup/uni-popup"
+  }
 }

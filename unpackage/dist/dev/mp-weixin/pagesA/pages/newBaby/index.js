@@ -1,4 +1,4 @@
-(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pagesA/pages/newBaby/index"],{
+require('../../common/vendor.js');(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pagesA/pages/newBaby/index"],{
 
 /***/ 572:
 /*!****************************************************************************!*\

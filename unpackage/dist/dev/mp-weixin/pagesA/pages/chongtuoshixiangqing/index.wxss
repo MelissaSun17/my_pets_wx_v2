@@ -24,13 +24,18 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+.selected.data-v-4eac765a {
+  background-color: #FFD1DB !important;
+  /* 设置选中时的颜色 */
+  font-weight: 600;
+}
 ._title.data-v-4eac765a {
   width: 112rpx;
   height: 40rpx;
   font-family: PingFangSC, PingFang SC;
   font-weight: 600;
   font-size: 28rpx;
-  color: #000000;
+  color: #666666;
   line-height: 40rpx;
   text-align: left;
   font-style: normal;
@@ -999,5 +1004,51 @@
   font-style: normal;
   margin-left: 94rpx;
   margin-top: 24rpx;
+}
+.xiangqing .popup-content .fuwuxiangmu-top.data-v-4eac765a {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 38rpx;
+}
+.xiangqing .popup-content .fuwuxiangmu-top .fuwuxiangmu-top-text.data-v-4eac765a {
+  width: 224rpx;
+  height: 44rpx;
+  font-family: PingFangSC, PingFang SC;
+  font-weight: 600;
+  font-size: 32rpx;
+  color: #000000;
+  line-height: 44rpx;
+  text-align: center;
+  font-style: normal;
+  margin-left: 264rpx;
+  margin-top: 38rpx;
+}
+.xiangqing .popup-content .fuwuxiangmu-top .fuwuxiangmu-top-img image.data-v-4eac765a {
+  margin-right: 40rpx;
+  margin-top: 40rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.xiangqing .popup-content .fuwuxiangmu.data-v-4eac765a {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 48rpx;
+}
+.xiangqing .popup-content .fuwuxiangmu .fuwuxiangmu-text.data-v-4eac765a {
+  width: 312rpx;
+  height: 96rpx;
+  border-radius: 16rpx;
+  line-height: 96rpx;
+  text-align: center;
+  background: #F2F2F2;
+  margin-right: 30rpx;
+  margin-top: 32rpx;
+}
+.xiangqing .popup-content .open.data-v-4eac765a {
+  width: 750rpx;
+  text-align: center;
+  padding-top: 28rpx;
+  border-top: 2rpx solid #EBE9E9;
+  margin-top: 72rpx;
 }
 
