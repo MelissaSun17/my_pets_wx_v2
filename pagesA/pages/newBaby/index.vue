@@ -221,16 +221,26 @@
 					</view>
 				</view>
 				<view class="touxiang">
-					<view class="">
-						<u-upload :fileList="fileList2" @afterRead="afterRead2" @delete="deletePic2" name="2" multiple
+					<view class="touxiang-list">
+						<view class="touxiang-img" v-for="(item, index) in imageList" :key="index">
+							<image :src="item.src" mode=""></image>
+							<view  v-if="index === 0" class="touxiang-img-text">
+								头像
+							</view>
+							<image class="touxiang_img" src="../../../static/QQ截图20240411111341.png" mode=""></image>
+						</view>
+						<view class="touxiang-list-upload">
+							<image src="../../../static/QQ截图20240408213821.png" mode=""></image>
+						</view>
+						<!-- <u-upload :fileList="fileList2" @afterRead="afterRead2" @delete="deletePic2" name="2" multiple
 							:maxCount="10" width="188" height="188">
-							<image class="_img2" src="../../../static/QQ截图20240408213821.png" mode=""></image>
-						</u-upload>
-						<image class="tupian" src="../../../static/logo.png" mode="" @click="handleUploadClick = true">
-						</image>
-						<u-action-sheet @select="handleSelect" @close='close' round='30' :cancelText='guanbi'
+							<image class="_img2" src="../../static/QQ截图20240408213821.png" mode=""></image>
+						</u-upload> -->
+						<!-- <image class="tupian" src="../../static/logo.png" mode="" @click="handleUploadClick = true">
+						</image> -->
+						<!-- <u-action-sheet @select="handleSelect" @close='close' round='30' :cancelText='guanbi'
 							:actions="list" :title="title" :show="handleUploadClick"
-							safeAreaInsetBottom="true"></u-action-sheet>
+							safeAreaInsetBottom="true"></u-action-sheet> -->
 					</view>
 				</view>
 			</view>
@@ -315,6 +325,32 @@
 						name: '去拍摄', //开启后文字不显示
 					}
 				],
+				imageList: [
+				        {
+							src:'../../../static/logo.png'
+						},
+						{
+							src:'../../../static/logo.png'
+						},
+						{
+							src:'../../../static/logo.png'
+						},
+						{
+							src:'../../../static/logo.png'
+						},
+						{
+							src:'../../../static/logo.png'
+						},
+						{
+							src:'../../../static/logo.png'
+						},
+						{
+							src:'../../../static/logo.png'
+						},
+						{
+							src:'../../../static/logo.png'
+						},
+				      ]
 			}
 		},
 		methods: {
@@ -1370,6 +1406,51 @@
 				.touxiang {
 					margin-left: 32rpx;
 					margin-top: 40rpx;
+					.touxiang-list{
+						display: flex;
+						flex-wrap: wrap;
+					}
+					.touxiang-img{
+						display: flex;
+						position: relative;
+						.touxiang-img-text{
+							width: 88rpx;
+							height: 40rpx;
+							border-radius: 20rpx 0rpx 20rpx 0rpx;
+							position: absolute;
+							top: 22rpx;
+							left: 0;
+							border: 2rpx solid rgba(0,0,0,0.4);
+							background: rgba(0,0,0,0.3);
+							font-size: 24rpx;
+							color: #FFFFFF;
+							text-align: center;
+							line-height: 40rpx;
+						}
+						image{
+							width: 188rpx;
+							height: 188rpx;
+							margin-right: 16rpx;
+							margin-top: 22rpx;
+							border-radius: 20rpx;
+						}
+						.touxiang_img{
+							position: absolute;
+							right: -6rpx;
+							top: -10rpx;
+							width: 40rpx;
+							height: 40rpx;
+						}
+					}
+					.touxiang-list-upload{
+						width: 188rpx;
+						height: 188rpx;
+						margin-top: 22rpx;
+						image{
+							width: 188rpx;
+							height: 188rpx;
+						}
+					}
 				}
 			}
 

@@ -706,6 +706,51 @@ u-datetime-picker.data-v-28ff4020 {
   margin-left: 32rpx;
   margin-top: 40rpx;
 }
+.box .content .baby-zhaopian .touxiang .touxiang-list.data-v-28ff4020 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.box .content .baby-zhaopian .touxiang .touxiang-img.data-v-28ff4020 {
+  display: flex;
+  position: relative;
+}
+.box .content .baby-zhaopian .touxiang .touxiang-img .touxiang-img-text.data-v-28ff4020 {
+  width: 88rpx;
+  height: 40rpx;
+  border-radius: 20rpx 0rpx 20rpx 0rpx;
+  position: absolute;
+  top: 22rpx;
+  left: 0;
+  border: 2rpx solid rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.3);
+  font-size: 24rpx;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 40rpx;
+}
+.box .content .baby-zhaopian .touxiang .touxiang-img image.data-v-28ff4020 {
+  width: 188rpx;
+  height: 188rpx;
+  margin-right: 16rpx;
+  margin-top: 22rpx;
+  border-radius: 20rpx;
+}
+.box .content .baby-zhaopian .touxiang .touxiang-img .touxiang_img.data-v-28ff4020 {
+  position: absolute;
+  right: -6rpx;
+  top: -10rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.box .content .baby-zhaopian .touxiang .touxiang-list-upload.data-v-28ff4020 {
+  width: 188rpx;
+  height: 188rpx;
+  margin-top: 22rpx;
+}
+.box .content .baby-zhaopian .touxiang .touxiang-list-upload image.data-v-28ff4020 {
+  width: 188rpx;
+  height: 188rpx;
+}
 .box .content .beizhu.data-v-28ff4020 {
   width: 660rpx;
   height: 420rpx;

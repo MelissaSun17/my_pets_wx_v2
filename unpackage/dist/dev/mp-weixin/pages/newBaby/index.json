@@ -5,7 +5,6 @@
     "u-input": "/node-modules/uview-ui/components/u-input/u-input",
     "u-datetime-picker": "/node-modules/uview-ui/components/u-datetime-picker/u-datetime-picker",
     "u-upload": "/node-modules/uview-ui/components/u-upload/u-upload",
-    "u-action-sheet": "/node-modules/uview-ui/components/u-action-sheet/u-action-sheet",
     "u-overlay": "/node-modules/uview-ui/components/u-overlay/u-overlay"
   }
 }
