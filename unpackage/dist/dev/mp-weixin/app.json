@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/yuyuedan/index",
     "pages/index/index",
     "pages/serve/index",
     "pages/news/index",

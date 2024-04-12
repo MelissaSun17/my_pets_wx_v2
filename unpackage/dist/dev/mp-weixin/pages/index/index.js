@@ -101,10 +101,10 @@ var components
 try {
   components = {
     uRow: function () {
-      return Promise.all(/*! import() | node-modules/uview-ui/components/u-row/u-row */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-row/u-row")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-row/u-row.vue */ 310))
+      return Promise.all(/*! import() | node-modules/uview-ui/components/u-row/u-row */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-row/u-row")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-row/u-row.vue */ 299))
     },
     uCol: function () {
-      return Promise.all(/*! import() | node-modules/uview-ui/components/u-col/u-col */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-col/u-col")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-col/u-col.vue */ 318))
+      return Promise.all(/*! import() | node-modules/uview-ui/components/u-col/u-col */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-col/u-col")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-col/u-col.vue */ 307))
     },
   }
 } catch (e) {

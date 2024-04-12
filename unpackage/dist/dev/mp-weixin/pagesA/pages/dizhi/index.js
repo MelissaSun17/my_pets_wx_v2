@@ -1,4 +1,4 @@
-require('../../common/vendor.js');(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pagesA/pages/dizhi/index"],{
+(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pagesA/pages/dizhi/index"],{
 
 /***/ 209:
 /*!**************************************************************************!*\
@@ -101,13 +101,13 @@ var components
 try {
   components = {
     uniSearchBar: function () {
-      return Promise.all(/*! import() | uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar.vue */ 350))
+      return Promise.all(/*! import() | uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar.vue */ 322))
     },
     uSwipeAction: function () {
-      return Promise.all(/*! import() | node-modules/uview-ui/components/u-swipe-action/u-swipe-action */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-swipe-action/u-swipe-action")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-swipe-action/u-swipe-action.vue */ 361))
+      return Promise.all(/*! import() | node-modules/uview-ui/components/u-swipe-action/u-swipe-action */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-swipe-action/u-swipe-action")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-swipe-action/u-swipe-action.vue */ 333))
     },
     uSwipeActionItem: function () {
-      return Promise.all(/*! import() | node-modules/uview-ui/components/u-swipe-action-item/u-swipe-action-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-swipe-action-item/u-swipe-action-item")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-swipe-action-item/u-swipe-action-item.vue */ 367))
+      return Promise.all(/*! import() | node-modules/uview-ui/components/u-swipe-action-item/u-swipe-action-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-swipe-action-item/u-swipe-action-item")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-swipe-action-item/u-swipe-action-item.vue */ 339))
     },
   }
 } catch (e) {

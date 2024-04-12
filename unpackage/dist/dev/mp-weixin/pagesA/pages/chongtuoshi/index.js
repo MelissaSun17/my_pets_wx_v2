@@ -1,4 +1,4 @@
-require('../../common/vendor.js');(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pagesA/pages/chongtuoshi/index"],{
+(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pagesA/pages/chongtuoshi/index"],{
 
 /***/ 225:
 /*!********************************************************************************!*\
@@ -101,16 +101,16 @@ var components
 try {
   components = {
     uPicker: function () {
-      return Promise.all(/*! import() | node-modules/uview-ui/components/u-picker/u-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-picker/u-picker")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-picker/u-picker.vue */ 402))
+      return Promise.all(/*! import() | node-modules/uview-ui/components/u-picker/u-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-picker/u-picker")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-picker/u-picker.vue */ 351))
     },
     uCalendar: function () {
-      return Promise.all(/*! import() | node-modules/uview-ui/components/u-calendar/u-calendar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-calendar/u-calendar")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-calendar/u-calendar.vue */ 326))
+      return Promise.all(/*! import() | node-modules/uview-ui/components/u-calendar/u-calendar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-calendar/u-calendar")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-calendar/u-calendar.vue */ 273))
     },
     uPopup: function () {
-      return Promise.all(/*! import() | node-modules/uview-ui/components/u-popup/u-popup */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-popup/u-popup")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-popup/u-popup.vue */ 410))
+      return Promise.all(/*! import() | node-modules/uview-ui/components/u-popup/u-popup */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-popup/u-popup")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-popup/u-popup.vue */ 359))
     },
     uniPopup: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-popup/components/uni-popup/uni-popup */ "uni_modules/uni-popup/components/uni-popup/uni-popup").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-popup/components/uni-popup/uni-popup.vue */ 336))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-popup/components/uni-popup/uni-popup */ "uni_modules/uni-popup/components/uni-popup/uni-popup").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-popup/components/uni-popup/uni-popup.vue */ 292))
     },
   }
 } catch (e) {
@@ -232,7 +232,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var ownCheck = function ownCheck() {
   __webpack_require__.e(/*! require.ensure | components/own-checkBtn/own-check */ "components/own-checkBtn/own-check").then((function () {
-    return resolve(__webpack_require__(/*! @/components/own-checkBtn/own-check.vue */ 343));
+    return resolve(__webpack_require__(/*! @/components/own-checkBtn/own-check.vue */ 315));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var _default = {

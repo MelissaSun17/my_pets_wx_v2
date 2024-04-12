@@ -1,4 +1,4 @@
-require('../../common/vendor.js');(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pagesA/pages/tuoguan/index"],{
+(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pagesA/pages/tuoguan/index"],{
 
 /***/ 193:
 /*!****************************************************************************!*\
@@ -101,7 +101,7 @@ var components
 try {
   components = {
     uCalendar: function () {
-      return Promise.all(/*! import() | node-modules/uview-ui/components/u-calendar/u-calendar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-calendar/u-calendar")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-calendar/u-calendar.vue */ 326))
+      return Promise.all(/*! import() | node-modules/uview-ui/components/u-calendar/u-calendar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-calendar/u-calendar")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-calendar/u-calendar.vue */ 273))
     },
   }
 } catch (e) {

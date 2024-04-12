@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "陪伴下单",
+  "navigationBarBackgroundColor": "#FFD1DB",
+  "usingComponents": {
+    "u-calendar": "/node-modules/uview-ui/components/u-calendar/u-calendar",
+    "u-tabs": "/node-modules/uview-ui/components/u-tabs/u-tabs",
+    "uni-popup": "/uni_modules/uni-popup/components/uni-popup/uni-popup"
+  }
+}

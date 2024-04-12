@@ -1,9 +1,5 @@
 {
   "navigationBarTitleText": "测试",
   "navigationBarBackgroundColor": "#FFD1DB",
-  "usingComponents": {
-    "u-toast": "/node-modules/uview-ui/components/u-toast/u-toast",
-    "u-cell-group": "/node-modules/uview-ui/components/u-cell-group/u-cell-group",
-    "u-cell": "/node-modules/uview-ui/components/u-cell/u-cell"
-  }
+  "usingComponents": {}
 }
