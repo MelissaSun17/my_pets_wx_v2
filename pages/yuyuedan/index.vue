@@ -57,7 +57,7 @@
 					<view class="jianjie-fuwu">
 						<image class="jianjie-fuwu-img" src="../../static/服务项目.png" mode=""></image>
 						<view class="jianjie-fuwu-text">
-							上门遛狗
+							{{currentService}}
 						</view>
 					</view>
 				</view>
@@ -200,18 +200,31 @@
 					<view class="fuwudizhi-top">
 						服务地址
 					</view>
-					<view class="dizhi">
-						<view class="dizhi-left">
-							<image src="../../static/icon_location@3x.png" mode=""></image>
-						</view>
-						<view class="dizhi-text">
-							徐汇区田林星巴克东南50米
-						</view>
-						<view class="dizhi-right">
-							<image src="../../static/icon_arrow.png" mode=""></image>
+					<view class="dizhi" style="height: 100%; padding-bottom: 15rpx;">
+						<view style="display: flex; flex-direction: column;height: 100%;">
+							<view style="display: flex; flex-direction: row;">
+								<view class="dizhi-left" v-if="!completeAddress">
+									<image src="../../static/icon_location@3x.png" mode=""></image>
+								</view>
+								<view class="dizhi-text" style="margin-left: 20rpx;">
+									徐汇区田林星巴克东南50米
+								</view>
+
+								<view class="dizhi-right" v-if="!completeAddress">
+									<image src="../../static/icon_arrow.png" mode=""></image>
+								</view>
+							</view>
+							<view style="display: flex; flex-direction: row;line-height: 1;" v-if="completeAddress">
+								<view class="dizhi-left" style="margin: 0rpx 10rpx;">
+									<image src="../../static/icon_location@3x.png" mode=""></image>
+								</view>
+								<view style="color: grey">距离您500m</view>
+
+								<view style="color: #FF5C7F">查看导航 ></view>
+							</view>
 						</view>
 					</view>
-					<view class="dizhi-tishi">
+					<view class="dizhi-tishi" v-if="!completeAddress">
 						<view class="dizhi-tishi-icon">
 							<image src="../../static/提示/红.png" mode=""></image>
 						</view>
@@ -299,8 +312,8 @@
 					</view>
 				</view>
 				<view class="fuwuriqi">
-					<u-calendar title="服务日期" rowHeight="100" :maxDate="maxDate" color="#FFD1DB" round="30rpx"
-						:show="show" :mode="mode" @confirm="confirm" @close="close"></u-calendar>
+					<u-calendar title="服务日期" rowHeight="100" color="#FFD1DB" round="30rpx" :show="show" :mode="mode"
+						@confirm="confirm" @close="close"></u-calendar>
 					<view class="" @click="show = true">
 						<view class="fuwuriqi-top">
 							服务日期
@@ -325,7 +338,7 @@
 							您选择的时间可能与该宠托师不匹配，但您也可以发送预约单商榷或<text class="underline">重新搜索宠托师</text>
 						</view>
 					</view>
-					<view class="riqixuanze">
+					<view class="riqixuanze" v-if="currentService == '上门喂养' || currentService == '遛狗'">
 						<view class="riqixuanze-tabs">
 							<u-tabs class="custom-tabs" lineColor="#000000" lineHeight="5" lineWidth="30"
 								:active="activeTab" :list="list1" @change="changeTab">
@@ -392,7 +405,7 @@
 								:class="{ 'popup-height': type === 'left' || type === 'right' }">
 								<view class="shangmen-time-top">
 									<view class="shangmen-time-top-text">
-										上门时间
+										{{popupTitle}}
 									</view>
 									<view class="shangmen-time-top-img" @click="guan">
 										<image src="../../static/QQ截图20240401171515.png" mode=""></image>
@@ -403,7 +416,8 @@
 										@click="toggleColor(index)">
 										<view class="time-xuanze-text" :class="{ 'isSelected': isSelected(index) }">
 											{{item.name}}
-											<view class="kongxian">
+											<view class="kongxian"
+												v-if="currentService == '上门喂养' || currentService == '遛狗'">
 												空闲
 											</view>
 										</view>
@@ -416,267 +430,364 @@
 							</view>
 						</uni-popup>
 					</view>
-				</view>
-			</view>
-			<view class="more" v-show="!showFirstView" v-if="!showview">
-				<view class="more-title">
-					更多服务
-				</view>
-				<view class="jiesong" @click="toggle1">
-					<view class="jiesong-left">
-						<view class="jiesong-left-top">
-							<view class="jiesong-left-top-icon">
-								<image src="../../static/加价icon/交通.png" mode=""></image>
-							</view>
-							<view class="jiesong-left-top-text">
-								上门接送
-							</view>
-							<view class="jiesong-left-top-money">
-								￥20
-							</view>
-						</view>
-						<view class="jiesong-left-text">
-							宠托师前往主人家中接送宝贝
-						</view>
-					</view>
-					<view class="jiesong-right">
-						<image :src="replace ? '../../static/选择框-未选择@3x.png' : '../../static/编组 3@3x1.png'" mode="">
-						</image>
-					</view>
-				</view>
-				<view class="jianmian" @click="toggle2">
-					<view class="jianmian-left">
-						<view class="jianmian-left-top">
-							<view class="jianmian-left-top-icon">
-								<image src="../../static/更多服务icon/提前见面.png" mode=""></image>
-							</view>
-							<view class="jianmian-left-top-text">
-								提前见面
-							</view>
-							<view class="jianmian-left-top-money">
-								￥20
-							</view>
-						</view>
-						<view class="jianmian-left-text">
-							宠托师在服务日期前提前与宝贝熟悉
-						</view>
-					</view>
-					<view class="jianmian-right">
-						<image :src="replace2 ? '../../static/选择框-未选择@3x.png' : '../../static/编组 3@3x1.png'" mode="">
-						</image>
-					</view>
-				</view>
-				<view class="weiyao">
-					<view class="weiyao-title" @click="toggleCollapse">
-						<view class="weiyao-left">
-							<view class="weiyao-left-top">
-								<view class="weiyao-left-top-icon">
-									<image src="../../static/更多服务icon/喂药.png" mode=""></image>
-								</view>
-								<view class="weiyao-left-top-text">
-									喂药
-								</view>
-								<view class="weiyao-left-top-money">
-									￥20
-								</view>
-							</view>
-							<view class="weiyao-left-text">
-								宠托师根据主人要求为宝贝喂药
-							</view>
-						</view>
-						<view class="weiyao-right">
-							<image :src="collapsed ? '../../static/选择框-未选择@3x.png' : '../../static/编组 3@3x1.png'"
-								mode="">
-							</image>
-						</view>
-					</view>
-					<view class="zhedieneirong" v-if="!collapsed">
-						<view class="content-jiajian">
-							<view class="content-jiajian-list">
-								<view class="content-jiajian-list-text">
-									哆啦
-								</view>
-								<view class="content-jiajian-list-right">
-									<view class="jianjie-left-icon" @click="decrement">
-										<image
-											:src="weiyaoCount1 > 0 ? '../../static/减去- icon@3x.png' : '../../static/减去- icon-不可点击@2x.png'"
-											mode=""></image>
+					<view v-if="currentService == '寄养'">
+						<view>
+							<view class="title">开始日期</view>
+							<view style="display: flex; flex-direction: row;">
+								<view class='dateButton'>{{startDate}}</view>
+								<view class="service" @click="goTime">
+									<view class="service-lest">
+										<image src="../../static/icon_time.png" mode=""></image>
 									</view>
-									<view class="jianjie-numberr">
-										{{ weiyaoCount1 }}次
+									<view class="service-text">
+										{{chooseStartTime? chooseStartTime: '请选择寄养开始时间'}}
 									</view>
-									<view class="jianjie-right-icon" @click="increment">
-										<image src="../../static/添加- icon@3x.png" mode=""></image>
-									</view>
-								</view>
-							</view>
-							<view class="content-jiajian-list">
-								<view class="content-jiajian-list-text">
-									哆啦
-								</view>
-								<view class="content-jiajian-list-right">
-									<view class="jianjie-left-icon" @click="decrement2">
-										<image
-											:src="weiyaoCount2 > 0 ? '../../static/减去- icon@3x.png' : '../../static/减去- icon-不可点击@2x.png'"
-											mode=""></image>
-									</view>
-									<view class="jianjie-numberr">
-										{{ weiyaoCount2 }}次
-									</view>
-									<view class="jianjie-right-icon" @click="increment2">
-										<image src="../../static/添加- icon@3x.png" mode=""></image>
+									<view class="service-right">
+										<image src="../../static/icon_arrow.png" mode=""></image>
 									</view>
 								</view>
 							</view>
 						</view>
-					</view>
-				</view>
-				<view class="tuyao">
-					<view class="tuyao-title" @click="toggleCollapse2">
-						<view class="tuyao-left">
-							<view class="tuyao-left-top">
-								<view class="tuyao-left-top-icon">
-									<image src="../../static/更多服务icon/涂药.png" mode=""></image>
-								</view>
-								<view class="tuyao-left-top-text">
-									涂药
-								</view>
-								<view class="tuyao-left-top-money">
-									￥20
-								</view>
-							</view>
-							<view class="tuyao-left-text">
-								宠托师根据主人要求为宝贝喂药
-							</view>
-						</view>
-						<view class="tuyao-right">
-							<image :src="collapsed2 ? '../../static/选择框-未选择@3x.png' : '../../static/编组 3@3x1.png'"
-								mode="">
-							</image>
-						</view>
-					</view>
-					<view class="zhedieneirong" v-if="!collapsed2">
-						<view class="content-jiajian">
-							<view class="content-jiajian-list">
-								<view class="content-jiajian-list-text">
-									哆啦
-								</view>
-								<view class="content-jiajian-list-right">
-									<view class="jianjie-left-icon" @click="decrement3">
-										<image
-											:src="tuyaoCount1 > 0 ? '../../static/减去- icon@3x.png' : '../../static/减去- icon-不可点击@2x.png'"
-											mode=""></image>
+						<view>
+							<view class="title">结束日期</view>
+							<view style="display: flex; flex-direction: row;">
+								<view class='dateButton'>{{endDate}}</view>
+								<view class="service" @click="goTime">
+									<view class="service-lest">
+										<image src="../../static/icon_time.png" mode=""></image>
 									</view>
-									<view class="jianjie-numberr">
-										{{tuyaoCount1}}次
-									</view>
-									<view class="jianjie-right-icon" @click="increment3">
-										<image src="../../static/添加- icon@3x.png" mode=""></image>
-									</view>
-								</view>
-							</view>
-							<view class="content-jiajian-list">
-								<view class="content-jiajian-list-text">
-									哆啦
-								</view>
-								<view class="content-jiajian-list-right">
-									<view class="jianjie-left-icon" @click="decrement4">
-										<image
-											:src="tuyaoCount2 > 0 ? '../../static/减去- icon@3x.png' : '../../static/减去- icon-不可点击@2x.png'"
-											mode=""></image>
-									</view>
-									<view class="jianjie-numberr">
-										{{tuyaoCount2}}次
-									</view>
-									<view class="jianjie-right-icon" @click="increment4">
-										<image src="../../static/添加- icon@3x.png" mode=""></image>
-									</view>
-								</view>
-							</view>
-						</view>
-					</view>
-				</view>
-				<view class="jianzhijia">
-					<view class="jianzhijia-title" @click="toggleCollapse3">
-						<view class="jianzhijia-left">
-							<view class="jianzhijia-left-top">
-								<view class="jianzhijia-left-top-icon">
-									<image src="../../static/更多服务icon/剪指甲.png" mode=""></image>
-								</view>
-								<view class="jianzhijia-left-top-text">
-									剪指甲
-								</view>
-								<view class="jianzhijia-left-top-money">
-									￥20
-								</view>
-							</view>
-							<view class="jianzhijia-left-text">
-								宠托师根据主人要求为宝贝喂药
-							</view>
-						</view>
-						<view class="jianzhijia-right">
-							<image :src="collapsed3 ? '../../static/选择框-未选择@3x.png' : '../../static/编组 3@3x1.png'"
-								mode="">
-							</image>
-						</view>
-					</view>
-					<view class="zhedieneirong" v-if="!collapsed3">
-						<view class="content-jiajian">
-							<view class="content-jiajian-list">
-								<view class="content-jiajian-list-text">
-									哆啦
-								</view>
-								<view class="content-jiajian-list-right">
-									<view class="jianjie-left-icon" @click="decrement5">
-										<image
-											:src="jianzhijiaCount1 > 0 ? '../../static/减去- icon@3x.png' : '../../static/减去- icon-不可点击@2x.png'"
-											mode=""></image>
-									</view>
-									<view class="jianjie-numberr">
-										{{ jianzhijiaCount1 }}次
-									</view>
-									<view class="jianjie-right-icon" @click="increment5">
-										<image src="../../static/添加- icon@3x.png" mode=""></image>
-									</view>
-								</view>
-							</view>
-							<view class="content-jiajian-list">
-								<view class="content-jiajian-list-text">
-									哆啦
-								</view>
-								<view class="content-jiajian-list-right">
-									<view class="jianjie-left-icon" @click="decrement6">
-										<image
-											:src="jianzhijiaCount2 > 0 ? '../../static/减去- icon@3x.png' : '../../static/减去- icon-不可点击@2x.png'"
-											mode=""></image>
-									</view>
-									<view class="jianjie-numberr">
-										{{ jianzhijiaCount2 }}次
-									</view>
-									<view class="jianjie-right-icon" @click="increment6">
-										<image src="../../static/添加- icon@3x.png" mode=""></image>
-									</view>
-								</view>
-							</view>
-						</view>
-					</view>
-				</view>
-			</view>
-			<view class="kong">
+									<view class="service-text">
+										{{chosedEndTime? chosedEndTime: '请选择寄养结束时间'}}
 
+									</view>
+									<view class="service-right">
+										<image src="../../static/icon_arrow.png" mode=""></image>
+									</view>
+								</view>
+							</view>
+						</view>
+					</view>
+					<view v-if="currentService == '日托'">
+						<view>
+							<view class="title">开始日期</view>
+							<view class="fuwuriqi-shijian">
+								<view class="fuwuriqi-shijian-lest">
+									<image src="../../static/icon_time.png" mode=""></image>
+								</view>
+								<view class="fuwuriqi-shijian-text">
+									请选择开始时间
+								</view>
+								<view class="fuwuriqi-shijian-right">
+									<image src="../../static/icon_arrow.png" mode=""></image>
+								</view>
+							</view>
+						</view>
+						<view>
+							<view class="title">结束日期</view>
+							<view class="fuwuriqi-shijian">
+								<view class="fuwuriqi-shijian-lest">
+									<image src="../../static/icon_time.png" mode=""></image>
+								</view>
+								<view class="fuwuriqi-shijian-text">
+									请选择结束时间
+								</view>
+								<view class="fuwuriqi-shijian-right">
+									<image src="../../static/icon_arrow.png" mode=""></image>
+								</view>
+							</view>
+						</view>
+					</view>
+
+				</view>
+				<view class="more" v-show="!showFirstView" v-if="!showview">
+					<view class="more-title">
+						更多服务
+					</view>
+					<view class="jiesong" @click="toggle1">
+						<view style="display: flex; flex-direction: row; padding-bottom: 20rpx;">
+							<view class="jiesong-left">
+								<view class="jiesong-left-top">
+									<view class="jiesong-left-top-icon">
+										<image src="../../static/加价icon/交通.png" mode=""></image>
+									</view>
+									<view class="jiesong-left-top-text">
+										上门接送
+									</view>
+									<view class="jiesong-left-top-money">
+										￥20
+									</view>
+								</view>
+								<view class="jiesong-left-text">
+									宠托师前往主人家中接送宝贝
+								</view>
+								<view>
+								</view>
+
+							</view>
+							<view class="jiesong-right">
+								<image :src="replace ? '../../static/选择框-未选择@3x.png' : '../../static/编组 3@3x1.png'"
+									mode="">
+								</image>
+							</view>
+						</view>
+						<view style="width: 90% !important; margin: auto !important;">
+							<u-divider v-if="!replace" lineColor='black' :dashed="true"></u-divider>
+						</view>
+						<view v-if="!replace">
+							<view class="address" style="margin: 0rpx 0rpx 20rpx 20rpx; padding-bottom: 20rpx;">
+								<view class="jiesong-left-top-text">
+									接送地址
+								</view>
+								<view class="dizhi">
+									<view class="dizhi-left">
+										<image src="../../static/icon_location@3x.png" mode=""></image>
+									</view>
+									<view class="dizhi-text">
+										徐汇区田林星巴克东南50米
+									</view>
+									<view class="dizhi-right">
+										<image src="../../static/icon_arrow.png" mode=""></image>
+									</view>
+								</view>
+							</view>
+						</view>
+
+					</view>
+					<view class="jianmian" @click="toggle2">
+						<view class="jianmian-left">
+							<view class="jianmian-left-top">
+								<view class="jianmian-left-top-icon">
+									<image src="../../static/更多服务icon/提前见面.png" mode=""></image>
+								</view>
+								<view class="jianmian-left-top-text">
+									提前见面
+								</view>
+								<view class="jianmian-left-top-money">
+									￥20
+								</view>
+							</view>
+							<view class="jianmian-left-text">
+								宠托师在服务日期前提前与宝贝熟悉
+							</view>
+						</view>
+						<view class="jianmian-right">
+							<image :src="replace2 ? '../../static/选择框-未选择@3x.png' : '../../static/编组 3@3x1.png'"
+								mode="">
+							</image>
+						</view>
+					</view>
+					<view class="weiyao">
+						<view class="weiyao-title" @click="toggleCollapse">
+							<view class="weiyao-left">
+								<view class="weiyao-left-top">
+									<view class="weiyao-left-top-icon">
+										<image src="../../static/更多服务icon/喂药.png" mode=""></image>
+									</view>
+									<view class="weiyao-left-top-text">
+										喂药
+									</view>
+									<view class="weiyao-left-top-money">
+										￥20
+									</view>
+								</view>
+								<view class="weiyao-left-text">
+									宠托师根据主人要求为宝贝喂药
+								</view>
+							</view>
+							<view class="weiyao-right">
+								<image :src="collapsed ? '../../static/选择框-未选择@3x.png' : '../../static/编组 3@3x1.png'"
+									mode="">
+								</image>
+							</view>
+						</view>
+						<view class="zhedieneirong" v-if="!collapsed">
+							<view class="content-jiajian">
+								<view class="content-jiajian-list">
+									<view class="content-jiajian-list-text">
+										哆啦
+									</view>
+									<view class="content-jiajian-list-right">
+										<view class="jianjie-left-icon" @click="decrement">
+											<image
+												:src="weiyaoCount1 > 0 ? '../../static/减去- icon@3x.png' : '../../static/减去- icon-不可点击@2x.png'"
+												mode=""></image>
+										</view>
+										<view class="jianjie-numberr">
+											{{ weiyaoCount1 }}次
+										</view>
+										<view class="jianjie-right-icon" @click="increment">
+											<image src="../../static/添加- icon@3x.png" mode=""></image>
+										</view>
+									</view>
+								</view>
+								<view class="content-jiajian-list">
+									<view class="content-jiajian-list-text">
+										哆啦
+									</view>
+									<view class="content-jiajian-list-right">
+										<view class="jianjie-left-icon" @click="decrement2">
+											<image
+												:src="weiyaoCount2 > 0 ? '../../static/减去- icon@3x.png' : '../../static/减去- icon-不可点击@2x.png'"
+												mode=""></image>
+										</view>
+										<view class="jianjie-numberr">
+											{{ weiyaoCount2 }}次
+										</view>
+										<view class="jianjie-right-icon" @click="increment2">
+											<image src="../../static/添加- icon@3x.png" mode=""></image>
+										</view>
+									</view>
+								</view>
+							</view>
+						</view>
+					</view>
+					<view class="tuyao">
+						<view class="tuyao-title" @click="toggleCollapse2">
+							<view class="tuyao-left">
+								<view class="tuyao-left-top">
+									<view class="tuyao-left-top-icon">
+										<image src="../../static/更多服务icon/涂药.png" mode=""></image>
+									</view>
+									<view class="tuyao-left-top-text">
+										涂药
+									</view>
+									<view class="tuyao-left-top-money">
+										￥20
+									</view>
+								</view>
+								<view class="tuyao-left-text">
+									宠托师根据主人要求为宝贝喂药
+								</view>
+							</view>
+							<view class="tuyao-right">
+								<image :src="collapsed2 ? '../../static/选择框-未选择@3x.png' : '../../static/编组 3@3x1.png'"
+									mode="">
+								</image>
+							</view>
+						</view>
+						<view class="zhedieneirong" v-if="!collapsed2">
+							<view class="content-jiajian">
+								<view class="content-jiajian-list">
+									<view class="content-jiajian-list-text">
+										哆啦
+									</view>
+									<view class="content-jiajian-list-right">
+										<view class="jianjie-left-icon" @click="decrement3">
+											<image
+												:src="tuyaoCount1 > 0 ? '../../static/减去- icon@3x.png' : '../../static/减去- icon-不可点击@2x.png'"
+												mode=""></image>
+										</view>
+										<view class="jianjie-numberr">
+											{{tuyaoCount1}}次
+										</view>
+										<view class="jianjie-right-icon" @click="increment3">
+											<image src="../../static/添加- icon@3x.png" mode=""></image>
+										</view>
+									</view>
+								</view>
+								<view class="content-jiajian-list">
+									<view class="content-jiajian-list-text">
+										哆啦
+									</view>
+									<view class="content-jiajian-list-right">
+										<view class="jianjie-left-icon" @click="decrement4">
+											<image
+												:src="tuyaoCount2 > 0 ? '../../static/减去- icon@3x.png' : '../../static/减去- icon-不可点击@2x.png'"
+												mode=""></image>
+										</view>
+										<view class="jianjie-numberr">
+											{{tuyaoCount2}}次
+										</view>
+										<view class="jianjie-right-icon" @click="increment4">
+											<image src="../../static/添加- icon@3x.png" mode=""></image>
+										</view>
+									</view>
+								</view>
+							</view>
+						</view>
+					</view>
+					<view class="jianzhijia">
+						<view class="jianzhijia-title" @click="toggleCollapse3">
+							<view class="jianzhijia-left">
+								<view class="jianzhijia-left-top">
+									<view class="jianzhijia-left-top-icon">
+										<image src="../../static/更多服务icon/剪指甲.png" mode=""></image>
+									</view>
+									<view class="jianzhijia-left-top-text">
+										剪指甲
+									</view>
+									<view class="jianzhijia-left-top-money">
+										￥20
+									</view>
+								</view>
+								<view class="jianzhijia-left-text">
+									宠托师根据主人要求为宝贝喂药
+								</view>
+							</view>
+							<view class="jianzhijia-right">
+								<image :src="collapsed3 ? '../../static/选择框-未选择@3x.png' : '../../static/编组 3@3x1.png'"
+									mode="">
+								</image>
+							</view>
+						</view>
+						<view class="zhedieneirong" v-if="!collapsed3">
+							<view class="content-jiajian">
+								<view class="content-jiajian-list">
+									<view class="content-jiajian-list-text">
+										哆啦
+									</view>
+									<view class="content-jiajian-list-right">
+										<view class="jianjie-left-icon" @click="decrement5">
+											<image
+												:src="jianzhijiaCount1 > 0 ? '../../static/减去- icon@3x.png' : '../../static/减去- icon-不可点击@2x.png'"
+												mode=""></image>
+										</view>
+										<view class="jianjie-numberr">
+											{{ jianzhijiaCount1 }}次
+										</view>
+										<view class="jianjie-right-icon" @click="increment5">
+											<image src="../../static/添加- icon@3x.png" mode=""></image>
+										</view>
+									</view>
+								</view>
+								<view class="content-jiajian-list">
+									<view class="content-jiajian-list-text">
+										哆啦
+									</view>
+									<view class="content-jiajian-list-right">
+										<view class="jianjie-left-icon" @click="decrement6">
+											<image
+												:src="jianzhijiaCount2 > 0 ? '../../static/减去- icon@3x.png' : '../../static/减去- icon-不可点击@2x.png'"
+												mode=""></image>
+										</view>
+										<view class="jianjie-numberr">
+											{{ jianzhijiaCount2 }}次
+										</view>
+										<view class="jianjie-right-icon" @click="increment6">
+											<image src="../../static/添加- icon@3x.png" mode=""></image>
+										</view>
+									</view>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+				<view class="kong">
+
+				</view>
 			</view>
-		</view>
-		<view class="btn-bottom" v-show="showFirstView">
-			<view class="btn" @click="nextStep" :class="{ 'selectedCor': isSelectedColor }">
-				下一步
+			<view class="btn-bottom" v-show="showFirstView">
+				<view class="btn" @click="nextStep" :class="{ 'selectedCor': isSelectedColor }">
+					下一步
+				</view>
 			</view>
-		</view>
-		<view class="btn-two-bottom" v-show="!showFirstView">
-			<view class="btn-two-bottom-left" @click="upslope">
-				上一步
-			</view>
-			<view class="btn-two-bottom-right" @click="xiabu">
-				下一步
+			<view class="btn-two-bottom" v-show="!showFirstView">
+				<view class="btn-two-bottom-left" @click="upslope">
+					上一步
+				</view>
+				<view class="btn-two-bottom-right" @click="xiabu">
+					下一步
+				</view>
 			</view>
 		</view>
 	</view>
@@ -691,8 +802,18 @@
 	export default {
 		data() {
 			return {
+				chooseStartTime: '',
+				chosedEndTime: '',
+				popupTitle: '',
+				startDate: '7月12日',
+				endDate: '7月15日',
+				service: [
+					'上门喂养', '遛狗', '日托', '寄养'
+				],
+				currentService: '上门喂养',
+				completeAddress: false,
 				showFirstView: true,
-				showview:false,
+				showview: false,
 				weiyaoCount1: 0,
 				weiyaoCount2: 0,
 				tuyaoCount1: 0,
@@ -702,7 +823,7 @@
 				overlay: false,
 				maxDate: `${year}-${month}-${date + 90}`,
 				show: false,
-				mode: 'multiple',
+				mode: 'range',
 				replace: true,
 				replace2: true,
 				collapsed: true,
@@ -818,17 +939,22 @@
 				],
 			}
 		},
+		mounted() {
+
+		},
 		methods: {
-			youhui(){
+			youhui() {
 				uni.navigateTo({
-					url:'/pages/youhuiquan/index'
+					url: '/pages/youhuiquan/index'
 				})
 			},
-			xiabu(){
-				this.showview=true
+			xiabu() {
+				this.showview = true
+				debugger
 			},
 			toggle1() {
 				this.replace = !this.replace;
+
 			},
 			toggle2() {
 				this.replace2 = !this.replace2;
@@ -921,7 +1047,7 @@
 			},
 			upslope() {
 				this.showFirstView = true
-				this.showview=false
+				this.showview = false
 			},
 			tongbu() {
 				this.buttonText = "已同步到所有天";
@@ -946,6 +1072,7 @@
 					this.selectedIndices.push(index);
 					this.isAnySelected = true; // 没有文本被选中
 				}
+				// debugger
 			},
 			isSelected(index) {
 				// 判断当前选项是否被选中
@@ -953,6 +1080,14 @@
 			},
 			goTime() {
 				this.toggle('bottom');
+				// if (t=='other'){
+				// 	this.popupTitle = '上门时间'
+				// } else if(t=='start'){
+				// 	this.popupTitle = '寄养开始时间'
+				// }else if(t=='end'){
+				// 	this.popupTitle = '寄养结束时间'
+				// }
+
 			},
 			toggle(type) {
 				this.type = type
@@ -986,11 +1121,19 @@
 			},
 			calendarConfirm(e) {
 				this.show = false,
+
 					console.log(e);
 			},
 			confirm(selectedDates) {
 				this.defaultDateMultiple = selectedDates;
 				console.log('日历选择：', selectedDates)
+				let temp = []
+				selectedDates.forEach(i => {
+					temp.push({
+						name: i
+					})
+				})
+				this.list1 = temp
 				this.show = false,
 					this.isColor = true;
 			},
@@ -1012,7 +1155,8 @@
 			background-color: #FFF133 !important;
 			color: #000 !important;
 		}
-		.jieshuan{
+
+		.jieshuan {
 			width: 660rpx;
 			height: 232rpx;
 			background: #FFFFFF;
@@ -1021,12 +1165,14 @@
 			box-shadow: 10rpx 15rpx rgba(0, 0, 0, 2);
 			margin-left: 40rpx;
 			margin-top: 34rpx;
-			.jieshuan-top{
+
+			.jieshuan-top {
 				display: flex;
 				justify-content: space-between;
 				padding-left: 32rpx;
 				padding-top: 24rpx;
-				.jieshuan-top-left{
+
+				.jieshuan-top-left {
 					height: 40rpx;
 					font-family: PingFangSC, PingFang SC;
 					font-weight: 600;
@@ -1036,7 +1182,8 @@
 					text-align: left;
 					font-style: normal;
 				}
-				.jieshuan-top-right{
+
+				.jieshuan-top-right {
 					height: 40rpx;
 					margin-right: 38rpx;
 					font-family: PingFangSC, PingFang SC;
@@ -1048,12 +1195,14 @@
 					font-style: normal;
 				}
 			}
-			.jieshuan-middle{
+
+			.jieshuan-middle {
 				display: flex;
 				justify-content: space-between;
 				padding-left: 32rpx;
 				padding-top: 24rpx;
-				.jieshuan-middle-left{
+
+				.jieshuan-middle-left {
 					height: 40rpx;
 					font-family: PingFangSC, PingFang SC;
 					font-weight: 600;
@@ -1063,10 +1212,12 @@
 					text-align: left;
 					font-style: normal;
 				}
-				.jieshuan-middle-right{
+
+				.jieshuan-middle-right {
 					display: flex;
 					margin-right: 38rpx;
-					.jieshuan-middle-right-text{
+
+					.jieshuan-middle-right-text {
 						height: 40rpx;
 						font-family: PingFangSC, PingFang SC;
 						font-weight: 400;
@@ -1077,22 +1228,26 @@
 						font-style: normal;
 						text-transform: none;
 					}
-					.jieshuan-middle-right-icon{
+
+					.jieshuan-middle-right-icon {
 						width: 24rpx;
 						height: 24rpx;
-						image{
+
+						image {
 							width: 24rpx;
 							height: 24rpx;
 						}
 					}
 				}
 			}
-			.jieshuan-bottom{
+
+			.jieshuan-bottom {
 				display: flex;
 				justify-content: space-between;
 				padding-left: 32rpx;
 				padding-top: 24rpx;
-				.jieshuan-bottom-left{
+
+				.jieshuan-bottom-left {
 					height: 40rpx;
 					font-family: PingFangSC, PingFang SC;
 					font-weight: 600;
@@ -1102,7 +1257,8 @@
 					text-align: left;
 					font-style: normal;
 				}
-				.jieshuan-bottom-right{
+
+				.jieshuan-bottom-right {
 					height: 56rpx;
 					font-family: PingFangSC, PingFang SC;
 					font-weight: 600;
@@ -1126,15 +1282,18 @@
 			border: 2rpx solid #000000;
 			box-shadow: 10rpx 15rpx rgba(0, 0, 0, 2);
 			margin-top: 34rpx;
+
 			.fuwufeiyong {
 				margin-left: 40rpx;
 				margin-right: 40rpx;
 				display: flex;
 				justify-content: space-between;
-				border-bottom: 1rpx dashed  rgba(0,0,0,0.2);
+				border-bottom: 1rpx dashed rgba(0, 0, 0, 0.2);
 				padding-bottom: 34rpx;
+
 				.fuwufeiyong-left {
 					margin-top: 24rpx;
+
 					.fuwufeiyong-left-top {
 						height: 40rpx;
 						font-family: PingFangSC, PingFang SC;
@@ -1185,15 +1344,17 @@
 					margin-top: 76rpx;
 				}
 			}
-			
+
 			.jiajiafeiyong {
 				margin-left: 40rpx;
 				margin-right: 40rpx;
 				display: flex;
 				justify-content: space-between;
 				padding-bottom: 34rpx;
+
 				.jiajiafeiyong-left {
 					margin-top: 24rpx;
+
 					.jiajiafeiyong-left-top {
 						height: 40rpx;
 						font-family: PingFangSC, PingFang SC;
@@ -1205,7 +1366,7 @@
 						font-style: normal;
 						text-transform: none;
 					}
-			
+
 					.jiajiafeiyong-left-middle {
 						height: 44rpx;
 						font-family: PingFangSC, PingFang SC;
@@ -1219,7 +1380,7 @@
 						margin-top: 8rpx;
 						margin-bottom: 16rpx;
 					}
-			
+
 					.jiajiafeiyong-left-bottom {
 						height: 24rpx;
 						font-family: PingFangSC, PingFang SC;
@@ -1231,7 +1392,7 @@
 						font-style: normal;
 					}
 				}
-			
+
 				.jiajiafeiyong-right {
 					height: 40rpx;
 					font-family: PingFangSC, PingFang SC;
@@ -1244,14 +1405,16 @@
 					margin-top: 76rpx;
 				}
 			}
-			.jiejiari{
+
+			.jiejiari {
 				margin-left: 40rpx;
 				margin-right: 40rpx;
 				padding-bottom: 34rpx;
 				justify-content: space-between;
 				display: flex;
-				.jiejiari-left{
-					.jiejiari-left-top{
+
+				.jiejiari-left {
+					.jiejiari-left-top {
 						height: 44rpx;
 						font-family: PingFangSC, PingFang SC;
 						font-weight: 600;
@@ -1262,7 +1425,8 @@
 						font-style: normal;
 						text-transform: none;
 					}
-					.jiejiari-left-bottom{
+
+					.jiejiari-left-bottom {
 						height: 24rpx;
 						font-family: PingFangSC, PingFang SC;
 						font-weight: 400;
@@ -1274,7 +1438,8 @@
 						margin-top: 16rpx;
 					}
 				}
-				.jiejiari-right{
+
+				.jiejiari-right {
 					height: 44rpx;
 					font-family: PingFangSC, PingFang SC;
 					font-weight: 400;
@@ -1285,14 +1450,16 @@
 					font-style: normal;
 				}
 			}
-			.jiaotong{
+
+			.jiaotong {
 				margin-left: 40rpx;
 				margin-right: 40rpx;
 				padding-bottom: 34rpx;
 				justify-content: space-between;
 				display: flex;
-				.jiaotong-left{
-					.jiaotong-left-top{
+
+				.jiaotong-left {
+					.jiaotong-left-top {
 						height: 44rpx;
 						font-family: PingFangSC, PingFang SC;
 						font-weight: 600;
@@ -1303,7 +1470,8 @@
 						font-style: normal;
 						text-transform: none;
 					}
-					.jiaotong-left-bottom{
+
+					.jiaotong-left-bottom {
 						height: 24rpx;
 						font-family: PingFangSC, PingFang SC;
 						font-weight: 400;
@@ -1315,7 +1483,8 @@
 						margin-top: 16rpx;
 					}
 				}
-				.jiaotong-right{
+
+				.jiaotong-right {
 					height: 44rpx;
 					font-family: PingFangSC, PingFang SC;
 					font-weight: 400;
@@ -1326,17 +1495,18 @@
 					font-style: normal;
 				}
 			}
-			.shichang{
+
+			.shichang {
 				margin-left: 40rpx;
 				margin-right: 40rpx;
 				padding-bottom: 34rpx;
 				justify-content: space-between;
 				display: flex;
-				border-bottom: 1rpx dashed  rgba(0,0,0,0.2);
+				border-bottom: 1rpx dashed rgba(0, 0, 0, 0.2);
 				padding-bottom: 34rpx;
-				
-				.shichang-left{
-					.shichang-left-top{
+
+				.shichang-left {
+					.shichang-left-top {
 						height: 44rpx;
 						font-family: PingFangSC, PingFang SC;
 						font-weight: 600;
@@ -1347,7 +1517,8 @@
 						font-style: normal;
 						text-transform: none;
 					}
-					.shichang-left-bottom{
+
+					.shichang-left-bottom {
 						height: 24rpx;
 						font-family: PingFangSC, PingFang SC;
 						font-weight: 400;
@@ -1359,7 +1530,8 @@
 						margin-top: 16rpx;
 					}
 				}
-				.shichang-right{
+
+				.shichang-right {
 					height: 44rpx;
 					font-family: PingFangSC, PingFang SC;
 					font-weight: 400;
@@ -1370,14 +1542,17 @@
 					font-style: normal;
 				}
 			}
-			.gengduofuwu{
+
+			.gengduofuwu {
 				margin-left: 40rpx;
 				margin-right: 40rpx;
 				display: flex;
 				justify-content: space-between;
 				padding-bottom: 34rpx;
+
 				.gengduofuwu-left {
 					margin-top: 24rpx;
+
 					.gengduofuwu-left-top {
 						height: 40rpx;
 						font-family: PingFangSC, PingFang SC;
@@ -1389,7 +1564,7 @@
 						font-style: normal;
 						text-transform: none;
 					}
-				
+
 					.gengduofuwu-left-middle {
 						height: 44rpx;
 						font-family: PingFangSC, PingFang SC;
@@ -1403,7 +1578,7 @@
 						margin-top: 8rpx;
 						margin-bottom: 16rpx;
 					}
-				
+
 					.gengduofuwu-left-bottom {
 						height: 24rpx;
 						font-family: PingFangSC, PingFang SC;
@@ -1415,7 +1590,7 @@
 						font-style: normal;
 					}
 				}
-				
+
 				.gengduofuwu-right {
 					height: 40rpx;
 					font-family: PingFangSC, PingFang SC;
@@ -1428,14 +1603,16 @@
 					margin-top: 76rpx;
 				}
 			}
-			.weiyaofeiyong{
+
+			.weiyaofeiyong {
 				margin-left: 40rpx;
 				margin-right: 40rpx;
 				padding-bottom: 34rpx;
 				justify-content: space-between;
 				display: flex;
-				.weiyaofeiyong-left{
-					.weiyaofeiyong-left-top{
+
+				.weiyaofeiyong-left {
+					.weiyaofeiyong-left-top {
 						height: 44rpx;
 						font-family: PingFangSC, PingFang SC;
 						font-weight: 600;
@@ -1446,7 +1623,8 @@
 						font-style: normal;
 						text-transform: none;
 					}
-					.weiyaofeiyong-left-bottom{
+
+					.weiyaofeiyong-left-bottom {
 						height: 24rpx;
 						font-family: PingFangSC, PingFang SC;
 						font-weight: 400;
@@ -1458,7 +1636,8 @@
 						margin-top: 16rpx;
 					}
 				}
-				.weiyaofeiyong-right{
+
+				.weiyaofeiyong-right {
 					height: 44rpx;
 					font-family: PingFangSC, PingFang SC;
 					font-weight: 400;
@@ -1499,12 +1678,12 @@
 
 		.jiesong {
 			width: 596rpx;
-			height: 116rpx;
+			height: 100%;
 			background: rgba(255, 209, 219, 0.3);
 			border-radius: 20rpx;
 			margin-left: 32rpx;
 			margin-top: 16rpx;
-			display: flex;
+			// display: flex;
 			justify-content: space-between;
 
 			.jiesong-left {
@@ -1563,6 +1742,9 @@
 			}
 
 			.jiesong-right {
+				position: absolute;
+				// top: 5%;
+				right: 10%;
 				margin-top: 36rpx;
 				margin-right: 34rpx;
 
@@ -2376,6 +2558,66 @@
 				}
 			}
 
+			.address {
+				width: 90%;
+
+				// margin-left: 40rpx;
+				.address-top {
+					width: 100%;
+					height: 40rpx;
+					font-family: PingFangSC, PingFang SC;
+					font-weight: 600;
+					font-size: 28rpx;
+					color: #000000;
+					line-height: 40rpx;
+					text-align: left;
+					font-style: normal;
+					text-transform: none;
+					margin-left: 32rpx;
+					margin-top: 24rpx;
+				}
+
+				.dizhi {
+					width: 98%;
+					height: 104rpx;
+					background: white;
+					border-radius: 16rpx;
+					display: flex;
+					border-radius: 32rpx;
+					margin-top: 16rpx;
+					margin-bottom: 16rpx;
+					line-height: 104rpx;
+					// margin-left: 32rpx;
+
+					.dizhi-left {
+						width: 40rpx;
+						height: 40rpx;
+						margin-left: 30rpx;
+						margin-right: 2rpx;
+						margin-top: 10rpx;
+
+						image {
+							width: 40rpx;
+							height: 40rpx;
+						}
+					}
+
+					.dizhi-text {
+						width: 100%;
+					}
+
+					.dizhi-right {
+						width: 24rpx;
+						height: 24rpx;
+
+						image {
+							width: 24rpx;
+							height: 24rpx;
+						}
+					}
+				}
+			}
+
 			.fuwudizhi {
 				width: 660rpx;
 				// height: 288rpx;
@@ -2585,6 +2827,73 @@
 				}
 			}
 
+			.title {
+				width: 112rpx;
+				height: 40rpx;
+				font-family: PingFangSC, PingFang SC;
+				font-weight: 600;
+				font-size: 28rpx;
+				color: #000000;
+				line-height: 40rpx;
+				text-align: left;
+				font-style: normal;
+				text-transform: none;
+				margin-top: 24rpx;
+				margin-left: 32rpx;
+			}
+
+			.dateButton {
+				border: 2rpx solid #000000;
+				border-radius: 16rpx;
+				// line-height: 104rpx;
+				margin-left: 32rpx;
+				margin-top: 16rpx;
+				height: 104rpx;
+				line-height: 104rpx;
+				padding: 0rpx 15rpx;
+				// width: 20%;
+			}
+
+			.service {
+				margin-top: 16rpx;
+				width: 60%;
+				height: 104rpx;
+				margin-left: 32rpx;
+				background: #F2F2F2;
+				border-radius: 16rpx;
+				line-height: 104rpx;
+				display: flex;
+
+				.service-lest {
+					margin-top: 8rpx;
+					margin-left: 24rpx;
+					width: 40rpx;
+					height: 40rpx;
+
+					image {
+						width: 40rpx;
+						height: 40rpx;
+					}
+				}
+
+				.service-text {
+					margin-left: 8rpx;
+					font-size: 28rpx;
+					color: #999999;
+					width: 480rpx;
+				}
+
+				.service-right {
+					width: 24rpx;
+					height: 24rpx;
+
+					image {
+						width: 24rpx;
+						height: 24rpx;
+					}
+				}
+			}
+
 			.fuwuriqi {
 				width: 660rpx;
 				// height: 208rpx;
@@ -2613,7 +2922,7 @@
 
 				.fuwuriqi-shijian {
 					margin-top: 16rpx;
-					width: 596rpx;
+					width: 564rpx;
 					height: 104rpx;
 					margin-left: 32rpx;
 					background: #F2F2F2;
